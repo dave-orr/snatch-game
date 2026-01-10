@@ -43,6 +43,15 @@ h1 {
     gap: 15px;
 }
 
+.button-row {
+    display: flex;
+    gap: 10px;
+}
+
+.button-row button {
+    flex: 1;
+}
+
 #word-input {
     padding: 16px 20px;
     font-size: 1.2rem;
@@ -60,11 +69,11 @@ h1 {
     box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.2);
 }
 
-#check-btn {
+#check-btn,
+#steals-btn {
     padding: 16px 20px;
     font-size: 1.1rem;
     font-weight: 600;
-    background: linear-gradient(135deg, #4a90d9 0%, #3672b9 100%);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -72,16 +81,31 @@ h1 {
     transition: transform 0.1s, box-shadow 0.2s;
 }
 
+#check-btn {
+    background: linear-gradient(135deg, #4a90d9 0%, #3672b9 100%);
+}
+
+#steals-btn {
+    background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+}
+
 #check-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(74, 144, 217, 0.4);
 }
 
-#check-btn:active {
+#steals-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
+}
+
+#check-btn:active,
+#steals-btn:active {
     transform: translateY(0);
 }
 
-#check-btn:disabled {
+#check-btn:disabled,
+#steals-btn:disabled {
     background: #ccc;
     cursor: not-allowed;
     transform: none;
@@ -131,6 +155,75 @@ h1 {
 
 .hidden {
     display: none;
+}
+
+/* Steals results */
+.steals-result {
+    margin-top: 25px;
+    text-align: left;
+    animation: fadeIn 0.3s ease;
+}
+
+.steals-section {
+    margin-bottom: 20px;
+}
+
+.steals-section:last-child {
+    margin-bottom: 0;
+}
+
+.steals-section h3 {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.steals-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.steal-item {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.steal-item .base-word {
+    font-weight: 600;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.steal-item .added-letters {
+    color: #9c27b0;
+    font-weight: 700;
+}
+
+.steal-item .arrow {
+    color: #999;
+}
+
+.steal-item .result-word {
+    font-weight: 600;
+    color: #2e7d32;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.no-steals {
+    color: #999;
+    font-style: italic;
+    padding: 10px 0;
 }
 
 /* Mobile optimizations */

@@ -21,10 +21,14 @@
                 spellcheck="false"
                 required
             >
-            <button type="submit" id="check-btn">Check</button>
+            <div class="button-row">
+                <button type="submit" id="check-btn">Check</button>
+                <button type="button" id="steals-btn">Find Steals</button>
+            </div>
         </form>
 
         <div id="result" class="result hidden"></div>
+        <div id="steals-result" class="steals-result hidden"></div>
         <div id="loading" class="loading hidden">Loading dictionary...</div>
     </div>
 
