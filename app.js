@@ -11,6 +11,13 @@ const stealsResultDiv = document.getElementById('steals-result');
 const loadingDiv = document.getElementById('loading');
 const checkBtn = document.getElementById('check-btn');
 const stealsBtn = document.getElementById('steals-btn');
+const backBtn = document.getElementById('back-btn');
+const forwardBtn = document.getElementById('forward-btn');
+
+// Navigation history
+let wordHistory = [];
+let historyIndex = -1;
+let isNavigating = false;
 
 async function loadDictionary() {
     loadingDiv.classList.remove('hidden');
@@ -36,6 +43,56 @@ async function loadDictionary() {
         loadingDiv.classList.add('hidden');
         checkBtn.disabled = false;
         stealsBtn.disabled = false;
+    }
+}
+
+// Navigation history functions
+function addToHistory(word) {
+    if (isNavigating) return;
+
+    const normalizedWord = word.trim().toUpperCase();
+    if (!normalizedWord) return;
+
+    // Remove any forward history if we're not at the end
+    if (historyIndex < wordHistory.length - 1) {
+        wordHistory = wordHistory.slice(0, historyIndex + 1);
+    }
+
+    // Don't add duplicate if it's the same as current word
+    if (wordHistory[historyIndex] !== normalizedWord) {
+        wordHistory.push(normalizedWord);
+        historyIndex = wordHistory.length - 1;
+    }
+
+    updateNavigationButtons();
+}
+
+function updateNavigationButtons() {
+    backBtn.disabled = historyIndex <= 0;
+    forwardBtn.disabled = historyIndex >= wordHistory.length - 1;
+}
+
+function navigateBack() {
+    if (historyIndex > 0) {
+        historyIndex--;
+        isNavigating = true;
+        const word = wordHistory[historyIndex];
+        wordInput.value = word;
+        stealsBtn.click();
+        isNavigating = false;
+        updateNavigationButtons();
+    }
+}
+
+function navigateForward() {
+    if (historyIndex < wordHistory.length - 1) {
+        historyIndex++;
+        isNavigating = true;
+        const word = wordHistory[historyIndex];
+        wordInput.value = word;
+        stealsBtn.click();
+        isNavigating = false;
+        updateNavigationButtons();
     }
 }
 
@@ -572,6 +629,9 @@ stealsBtn.addEventListener('click', async () => {
         return;
     }
 
+    // Add to history when finding steals
+    addToHistory(word);
+
     stealsBtn.disabled = true;
     stealsBtn.textContent = 'Searching...';
     resultDiv.classList.add('hidden');
@@ -603,6 +663,9 @@ function handleWordClick(event) {
         // Update the input field
         wordInput.value = clickedWord;
 
+        // Add to history before triggering search
+        addToHistory(clickedWord);
+
         // Automatically trigger steals search
         stealsBtn.click();
     }
@@ -611,6 +674,10 @@ function handleWordClick(event) {
 // Add event delegation for clickable words
 resultDiv.addEventListener('click', handleWordClick);
 stealsResultDiv.addEventListener('click', handleWordClick);
+
+// Navigation button listeners
+backBtn.addEventListener('click', navigateBack);
+forwardBtn.addEventListener('click', navigateForward);
 
 // Load dictionary on page load
 loadDictionary();

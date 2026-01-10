@@ -12,6 +12,17 @@ body {
     align-items: center;
     justify-content: center;
     padding: 20px;
+    position: relative;
+}
+
+.version {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
 .container {
@@ -33,8 +44,43 @@ h1 {
 
 .subtitle {
     color: #666;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 0.95rem;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.nav-btn {
+    background: #f5f5f5;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background: #ebebeb;
+    transform: translateY(-1px);
+}
+
+.nav-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.nav-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
 }
 
 #word-form {
