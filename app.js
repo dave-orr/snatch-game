@@ -108,6 +108,21 @@ function getAddedLetters(smallerCounts, largerCounts) {
     return added.sort().join('');
 }
 
+// Combine two letter count objects
+function combineLetterCounts(counts1, counts2) {
+    const combined = { ...counts1 };
+    for (const letter in counts2) {
+        combined[letter] = (combined[letter] || 0) + counts2[letter];
+    }
+    return combined;
+}
+
+// Check if counts1 + counts2 is a strict subset of targetCounts (need at least 1 more letter)
+function isCombinedStrictSubset(counts1, counts2, targetCounts) {
+    const combined = combineLetterCounts(counts1, counts2);
+    return isStrictSubset(combined, targetCounts);
+}
+
 // Find all words that could be stolen to make the target word
 function findStealsFrom(targetWord) {
     const targetCounts = getLetterCounts(targetWord);
@@ -160,7 +175,168 @@ function findStealsTo(sourceWord) {
     return results;
 }
 
-function displaySteals(word) {
+// Find all pairs of words that can be merged (with at least 1 added letter) to make the target word
+function findMergeSteals(targetWord, maxResults = 200) {
+    const targetCounts = getLetterCounts(targetWord);
+    const targetLength = targetWord.length;
+    const results = [];
+
+    // Minimum: 4 + 4 + 1 = 9 letters needed for a merge steal
+    if (targetLength < MIN_WORD_LENGTH * 2 + 1) {
+        return results;
+    }
+
+    // First, find all valid words that are subsets of the target
+    const candidateWords = [];
+    for (const word of wordList) {
+        if (word.length < MIN_WORD_LENGTH || word.length > targetLength - MIN_WORD_LENGTH - 1) continue;
+
+        const wordCounts = getLetterCounts(word);
+        // Check if this word's letters are contained in target
+        let isSubset = true;
+        for (const letter in wordCounts) {
+            if (!targetCounts[letter] || wordCounts[letter] > targetCounts[letter]) {
+                isSubset = false;
+                break;
+            }
+        }
+        if (isSubset) {
+            candidateWords.push({ word, counts: wordCounts });
+        }
+    }
+
+    // Now find pairs that combine to form a strict subset of target
+    const seen = new Set();
+    outer: for (let i = 0; i < candidateWords.length; i++) {
+        for (let j = i + 1; j < candidateWords.length; j++) {
+            if (results.length >= maxResults) break outer;
+
+            const word1 = candidateWords[i];
+            const word2 = candidateWords[j];
+
+            // Combined length must be less than target (need at least 1 added letter)
+            if (word1.word.length + word2.word.length >= targetLength) continue;
+
+            // Check if combined letters form a strict subset
+            if (isCombinedStrictSubset(word1.counts, word2.counts, targetCounts)) {
+                const combined = combineLetterCounts(word1.counts, word2.counts);
+                const addedLetters = getAddedLetters(combined, targetCounts);
+
+                // Create a canonical key to avoid duplicates
+                const key = [word1.word, word2.word].sort().join('|');
+                if (!seen.has(key)) {
+                    seen.add(key);
+                    results.push({
+                        word1: word1.word,
+                        word2: word2.word,
+                        addedLetters
+                    });
+                }
+            }
+        }
+    }
+
+    // Sort by total letters used (more letters first = fewer added), then alphabetically
+    results.sort((a, b) => {
+        const aTotal = a.word1.length + a.word2.length;
+        const bTotal = b.word1.length + b.word2.length;
+        if (bTotal !== aTotal) {
+            return bTotal - aTotal;
+        }
+        return a.word1.localeCompare(b.word1);
+    });
+
+    return results;
+}
+
+// Find all words that can be merged with sourceWord (plus added letters) to make valid words
+function findMergeStealsTo(sourceWord, maxResults = 200) {
+    const sourceCounts = getLetterCounts(sourceWord);
+    const sourceLength = sourceWord.length;
+    const results = [];
+
+    // For each word in dictionary that's long enough to be a merge result
+    for (const targetWord of wordList) {
+        if (results.length >= maxResults) break;
+
+        const targetLength = targetWord.length;
+        // Target must be at least sourceWord + MIN_WORD_LENGTH + 1 (for the added letter)
+        if (targetLength < sourceLength + MIN_WORD_LENGTH + 1) continue;
+        // Limit target length to avoid very long searches
+        if (targetLength > sourceLength + 10) continue;
+
+        const targetCounts = getLetterCounts(targetWord);
+
+        // Check if source is a subset of target
+        let sourceIsSubset = true;
+        for (const letter in sourceCounts) {
+            if (!targetCounts[letter] || sourceCounts[letter] > targetCounts[letter]) {
+                sourceIsSubset = false;
+                break;
+            }
+        }
+        if (!sourceIsSubset) continue;
+
+        // Find the remaining letters after removing source from target
+        const remainingCounts = {};
+        for (const letter in targetCounts) {
+            const remaining = targetCounts[letter] - (sourceCounts[letter] || 0);
+            if (remaining > 0) {
+                remainingCounts[letter] = remaining;
+            }
+        }
+
+        const remainingLength = Object.values(remainingCounts).reduce((a, b) => a + b, 0);
+
+        // Now find valid words that are strict subsets of remaining (need at least 1 added letter)
+        for (const otherWord of wordList) {
+            if (results.length >= maxResults) break;
+            if (otherWord.length < MIN_WORD_LENGTH || otherWord.length >= remainingLength) continue;
+
+            const otherCounts = getLetterCounts(otherWord);
+
+            // Check if other word is a strict subset of remaining
+            let isSubset = true;
+            for (const letter in otherCounts) {
+                if (!remainingCounts[letter] || otherCounts[letter] > remainingCounts[letter]) {
+                    isSubset = false;
+                    break;
+                }
+            }
+
+            if (isSubset) {
+                // Calculate added letters
+                const combined = combineLetterCounts(sourceCounts, otherCounts);
+                const addedLetters = getAddedLetters(combined, targetCounts);
+
+                if (addedLetters.length > 0) {
+                    results.push({
+                        otherWord,
+                        addedLetters,
+                        resultWord: targetWord
+                    });
+                }
+            }
+        }
+    }
+
+    // Sort by result word length (shorter first), then by other word length, then alphabetically
+    results.sort((a, b) => {
+        if (a.resultWord.length !== b.resultWord.length) {
+            return a.resultWord.length - b.resultWord.length;
+        }
+        if (b.otherWord.length !== a.otherWord.length) {
+            return b.otherWord.length - a.otherWord.length;
+        }
+        return a.resultWord.localeCompare(b.resultWord);
+    });
+
+    return results;
+}
+
+const MAX_RESULTS = 100;
+
+async function displaySteals(word) {
     resultDiv.classList.add('hidden');
     stealsResultDiv.classList.remove('hidden');
 
@@ -178,6 +354,15 @@ function displaySteals(word) {
 
     const stealsFrom = findStealsFrom(normalizedWord);
     const stealsTo = findStealsTo(normalizedWord);
+
+    // Allow UI to stay responsive between expensive operations
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    const mergeSteals = findMergeSteals(normalizedWord);
+
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    const mergeStealsTo = findMergeStealsTo(normalizedWord);
 
     let html = '';
 
@@ -197,6 +382,31 @@ function displaySteals(word) {
         html += '</div>';
     } else {
         html += '<div class="no-steals">No words can be stolen to make this word</div>';
+    }
+    html += '</div>';
+
+    // Merge steals section (two words combined with added letters)
+    html += '<div class="steals-section">';
+    html += `<h3>Merge to make ${normalizedWord}</h3>`;
+    if (mergeSteals.length > 0) {
+        html += '<div class="steals-list">';
+        for (const { word1, word2, addedLetters } of mergeSteals) {
+            html += `
+                <div class="steal-item merge-item">
+                    <span class="base-word">${word1}</span>
+                    <span class="merge-plus">+</span>
+                    <span class="base-word">${word2}</span>
+                    <span class="added-letters">+${addedLetters}</span>
+                </div>
+            `;
+        }
+        html += '</div>';
+    } else {
+        if (normalizedWord.length < MIN_WORD_LENGTH * 2 + 1) {
+            html += `<div class="no-steals">Word too short for merge (need ${MIN_WORD_LENGTH * 2 + 1}+ letters)</div>`;
+        } else {
+            html += '<div class="no-steals">No merge steals found</div>';
+        }
     }
     html += '</div>';
 
@@ -220,6 +430,27 @@ function displaySteals(word) {
     }
     html += '</div>';
 
+    // Merge steals TO section (merge this word with another to make new words)
+    html += '<div class="steals-section">';
+    html += `<h3>Merge ${normalizedWord} with</h3>`;
+    if (mergeStealsTo.length > 0) {
+        html += '<div class="steals-list">';
+        for (const { otherWord, addedLetters, resultWord } of mergeStealsTo) {
+            html += `
+                <div class="steal-item merge-item">
+                    <span class="base-word">${otherWord}</span>
+                    <span class="added-letters">+${addedLetters}</span>
+                    <span class="arrow">→</span>
+                    <span class="result-word">${resultWord}</span>
+                </div>
+            `;
+        }
+        html += '</div>';
+    } else {
+        html += '<div class="no-steals">No merge possibilities found</div>';
+    }
+    html += '</div>';
+
     stealsResultDiv.innerHTML = html;
 }
 
@@ -239,7 +470,7 @@ wordForm.addEventListener('submit', (e) => {
     displayResult(word, isValid);
 });
 
-stealsBtn.addEventListener('click', () => {
+stealsBtn.addEventListener('click', async () => {
     const word = wordInput.value.trim();
     if (!word) return;
 
@@ -249,7 +480,21 @@ stealsBtn.addEventListener('click', () => {
         return;
     }
 
-    displaySteals(word);
+    stealsBtn.disabled = true;
+    stealsBtn.textContent = 'Searching...';
+    resultDiv.classList.add('hidden');
+    stealsResultDiv.classList.remove('hidden');
+    stealsResultDiv.innerHTML = '<div class="loading">Finding steals...</div>';
+
+    // Let the UI update before starting expensive computation
+    await new Promise(resolve => setTimeout(resolve, 10));
+
+    try {
+        await displaySteals(word);
+    } finally {
+        stealsBtn.disabled = false;
+        stealsBtn.textContent = 'Find Steals';
+    }
 });
 
 // Load dictionary on page load

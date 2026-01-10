@@ -219,6 +219,16 @@ h1 {
     color: #999;
 }
 
+.steal-item .merge-plus {
+    color: #666;
+    font-weight: 500;
+}
+
+.steal-item.merge-item {
+    background: #f3e5f5;
+    border-color: #ce93d8;
+}
+
 .steal-item .result-word {
     font-weight: 600;
     color: #2e7d32;
