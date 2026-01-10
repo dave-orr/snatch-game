@@ -64,12 +64,14 @@ function addToHistory(word) {
         historyIndex = wordHistory.length - 1;
     }
 
+    console.log('History:', wordHistory, 'Index:', historyIndex);
     updateNavigationButtons();
 }
 
 function updateNavigationButtons() {
     backBtn.disabled = historyIndex <= 0;
     forwardBtn.disabled = historyIndex >= wordHistory.length - 1;
+    console.log('Navigation buttons updated - Back:', !backBtn.disabled, 'Forward:', !forwardBtn.disabled);
 }
 
 function navigateBack() {
@@ -77,6 +79,7 @@ function navigateBack() {
         historyIndex--;
         isNavigating = true;
         const word = wordHistory[historyIndex];
+        console.log('Navigating back to:', word);
         wordInput.value = word;
         stealsBtn.click();
         isNavigating = false;
@@ -89,6 +92,7 @@ function navigateForward() {
         historyIndex++;
         isNavigating = true;
         const word = wordHistory[historyIndex];
+        console.log('Navigating forward to:', word);
         wordInput.value = word;
         stealsBtn.click();
         isNavigating = false;

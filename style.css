@@ -19,10 +19,14 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.3);
-    font-weight: 500;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
     letter-spacing: 0.5px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
 }
 
 .container {
@@ -56,31 +60,39 @@ h1 {
 }
 
 .nav-btn {
-    background: #f5f5f5;
-    border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    width: 36px;
-    height: 36px;
-    font-size: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
     cursor: pointer;
-    transition: background 0.2s, transform 0.1s;
+    transition: all 0.2s;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #495057;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-btn:hover:not(:disabled) {
-    background: #ebebeb;
-    transform: translateY(-1px);
+    background: linear-gradient(135deg, #4a90d9 0%, #3672b9 100%);
+    border-color: #3672b9;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(74, 144, 217, 0.3);
 }
 
 .nav-btn:active:not(:disabled) {
     transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(74, 144, 217, 0.2);
 }
 
 .nav-btn:disabled {
-    opacity: 0.3;
+    opacity: 0.25;
     cursor: not-allowed;
+    box-shadow: none;
 }
 
 #word-form {
