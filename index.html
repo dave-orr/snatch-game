@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snatch - Word Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Snatch</h1>
+        <p class="subtitle">Check if a word is valid in Scrabble</p>
+
+        <form id="word-form">
+            <input
+                type="text"
+                id="word-input"
+                placeholder="Enter a word"
+                autocomplete="off"
+                autocapitalize="none"
+                spellcheck="false"
+                required
+            >
+            <button type="submit" id="check-btn">Check</button>
+        </form>
+
+        <div id="result" class="result hidden"></div>
+        <div id="loading" class="loading hidden">Loading dictionary...</div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
