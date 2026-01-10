@@ -151,6 +151,14 @@ h1 {
     letter-spacing: 2px;
     display: block;
     margin-bottom: 5px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.result .word:hover {
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .loading {
@@ -208,6 +216,14 @@ h1 {
     color: #1a1a2e;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.steal-item .base-word:hover {
+    background: rgba(74, 144, 217, 0.15);
 }
 
 .steal-item .added-letters {
@@ -255,6 +271,14 @@ h1 {
     color: #2e7d32;
     text-transform: uppercase;
     letter-spacing: 1px;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 3px;
+    transition: background 0.2s;
+}
+
+.steal-item .result-word:hover {
+    background: rgba(46, 125, 50, 0.15);
 }
 
 .no-steals {
