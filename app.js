@@ -336,6 +336,49 @@ function findMergeStealsTo(sourceWord, maxResults = 200) {
 
 const MAX_RESULTS = 100;
 
+// Group results by number of added letters
+function groupByAddedLetters(results, addedLettersKey = 'addedLetters') {
+    const groups = {};
+    for (const result of results) {
+        const count = result[addedLettersKey].length;
+        if (!groups[count]) {
+            groups[count] = [];
+        }
+        groups[count].push(result);
+    }
+    return groups;
+}
+
+// Render a collapsible group
+function renderCollapsibleGroup(letterCount, items, renderItem, expanded = false) {
+    const id = `group-${Math.random().toString(36).substr(2, 9)}`;
+    const expandedClass = expanded ? 'expanded' : '';
+    const itemsHtml = items.map(renderItem).join('');
+
+    return `
+        <div class="collapsible-group ${expandedClass}">
+            <button class="collapsible-header" onclick="toggleGroup('${id}')">
+                <span class="collapsible-title">+${letterCount} letter${letterCount > 1 ? 's' : ''}</span>
+                <span class="collapsible-count">${items.length} result${items.length > 1 ? 's' : ''}</span>
+                <span class="collapsible-arrow">&#9660;</span>
+            </button>
+            <div class="collapsible-content" id="${id}">
+                <div class="steals-list">${itemsHtml}</div>
+            </div>
+        </div>
+    `;
+}
+
+// Toggle collapsible group
+function toggleGroup(id) {
+    const content = document.getElementById(id);
+    const group = content.parentElement;
+    group.classList.toggle('expanded');
+}
+
+// Make toggleGroup available globally
+window.toggleGroup = toggleGroup;
+
 async function displaySteals(word) {
     resultDiv.classList.add('hidden');
     stealsResultDiv.classList.remove('hidden');
@@ -366,89 +409,86 @@ async function displaySteals(word) {
 
     let html = '';
 
+    // Render function for "steal from" items
+    const renderStealFrom = ({ baseWord, addedLetters }) => `
+        <div class="steal-item">
+            <span class="base-word">${baseWord}</span>
+            <span class="added-letters">+${addedLetters}</span>
+        </div>
+    `;
+
+    // Render function for "steal to" items
+    const renderStealTo = ({ resultWord, addedLetters }) => `
+        <div class="steal-item">
+            <span class="added-letters">+${addedLetters}</span>
+            <span class="arrow">→</span>
+            <span class="result-word">${resultWord}</span>
+        </div>
+    `;
+
+    // Render function for merge items
+    const renderMergeFrom = ({ word1, word2, addedLetters }) => `
+        <div class="steal-item merge-item">
+            <span class="base-word">${word1}</span>
+            <span class="merge-plus">+</span>
+            <span class="base-word">${word2}</span>
+            <span class="added-letters">+${addedLetters}</span>
+        </div>
+    `;
+
+    // Render function for merge-to items
+    const renderMergeTo = ({ otherWord, addedLetters, resultWord }) => `
+        <div class="steal-item merge-item">
+            <span class="base-word">${otherWord}</span>
+            <span class="added-letters">+${addedLetters}</span>
+            <span class="arrow">→</span>
+            <span class="result-word">${resultWord}</span>
+        </div>
+    `;
+
+    // Helper to render grouped results
+    const renderGroupedResults = (results, renderItem, emptyMessage) => {
+        if (results.length === 0) {
+            return `<div class="no-steals">${emptyMessage}</div>`;
+        }
+
+        const groups = groupByAddedLetters(results);
+        const sortedCounts = Object.keys(groups).map(Number).sort((a, b) => a - b);
+
+        let groupsHtml = '';
+        for (const count of sortedCounts) {
+            const expanded = count === 1; // Expand 1-letter groups by default
+            groupsHtml += renderCollapsibleGroup(count, groups[count], renderItem, expanded);
+        }
+        return groupsHtml;
+    };
+
     // Steals FROM section (what words can become this word)
     html += '<div class="steals-section">';
     html += `<h3>Steal to make ${normalizedWord}</h3>`;
-    if (stealsFrom.length > 0) {
-        html += '<div class="steals-list">';
-        for (const { baseWord, addedLetters } of stealsFrom) {
-            html += `
-                <div class="steal-item">
-                    <span class="base-word">${baseWord}</span>
-                    <span class="added-letters">+${addedLetters}</span>
-                </div>
-            `;
-        }
-        html += '</div>';
-    } else {
-        html += '<div class="no-steals">No words can be stolen to make this word</div>';
-    }
+    html += renderGroupedResults(stealsFrom, renderStealFrom, 'No words can be stolen to make this word');
     html += '</div>';
 
     // Merge steals section (two words combined with added letters)
     html += '<div class="steals-section">';
     html += `<h3>Merge to make ${normalizedWord}</h3>`;
-    if (mergeSteals.length > 0) {
-        html += '<div class="steals-list">';
-        for (const { word1, word2, addedLetters } of mergeSteals) {
-            html += `
-                <div class="steal-item merge-item">
-                    <span class="base-word">${word1}</span>
-                    <span class="merge-plus">+</span>
-                    <span class="base-word">${word2}</span>
-                    <span class="added-letters">+${addedLetters}</span>
-                </div>
-            `;
-        }
-        html += '</div>';
+    if (normalizedWord.length < MIN_WORD_LENGTH * 2 + 1) {
+        html += `<div class="no-steals">Word too short for merge (need ${MIN_WORD_LENGTH * 2 + 1}+ letters)</div>`;
     } else {
-        if (normalizedWord.length < MIN_WORD_LENGTH * 2 + 1) {
-            html += `<div class="no-steals">Word too short for merge (need ${MIN_WORD_LENGTH * 2 + 1}+ letters)</div>`;
-        } else {
-            html += '<div class="no-steals">No merge steals found</div>';
-        }
+        html += renderGroupedResults(mergeSteals, renderMergeFrom, 'No merge steals found');
     }
     html += '</div>';
 
     // Steals TO section (what this word can become)
     html += '<div class="steals-section">';
     html += `<h3>Steal ${normalizedWord} to make</h3>`;
-    if (stealsTo.length > 0) {
-        html += '<div class="steals-list">';
-        for (const { resultWord, addedLetters } of stealsTo) {
-            html += `
-                <div class="steal-item">
-                    <span class="added-letters">+${addedLetters}</span>
-                    <span class="arrow">→</span>
-                    <span class="result-word">${resultWord}</span>
-                </div>
-            `;
-        }
-        html += '</div>';
-    } else {
-        html += '<div class="no-steals">This word cannot be stolen to make other words</div>';
-    }
+    html += renderGroupedResults(stealsTo, renderStealTo, 'This word cannot be stolen to make other words');
     html += '</div>';
 
     // Merge steals TO section (merge this word with another to make new words)
     html += '<div class="steals-section">';
     html += `<h3>Merge ${normalizedWord} with</h3>`;
-    if (mergeStealsTo.length > 0) {
-        html += '<div class="steals-list">';
-        for (const { otherWord, addedLetters, resultWord } of mergeStealsTo) {
-            html += `
-                <div class="steal-item merge-item">
-                    <span class="base-word">${otherWord}</span>
-                    <span class="added-letters">+${addedLetters}</span>
-                    <span class="arrow">→</span>
-                    <span class="result-word">${resultWord}</span>
-                </div>
-            `;
-        }
-        html += '</div>';
-    } else {
-        html += '<div class="no-steals">No merge possibilities found</div>';
-    }
+    html += renderGroupedResults(mergeStealsTo, renderMergeTo, 'No merge possibilities found');
     html += '</div>';
 
     stealsResultDiv.innerHTML = html;

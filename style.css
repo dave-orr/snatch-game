@@ -19,7 +19,7 @@ body {
     border-radius: 16px;
     padding: 40px 30px;
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
@@ -240,6 +240,68 @@ h1 {
     color: #999;
     font-style: italic;
     padding: 10px 0;
+}
+
+/* Collapsible groups */
+.collapsible-group {
+    margin-bottom: 8px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.collapsible-header {
+    width: 100%;
+    padding: 10px 12px;
+    background: #f5f5f5;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.collapsible-header:hover {
+    background: #ebebeb;
+}
+
+.collapsible-title {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.collapsible-count {
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.collapsible-arrow {
+    margin-left: auto;
+    color: #999;
+    font-size: 0.7rem;
+    transition: transform 0.2s;
+}
+
+.collapsible-group.expanded .collapsible-arrow {
+    transform: rotate(180deg);
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.collapsible-group.expanded .collapsible-content {
+    max-height: 2000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.collapsible-content .steals-list {
+    padding: 10px;
 }
 
 /* Mobile optimizations */
