@@ -123,9 +123,29 @@ function isCombinedStrictSubset(counts1, counts2, targetCounts) {
     return isStrictSubset(combined, targetCounts);
 }
 
-// Check if a steal is an invalid inflection (result just starts with base word - no rearrangement)
+// Common grammatical suffixes and prefixes
+const INFLECTION_SUFFIXES = ['S', 'ES', 'ED', 'D', 'ING', 'ER', 'EST', 'LY', 'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION', 'FUL', 'LESS', 'ISH', 'IZE', 'ISE', 'EN'];
+const INFLECTION_PREFIXES = ['UN', 'RE', 'PRE', 'DE', 'DIS', 'MIS', 'NON', 'OVER', 'UNDER', 'OUT', 'SUB', 'SEMI', 'ANTI', 'MID', 'BI', 'TRI'];
+
+// Check if a steal is invalid (result is base word + grammatical affix)
 function isInflection(baseWord, resultWord) {
-    return resultWord.startsWith(baseWord);
+    // Check for suffix: result = base + suffix
+    if (resultWord.startsWith(baseWord)) {
+        const suffix = resultWord.slice(baseWord.length);
+        if (INFLECTION_SUFFIXES.includes(suffix)) {
+            return true;
+        }
+    }
+
+    // Check for prefix: result = prefix + base
+    if (resultWord.endsWith(baseWord)) {
+        const prefix = resultWord.slice(0, resultWord.length - baseWord.length);
+        if (INFLECTION_PREFIXES.includes(prefix)) {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 // Check if result is a compound word containing one of the source words
