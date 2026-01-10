@@ -123,6 +123,16 @@ function isCombinedStrictSubset(counts1, counts2, targetCounts) {
     return isStrictSubset(combined, targetCounts);
 }
 
+// Check if a steal is an invalid inflection (result just starts with base word - no rearrangement)
+function isInflection(baseWord, resultWord) {
+    return resultWord.startsWith(baseWord);
+}
+
+// Check if result is a compound word containing one of the source words
+function isCompoundContaining(word1, word2, resultWord) {
+    return resultWord.includes(word1) || resultWord.includes(word2);
+}
+
 // Find all words that could be stolen to make the target word
 function findStealsFrom(targetWord) {
     const targetCounts = getLetterCounts(targetWord);
@@ -134,12 +144,16 @@ function findStealsFrom(targetWord) {
         const wordCounts = getLetterCounts(word);
         if (isStrictSubset(wordCounts, targetCounts)) {
             const addedLetters = getAddedLetters(wordCounts, targetCounts);
-            results.push({ baseWord: word, addedLetters });
+            const invalid = isInflection(word, targetWord);
+            results.push({ baseWord: word, addedLetters, invalid });
         }
     }
 
-    // Sort by base word length (longer first), then alphabetically
+    // Sort: valid first, then by base word length (longer first), then alphabetically
     results.sort((a, b) => {
+        if (a.invalid !== b.invalid) {
+            return a.invalid ? 1 : -1;
+        }
         if (b.baseWord.length !== a.baseWord.length) {
             return b.baseWord.length - a.baseWord.length;
         }
@@ -160,12 +174,16 @@ function findStealsTo(sourceWord) {
         const wordCounts = getLetterCounts(word);
         if (isStrictSubset(sourceCounts, wordCounts)) {
             const addedLetters = getAddedLetters(sourceCounts, wordCounts);
-            results.push({ resultWord: word, addedLetters });
+            const invalid = isInflection(sourceWord, word);
+            results.push({ resultWord: word, addedLetters, invalid });
         }
     }
 
-    // Sort by result word length (shorter first), then alphabetically
+    // Sort: valid first, then by result word length (shorter first), then alphabetically
     results.sort((a, b) => {
+        if (a.invalid !== b.invalid) {
+            return a.invalid ? 1 : -1;
+        }
         if (a.resultWord.length !== b.resultWord.length) {
             return a.resultWord.length - b.resultWord.length;
         }
@@ -226,18 +244,23 @@ function findMergeSteals(targetWord, maxResults = 200) {
                 const key = [word1.word, word2.word].sort().join('|');
                 if (!seen.has(key)) {
                     seen.add(key);
+                    const invalid = isCompoundContaining(word1.word, word2.word, targetWord);
                     results.push({
                         word1: word1.word,
                         word2: word2.word,
-                        addedLetters
+                        addedLetters,
+                        invalid
                     });
                 }
             }
         }
     }
 
-    // Sort by total letters used (more letters first = fewer added), then alphabetically
+    // Sort: valid first, then by total letters used (more letters first = fewer added), then alphabetically
     results.sort((a, b) => {
+        if (a.invalid !== b.invalid) {
+            return a.invalid ? 1 : -1;
+        }
         const aTotal = a.word1.length + a.word2.length;
         const bTotal = b.word1.length + b.word2.length;
         if (bTotal !== aTotal) {
@@ -310,18 +333,23 @@ function findMergeStealsTo(sourceWord, maxResults = 200) {
                 const addedLetters = getAddedLetters(combined, targetCounts);
 
                 if (addedLetters.length > 0) {
+                    const invalid = isCompoundContaining(sourceWord, otherWord, targetWord);
                     results.push({
                         otherWord,
                         addedLetters,
-                        resultWord: targetWord
+                        resultWord: targetWord,
+                        invalid
                     });
                 }
             }
         }
     }
 
-    // Sort by result word length (shorter first), then by other word length, then alphabetically
+    // Sort: valid first, then by result word length (shorter first), then by other word length, then alphabetically
     results.sort((a, b) => {
+        if (a.invalid !== b.invalid) {
+            return a.invalid ? 1 : -1;
+        }
         if (a.resultWord.length !== b.resultWord.length) {
             return a.resultWord.length - b.resultWord.length;
         }
@@ -410,39 +438,43 @@ async function displaySteals(word) {
     let html = '';
 
     // Render function for "steal from" items
-    const renderStealFrom = ({ baseWord, addedLetters }) => `
-        <div class="steal-item">
+    const renderStealFrom = ({ baseWord, addedLetters, invalid }) => `
+        <div class="steal-item${invalid ? ' invalid-steal' : ''}">
             <span class="base-word">${baseWord}</span>
             <span class="added-letters">+${addedLetters}</span>
+            ${invalid ? '<span class="invalid-label">inflection</span>' : ''}
         </div>
     `;
 
     // Render function for "steal to" items
-    const renderStealTo = ({ resultWord, addedLetters }) => `
-        <div class="steal-item">
+    const renderStealTo = ({ resultWord, addedLetters, invalid }) => `
+        <div class="steal-item${invalid ? ' invalid-steal' : ''}">
             <span class="added-letters">+${addedLetters}</span>
             <span class="arrow">→</span>
             <span class="result-word">${resultWord}</span>
+            ${invalid ? '<span class="invalid-label">inflection</span>' : ''}
         </div>
     `;
 
     // Render function for merge items
-    const renderMergeFrom = ({ word1, word2, addedLetters }) => `
-        <div class="steal-item merge-item">
+    const renderMergeFrom = ({ word1, word2, addedLetters, invalid }) => `
+        <div class="steal-item merge-item${invalid ? ' invalid-steal' : ''}">
             <span class="base-word">${word1}</span>
             <span class="merge-plus">+</span>
             <span class="base-word">${word2}</span>
             <span class="added-letters">+${addedLetters}</span>
+            ${invalid ? '<span class="invalid-label">compound</span>' : ''}
         </div>
     `;
 
     // Render function for merge-to items
-    const renderMergeTo = ({ otherWord, addedLetters, resultWord }) => `
-        <div class="steal-item merge-item">
+    const renderMergeTo = ({ otherWord, addedLetters, resultWord, invalid }) => `
+        <div class="steal-item merge-item${invalid ? ' invalid-steal' : ''}">
             <span class="base-word">${otherWord}</span>
             <span class="added-letters">+${addedLetters}</span>
             <span class="arrow">→</span>
             <span class="result-word">${resultWord}</span>
+            ${invalid ? '<span class="invalid-label">compound</span>' : ''}
         </div>
     `;
 
