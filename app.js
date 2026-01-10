@@ -589,5 +589,28 @@ stealsBtn.addEventListener('click', async () => {
     }
 });
 
+// Handle clicking on words to update the form
+function handleWordClick(event) {
+    const target = event.target;
+
+    // Check if the clicked element is a word element
+    if (target.classList.contains('word') ||
+        target.classList.contains('base-word') ||
+        target.classList.contains('result-word')) {
+
+        const clickedWord = target.textContent.trim();
+
+        // Update the input field
+        wordInput.value = clickedWord;
+
+        // Automatically trigger steals search
+        stealsBtn.click();
+    }
+}
+
+// Add event delegation for clickable words
+resultDiv.addEventListener('click', handleWordClick);
+stealsResultDiv.addEventListener('click', handleWordClick);
+
 // Load dictionary on page load
 loadDictionary();
