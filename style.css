@@ -138,6 +138,12 @@ h1 {
     border: 2px solid #ef9a9a;
 }
 
+.result.too-short {
+    background: #fff3e0;
+    color: #e65100;
+    border: 2px solid #ffcc80;
+}
+
 .result .word {
     font-size: 1.4rem;
     font-weight: 700;

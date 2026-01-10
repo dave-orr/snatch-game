@@ -39,19 +39,29 @@ async function loadDictionary() {
     }
 }
 
+const MIN_WORD_LENGTH = 4;
+
 function checkWord(word) {
     const normalizedWord = word.trim().toUpperCase();
     if (!normalizedWord || !isLoaded) return null;
-    return dictionary.has(normalizedWord);
+
+    if (normalizedWord.length < MIN_WORD_LENGTH) {
+        return 'too_short';
+    }
+
+    return dictionary.has(normalizedWord) ? 'valid' : 'invalid';
 }
 
-function displayResult(word, isValid) {
-    resultDiv.classList.remove('hidden', 'valid', 'invalid');
+function displayResult(word, result) {
+    resultDiv.classList.remove('hidden', 'valid', 'invalid', 'too-short');
     stealsResultDiv.classList.add('hidden');
 
-    if (isValid) {
+    if (result === 'valid') {
         resultDiv.classList.add('valid');
         resultDiv.innerHTML = `<span class="word">${word}</span>Valid Scrabble word!`;
+    } else if (result === 'too_short') {
+        resultDiv.classList.add('too-short');
+        resultDiv.innerHTML = `<span class="word">${word}</span>Too short (minimum ${MIN_WORD_LENGTH} letters)`;
     } else {
         resultDiv.classList.add('invalid');
         resultDiv.innerHTML = `<span class="word">${word}</span>Not in dictionary`;
@@ -104,7 +114,7 @@ function findStealsFrom(targetWord) {
     const results = [];
 
     for (const word of wordList) {
-        if (word.length >= targetWord.length || word.length < 2) continue;
+        if (word.length >= targetWord.length || word.length < MIN_WORD_LENGTH) continue;
 
         const wordCounts = getLetterCounts(word);
         if (isStrictSubset(wordCounts, targetCounts)) {
@@ -130,7 +140,7 @@ function findStealsTo(sourceWord) {
     const results = [];
 
     for (const word of wordList) {
-        if (word.length <= sourceWord.length) continue;
+        if (word.length <= sourceWord.length || word.length < MIN_WORD_LENGTH) continue;
 
         const wordCounts = getLetterCounts(word);
         if (isStrictSubset(sourceCounts, wordCounts)) {
@@ -155,6 +165,11 @@ function displaySteals(word) {
     stealsResultDiv.classList.remove('hidden');
 
     const normalizedWord = word.trim().toUpperCase();
+
+    if (normalizedWord.length < MIN_WORD_LENGTH) {
+        stealsResultDiv.innerHTML = `<div class="no-steals">"${normalizedWord}" is too short (minimum ${MIN_WORD_LENGTH} letters)</div>`;
+        return;
+    }
 
     if (!dictionary.has(normalizedWord)) {
         stealsResultDiv.innerHTML = `<div class="no-steals">"${normalizedWord}" is not a valid word</div>`;
