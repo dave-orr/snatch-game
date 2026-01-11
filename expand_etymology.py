@@ -196,8 +196,9 @@ def build_derived_terms_map(wiktionary_path, scrabble_words):
 def expand_etymology(etymology_dict, derived_map, scrabble_words):
     """
     Expand etymology dictionary by propagating to derived terms.
+    Etymology values are now lists of etymologies.
     """
-    expanded = dict(etymology_dict)
+    expanded = {k: list(v) for k, v in etymology_dict.items()}  # Deep copy lists
     propagated = 0
 
     for base_word, derived_terms in derived_map.items():
@@ -208,7 +209,7 @@ def expand_etymology(etymology_dict, derived_map, scrabble_words):
             # Propagate to derived terms that don't have etymology yet
             for derived in derived_terms:
                 if derived not in expanded and derived in scrabble_words:
-                    expanded[derived] = base_etym
+                    expanded[derived] = list(base_etym)  # Copy the list
                     propagated += 1
 
     print(f"Propagated etymology to {propagated} derived terms")

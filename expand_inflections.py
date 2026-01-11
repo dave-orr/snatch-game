@@ -193,8 +193,9 @@ def expand_inflections(etymology_dict, scrabble_words):
     """
     Expand etymology dictionary by finding inflected forms.
     Only fills in blanks - never overwrites.
+    Etymology values are now lists of etymologies.
     """
-    expanded = dict(etymology_dict)
+    expanded = {k: list(v) for k, v in etymology_dict.items()}  # Deep copy lists
     propagated = 0
 
     # Find all words without etymology
@@ -207,7 +208,7 @@ def expand_inflections(etymology_dict, scrabble_words):
 
         base, etym = find_base_word(word, expanded, scrabble_words)
         if base and etym:
-            expanded[word] = etym
+            expanded[word] = list(etym)  # Copy the list
             propagated += 1
 
     print(f"Propagated etymology to {propagated} inflected forms")

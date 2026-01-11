@@ -62,8 +62,9 @@ def load_scrabble_dictionary(url="https://raw.githubusercontent.com/redbo/scrabb
 
 def extract_etymology_from_text(wiki_text):
     """
-    Extract etymology information from wiki markup text.
-    Returns the root language and word if found.
+    Extract ALL etymology information from wiki markup text.
+    Returns a list of root language:word strings, or None if none found.
+    Handles multiple etymology sections (Etymology 1, Etymology 2, etc.)
     """
     # Only process if it has an English section
     if '==English==' not in wiki_text:
@@ -76,53 +77,46 @@ def extract_etymology_from_text(wiki_text):
 
     english_section = english_match.group(1)
 
-    # Find the etymology section within English
-    etym_match = re.search(r'===Etymology(?:\s*\d*)?===(.*?)(?=\n===|\Z)', english_section, re.DOTALL)
-    if not etym_match:
+    # Find ALL etymology sections within English (Etymology, Etymology 1, Etymology 2, etc.)
+    etym_sections = re.findall(
+        r'===Etymology(?:\s*\d*)?===(.*?)(?=\n===|\Z)',
+        english_section,
+        re.DOTALL
+    )
+
+    if not etym_sections:
         return None
 
-    etymology_text = etym_match.group(1)
-
-    # Extract etymology templates
+    # Extract etymology templates from ALL sections
     # Patterns: {{der|en|la|word}}, {{inh|en|la|word}}, {{bor|en|la|word}}
     # Also handles {{bor+|...}}, {{der+|...}}, {{inh+|...}} variants
-    # The word is the 3rd parameter, may have additional params after
     pattern = r'\{\{(?:der|inh|bor|borrowed|derived|inherited)\+?\|en\|([a-z-]+)\|([^|}]+)'
 
-    etymologies = []
-    for match in re.finditer(pattern, etymology_text, re.IGNORECASE):
-        lang_code = match.group(1).lower()
-        word = match.group(2).strip()
+    all_etymologies = set()  # Use set to dedupe
 
-        # Clean up the word
-        word = re.sub(r'<[^>]+>', '', word)  # Remove HTML
-        word = re.sub(r'\[\[([^\]|]+)(\|[^\]]+)?\]\]', r'\1', word)  # [[word|display]] -> word
-        word = word.split('|')[0].strip()
-        word = word.strip('*')  # Remove reconstructed word marker
+    for etymology_text in etym_sections:
+        for match in re.finditer(pattern, etymology_text, re.IGNORECASE):
+            lang_code = match.group(1).lower()
+            word = match.group(2).strip()
 
-        # Skip PIE
-        if lang_code in SKIP_LANGUAGES:
-            continue
+            # Clean up the word
+            word = re.sub(r'<[^>]+>', '', word)  # Remove HTML
+            word = re.sub(r'\[\[([^\]|]+)(\|[^\]]+)?\]\]', r'\1', word)  # [[word|display]] -> word
+            word = word.split('|')[0].strip()
+            word = word.strip('*')  # Remove reconstructed word marker
 
-        if word and len(word) > 0:
-            etymologies.append((lang_code, word))
+            # Skip PIE
+            if lang_code in SKIP_LANGUAGES:
+                continue
 
-    # Find the best root etymology (prefer older languages)
-    priority_order = ['la', 'grc', 'ang', 'non', 'goh', 'fro', 'ar', 'fa', 'sa', 'hi']
+            if word and len(word) > 0:
+                readable_lang = ROOT_LANGUAGES.get(lang_code, lang_code)
+                all_etymologies.add(f"{readable_lang}:{word.lower()}")
 
-    for lang in priority_order:
-        for etym_lang, etym_word in etymologies:
-            if etym_lang == lang:
-                readable_lang = ROOT_LANGUAGES.get(lang, lang)
-                return f"{readable_lang}:{etym_word.lower()}"
+    if not all_etymologies:
+        return None
 
-    # If no priority language found, take the first non-English one
-    for lang_code, word in etymologies:
-        if lang_code not in ('en', 'enm'):
-            readable_lang = ROOT_LANGUAGES.get(lang_code, lang_code)
-            return f"{readable_lang}:{word.lower()}"
-
-    return None
+    return list(all_etymologies)
 
 
 def iter_wiktionary_pages(filepath):
@@ -246,20 +240,28 @@ def main():
 
     # Print some stats
     roots = defaultdict(int)
-    for word, root in etymology_dict.items():
-        lang = root.split(':')[0]
-        roots[lang] += 1
+    multi_etym_count = 0
+    for word, etym_list in etymology_dict.items():
+        if len(etym_list) > 1:
+            multi_etym_count += 1
+        for etym in etym_list:
+            lang = etym.split(':')[0]
+            roots[lang] += 1
+
+    print(f"Words with multiple etymologies: {multi_etym_count}")
 
     print("\nBreakdown by root language:")
     for lang, count in sorted(roots.items(), key=lambda x: -x[1])[:20]:
         print(f"  {lang}: {count}")
 
-    # Show some examples
-    print("\nSample entries:")
-    examples = ['FIX', 'AFFIX', 'SUFFIX', 'PREFIX', 'BANG', 'BANGLE', 'WALK', 'HELLO', 'PIZZA']
-    for word in examples:
-        if word in etymology_dict:
-            print(f"  {word}: {etymology_dict[word]}")
+    # Show some examples (write to file to avoid Unicode issues)
+    with open('etymology_samples.txt', 'w', encoding='utf-8') as f:
+        f.write("Sample entries:\n")
+        examples = ['FIX', 'AFFIX', 'SUFFIX', 'PREFIX', 'BANG', 'BANGLE', 'WIND', 'WINDY']
+        for word in examples:
+            if word in etymology_dict:
+                f.write(f"  {word}: {etymology_dict[word]}\n")
+    print("\nSample entries written to etymology_samples.txt")
 
 
 if __name__ == '__main__':
