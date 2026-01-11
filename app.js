@@ -129,13 +129,34 @@ function checkWord(word) {
     return dictionary.has(normalizedWord) ? 'valid' : 'invalid';
 }
 
+// Format etymology for display
+function formatEtymology(word) {
+    const etymList = etymology[word];
+    if (!etymList || !Array.isArray(etymList) || etymList.length === 0) {
+        return '<div class="etymology">Etymology: <span class="etymology-unknown">unknown</span></div>';
+    }
+
+    // Format each etymology entry nicely
+    const formatted = etymList.map(e => {
+        const [lang, root] = e.split(':');
+        if (!root || root === '-') {
+            return `<span class="etymology-lang">${lang}</span>`;
+        }
+        return `<span class="etymology-lang">${lang}</span>:<span class="etymology-root">${root}</span>`;
+    }).join(', ');
+
+    return `<div class="etymology">Etymology: ${formatted}</div>`;
+}
+
 function displayResult(word, result) {
     resultDiv.classList.remove('hidden', 'valid', 'invalid', 'too-short');
     stealsResultDiv.classList.add('hidden');
 
+    const etymHtml = result === 'valid' ? formatEtymology(word) : '';
+
     if (result === 'valid') {
         resultDiv.classList.add('valid');
-        resultDiv.innerHTML = `<span class="word">${word}</span>Valid Scrabble word!`;
+        resultDiv.innerHTML = `<span class="word">${word}</span>Valid Scrabble word!${etymHtml}`;
     } else if (result === 'too_short') {
         resultDiv.classList.add('too-short');
         resultDiv.innerHTML = `<span class="word">${word}</span>Too short (minimum ${MIN_WORD_LENGTH} letters)`;
@@ -604,6 +625,12 @@ async function displaySteals(word) {
     const mergeStealsTo = findMergeStealsTo(normalizedWord);
 
     let html = '';
+
+    // Show etymology at the top
+    html += `<div class="steals-header">
+        <h2 class="steals-word">${normalizedWord}</h2>
+        ${formatEtymology(normalizedWord)}
+    </div>`;
 
     // Render function for "steal from" items
     const renderStealFrom = ({ baseWord, addedLetters, invalid }) => `

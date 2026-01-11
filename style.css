@@ -345,6 +345,53 @@ body {
     padding: 10px 0;
 }
 
+/* Etymology display */
+.etymology {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.etymology-lang {
+    color: #7b1fa2;
+    font-weight: 500;
+}
+
+.etymology-root {
+    color: #1a1a2e;
+    font-style: italic;
+}
+
+.etymology-unknown {
+    color: #999;
+    font-style: italic;
+}
+
+/* Steals header with word and etymology */
+.steals-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.steals-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.steals-header .etymology {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 5px;
+}
+
 /* Collapsible groups */
 .collapsible-group {
     margin-bottom: 8px;
