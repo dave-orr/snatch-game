@@ -109,7 +109,8 @@ def extract_etymology_from_text(wiki_text):
             if lang_code in SKIP_LANGUAGES:
                 continue
 
-            if word and len(word) > 0:
+            # Skip if word is just '-' (placeholder meaning "same as headword")
+            if word and len(word) > 0 and word != '-':
                 readable_lang = ROOT_LANGUAGES.get(lang_code, lang_code)
                 all_etymologies.add(f"{readable_lang}:{word.lower()}")
 
