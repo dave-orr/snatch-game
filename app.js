@@ -152,17 +152,18 @@ function displayResult(word, result) {
     resultDiv.classList.remove('hidden', 'valid', 'invalid', 'too-short');
     stealsResultDiv.classList.add('hidden');
 
-    const etymHtml = result === 'valid' ? formatEtymology(word) : '';
+    const normalizedWord = word.trim().toUpperCase();
+    const etymHtml = result === 'valid' ? formatEtymology(normalizedWord) : '';
 
     if (result === 'valid') {
         resultDiv.classList.add('valid');
-        resultDiv.innerHTML = `<span class="word">${word}</span>Valid Scrabble word!${etymHtml}`;
+        resultDiv.innerHTML = `<span class="word">${normalizedWord}</span>Valid Scrabble word!${etymHtml}`;
     } else if (result === 'too_short') {
         resultDiv.classList.add('too-short');
-        resultDiv.innerHTML = `<span class="word">${word}</span>Too short (minimum ${MIN_WORD_LENGTH} letters)`;
+        resultDiv.innerHTML = `<span class="word">${normalizedWord}</span>Too short (minimum ${MIN_WORD_LENGTH} letters)`;
     } else {
         resultDiv.classList.add('invalid');
-        resultDiv.innerHTML = `<span class="word">${word}</span>Not in dictionary`;
+        resultDiv.innerHTML = `<span class="word">${normalizedWord}</span>Not in dictionary`;
     }
 }
 
