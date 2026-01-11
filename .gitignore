@@ -1,6 +1,9 @@
 # Wiktionary dump (too large for git)
 *.xml.bz2
 
+# Original large logo (use resized logo.png instead)
+snatch app logo.png
+
 # Debug and temp files
 debug_*.txt
 etym_check*.txt
