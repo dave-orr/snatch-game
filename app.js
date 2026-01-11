@@ -1,7 +1,9 @@
 const DICTIONARY_URL = 'https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt';
+const ETYMOLOGY_URL = 'etymology.json';
 
 let dictionary = new Set();
 let wordList = [];
+let etymology = {};
 let isLoaded = false;
 
 const wordInput = document.getElementById('word-input');
@@ -25,13 +27,27 @@ async function loadDictionary() {
     stealsBtn.disabled = true;
 
     try {
-        const response = await fetch(DICTIONARY_URL);
-        if (!response.ok) throw new Error('Failed to fetch dictionary');
+        // Load dictionary and etymology in parallel
+        const [dictResponse, etymResponse] = await Promise.all([
+            fetch(DICTIONARY_URL),
+            fetch(ETYMOLOGY_URL).catch(() => null) // Etymology is optional
+        ]);
 
-        const text = await response.text();
+        if (!dictResponse.ok) throw new Error('Failed to fetch dictionary');
+
+        const text = await dictResponse.text();
         const words = text.split('\n').map(w => w.trim().toUpperCase()).filter(w => w.length > 0);
         dictionary = new Set(words);
         wordList = Array.from(dictionary);
+
+        // Load etymology if available
+        if (etymResponse && etymResponse.ok) {
+            etymology = await etymResponse.json();
+            console.log(`Etymology loaded: ${Object.keys(etymology).length} entries`);
+        } else {
+            console.log('Etymology not available, using affix-based detection only');
+        }
+
         isLoaded = true;
         console.log(`Dictionary loaded: ${dictionary.size} words`);
     } catch (error) {
@@ -184,12 +200,60 @@ function isCombinedStrictSubset(counts1, counts2, targetCounts) {
     return isStrictSubset(combined, targetCounts);
 }
 
-// Common grammatical suffixes and prefixes
+// Common grammatical suffixes and prefixes (fallback when etymology not available)
 const INFLECTION_SUFFIXES = ['S', 'ES', 'ED', 'D', 'ING', 'ER', 'EST', 'LY', 'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION', 'FUL', 'LESS', 'ISH', 'IZE', 'ISE', 'EN'];
 const INFLECTION_PREFIXES = ['UN', 'RE', 'PRE', 'DE', 'DIS', 'MIS', 'NON', 'OVER', 'UNDER', 'OUT', 'SUB', 'SEMI', 'ANTI', 'MID', 'BI', 'TRI'];
 
-// Check if a steal is invalid (result is base word + grammatical affix)
+// Check if two words share the same etymological root
+function shareEtymology(word1, word2) {
+    const etym1 = etymology[word1];
+    const etym2 = etymology[word2];
+
+    // If both have etymology, compare them
+    if (etym1 && etym2) {
+        // Same exact etymology = same root
+        if (etym1 === etym2) {
+            return true;
+        }
+
+        // Check if they share the same language and have similar roots
+        // e.g., "latin:fīxus" and "latin:suffīxus" both end in "fixus"
+        const [lang1, root1] = etym1.split(':');
+        const [lang2, root2] = etym2.split(':');
+
+        if (lang1 === lang2 && root1 && root2) {
+            // Check if one root contains the other (for Latin affixed forms)
+            // e.g., "fixus" is contained in "suffixus", "affixus", "praefixus"
+            const r1 = root1.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            const r2 = root2.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            if (r1.length >= 3 && r2.length >= 3) {
+                if (r2.endsWith(r1) || r1.endsWith(r2)) {
+                    return true;
+                }
+            }
+        }
+
+        // Different etymologies = different roots
+        return false;
+    }
+
+    // If etymology not available for one or both, return null (unknown)
+    return null;
+}
+
+// Check if a steal is invalid (words share the same root)
 function isInflection(baseWord, resultWord) {
+    // First, check etymology if available
+    const etymResult = shareEtymology(baseWord, resultWord);
+    if (etymResult === true) {
+        return true; // Same etymology = invalid steal
+    }
+    if (etymResult === false) {
+        return false; // Different etymology = valid steal
+    }
+
+    // Fall back to affix-based detection when etymology is unavailable
+
     // Check for suffix: result = base + suffix
     if (resultWord.startsWith(baseWord)) {
         const suffix = resultWord.slice(baseWord.length);
@@ -523,7 +587,7 @@ async function displaySteals(word) {
         <div class="steal-item${invalid ? ' invalid-steal' : ''}">
             <span class="base-word">${baseWord}</span>
             <span class="added-letters">+${addedLetters}</span>
-            ${invalid ? '<span class="invalid-label">inflection</span>' : ''}
+            ${invalid ? '<span class="invalid-label">same root</span>' : ''}
         </div>
     `;
 
@@ -533,7 +597,7 @@ async function displaySteals(word) {
             <span class="added-letters">+${addedLetters}</span>
             <span class="arrow">→</span>
             <span class="result-word">${resultWord}</span>
-            ${invalid ? '<span class="invalid-label">inflection</span>' : ''}
+            ${invalid ? '<span class="invalid-label">same root</span>' : ''}
         </div>
     `;
 

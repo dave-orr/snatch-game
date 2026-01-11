@@ -1,0 +1,10 @@
+# Wiktionary dump (too large for git)
+*.xml.bz2
+
+# Debug and temp files
+debug_*.txt
+etym_check*.txt
+etym_final.txt
+missing_*.txt
+gap_analysis.txt
+*.log
