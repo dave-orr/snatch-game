@@ -26,12 +26,17 @@ SUFFIXES = [
     'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION',
     'URIST', 'OLOGIST',  # agent nouns
     'LING', 'INGS', 'IEST', 'IERS',
+    'LETS',  # diminutive plurals (PIGLETS)
     'ICAL', 'IVES', 'ISTS',  # adjective/noun forms
     'ING', 'IES', 'IER', 'IED', 'EST', 'ERS', 'ENS',
+    'LET',  # diminutives (PIGLET)
     'ILY', 'IVE', 'IST', 'ISH', 'ISE', 'IZE',  # adjective/verb forms
     'LY', 'ED', 'ER', 'ES', 'EN', 'EY',
     'Y', 'S', 'D',
 ]
+
+# Consonants that commonly double before suffixes
+DOUBLE_CONSONANTS = set('BCDFGKLMNPRSTVZ')
 
 # Latin plurals (special handling needed)
 LATIN_PLURALS = [
@@ -87,7 +92,8 @@ def find_base_word(word, etymology_dict, scrabble_words):
                 return base_e, etymology_dict[base_e]
 
             # Try doubling handling (e.g., RUNNING -> RUN, not RUNN)
-            if len(base) >= 3 and base[-1] == base[-2]:
+            # Also handles FROGGING -> FROG (doubled consonant before suffix)
+            if len(base) >= 3 and base[-1] == base[-2] and base[-1] in DOUBLE_CONSONANTS:
                 base_undoubled = base[:-1]
                 if base_undoubled in etymology_dict:
                     return base_undoubled, etymology_dict[base_undoubled]

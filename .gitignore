@@ -7,4 +7,7 @@ etym_check*.txt
 etym_final.txt
 missing_*.txt
 gap_analysis.txt
+let_analysis.txt
+let_verify.txt
+analyze_let.py
 *.log

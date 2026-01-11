@@ -201,8 +201,9 @@ function isCombinedStrictSubset(counts1, counts2, targetCounts) {
 }
 
 // Common grammatical suffixes and prefixes (fallback when etymology not available)
-const INFLECTION_SUFFIXES = ['S', 'ES', 'ED', 'D', 'ING', 'ER', 'EST', 'LY', 'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION', 'FUL', 'LESS', 'ISH', 'IZE', 'ISE', 'EN'];
+const INFLECTION_SUFFIXES = ['S', 'ES', 'ED', 'D', 'ING', 'ER', 'EST', 'LY', 'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION', 'FUL', 'LESS', 'ISH', 'IZE', 'ISE', 'EN', 'LET', 'LETS'];
 const INFLECTION_PREFIXES = ['UN', 'RE', 'PRE', 'DE', 'DIS', 'MIS', 'NON', 'OVER', 'UNDER', 'OUT', 'SUB', 'SEMI', 'ANTI', 'MID', 'BI', 'TRI'];
+const DOUBLE_CONSONANTS = new Set('BCDFGKLMNPRSTVZ');
 
 // Check if two words share the same etymological root
 function shareEtymology(word1, word2) {
@@ -259,6 +260,16 @@ function isInflection(baseWord, resultWord) {
         const suffix = resultWord.slice(baseWord.length);
         if (INFLECTION_SUFFIXES.includes(suffix)) {
             return true;
+        }
+        // Check for doubled consonant + suffix (e.g., FROG -> FROGGING)
+        if (suffix.length >= 2) {
+            const doubledChar = suffix[0];
+            const restOfSuffix = suffix.slice(1);
+            if (DOUBLE_CONSONANTS.has(doubledChar) &&
+                baseWord.endsWith(doubledChar) &&
+                INFLECTION_SUFFIXES.includes(restOfSuffix)) {
+                return true;
+            }
         }
     }
 
