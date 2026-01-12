@@ -19,7 +19,11 @@ import {
 
 import {
     MIN_WORD_LENGTH,
-    checkWord
+    checkWord,
+    getLetterCounts,
+    isStrictSubset,
+    getAddedLetters,
+    shareEtymology
 } from './words.js';
 
 import {
@@ -38,6 +42,13 @@ const checkBtn = document.getElementById('check-btn');
 const stealsBtn = document.getElementById('steals-btn');
 const backBtn = document.getElementById('back-btn');
 const forwardBtn = document.getElementById('forward-btn');
+
+// Compare mode elements
+const compareToggle = document.getElementById('compare-toggle');
+const compareSection = document.getElementById('compare-section');
+const compareWord1 = document.getElementById('compare-word1');
+const compareWord2 = document.getElementById('compare-word2');
+const compareBtn = document.getElementById('compare-btn');
 
 async function loadDictionary() {
     loadingDiv.classList.remove('hidden');
@@ -434,6 +445,255 @@ stealsResultDiv.addEventListener('click', handleWordClick);
 // Navigation button listeners
 backBtn.addEventListener('click', navigateBack);
 forwardBtn.addEventListener('click', navigateForward);
+
+// Compare mode toggle
+compareToggle.addEventListener('change', () => {
+    if (compareToggle.checked) {
+        compareSection.classList.remove('hidden');
+    } else {
+        compareSection.classList.add('hidden');
+        // Clear any existing compare result
+        const existingResult = document.querySelector('.compare-result');
+        if (existingResult) {
+            existingResult.remove();
+        }
+    }
+});
+
+// Format etymology for compare display (simpler version without the "Etymology:" prefix)
+function formatEtymologySimple(word) {
+    const etymology = getEtymology();
+    const etymList = etymology[word];
+    if (!etymList || !Array.isArray(etymList) || etymList.length === 0) {
+        return '<span class="etymology-unknown">unknown</span>';
+    }
+
+    return etymList.map(e => {
+        const [lang, root] = e.split(':');
+        if (!root || root === '-') {
+            return `<span class="etymology-lang">${lang}</span>`;
+        }
+        return `<span class="etymology-lang">${lang}</span>:<span class="etymology-root">${root}</span>`;
+    }).join(', ');
+}
+
+// Get shared etymologies between two words
+function getSharedEtymologies(word1, word2) {
+    const etymology = getEtymology();
+    const etymList1 = etymology[word1];
+    const etymList2 = etymology[word2];
+    const shared = [];
+
+    if (etymList1 && etymList2 && Array.isArray(etymList1) && Array.isArray(etymList2)) {
+        for (const etym1 of etymList1) {
+            for (const etym2 of etymList2) {
+                // Check if they match (reusing the same logic from words.js)
+                if (etym1 === etym2) {
+                    shared.push(etym1);
+                } else {
+                    const [lang1, root1] = etym1.split(':');
+                    const [lang2, root2] = etym2.split(':');
+                    if (lang1 === lang2 && root1 && root2) {
+                        const r1 = root1.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                        const r2 = root2.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                        if (r1.length >= 3 && r2.length >= 3) {
+                            if (r2.endsWith(r1) || r1.endsWith(r2)) {
+                                // Return the shorter root as the "base"
+                                shared.push(r1.length <= r2.length ? etym1 : etym2);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return [...new Set(shared)]; // Remove duplicates
+}
+
+// Check if word2 can be stolen from word1
+function checkSteal(baseWord, stealWord) {
+    const base = baseWord.trim().toUpperCase();
+    const steal = stealWord.trim().toUpperCase();
+
+    // Validate both words
+    if (base.length < MIN_WORD_LENGTH) {
+        return { error: `"${base}" is too short (minimum ${MIN_WORD_LENGTH} letters)` };
+    }
+    if (steal.length < MIN_WORD_LENGTH) {
+        return { error: `"${steal}" is too short (minimum ${MIN_WORD_LENGTH} letters)` };
+    }
+    if (!getDictionary().has(base)) {
+        return { error: `"${base}" is not a valid word` };
+    }
+    if (!getDictionary().has(steal)) {
+        return { error: `"${steal}" is not a valid word` };
+    }
+    if (steal.length <= base.length) {
+        return { error: `Steal word must be longer than base word` };
+    }
+
+    const baseCounts = getLetterCounts(base);
+    const stealCounts = getLetterCounts(steal);
+
+    // Check if base is a strict subset of steal
+    if (!isStrictSubset(baseCounts, stealCounts)) {
+        return {
+            canSteal: false,
+            reason: 'letters',
+            base,
+            steal,
+            message: `${base} cannot become ${steal} - letters don't match`
+        };
+    }
+
+    const addedLetters = getAddedLetters(baseCounts, stealCounts);
+
+    // Check if they share etymology (making it an invalid steal)
+    const sharedEtym = shareEtymology(base, steal);
+    const sharedRoots = getSharedEtymologies(base, steal);
+
+    // Also check for affix patterns
+    let isAffix = false;
+    const INFLECTION_SUFFIXES = ['S', 'ES', 'ED', 'D', 'ING', 'ER', 'EST', 'LY', 'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION', 'FUL', 'LESS', 'ISH', 'IZE', 'ISE', 'EN', 'LET', 'LETS', 'Y', 'IER', 'IEST'];
+    const INFLECTION_PREFIXES = ['UN', 'RE', 'PRE', 'DE', 'DIS', 'MIS', 'NON', 'OVER', 'UNDER', 'OUT', 'SUB', 'SEMI', 'ANTI', 'MID', 'BI', 'TRI'];
+
+    if (steal.startsWith(base)) {
+        const suffix = steal.slice(base.length);
+        if (INFLECTION_SUFFIXES.includes(suffix)) {
+            isAffix = true;
+        }
+    }
+    if (steal.endsWith(base)) {
+        const prefix = steal.slice(0, steal.length - base.length);
+        if (INFLECTION_PREFIXES.includes(prefix)) {
+            isAffix = true;
+        }
+    }
+
+    if (sharedEtym === true || isAffix) {
+        return {
+            canSteal: false,
+            reason: 'same_root',
+            base,
+            steal,
+            addedLetters,
+            sharedRoots,
+            message: 'Same root - invalid steal'
+        };
+    }
+
+    return {
+        canSteal: true,
+        base,
+        steal,
+        addedLetters,
+        message: 'Valid steal!'
+    };
+}
+
+// Display compare result
+function displayCompareResult(result) {
+    // Remove any existing compare result
+    const existingResult = document.querySelector('.compare-result');
+    if (existingResult) {
+        existingResult.remove();
+    }
+
+    // Hide the regular results
+    resultDiv.classList.add('hidden');
+    stealsResultDiv.classList.add('hidden');
+
+    const resultContainer = document.createElement('div');
+    resultContainer.className = 'compare-result';
+
+    if (result.error) {
+        resultContainer.classList.add('not-a-steal');
+        resultContainer.innerHTML = `
+            <div class="compare-verdict">${result.error}</div>
+        `;
+    } else if (!result.canSteal && result.reason === 'letters') {
+        resultContainer.classList.add('not-a-steal');
+        resultContainer.innerHTML = `
+            <div class="compare-words">
+                <div class="compare-word">
+                    <div class="word-text">${result.base}</div>
+                    <div class="etymology">${formatEtymologySimple(result.base)}</div>
+                </div>
+                <span class="compare-arrow-large">→</span>
+                <div class="compare-word">
+                    <div class="word-text">${result.steal}</div>
+                    <div class="etymology">${formatEtymologySimple(result.steal)}</div>
+                </div>
+            </div>
+            <div class="compare-verdict">Not a steal - letters don't match</div>
+        `;
+    } else if (!result.canSteal && result.reason === 'same_root') {
+        resultContainer.classList.add('invalid-steal');
+        let sharedRootsHtml = '';
+        if (result.sharedRoots && result.sharedRoots.length > 0) {
+            const rootsFormatted = result.sharedRoots.map(r => {
+                const [lang, root] = r.split(':');
+                return `<span class="etymology-lang">${lang}</span>:<span class="etymology-root">${root}</span>`;
+            }).join(', ');
+            sharedRootsHtml = `<div class="shared-roots"><strong>Shared root:</strong> ${rootsFormatted}</div>`;
+        }
+        resultContainer.innerHTML = `
+            <div class="compare-words">
+                <div class="compare-word">
+                    <div class="word-text">${result.base}</div>
+                    <div class="etymology">${formatEtymologySimple(result.base)}</div>
+                </div>
+                <span class="compare-arrow-large">→</span>
+                <div class="compare-word">
+                    <div class="word-text">${result.steal}</div>
+                    <div class="etymology">${formatEtymologySimple(result.steal)}</div>
+                </div>
+            </div>
+            <div class="compare-added">+${result.addedLetters}</div>
+            <div class="compare-verdict">Invalid steal - same root</div>
+            ${sharedRootsHtml}
+        `;
+    } else {
+        resultContainer.classList.add('valid-steal');
+        resultContainer.innerHTML = `
+            <div class="compare-words">
+                <div class="compare-word">
+                    <div class="word-text">${result.base}</div>
+                    <div class="etymology">${formatEtymologySimple(result.base)}</div>
+                </div>
+                <span class="compare-arrow-large">→</span>
+                <div class="compare-word">
+                    <div class="word-text">${result.steal}</div>
+                    <div class="etymology">${formatEtymologySimple(result.steal)}</div>
+                </div>
+            </div>
+            <div class="compare-added">+${result.addedLetters}</div>
+            <div class="compare-verdict">Valid steal!</div>
+        `;
+    }
+
+    compareSection.appendChild(resultContainer);
+}
+
+// Compare button click handler
+compareBtn.addEventListener('click', () => {
+    if (!getIsLoaded()) {
+        displayCompareResult({ error: 'Dictionary still loading...' });
+        return;
+    }
+
+    const word1 = compareWord1.value.trim();
+    const word2 = compareWord2.value.trim();
+
+    if (!word1 || !word2) {
+        displayCompareResult({ error: 'Please enter both words' });
+        return;
+    }
+
+    const result = checkSteal(word1, word2);
+    displayCompareResult(result);
+});
 
 // Load dictionary on page load
 loadDictionary();

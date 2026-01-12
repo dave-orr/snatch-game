@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="version">v1.2.3</div>
+    <div class="version">v1.3.0</div>
     <div class="container">
         <img src="logo.png" alt="Snatch" class="logo">
         <p class="subtitle">Check if a word is valid in Scrabble</p>
@@ -32,6 +32,36 @@
                 <button type="button" id="steals-btn">Find Steals</button>
             </div>
         </form>
+
+        <div class="compare-toggle">
+            <label class="toggle-label">
+                <input type="checkbox" id="compare-toggle">
+                <span>Compare two words</span>
+            </label>
+        </div>
+
+        <div id="compare-section" class="compare-section hidden">
+            <div class="compare-inputs">
+                <input
+                    type="text"
+                    id="compare-word1"
+                    placeholder="Base word"
+                    autocomplete="off"
+                    autocapitalize="none"
+                    spellcheck="false"
+                >
+                <span class="compare-arrow">→</span>
+                <input
+                    type="text"
+                    id="compare-word2"
+                    placeholder="Steal word"
+                    autocomplete="off"
+                    autocapitalize="none"
+                    spellcheck="false"
+                >
+            </div>
+            <button type="button" id="compare-btn">Check Steal</button>
+        </div>
 
         <div id="result" class="result hidden"></div>
         <div id="steals-result" class="steals-result hidden"></div>
