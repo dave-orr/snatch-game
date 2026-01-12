@@ -45,9 +45,8 @@ const forwardBtn = document.getElementById('forward-btn');
 
 // Compare mode elements
 const compareToggle = document.getElementById('compare-toggle');
-const compareSection = document.getElementById('compare-section');
-const compareWord1 = document.getElementById('compare-word1');
-const compareWord2 = document.getElementById('compare-word2');
+const compareField = document.getElementById('compare-field');
+const compareWord = document.getElementById('compare-word');
 const compareBtn = document.getElementById('compare-btn');
 
 async function loadDictionary() {
@@ -447,11 +446,14 @@ backBtn.addEventListener('click', navigateBack);
 forwardBtn.addEventListener('click', navigateForward);
 
 // Compare mode toggle
-compareToggle.addEventListener('change', () => {
-    if (compareToggle.checked) {
-        compareSection.classList.remove('hidden');
+compareToggle.addEventListener('click', () => {
+    const isActive = compareToggle.classList.toggle('active');
+    if (isActive) {
+        compareField.classList.remove('hidden');
+        compareWord.focus();
     } else {
-        compareSection.classList.add('hidden');
+        compareField.classList.add('hidden');
+        compareWord.value = '';
         // Clear any existing compare result
         const existingResult = document.querySelector('.compare-result');
         if (existingResult) {
@@ -673,7 +675,8 @@ function displayCompareResult(result) {
         `;
     }
 
-    compareSection.appendChild(resultContainer);
+    // Insert after compare field
+    compareField.insertAdjacentElement('afterend', resultContainer);
 }
 
 // Compare button click handler
@@ -683,15 +686,19 @@ compareBtn.addEventListener('click', () => {
         return;
     }
 
-    const word1 = compareWord1.value.trim();
-    const word2 = compareWord2.value.trim();
+    const baseWord = wordInput.value.trim();
+    const stealWord = compareWord.value.trim();
 
-    if (!word1 || !word2) {
-        displayCompareResult({ error: 'Please enter both words' });
+    if (!baseWord) {
+        displayCompareResult({ error: 'Please enter a base word above' });
+        return;
+    }
+    if (!stealWord) {
+        displayCompareResult({ error: 'Please enter a steal word' });
         return;
     }
 
-    const result = checkSteal(word1, word2);
+    const result = checkSteal(baseWord, stealWord);
     displayCompareResult(result);
 });
 
