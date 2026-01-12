@@ -14,6 +14,23 @@ import {
     isCompoundContaining
 } from './words.js';
 
+// Factory for creating steal result sorters
+// All sorters: valid first, then by length, then alphabetically
+function createStealSorter(getLengthValue, ascending, getAlphaKey) {
+    const lengthMultiplier = ascending ? 1 : -1;
+    return (a, b) => {
+        if (a.invalid !== b.invalid) {
+            return a.invalid ? 1 : -1;
+        }
+        const aLen = getLengthValue(a);
+        const bLen = getLengthValue(b);
+        if (aLen !== bLen) {
+            return (aLen - bLen) * lengthMultiplier;
+        }
+        return getAlphaKey(a).localeCompare(getAlphaKey(b));
+    };
+}
+
 // Core steal-finding algorithm
 // direction: 'from' finds words that can become referenceWord (candidates are shorter)
 // direction: 'to' finds words referenceWord can become (candidates are longer)
@@ -56,16 +73,8 @@ function findStealsCore(referenceWord, direction) {
 
     // Sort: valid first, then by length, then alphabetically
     // 'from': longer words first (descending), 'to': shorter words first (ascending)
-    const lengthMultiplier = direction === 'from' ? -1 : 1;
-    results.sort((a, b) => {
-        if (a.invalid !== b.invalid) {
-            return a.invalid ? 1 : -1;
-        }
-        if (a.word.length !== b.word.length) {
-            return (a.word.length - b.word.length) * lengthMultiplier;
-        }
-        return a.word.localeCompare(b.word);
-    });
+    const ascending = direction === 'to';
+    results.sort(createStealSorter(r => r.word.length, ascending, r => r.word));
 
     return results;
 }
@@ -153,17 +162,11 @@ export function findMergeSteals(targetWord, maxResults = 200) {
     }
 
     // Sort: valid first, then by total letters used (more letters first = fewer added), then alphabetically
-    results.sort((a, b) => {
-        if (a.invalid !== b.invalid) {
-            return a.invalid ? 1 : -1;
-        }
-        const aTotal = a.word1.length + a.word2.length;
-        const bTotal = b.word1.length + b.word2.length;
-        if (bTotal !== aTotal) {
-            return bTotal - aTotal;
-        }
-        return a.word1.localeCompare(b.word1);
-    });
+    results.sort(createStealSorter(
+        r => r.word1.length + r.word2.length,
+        false, // descending (more letters first)
+        r => r.word1
+    ));
 
     return results;
 }
