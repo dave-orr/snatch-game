@@ -52,11 +52,8 @@ const stealsBtn = document.getElementById('steals-btn');
 const backBtn = document.getElementById('back-btn');
 const forwardBtn = document.getElementById('forward-btn');
 
-// Compare mode elements
-const compareToggle = document.getElementById('compare-toggle');
-const compareSection = document.getElementById('compare-section');
-const compareWord = document.getElementById('compare-word');
-const compareBtn = document.getElementById('compare-btn');
+// Steal input element
+const stealInput = document.getElementById('steal-input');
 
 async function loadDictionary() {
     loadingDiv.classList.remove('hidden');
@@ -374,6 +371,7 @@ async function displaySteals(word) {
 wordForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const word = wordInput.value.trim();
+    const stealWord = stealInput.value.trim();
     if (!word) return;
 
     if (!getIsLoaded()) {
@@ -383,8 +381,15 @@ wordForm.addEventListener('submit', (e) => {
         return;
     }
 
-    const isValid = checkWord(word);
-    displayResult(word, isValid);
+    // If steal word is provided, check the steal
+    if (stealWord) {
+        const result = checkSteal(word, stealWord);
+        displayCompareResult(result);
+    } else {
+        // Just check the single word
+        const isValid = checkWord(word);
+        displayResult(word, isValid);
+    }
 });
 
 // Perform steals search - can be awaited by navigation functions
@@ -453,23 +458,6 @@ stealsResultDiv.addEventListener('click', handleWordClick);
 // Navigation button listeners
 backBtn.addEventListener('click', navigateBack);
 forwardBtn.addEventListener('click', navigateForward);
-
-// Compare mode toggle
-compareToggle.addEventListener('click', () => {
-    const isActive = compareToggle.classList.toggle('active');
-    if (isActive) {
-        compareSection.classList.remove('hidden');
-        compareWord.focus();
-    } else {
-        compareSection.classList.add('hidden');
-        compareWord.value = '';
-        // Clear any existing compare result
-        const existingResult = document.querySelector('.compare-result');
-        if (existingResult) {
-            existingResult.remove();
-        }
-    }
-});
 
 // Format etymology for compare display (simpler version without the "Etymology:" prefix)
 function formatEtymologySimple(word) {
@@ -684,32 +672,9 @@ function displayCompareResult(result) {
         `;
     }
 
-    // Insert after compare section
-    compareSection.insertAdjacentElement('afterend', resultContainer);
+    // Insert where result div is
+    resultDiv.insertAdjacentElement('afterend', resultContainer);
 }
-
-// Compare button click handler
-compareBtn.addEventListener('click', () => {
-    if (!getIsLoaded()) {
-        displayCompareResult({ error: 'Dictionary still loading...' });
-        return;
-    }
-
-    const baseWord = wordInput.value.trim();
-    const stealWord = compareWord.value.trim();
-
-    if (!baseWord) {
-        displayCompareResult({ error: 'Please enter a base word above' });
-        return;
-    }
-    if (!stealWord) {
-        displayCompareResult({ error: 'Please enter a steal word' });
-        return;
-    }
-
-    const result = checkSteal(baseWord, stealWord);
-    displayCompareResult(result);
-});
 
 // Load dictionary on page load
 loadDictionary();
