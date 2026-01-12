@@ -4,6 +4,7 @@
 import { getDictionary, getIsLoaded, getEtymology } from './state.js';
 
 export const MIN_WORD_LENGTH = 4;
+export const MIN_MERGE_LENGTH = MIN_WORD_LENGTH * 2 + 1; // 9 letters minimum for merge steals
 
 // Get letter frequency count for a word
 export function getLetterCounts(word) {

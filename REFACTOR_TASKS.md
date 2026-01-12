@@ -101,11 +101,14 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 
 ## Category 5: Code Quality
 
-### 5.1 Replace magic numbers with named constants
-- Line 119: `MIN_WORD_LENGTH = 4` (already done)
-- Line 572: Extract ID generation to named function
-- Line 761: `UI_YIELD_MS = 10` or similar
-- Lines 393, 477: `MIN_MERGE_LENGTH = MIN_WORD_LENGTH * 2 + 1`
+### 5.1 Replace magic numbers with named constants [DONE]
+- ~~Line 119: `MIN_WORD_LENGTH = 4` (already done)~~
+- ~~Line 572: Extract ID generation to named function~~
+- ~~Line 761: `UI_YIELD_MS = 10` or similar~~
+- ~~Lines 393, 477: `MIN_MERGE_LENGTH = MIN_WORD_LENGTH * 2 + 1`~~
+- Added `MIN_MERGE_LENGTH` constant to words.js
+- Added `UI_YIELD_MS` constant and `generateUniqueId()` function to app.js
+- Updated steals.js to use MIN_MERGE_LENGTH
 
 ### 5.2 Fix inconsistent null handling
 - Decide on null vs undefined convention

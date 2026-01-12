@@ -4,6 +4,7 @@
 import { getWordList } from './state.js';
 import {
     MIN_WORD_LENGTH,
+    MIN_MERGE_LENGTH,
     getLetterCounts,
     isStrictSubset,
     getAddedLetters,
@@ -83,7 +84,7 @@ export function findMergeSteals(targetWord, maxResults = 200) {
     const wordList = getWordList();
 
     // Minimum: 4 + 4 + 1 = 9 letters needed for a merge steal
-    if (targetLength < MIN_WORD_LENGTH * 2 + 1) {
+    if (targetLength < MIN_MERGE_LENGTH) {
         return results;
     }
 

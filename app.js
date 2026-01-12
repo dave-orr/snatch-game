@@ -19,6 +19,7 @@ import {
 
 import {
     MIN_WORD_LENGTH,
+    MIN_MERGE_LENGTH,
     checkWord,
     getLetterCounts,
     isStrictSubset,
@@ -32,6 +33,14 @@ import {
     findMergeSteals,
     findMergeStealsTo
 } from './steals.js';
+
+// UI constants
+const UI_YIELD_MS = 10;
+
+// Generate unique ID for collapsible groups
+function generateUniqueId() {
+    return `group-${Math.random().toString(36).substr(2, 9)}`;
+}
 
 const wordInput = document.getElementById('word-input');
 const wordForm = document.getElementById('word-form');
@@ -209,7 +218,7 @@ function groupByAddedLetters(results, addedLettersKey = 'addedLetters') {
 
 // Render a collapsible group
 function renderCollapsibleGroup(letterCount, items, renderItem, expanded = false) {
-    const id = `group-${Math.random().toString(36).substr(2, 9)}`;
+    const id = generateUniqueId();
     const expandedClass = expanded ? 'expanded' : '';
     const itemsHtml = items.map(renderItem).join('');
 
@@ -340,8 +349,8 @@ async function displaySteals(word) {
     // Merge steals section (two words combined with added letters)
     html += '<div class="steals-section">';
     html += `<h3>Merge to make ${normalizedWord}</h3>`;
-    if (normalizedWord.length < MIN_WORD_LENGTH * 2 + 1) {
-        html += `<div class="no-steals">Word too short for merge (need ${MIN_WORD_LENGTH * 2 + 1}+ letters)</div>`;
+    if (normalizedWord.length < MIN_MERGE_LENGTH) {
+        html += `<div class="no-steals">Word too short for merge (need ${MIN_MERGE_LENGTH}+ letters)</div>`;
     } else {
         html += renderGroupedResults(mergeSteals, renderMergeFrom, 'No merge steals found');
     }
@@ -400,7 +409,7 @@ async function performStealsSearch(word, addToHistoryFlag = true) {
     stealsResultDiv.innerHTML = '<div class="loading">Finding steals...</div>';
 
     // Let the UI update before starting expensive computation
-    await new Promise(resolve => setTimeout(resolve, 10));
+    await new Promise(resolve => setTimeout(resolve, UI_YIELD_MS));
 
     try {
         await displaySteals(word);
