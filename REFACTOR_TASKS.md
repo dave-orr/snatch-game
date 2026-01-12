@@ -12,10 +12,12 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 - Remove inline counting in `findMergeSteals` (lines 399-414)
 - Remove inline counting in `findMergeStealsTo` (lines 485-518)
 
-### 1.2 Unify findStealsFrom and findStealsTo
-- Extract shared algorithm into helper function
-- Both functions differ only in: length check direction, result key names, sort order
-- Reduce ~54 lines to ~30
+### 1.2 Unify findStealsFrom and findStealsTo [DONE]
+- ~~Extract shared algorithm into helper function~~
+- ~~Both functions differ only in: length check direction, result key names, sort order~~
+- ~~Reduce ~54 lines to ~30~~
+- Created `findStealsCore()` helper with direction parameter
+- Public API unchanged - functions map results to expected key names
 
 ### 1.3 Extract common sorting comparator
 - Lines 343-351, 373-381, 450-460, 539-550 all use same pattern

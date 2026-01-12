@@ -14,66 +14,78 @@ import {
     isCompoundContaining
 } from './words.js';
 
-// Find all words that could be stolen to make the target word
-export function findStealsFrom(targetWord) {
-    const targetCounts = getLetterCounts(targetWord);
+// Core steal-finding algorithm
+// direction: 'from' finds words that can become referenceWord (candidates are shorter)
+// direction: 'to' finds words referenceWord can become (candidates are longer)
+function findStealsCore(referenceWord, direction) {
+    const referenceCounts = getLetterCounts(referenceWord);
     const results = [];
     const wordList = getWordList();
 
     for (const word of wordList) {
-        if (word.length >= targetWord.length || word.length < MIN_WORD_LENGTH) continue;
+        if (word.length < MIN_WORD_LENGTH) continue;
+
+        // Length check: 'from' wants shorter candidates, 'to' wants longer
+        const validLength = direction === 'from'
+            ? word.length < referenceWord.length
+            : word.length > referenceWord.length;
+        if (!validLength) continue;
 
         const wordCounts = getLetterCounts(word);
-        if (isStrictSubset(wordCounts, targetCounts)) {
-            const addedLetters = getAddedLetters(wordCounts, targetCounts);
-            const invalid = isInflection(word, targetWord);
-            results.push({ baseWord: word, addedLetters, invalid });
+
+        // Subset check: smaller word's counts must be subset of larger word's counts
+        const [smallerCounts, largerCounts] = direction === 'from'
+            ? [wordCounts, referenceCounts]
+            : [referenceCounts, wordCounts];
+
+        if (isStrictSubset(smallerCounts, largerCounts)) {
+            const addedLetters = getAddedLetters(smallerCounts, largerCounts);
+            // For inflection check: first arg is base word, second is result word
+            const [baseWord, resultWord] = direction === 'from'
+                ? [word, referenceWord]
+                : [referenceWord, word];
+            const invalid = isInflection(baseWord, resultWord);
+
+            results.push({
+                word,
+                addedLetters,
+                invalid
+            });
         }
     }
 
-    // Sort: valid first, then by base word length (longer first), then alphabetically
+    // Sort: valid first, then by length, then alphabetically
+    // 'from': longer words first (descending), 'to': shorter words first (ascending)
+    const lengthMultiplier = direction === 'from' ? -1 : 1;
     results.sort((a, b) => {
         if (a.invalid !== b.invalid) {
             return a.invalid ? 1 : -1;
         }
-        if (b.baseWord.length !== a.baseWord.length) {
-            return b.baseWord.length - a.baseWord.length;
+        if (a.word.length !== b.word.length) {
+            return (a.word.length - b.word.length) * lengthMultiplier;
         }
-        return a.baseWord.localeCompare(b.baseWord);
+        return a.word.localeCompare(b.word);
     });
 
     return results;
 }
 
+// Find all words that could be stolen to make the target word
+export function findStealsFrom(targetWord) {
+    return findStealsCore(targetWord, 'from').map(({ word, addedLetters, invalid }) => ({
+        baseWord: word,
+        addedLetters,
+        invalid
+    }));
+}
+
 // Find all words that can be made by stealing the source word
 export function findStealsTo(sourceWord) {
-    const sourceCounts = getLetterCounts(sourceWord);
-    const results = [];
-    const wordList = getWordList();
-
-    for (const word of wordList) {
-        if (word.length <= sourceWord.length || word.length < MIN_WORD_LENGTH) continue;
-
-        const wordCounts = getLetterCounts(word);
-        if (isStrictSubset(sourceCounts, wordCounts)) {
-            const addedLetters = getAddedLetters(sourceCounts, wordCounts);
-            const invalid = isInflection(sourceWord, word);
-            results.push({ resultWord: word, addedLetters, invalid });
-        }
-    }
-
-    // Sort: valid first, then by result word length (shorter first), then alphabetically
-    results.sort((a, b) => {
-        if (a.invalid !== b.invalid) {
-            return a.invalid ? 1 : -1;
-        }
-        if (a.resultWord.length !== b.resultWord.length) {
-            return a.resultWord.length - b.resultWord.length;
-        }
-        return a.resultWord.localeCompare(b.resultWord);
-    });
-
-    return results;
+    return findStealsCore(sourceWord, 'to').map(({ word, addedLetters, invalid }) => ({
+        resultWord: word,
+        addedLetters,
+        invalid
+    }));
 }
 
 // Find all pairs of words that can be merged (with at least 1 added letter) to make the target word
