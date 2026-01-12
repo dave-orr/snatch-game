@@ -33,10 +33,13 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 - Updated app.js to import from state module
 - Updated index.html to use type=module
 
-### 2.2 Extract word validation module
-- Move `checkWord()`, `getLetterCounts()`, `isStrictSubset()`, `getAddedLetters()`
-- Move inflection checking: `INFLECTION_SUFFIXES`, `INFLECTION_PREFIXES`, `isInflection()`
-- Self-contained module with no DOM dependencies
+### 2.2 Extract word validation module [DONE]
+- ~~Move `checkWord()`, `getLetterCounts()`, `isStrictSubset()`, `getAddedLetters()`~~
+- ~~Move inflection checking: `INFLECTION_SUFFIXES`, `INFLECTION_PREFIXES`, `isInflection()`~~
+- ~~Self-contained module with no DOM dependencies~~
+- Created words.js with word validation functions
+- Also moved `combineLetterCounts()`, `isCombinedStrictSubset()`, `shareEtymology()`, `isCompoundContaining()`
+- Updated app.js to import from words module
 
 ### 2.3 Extract steal-finding module
 - Move `findStealsFrom()`, `findStealsTo()`, `findMergeSteals()`, `findMergeStealsTo()`
