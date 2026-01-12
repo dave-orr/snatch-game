@@ -1,10 +1,22 @@
-const DICTIONARY_URL = 'https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt';
-const ETYMOLOGY_URL = 'etymology.json';
-
-let dictionary = new Set();
-let wordList = [];
-let etymology = {};
-let isLoaded = false;
+import {
+    DICTIONARY_URL,
+    ETYMOLOGY_URL,
+    getDictionary,
+    setDictionary,
+    getWordList,
+    getEtymology,
+    setEtymology,
+    getIsLoaded,
+    setIsLoaded,
+    getHistoryIndex,
+    setHistoryIndex,
+    getIsNavigating,
+    setIsNavigating,
+    pushToHistory,
+    truncateHistoryAt,
+    getHistoryWord,
+    getHistoryLength
+} from './state.js';
 
 const wordInput = document.getElementById('word-input');
 const wordForm = document.getElementById('word-form');
@@ -15,11 +27,6 @@ const checkBtn = document.getElementById('check-btn');
 const stealsBtn = document.getElementById('steals-btn');
 const backBtn = document.getElementById('back-btn');
 const forwardBtn = document.getElementById('forward-btn');
-
-// Navigation history
-let wordHistory = [];
-let historyIndex = -1;
-let isNavigating = false;
 
 async function loadDictionary() {
     loadingDiv.classList.remove('hidden');
@@ -37,19 +44,19 @@ async function loadDictionary() {
 
         const text = await dictResponse.text();
         const words = text.split('\n').map(w => w.trim().toUpperCase()).filter(w => w.length > 0);
-        dictionary = new Set(words);
-        wordList = Array.from(dictionary);
+        setDictionary(new Set(words));
+        // wordList is set automatically by setDictionary
 
         // Load etymology if available
         if (etymResponse && etymResponse.ok) {
-            etymology = await etymResponse.json();
-            console.log(`Etymology loaded: ${Object.keys(etymology).length} entries`);
+            setEtymology(await etymResponse.json());
+            console.log(`Etymology loaded: ${Object.keys(getEtymology()).length} entries`);
         } else {
             console.log('Etymology not available, using affix-based detection only');
         }
 
-        isLoaded = true;
-        console.log(`Dictionary loaded: ${dictionary.size} words`);
+        setIsLoaded(true);
+        console.log(`Dictionary loaded: ${getDictionary().size} words`);
     } catch (error) {
         console.error('Error loading dictionary:', error);
         resultDiv.innerHTML = 'Error loading dictionary. Please refresh the page.';
@@ -64,54 +71,53 @@ async function loadDictionary() {
 
 // Navigation history functions
 function addToHistory(word) {
-    if (isNavigating) return;
+    if (getIsNavigating()) return;
 
     const normalizedWord = word.trim().toUpperCase();
     if (!normalizedWord) return;
 
     // Remove any forward history if we're not at the end
-    if (historyIndex < wordHistory.length - 1) {
-        wordHistory = wordHistory.slice(0, historyIndex + 1);
+    if (getHistoryIndex() < getHistoryLength() - 1) {
+        truncateHistoryAt(getHistoryIndex());
     }
 
     // Don't add duplicate if it's the same as current word
-    if (wordHistory[historyIndex] !== normalizedWord) {
-        wordHistory.push(normalizedWord);
-        historyIndex = wordHistory.length - 1;
+    if (getHistoryWord(getHistoryIndex()) !== normalizedWord) {
+        pushToHistory(normalizedWord);
     }
 
-    console.log('History:', wordHistory, 'Index:', historyIndex);
+    console.log('History:', getHistoryLength(), 'Index:', getHistoryIndex());
     updateNavigationButtons();
 }
 
 function updateNavigationButtons() {
-    backBtn.disabled = historyIndex <= 0;
-    forwardBtn.disabled = historyIndex >= wordHistory.length - 1;
+    backBtn.disabled = getHistoryIndex() <= 0;
+    forwardBtn.disabled = getHistoryIndex() >= getHistoryLength() - 1;
     console.log('Navigation buttons updated - Back:', !backBtn.disabled, 'Forward:', !forwardBtn.disabled);
 }
 
 function navigateBack() {
-    if (historyIndex > 0) {
-        historyIndex--;
-        isNavigating = true;
-        const word = wordHistory[historyIndex];
+    if (getHistoryIndex() > 0) {
+        setHistoryIndex(getHistoryIndex() - 1);
+        setIsNavigating(true);
+        const word = getHistoryWord(getHistoryIndex());
         console.log('Navigating back to:', word);
         wordInput.value = word;
         stealsBtn.click();
-        isNavigating = false;
+        setIsNavigating(false);
         updateNavigationButtons();
     }
 }
 
 function navigateForward() {
-    if (historyIndex < wordHistory.length - 1) {
-        historyIndex++;
-        isNavigating = true;
-        const word = wordHistory[historyIndex];
+    if (getHistoryIndex() < getHistoryLength() - 1) {
+        setHistoryIndex(getHistoryIndex() + 1);
+        setIsNavigating(true);
+        const word = getHistoryWord(getHistoryIndex());
         console.log('Navigating forward to:', word);
         wordInput.value = word;
         stealsBtn.click();
-        isNavigating = false;
+        setIsNavigating(false);
         updateNavigationButtons();
     }
 }
@@ -120,17 +126,18 @@ const MIN_WORD_LENGTH = 4;
 
 function checkWord(word) {
     const normalizedWord = word.trim().toUpperCase();
-    if (!normalizedWord || !isLoaded) return null;
+    if (!normalizedWord || !getIsLoaded()) return null;
 
     if (normalizedWord.length < MIN_WORD_LENGTH) {
         return 'too_short';
     }
 
-    return dictionary.has(normalizedWord) ? 'valid' : 'invalid';
+    return getDictionary().has(normalizedWord) ? 'valid' : 'invalid';
 }
 
 // Format etymology for display
 function formatEtymology(word) {
+    const etymology = getEtymology();
     const etymList = etymology[word];
     if (!etymList || !Array.isArray(etymList) || etymList.length === 0) {
         return '<div class="etymology">Etymology: <span class="etymology-unknown">unknown</span></div>';
@@ -257,6 +264,7 @@ function etymologiesMatch(etym1, etym2) {
 // Check if two words share ANY etymological root
 // Etymology values are now arrays of possible etymologies
 function shareEtymology(word1, word2) {
+    const etymology = getEtymology();
     const etymList1 = etymology[word1];
     const etymList2 = etymology[word2];
 
@@ -327,6 +335,7 @@ function isCompoundContaining(word1, word2, resultWord) {
 function findStealsFrom(targetWord) {
     const targetCounts = getLetterCounts(targetWord);
     const results = [];
+    const wordList = getWordList();
 
     for (const word of wordList) {
         if (word.length >= targetWord.length || word.length < MIN_WORD_LENGTH) continue;
@@ -357,6 +366,7 @@ function findStealsFrom(targetWord) {
 function findStealsTo(sourceWord) {
     const sourceCounts = getLetterCounts(sourceWord);
     const results = [];
+    const wordList = getWordList();
 
     for (const word of wordList) {
         if (word.length <= sourceWord.length || word.length < MIN_WORD_LENGTH) continue;
@@ -388,6 +398,7 @@ function findMergeSteals(targetWord, maxResults = 200) {
     const targetCounts = getLetterCounts(targetWord);
     const targetLength = targetWord.length;
     const results = [];
+    const wordList = getWordList();
 
     // Minimum: 4 + 4 + 1 = 9 letters needed for a merge steal
     if (targetLength < MIN_WORD_LENGTH * 2 + 1) {
@@ -467,6 +478,7 @@ function findMergeStealsTo(sourceWord, maxResults = 200) {
     const sourceCounts = getLetterCounts(sourceWord);
     const sourceLength = sourceWord.length;
     const results = [];
+    const wordList = getWordList();
 
     // For each word in dictionary that's long enough to be a merge result
     for (const targetWord of wordList) {
@@ -608,7 +620,7 @@ async function displaySteals(word) {
         return;
     }
 
-    if (!dictionary.has(normalizedWord)) {
+    if (!getDictionary().has(normalizedWord)) {
         stealsResultDiv.innerHTML = `<div class="no-steals">"${normalizedWord}" is not a valid word</div>`;
         return;
     }
@@ -727,7 +739,7 @@ wordForm.addEventListener('submit', (e) => {
     const word = wordInput.value.trim();
     if (!word) return;
 
-    if (!isLoaded) {
+    if (!getIsLoaded()) {
         resultDiv.innerHTML = 'Dictionary still loading...';
         resultDiv.className = 'result';
         resultDiv.classList.remove('hidden');
@@ -742,7 +754,7 @@ stealsBtn.addEventListener('click', async () => {
     const word = wordInput.value.trim();
     if (!word) return;
 
-    if (!isLoaded) {
+    if (!getIsLoaded()) {
         stealsResultDiv.innerHTML = '<div class="no-steals">Dictionary still loading...</div>';
         stealsResultDiv.classList.remove('hidden');
         return;

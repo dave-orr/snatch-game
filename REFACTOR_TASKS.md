@@ -25,10 +25,13 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 
 ## Category 2: Code Organization
 
-### 2.1 Extract state management module
-- Move global state (lines 4-7, 20-22) into a state object
-- Create getter/setter functions for dictionary, wordList, etymology, isLoaded
-- Create navigation state helpers (wordHistory, historyIndex, isNavigating)
+### 2.1 Extract state management module [DONE]
+- ~~Move global state (lines 4-7, 20-22) into a state object~~
+- ~~Create getter/setter functions for dictionary, wordList, etymology, isLoaded~~
+- ~~Create navigation state helpers (wordHistory, historyIndex, isNavigating)~~
+- Created state.js with all state and accessors
+- Updated app.js to import from state module
+- Updated index.html to use type=module
 
 ### 2.2 Extract word validation module
 - Move `checkWord()`, `getLetterCounts()`, `isStrictSubset()`, `getAddedLetters()`
