@@ -191,6 +191,11 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     checked = 0
 
     for title, text in iter_wiktionary_pages(wiktionary_path):
+        # Skip proper nouns (titles starting with capital letter)
+        # These are names, German nouns, etc. - not valid Scrabble words
+        if title[0].isupper():
+            continue
+
         word_upper = title.upper()
 
         # Only process words in Scrabble dictionary
