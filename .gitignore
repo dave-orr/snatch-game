@@ -14,3 +14,7 @@ let_analysis.txt
 let_verify.txt
 analyze_let.py
 *.log
+
+# Claude Code temp files
+tmpclaude-*
+.claude/settings.local.json
