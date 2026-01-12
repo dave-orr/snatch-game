@@ -54,7 +54,7 @@ const forwardBtn = document.getElementById('forward-btn');
 
 // Compare mode elements
 const compareToggle = document.getElementById('compare-toggle');
-const compareField = document.getElementById('compare-field');
+const compareSection = document.getElementById('compare-section');
 const compareWord = document.getElementById('compare-word');
 const compareBtn = document.getElementById('compare-btn');
 
@@ -458,10 +458,10 @@ forwardBtn.addEventListener('click', navigateForward);
 compareToggle.addEventListener('click', () => {
     const isActive = compareToggle.classList.toggle('active');
     if (isActive) {
-        compareField.classList.remove('hidden');
+        compareSection.classList.remove('hidden');
         compareWord.focus();
     } else {
-        compareField.classList.add('hidden');
+        compareSection.classList.add('hidden');
         compareWord.value = '';
         // Clear any existing compare result
         const existingResult = document.querySelector('.compare-result');
@@ -684,8 +684,8 @@ function displayCompareResult(result) {
         `;
     }
 
-    // Insert after compare field
-    compareField.insertAdjacentElement('afterend', resultContainer);
+    // Insert after compare section
+    compareSection.insertAdjacentElement('afterend', resultContainer);
 }
 
 // Compare button click handler

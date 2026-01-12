@@ -456,14 +456,16 @@ body {
 
 /* Compare toggle button */
 .compare-toggle-btn {
+    display: block;
+    width: 100%;
     margin-top: 15px;
-    padding: 10px 20px;
-    font-size: 0.9rem;
+    padding: 12px 24px;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #666;
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     border: 2px solid #dee2e6;
-    border-radius: 20px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -472,6 +474,7 @@ body {
     background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
     border-color: #adb5bd;
     color: #333;
+    transform: translateY(-1px);
 }
 
 .compare-toggle-btn.active {
@@ -484,17 +487,27 @@ body {
     box-shadow: 0 4px 12px rgba(156, 39, 176, 0.3);
 }
 
-/* Compare field */
-.compare-field {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Compare section */
+.compare-section {
     margin-top: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+    border: 2px solid #ce93d8;
+    border-radius: 10px;
     animation: fadeIn 0.3s ease;
 }
 
-.compare-field input {
-    flex: 1;
+.compare-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7b1fa2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.compare-section input {
+    width: 100%;
     padding: 16px 20px;
     font-size: 1.2rem;
     border: 2px solid #ce93d8;
@@ -504,22 +517,20 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
+    background: #fff;
 }
 
-.compare-field input:focus {
+.compare-section input:focus {
     border-color: #9c27b0;
     box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.2);
 }
 
-.compare-arrow {
-    color: #9c27b0;
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-
-#compare-btn {
+.compare-check-btn {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
     padding: 16px 24px;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: #fff;
     background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
@@ -527,19 +538,18 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.1s, box-shadow 0.2s;
-    white-space: nowrap;
 }
 
-#compare-btn:hover {
+.compare-check-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(156, 39, 176, 0.4);
 }
 
-#compare-btn:active {
+.compare-check-btn:active {
     transform: translateY(0);
 }
 
-#compare-btn:disabled {
+.compare-check-btn:disabled {
     background: #ccc;
     cursor: not-allowed;
     transform: none;
@@ -662,18 +672,6 @@ body {
     #check-btn {
         padding: 14px 16px;
         font-size: 1rem;
-    }
-
-    .compare-field {
-        flex-direction: column;
-    }
-
-    .compare-field .compare-arrow {
-        transform: rotate(90deg);
-    }
-
-    .compare-field #compare-btn {
-        width: 100%;
     }
 
     .compare-words {
