@@ -41,10 +41,12 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 - Also moved `combineLetterCounts()`, `isCombinedStrictSubset()`, `shareEtymology()`, `isCompoundContaining()`
 - Updated app.js to import from words module
 
-### 2.3 Extract steal-finding module
-- Move `findStealsFrom()`, `findStealsTo()`, `findMergeSteals()`, `findMergeStealsTo()`
-- Depends on word validation module
-- No DOM dependencies
+### 2.3 Extract steal-finding module [DONE]
+- ~~Move `findStealsFrom()`, `findStealsTo()`, `findMergeSteals()`, `findMergeStealsTo()`~~
+- ~~Depends on word validation module~~
+- ~~No DOM dependencies~~
+- Created steals.js with all steal-finding functions
+- Updated app.js to import from steals module
 
 ### 2.4 Extract etymology module
 - Move `getEtymology()`, `shareEtymology()`
