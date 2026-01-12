@@ -65,10 +65,13 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 
 ## Category 3: Bug Fixes
 
-### 3.1 Fix navigation race condition
-- Lines 93-117: `isNavigating` set false before async operation completes
-- Use async/await properly or callback pattern
-- Ensure flag stays true until displaySteals completes
+### 3.1 Fix navigation race condition [DONE]
+- ~~Lines 93-117: `isNavigating` set false before async operation completes~~
+- ~~Use async/await properly or callback pattern~~
+- ~~Ensure flag stays true until displaySteals completes~~
+- Created `performStealsSearch()` function that can be awaited
+- Made `navigateBack()` and `navigateForward()` async
+- `isNavigating` now stays true until search completes via try/finally
 
 ### 3.2 Add bounds checking to navigation
 - Lines 99, 113: Add defensive checks for empty wordHistory

@@ -107,29 +107,35 @@ function updateNavigationButtons() {
     console.log('Navigation buttons updated - Back:', !backBtn.disabled, 'Forward:', !forwardBtn.disabled);
 }
 
-function navigateBack() {
+async function navigateBack() {
     if (getHistoryIndex() > 0) {
         setHistoryIndex(getHistoryIndex() - 1);
         setIsNavigating(true);
         const word = getHistoryWord(getHistoryIndex());
         console.log('Navigating back to:', word);
         wordInput.value = word;
-        stealsBtn.click();
-        setIsNavigating(false);
-        updateNavigationButtons();
+        try {
+            await performStealsSearch(word, false);
+        } finally {
+            setIsNavigating(false);
+            updateNavigationButtons();
+        }
     }
 }
 
-function navigateForward() {
+async function navigateForward() {
     if (getHistoryIndex() < getHistoryLength() - 1) {
         setHistoryIndex(getHistoryIndex() + 1);
         setIsNavigating(true);
         const word = getHistoryWord(getHistoryIndex());
         console.log('Navigating forward to:', word);
         wordInput.value = word;
-        stealsBtn.click();
-        setIsNavigating(false);
-        updateNavigationButtons();
+        try {
+            await performStealsSearch(word, false);
+        } finally {
+            setIsNavigating(false);
+            updateNavigationButtons();
+        }
     }
 }
 
@@ -358,8 +364,8 @@ wordForm.addEventListener('submit', (e) => {
     displayResult(word, isValid);
 });
 
-stealsBtn.addEventListener('click', async () => {
-    const word = wordInput.value.trim();
+// Perform steals search - can be awaited by navigation functions
+async function performStealsSearch(word, addToHistoryFlag = true) {
     if (!word) return;
 
     if (!getIsLoaded()) {
@@ -368,8 +374,10 @@ stealsBtn.addEventListener('click', async () => {
         return;
     }
 
-    // Add to history when finding steals
-    addToHistory(word);
+    // Add to history when finding steals (unless navigating)
+    if (addToHistoryFlag) {
+        addToHistory(word);
+    }
 
     stealsBtn.disabled = true;
     stealsBtn.textContent = 'Searching...';
@@ -386,6 +394,11 @@ stealsBtn.addEventListener('click', async () => {
         stealsBtn.disabled = false;
         stealsBtn.textContent = 'Find Steals';
     }
+}
+
+stealsBtn.addEventListener('click', async () => {
+    const word = wordInput.value.trim();
+    await performStealsSearch(word);
 });
 
 // Handle clicking on words to update the form
