@@ -73,9 +73,11 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 - Made `navigateBack()` and `navigateForward()` async
 - `isNavigating` now stays true until search completes via try/finally
 
-### 3.2 Add bounds checking to navigation
-- Lines 99, 113: Add defensive checks for empty wordHistory
-- Ensure historyIndex is always valid before access
+### 3.2 Add bounds checking to navigation [DONE]
+- ~~Lines 99, 113: Add defensive checks for empty wordHistory~~
+- ~~Ensure historyIndex is always valid before access~~
+- Added bounds check in `getHistoryWord()` for invalid indices
+- Added explicit empty history handling in `addToHistory()`
 
 ### 3.3 Add proper error handling to displaySteals
 - Wrap steal-finding calls in try-catch

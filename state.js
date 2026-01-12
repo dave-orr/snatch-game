@@ -78,6 +78,9 @@ export function truncateHistoryAt(index) {
 }
 
 export function getHistoryWord(index) {
+    if (index < 0 || index >= wordHistory.length) {
+        return undefined;
+    }
     return wordHistory[index];
 }
 

@@ -88,12 +88,16 @@ function addToHistory(word) {
     if (!normalizedWord) return;
 
     // Remove any forward history if we're not at the end
-    if (getHistoryIndex() < getHistoryLength() - 1) {
-        truncateHistoryAt(getHistoryIndex());
+    const currentIndex = getHistoryIndex();
+    const historyLength = getHistoryLength();
+
+    if (historyLength > 0 && currentIndex < historyLength - 1) {
+        truncateHistoryAt(currentIndex);
     }
 
     // Don't add duplicate if it's the same as current word
-    if (getHistoryWord(getHistoryIndex()) !== normalizedWord) {
+    const currentWord = historyLength > 0 ? getHistoryWord(currentIndex) : null;
+    if (currentWord !== normalizedWord) {
         pushToHistory(normalizedWord);
     }
 
