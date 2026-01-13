@@ -32,13 +32,6 @@ import {
     getSharedEtymologies
 } from './etymology.js';
 
-import {
-    addToHistory,
-    updateNavigationButtons,
-    navigateBack,
-    navigateForward
-} from './navigation.js';
-
 // UI constants
 const UI_YIELD_MS = 10;
 
@@ -54,8 +47,6 @@ const stealsResultDiv = document.getElementById('steals-result');
 const loadingDiv = document.getElementById('loading');
 const checkBtn = document.getElementById('check-btn');
 const stealsBtn = document.getElementById('steals-btn');
-const backBtn = document.getElementById('back-btn');
-const forwardBtn = document.getElementById('forward-btn');
 
 // Steal input element
 const stealInput = document.getElementById('steal-input');
@@ -100,12 +91,6 @@ async function loadDictionary() {
         stealsBtn.disabled = false;
     }
 }
-
-// Navigation wrappers that bind DOM elements and search function
-const updateNavButtons = () => updateNavigationButtons(backBtn, forwardBtn);
-const addWordToHistory = (word) => addToHistory(word, updateNavButtons);
-const goBack = () => navigateBack(wordInput, performStealsSearch, updateNavButtons);
-const goForward = () => navigateForward(wordInput, performStealsSearch, updateNavButtons);
 
 function displayResult(word, result) {
     resultDiv.classList.remove('hidden', 'valid', 'invalid', 'too-short');
@@ -320,19 +305,14 @@ wordForm.addEventListener('submit', (e) => {
     }
 });
 
-// Perform steals search - can be awaited by navigation functions
-async function performStealsSearch(word, addToHistoryFlag = true) {
+// Perform steals search
+async function performStealsSearch(word) {
     if (!word) return;
 
     if (!getIsLoaded()) {
         stealsResultDiv.innerHTML = '<div class="no-steals">Dictionary still loading...</div>';
         stealsResultDiv.classList.remove('hidden');
         return;
-    }
-
-    // Add to history when finding steals (unless navigating)
-    if (addToHistoryFlag) {
-        addWordToHistory(word);
     }
 
     stealsBtn.disabled = true;
@@ -368,13 +348,8 @@ function handleWordClick(event) {
 
         const clickedWord = target.textContent.trim();
 
-        // Update the input field
+        // Update the input field and trigger steals search
         wordInput.value = clickedWord;
-
-        // Add to history before triggering search
-        addWordToHistory(clickedWord);
-
-        // Automatically trigger steals search
         stealsBtn.click();
     }
 }
@@ -382,10 +357,6 @@ function handleWordClick(event) {
 // Add event delegation for clickable words
 resultDiv.addEventListener('click', handleWordClick);
 stealsResultDiv.addEventListener('click', handleWordClick);
-
-// Navigation button listeners
-backBtn.addEventListener('click', goBack);
-forwardBtn.addEventListener('click', goForward);
 
 // Handle Enter key in steal input - submit the form
 stealInput.addEventListener('keydown', (e) => {

@@ -11,11 +11,6 @@ let wordList = [];
 let etymology = {};
 let isLoaded = false;
 
-// Navigation state
-let wordHistory = [];
-let historyIndex = -1;
-let isNavigating = false;
-
 // Dictionary state accessors
 export function getDictionary() {
     return dictionary;
@@ -44,46 +39,4 @@ export function getIsLoaded() {
 
 export function setIsLoaded(loaded) {
     isLoaded = loaded;
-}
-
-// Navigation state accessors
-export function getWordHistory() {
-    return wordHistory;
-}
-
-export function getHistoryIndex() {
-    return historyIndex;
-}
-
-export function setHistoryIndex(index) {
-    historyIndex = index;
-}
-
-export function getIsNavigating() {
-    return isNavigating;
-}
-
-export function setIsNavigating(navigating) {
-    isNavigating = navigating;
-}
-
-// Navigation helpers
-export function pushToHistory(word) {
-    wordHistory.push(word);
-    historyIndex = wordHistory.length - 1;
-}
-
-export function truncateHistoryAt(index) {
-    wordHistory = wordHistory.slice(0, index + 1);
-}
-
-export function getHistoryWord(index) {
-    if (index < 0 || index >= wordHistory.length) {
-        return undefined;
-    }
-    return wordHistory[index];
-}
-
-export function getHistoryLength() {
-    return wordHistory.length;
 }

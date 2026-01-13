@@ -52,49 +52,6 @@ body {
     font-size: 0.95rem;
 }
 
-.nav-buttons {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.nav-btn {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border: 2px solid #dee2e6;
-    border-radius: 8px;
-    width: 40px;
-    height: 40px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #495057;
-    font-weight: 600;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.nav-btn:hover:not(:disabled) {
-    background: linear-gradient(135deg, #4a90d9 0%, #3672b9 100%);
-    border-color: #3672b9;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(74, 144, 217, 0.3);
-}
-
-.nav-btn:active:not(:disabled) {
-    transform: translateY(0);
-    box-shadow: 0 2px 4px rgba(74, 144, 217, 0.2);
-}
-
-.nav-btn:disabled {
-    opacity: 0.25;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
 #word-form {
     display: flex;
     flex-direction: column;
