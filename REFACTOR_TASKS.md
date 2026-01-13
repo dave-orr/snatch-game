@@ -53,9 +53,12 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 - Created steals.js with all steal-finding functions
 - Updated app.js to import from steals module
 
-### 2.4 Extract etymology module
-- Move `getEtymology()`, `shareEtymology()`
-- Self-contained lookup functions
+### 2.4 Extract etymology module [DONE]
+- ~~Move `getEtymology()`, `shareEtymology()`~~
+- ~~Self-contained lookup functions~~
+- Created etymology.js with `formatEtymology()`, `formatEtymologySimple()`, `getSharedEtymologies()`
+- Extracted common `formatEtymologyEntry()` helper
+- Updated app.js to import from etymology module
 
 ### 2.5 Extract UI rendering module
 - Move `renderCollapsibleGroup()`, `displaySteals()`, result rendering functions
