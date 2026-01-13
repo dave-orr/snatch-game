@@ -54,12 +54,16 @@ const resultDiv = document.getElementById('result');
 const stealsResultDiv = document.getElementById('steals-result');
 const loadingDiv = document.getElementById('loading');
 const checkBtn = document.getElementById('check-btn');
+const compareBtn = document.getElementById('compare-btn');
 const stealsBtn = document.getElementById('steals-btn');
 const backBtn = document.getElementById('back-btn');
 const forwardBtn = document.getElementById('forward-btn');
 
 // Steal input element
 const stealInput = document.getElementById('steal-input');
+
+// Track compare mode state
+let compareMode = false;
 
 async function loadDictionary() {
     loadingDiv.classList.remove('hidden');
@@ -357,7 +361,6 @@ async function displaySteals(word) {
 wordForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const word = wordInput.value.trim();
-    const stealWord = stealInput.value.trim();
     if (!word) return;
 
     if (!getIsLoaded()) {
@@ -367,15 +370,9 @@ wordForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // If steal word is provided, check the steal
-    if (stealWord) {
-        const result = checkSteal(word, stealWord);
-        displayCompareResult(result);
-    } else {
-        // Just check the single word
-        const isValid = checkWord(word);
-        displayResult(word, isValid);
-    }
+    // Just check the single word (form submit = Check button)
+    const isValid = checkWord(word);
+    displayResult(word, isValid);
 });
 
 // Perform steals search - can be awaited by navigation functions
@@ -444,6 +441,56 @@ stealsResultDiv.addEventListener('click', handleWordClick);
 // Navigation button listeners
 backBtn.addEventListener('click', navigateBack);
 forwardBtn.addEventListener('click', navigateForward);
+
+// Compare button - toggle compare mode
+compareBtn.addEventListener('click', () => {
+    compareMode = !compareMode;
+    compareBtn.classList.toggle('active', compareMode);
+
+    if (compareMode) {
+        stealInput.classList.remove('hidden');
+        stealInput.focus();
+    } else {
+        stealInput.classList.add('hidden');
+        stealInput.value = '';
+        // Clear any existing compare result
+        const existingResult = document.querySelector('.compare-result');
+        if (existingResult) {
+            existingResult.remove();
+        }
+    }
+});
+
+// Perform comparison when in compare mode
+function performComparison() {
+    const word = wordInput.value.trim();
+    const stealWord = stealInput.value.trim();
+
+    if (!getIsLoaded()) {
+        displayCompareResult({ error: 'Dictionary still loading...' });
+        return;
+    }
+
+    if (!word) {
+        displayCompareResult({ error: 'Please enter a base word' });
+        return;
+    }
+    if (!stealWord) {
+        displayCompareResult({ error: 'Please enter a steal word' });
+        return;
+    }
+
+    const result = checkSteal(word, stealWord);
+    displayCompareResult(result);
+}
+
+// Handle Enter key in steal input
+stealInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        performComparison();
+    }
+});
 
 // Check if word2 can be stolen from word1
 function checkSteal(baseWord, stealWord) {
