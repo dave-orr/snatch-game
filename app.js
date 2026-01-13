@@ -6,15 +6,7 @@ import {
     getEtymology,
     setEtymology,
     getIsLoaded,
-    setIsLoaded,
-    getHistoryIndex,
-    setHistoryIndex,
-    getIsNavigating,
-    setIsNavigating,
-    pushToHistory,
-    truncateHistoryAt,
-    getHistoryWord,
-    getHistoryLength
+    setIsLoaded
 } from './state.js';
 
 import {
@@ -39,6 +31,13 @@ import {
     formatEtymologySimple,
     getSharedEtymologies
 } from './etymology.js';
+
+import {
+    addToHistory,
+    updateNavigationButtons,
+    navigateBack,
+    navigateForward
+} from './navigation.js';
 
 // UI constants
 const UI_YIELD_MS = 10;
@@ -106,68 +105,11 @@ async function loadDictionary() {
     }
 }
 
-// Navigation history functions
-function addToHistory(word) {
-    if (getIsNavigating()) return;
-
-    const normalizedWord = word.trim().toUpperCase();
-    if (!normalizedWord) return;
-
-    // Remove any forward history if we're not at the end
-    const currentIndex = getHistoryIndex();
-    const historyLength = getHistoryLength();
-
-    if (historyLength > 0 && currentIndex < historyLength - 1) {
-        truncateHistoryAt(currentIndex);
-    }
-
-    // Don't add duplicate if it's the same as current word
-    const currentWord = historyLength > 0 ? getHistoryWord(currentIndex) : null;
-    if (currentWord !== normalizedWord) {
-        pushToHistory(normalizedWord);
-    }
-
-    console.log('History:', getHistoryLength(), 'Index:', getHistoryIndex());
-    updateNavigationButtons();
-}
-
-function updateNavigationButtons() {
-    backBtn.disabled = getHistoryIndex() <= 0;
-    forwardBtn.disabled = getHistoryIndex() >= getHistoryLength() - 1;
-    console.log('Navigation buttons updated - Back:', !backBtn.disabled, 'Forward:', !forwardBtn.disabled);
-}
-
-async function navigateBack() {
-    if (getHistoryIndex() > 0) {
-        setHistoryIndex(getHistoryIndex() - 1);
-        setIsNavigating(true);
-        const word = getHistoryWord(getHistoryIndex());
-        console.log('Navigating back to:', word);
-        wordInput.value = word;
-        try {
-            await performStealsSearch(word, false);
-        } finally {
-            setIsNavigating(false);
-            updateNavigationButtons();
-        }
-    }
-}
-
-async function navigateForward() {
-    if (getHistoryIndex() < getHistoryLength() - 1) {
-        setHistoryIndex(getHistoryIndex() + 1);
-        setIsNavigating(true);
-        const word = getHistoryWord(getHistoryIndex());
-        console.log('Navigating forward to:', word);
-        wordInput.value = word;
-        try {
-            await performStealsSearch(word, false);
-        } finally {
-            setIsNavigating(false);
-            updateNavigationButtons();
-        }
-    }
-}
+// Navigation wrappers that bind DOM elements and search function
+const updateNavButtons = () => updateNavigationButtons(backBtn, forwardBtn);
+const addWordToHistory = (word) => addToHistory(word, updateNavButtons);
+const goBack = () => navigateBack(wordInput, performStealsSearch, updateNavButtons);
+const goForward = () => navigateForward(wordInput, performStealsSearch, updateNavButtons);
 
 function displayResult(word, result) {
     resultDiv.classList.remove('hidden', 'valid', 'invalid', 'too-short');
@@ -387,7 +329,7 @@ async function performStealsSearch(word, addToHistoryFlag = true) {
 
     // Add to history when finding steals (unless navigating)
     if (addToHistoryFlag) {
-        addToHistory(word);
+        addWordToHistory(word);
     }
 
     stealsBtn.disabled = true;
@@ -427,7 +369,7 @@ function handleWordClick(event) {
         wordInput.value = clickedWord;
 
         // Add to history before triggering search
-        addToHistory(clickedWord);
+        addWordToHistory(clickedWord);
 
         // Automatically trigger steals search
         stealsBtn.click();
@@ -439,8 +381,8 @@ resultDiv.addEventListener('click', handleWordClick);
 stealsResultDiv.addEventListener('click', handleWordClick);
 
 // Navigation button listeners
-backBtn.addEventListener('click', navigateBack);
-forwardBtn.addEventListener('click', navigateForward);
+backBtn.addEventListener('click', goBack);
+forwardBtn.addEventListener('click', goForward);
 
 // Compare button - toggle compare mode
 compareBtn.addEventListener('click', () => {

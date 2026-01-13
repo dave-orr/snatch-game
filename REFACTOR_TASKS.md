@@ -65,9 +65,12 @@ Bite-sized chunks for parallel work. Each task should be completable in 1-2 Clau
 - Move `toggleGroup()` and related UI helpers
 - All DOM manipulation lives here
 
-### 2.6 Extract navigation module
-- Move `addToHistory()`, `navigateBack()`, `navigateForward()`, `updateNavButtons()`
-- History state and navigation logic
+### 2.6 Extract navigation module [DONE]
+- ~~Move `addToHistory()`, `navigateBack()`, `navigateForward()`, `updateNavButtons()`~~
+- ~~History state and navigation logic~~
+- Created navigation.js with history and navigation functions
+- Functions take dependencies as parameters for testability
+- app.js creates bound wrappers for DOM elements and search function
 
 ---
 
