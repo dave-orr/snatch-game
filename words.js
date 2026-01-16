@@ -66,6 +66,19 @@ export const INFLECTION_SUFFIXES = ['S', 'ES', 'ED', 'D', 'ING', 'ER', 'EST', 'L
 export const INFLECTION_PREFIXES = ['UN', 'RE', 'PRE', 'DE', 'DIS', 'MIS', 'NON', 'OVER', 'UNDER', 'OUT', 'SUB', 'SEMI', 'ANTI', 'MID', 'BI', 'TRI'];
 const DOUBLE_CONSONANTS = new Set('BCDFGKLMNPRSTVZ');
 
+// Irregular verb pairs (base -> past participle) where letters match but etymology detection fails
+const IRREGULAR_VERB_PAIRS = new Map([
+    ['ARISE', 'ARISEN'], ['BEAT', 'BEATEN'], ['BITE', 'BITTEN'], ['BLOW', 'BLOWN'],
+    ['BURN', 'BURNT'], ['DEAL', 'DEALT'], ['DRAW', 'DRAWN'], ['DREAM', 'DREAMT'],
+    ['DRIVE', 'DRIVEN'], ['FALL', 'FALLEN'], ['FORBID', 'FORBIDDEN'],
+    ['FORGET', 'FORGOTTEN'], ['FORGIVE', 'FORGIVEN'], ['GIVE', 'GIVEN'],
+    ['GROW', 'GROWN'], ['HEAR', 'HEARD'], ['HIDE', 'HIDDEN'], ['KNOW', 'KNOWN'],
+    ['LEAN', 'LEANT'], ['LEARN', 'LEARNT'], ['MEAN', 'MEANT'],
+    ['OVERTAKE', 'OVERTAKEN'], ['RIDE', 'RIDDEN'], ['RISE', 'RISEN'],
+    ['SHAKE', 'SHAKEN'], ['SHOW', 'SHOWN'], ['SWELL', 'SWOLLEN'],
+    ['TAKE', 'TAKEN'], ['THROW', 'THROWN'], ['WRITE', 'WRITTEN'],
+]);
+
 // Check if two etymology strings are related
 function etymologiesMatch(etym1, etym2) {
     // Same exact etymology = same root
@@ -123,6 +136,11 @@ export function isInflection(baseWord, resultWord) {
     const etymResult = shareEtymology(baseWord, resultWord);
     if (etymResult === true) {
         return true; // Same etymology = invalid steal
+    }
+
+    // Check for irregular verb pairs (e.g., BITE -> BITTEN)
+    if (IRREGULAR_VERB_PAIRS.get(baseWord) === resultWord) {
+        return true;
     }
 
     // Always check affix patterns as a safety net
