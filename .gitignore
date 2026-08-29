@@ -18,3 +18,7 @@ analyze_let.py
 # Claude Code temp files
 tmpclaude-*
 .claude/settings.local.json
+
+# Python bytecode
+__pycache__/
+*.pyc
