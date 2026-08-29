@@ -147,6 +147,10 @@ CLASSICAL_PLURALS = [
 # Irregular plurals
 VES_SINGULARS = ['F', 'FE']   # aardwolf -> aardwolves, knife -> knives
 
+# Below this length a word has too many coincidental inflections to trust
+# the reverse direction.
+MIN_REVERSE_LENGTH = 4
+
 # Prefixes to try stripping
 PREFIXES = [
     'UNDER', 'SUPER', 'OVER', 'SEMI', 'ANTI', 'FORE',
@@ -198,6 +202,41 @@ def stem_variants(stem, suffix):
         yield stem[:-1]
     for repair in SUFFIX_REPAIRS.get(suffix, ()):
         yield stem + repair
+
+
+def inflected_forms(word):
+    """
+    Yield inflections OF a word, for propagating backwards from a covered
+    derived form to its uncovered base (BUBBLING is covered, BUBBLE is not).
+    Only inflections, never derivations: a derived form can carry a root the
+    base does not share, which would make TIN a relative of TINY.
+    """
+    # A word ending in a sibilant takes -ES, not -S. Without that, DISCUS
+    # picks up the etymology of DISCUSS.
+    if not word.endswith(('S', 'X', 'Z', 'CH', 'SH')):
+        yield word + 'S'
+    yield word + 'ES'
+    yield word + 'ED'
+    yield word + 'ING'
+    yield word + 'D'
+
+    if word.endswith('E'):
+        yield word[:-1] + 'ING'
+        yield word[:-1] + 'ED'
+        yield word[:-1] + 'ES'
+
+    if word.endswith('Y'):
+        yield word[:-1] + 'IES'
+        yield word[:-1] + 'IED'
+
+    # A short word with a final consonant doubles it: BAG -> BAGGED.
+    # Sibilants are excluded for the same reason as above: doubling the S of
+    # DISCUS reaches DISCUSSED.
+    vowels = set('AEIOU')
+    if len(word) >= 3 and word[-1] not in vowels and word[-1] not in 'SXZ' \
+            and word[-2] in vowels and word[-3] not in vowels:
+        yield word + word[-1] + 'ED'
+        yield word + word[-1] + 'ING'
 
 
 def candidate_bases(word, scrabble_words):
@@ -254,6 +293,13 @@ def candidate_bases(word, scrabble_words):
     for prefix in MORE_PREFIXES:
         if word.startswith(prefix) and len(word) >= len(prefix) + MIN_PREFIXED_BASE:
             yield (f'prefix:{prefix}', word[len(prefix):])
+
+    # Last resort: take the etymology from an inflection of this word. Every
+    # rule above works down towards a base word, which leaves an uncovered
+    # base stranded when only its inflections were parsed.
+    if len(word) >= MIN_REVERSE_LENGTH:
+        for form in inflected_forms(word):
+            yield ('reverse_inflection', form)
 
 
 def find_base_word(word, etymology_dict, scrabble_words):
