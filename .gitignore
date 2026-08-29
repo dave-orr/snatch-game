@@ -22,3 +22,6 @@ tmpclaude-*
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Debug output from build_etymology.py
+etymology_samples.txt

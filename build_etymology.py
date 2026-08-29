@@ -13,6 +13,7 @@ Usage:
 """
 
 import bz2
+import html
 import json
 import re
 import sys
@@ -89,6 +90,11 @@ def iter_templates(text):
         parts = split_template(m.group(1))
         yield parts[0].strip().lower(), parts[1:]
 
+def valid_lang(code):
+    return (bool(re.fullmatch(r'[a-z][a-z0-9-]{0,15}', code))
+            and code not in SKIP_LANGUAGES)
+
+
 def normalize(word):
     """Match the conventions of the existing data: one word, no reconstruction
     marker, lowercase."""
@@ -160,9 +166,9 @@ def extract(ety_text):
         if base in UNKNOWN: flags.add('unknown'); continue
 
         if base in ROOT_TEMPLATES and len(args) >= 3 and clean_arg(args[0]) == 'en':
-            lang = clean_arg(args[1]).lower()
+            lang = clean_arg(args[1]).lower().strip('.,;:')
             word = clean_arg(args[2])
-            if lang and word and word != '-' and lang not in SKIP_LANGUAGES:
+            if valid_lang(lang) and word and word != '-':
                 roots.add((lang, normalize(word)))
         elif base in AFFIX_TEMPLATES and args and clean_arg(args[0]) == 'en':
             shape = ('suffix' if base in ('suf','suffix') else
@@ -179,13 +185,13 @@ def extract(ety_text):
                 arg = clean_arg(rest[0])
                 if ':' in arg:
                     lang, _, word = arg.partition(':')
-                    lang, word = lang.strip().lower(), word.strip()
-                    if lang and word and word != '-' and lang not in SKIP_LANGUAGES:
+                    lang, word = lang.strip().lower().strip('.,;:'), word.strip()
+                    if valid_lang(lang) and word and word != '-':
                         roots.add((lang, normalize(word)))
         elif base == 'm' and len(args) >= 2:
-            lang = clean_arg(args[0]).lower()
+            lang = clean_arg(args[0]).lower().strip('.,;:')
             # English mentions are "influenced by" noise, not ancestors
-            if lang != 'en' and lang not in SKIP_LANGUAGES:
+            if lang != 'en' and valid_lang(lang):
                 word = clean_arg(args[1])
                 if word and word != '-': mentions.append((lang, normalize(word)))
 
@@ -284,6 +290,39 @@ def english_etymology_section(wiki_text):
 
 MAX_RESOLUTION_DEPTH = 4
 
+# An affix shared by thousands of words says nothing about any of them: UN-
+# reached 4,983 words and RE- 3,246, which in a game about shared roots is
+# pure noise. Contentful combining forms stay well under this (-λογία 326,
+# -φοβία 108), so frequency separates the two without a hand-kept list.
+AFFIX_NOISE_LIMIT = 1000
+
+
+def drop_noisy_affixes(etymology_dict):
+    """Remove affix roots that are too widespread to distinguish anything."""
+    frequency = defaultdict(int)
+    for roots in etymology_dict.values():
+        for root in roots:
+            frequency[root] += 1
+    noisy = {root for root, n in frequency.items()
+             if n > AFFIX_NOISE_LIMIT and is_affix_root(root)}
+    if noisy:
+        print(f"Dropping {len(noisy)} affix roots seen in more than "
+              f"{AFFIX_NOISE_LIMIT} words: "
+              f"{', '.join(sorted(noisy, key=lambda r: -frequency[r])[:8])}")
+    trimmed = {}
+    for word, roots in etymology_dict.items():
+        kept = [r for r in roots if r not in noisy]
+        if kept:
+            trimmed[word] = kept
+    print(f"Words left with at least one root: {len(trimmed)} "
+          f"(lost {len(etymology_dict) - len(trimmed)} that had only noise)")
+    return trimmed
+
+
+def is_affix_root(root):
+    word = root.split(':', 1)[1] if ':' in root else root
+    return word.startswith('-') or word.endswith('-')
+
 
 def resolve(title, pages, cache, seen=None):
     """
@@ -325,7 +364,9 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     for title, text in iter_wiktionary_pages(wiktionary_path):
         if title[:1].isupper():   # proper nouns are not Scrabble words
             continue
-        section = english_etymology_section(text)
+        # The XML dump escapes markup, so <t:...> annotations arrive as
+        # &lt;t:...&gt; and survive the stripper unless unescaped first.
+        section = english_etymology_section(html.unescape(text))
         if not section:
             continue
         page_count += 1
@@ -349,6 +390,8 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
                 f"{ROOT_LANGUAGES.get(lang, lang)}:{root}" for lang, root in roots)
         elif word.lower() in pages:
             unresolved += 1
+
+    etymology_dict = drop_noisy_affixes(etymology_dict)
 
     imitative = sum(1 for w in scrabble_words
                     if w not in etymology_dict and 'imitative' in flags.get(w.lower(), ()))
