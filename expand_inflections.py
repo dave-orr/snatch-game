@@ -177,22 +177,40 @@ PREFIXES = [
     'UN', 'RE', 'DE', 'BI', 'TRI', 'BE',
 ]
 
-# Further prefixes, matched only against a base of at least four letters.
-# Shorter remainders are where the false splits are: SUBBED>BED, ADMEN>MEN,
-# PSEUDOPOD>POD.
+# Further prefixes. These attach to English words, so a four-letter base is
+# enough; below that the splits are false ones (SUBBED>BED, ADMEN>MEN).
 #
 # PRO- and AB- are deliberately absent. Both attach to Latin stems that are
 # not English words, so what they matched was mostly coincidence: PRO- was
 # 43% wrong (PROLOGS>LOGS, PROLATE>LATE, PROCHAIN>CHAIN, PROMINE>MINE) and
 # AB- 25% (ABBES>BES, ABLUSH>LUSH, ABLINS>LINS, ABOUGHT>OUGHT).
 MIN_PREFIXED_BASE = 4
-MORE_PREFIXES = [
-    'COUNTER', 'ELECTRO', 'PSEUDO', 'THERMO', 'MICRO', 'MACRO', 'MULTI',
-    'INTER', 'INTRA', 'TRANS', 'ULTRA', 'QUASI', 'CROSS', 'AFTER',
-    'PHOTO', 'RADIO', 'HYDRO', 'SELF', 'HALF', 'AUTO', 'POLY', 'MONO',
-    'BACK', 'DOWN', 'MINI', 'POST', 'NEO', 'MID', 'SUB', 'UP',
-    'IN', 'IM', 'EN', 'EM', 'CO', 'EX', 'AD',
+ENGLISH_PREFIXES = [
+    'COUNTER', 'INTER', 'INTRA', 'TRANS', 'ULTRA', 'QUASI', 'CROSS',
+    'AFTER', 'MULTI', 'SELF', 'HALF', 'BACK', 'DOWN', 'MINI', 'POST',
+    'MID', 'SUB', 'UP', 'IN', 'IM', 'EN', 'EM', 'EX', 'AD',
 ]
+
+# Greek and Latin prefixes need a longer base. What follows one of these is
+# usually another combining form rather than an English word, and where it
+# happens to spell an English word that word is a different root: MONOSOME
+# and AUTOSOME are Greek soma, not SOME; RADIOLOGY and NEOLOGY are logos,
+# not LOGY; MONOKINE is kinein, not KINE; HYDROPATH is pathos, not PATH.
+# On four-letter bases MONO- was 8 of 13 wrong and HYDRO- 4 of 8.
+#
+# CO- belongs here for a different reason: so many English words simply
+# begin with the letters, and 12 of its 23 four-letter-base matches were
+# wrong (COARSE>ARSE, COCOON>COON, COLOUR>LOUR, COPOUT>POUT).
+MIN_NEOCLASSICAL_BASE = 5
+NEOCLASSICAL_PREFIXES = [
+    'ELECTRO', 'PSEUDO', 'THERMO', 'MICRO', 'MACRO', 'PHOTO', 'RADIO',
+    'HYDRO', 'AUTO', 'POLY', 'MONO', 'NEO', 'CO',
+]
+
+MORE_PREFIXES = (
+    [(prefix, MIN_PREFIXED_BASE) for prefix in ENGLISH_PREFIXES] +
+    [(prefix, MIN_NEOCLASSICAL_BASE) for prefix in NEOCLASSICAL_PREFIXES]
+)
 
 
 def load_scrabble_dictionary(source=DICTIONARY_URL):
@@ -309,9 +327,16 @@ def candidate_bases(word, scrabble_words):
         if word.startswith(prefix) and len(word) > len(prefix) + 2:
             yield (f'prefix:{prefix}', word[len(prefix):])
 
-    for prefix in MORE_PREFIXES:
-        if word.startswith(prefix) and len(word) >= len(prefix) + MIN_PREFIXED_BASE:
-            yield (f'prefix:{prefix}', word[len(prefix):])
+    for prefix, min_base in MORE_PREFIXES:
+        if word.startswith(prefix):
+            base = word[len(prefix):]
+            # Measure the base without the plural -S it shares with the word,
+            # or a plural evades the minimum and then leaks back to its own
+            # singular through the reverse rule: COCOONS passes as CO+COONS,
+            # and COCOON then takes its etymology from COCOONS.
+            effective = len(base) - 1 if base.endswith('S') else len(base)
+            if effective >= min_base:
+                yield (f'prefix:{prefix}', base)
 
     # The other spelling of the same word
     for one, other, min_length in SPELLING_VARIANTS:
@@ -415,6 +440,10 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--audit', action='store_true',
                         help="report what the rules would do, saving nothing")
+    parser.add_argument('--rebuild', action='store_true',
+                        help="drop previously propagated entries and redo them, "
+                             "so that changing a rule cannot leave its old "
+                             "guesses behind")
     parser.add_argument('--sample', type=int, default=15,
                         help="samples per rule to print in audit mode")
     parser.add_argument('--rules', nargs='*',
@@ -440,6 +469,13 @@ def main():
         with open(SOURCES_PATH, 'r', encoding='utf-8') as f:
             sources = json.load(f)
         print(f"Loaded provenance for {len(sources)} entries")
+
+    if args.rebuild and sources:
+        etymology_dict = {word: etym for word, etym in etymology_dict.items()
+                          if word not in sources}
+        print(f"Dropped {len(sources)} previously propagated entries, "
+              f"{len(etymology_dict)} parsed entries remain")
+        sources = {}
 
     scrabble_words = load_scrabble_dictionary(args.dictionary)
 
