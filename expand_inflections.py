@@ -151,6 +151,25 @@ VES_SINGULARS = ['F', 'FE']   # aardwolf -> aardwolves, knife -> knives
 # the reverse direction.
 MIN_REVERSE_LENGTH = 4
 
+# British and American spellings of the same word, as (one spelling, the
+# other, minimum word length). Tried in both directions.
+#
+# The single-letter substitutions need a length floor because on short words
+# they land on unrelated words rather than the other spelling: MAE>ME,
+# WAE>WE, PAEON>PEON, CELS>CELLS, SEL>SELL, RILED>RILLED, COED>COOED.
+#
+# CE<>SE is left out. Swapping C and S mid-word reaches a different word far
+# more often than the other spelling of the same one, and it was 60-70%
+# wrong: ASCENT>ASSENT, CENSUAL>SENSUAL, CEROUS>SEROUS, SENSOR>CENSOR.
+SPELLING_VARIANTS = [
+    ('ISATION', 'IZATION', 0), ('ISING', 'IZING', 0), ('ISED', 'IZED', 0),
+    ('ISES', 'IZES', 0), ('ISE', 'IZE', 0),
+    ('YSING', 'YZING', 0), ('YSED', 'YZED', 0), ('YSES', 'YZES', 0),
+    ('YSE', 'YZE', 0),
+    ('OUR', 'OR', 0), ('OGUE', 'OG', 0),
+    ('AE', 'E', 6), ('OE', 'E', 6), ('LL', 'L', 6),
+]
+
 # Prefixes to try stripping
 PREFIXES = [
     'UNDER', 'SUPER', 'OVER', 'SEMI', 'ANTI', 'FORE',
@@ -293,6 +312,16 @@ def candidate_bases(word, scrabble_words):
     for prefix in MORE_PREFIXES:
         if word.startswith(prefix) and len(word) >= len(prefix) + MIN_PREFIXED_BASE:
             yield (f'prefix:{prefix}', word[len(prefix):])
+
+    # The other spelling of the same word
+    for one, other, min_length in SPELLING_VARIANTS:
+        if len(word) < min_length:
+            continue
+        for source, target in ((one, other), (other, one)):
+            if source in word:
+                respelled = word.replace(source, target)
+                if respelled != word:
+                    yield (f'spelling:{source}>{target}', respelled)
 
     # Last resort: take the etymology from an inflection of this word. Every
     # rule above works down towards a base word, which leaves an uncovered
