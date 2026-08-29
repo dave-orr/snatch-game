@@ -16,6 +16,7 @@ import bz2
 import json
 import re
 import sys
+import unicodedata
 from collections import defaultdict
 from pathlib import Path
 
@@ -45,8 +46,157 @@ ROOT_LANGUAGES = {
     'pt': 'portuguese',
 }
 
-# Skip these - too far back or not useful
 SKIP_LANGUAGES = {'ine-pro', 'ine-bsl-pro', 'gem-pro'}
+
+# {{tmpl|en|LANG|WORD}} - a root in another language
+ROOT_TEMPLATES = ('der','inh','bor','borrowed','derived','inherited','uder','lbor',
+                  'slbor','obor','cal','calque','clq','translit','psm','sl')
+# {{tmpl|en|WORD|WORD}} - English components
+AFFIX_TEMPLATES = ('af','affix','suf','suffix','pre','prefix','con','confix',
+                   'com','compound','blend','univerbation','back-form',
+                   'back-formation','clipping','rebracketing','surf')
+IMITATIVE = ('onom','onomatopoeic','imitative','ideophonic')
+UNKNOWN = ('unk','unknown','rfe')
+
+def clean_arg(arg):
+    """strip annotations, links and named parameters from a template argument"""
+    # annotations nest: la-new:-<ety:from<la:-<ety:der<grc:-φοβία>>>>
+    while True:
+        stripped = re.sub(r'<[^<>]*>', '', arg)
+        if stripped == arg: break
+        arg = stripped
+    arg = arg.replace('<', '').replace('>', '')
+    arg = re.sub(r'\[\[([^\]|]+)(\|[^\]]+)?\]\]', r'\1', arg)
+    return arg.strip()
+
+def is_named(arg):
+    return bool(re.match(r'^[a-z0-9_-]+\s*=', arg, re.IGNORECASE))
+
+def split_template(body):
+    """split a template body on | respecting nested {{ }} and [[ ]]"""
+    parts, depth, cur = [], 0, ''
+    for ch in body:
+        if ch == '{' or ch == '[': depth += 1
+        elif ch == '}' or ch == ']': depth -= 1
+        if ch == '|' and depth == 0: parts.append(cur); cur = ''
+        else: cur += ch
+    parts.append(cur)
+    return parts
+
+def iter_templates(text):
+    """yield (name, [args]) for each top-level template"""
+    for m in re.finditer(r'\{\{([^{}]*(?:\{\{[^{}]*\}\}[^{}]*)*)\}\}', text):
+        parts = split_template(m.group(1))
+        yield parts[0].strip().lower(), parts[1:]
+
+def normalize(word):
+    """Match the conventions of the existing data: one word, no reconstruction
+    marker, lowercase."""
+    word = word.split(',')[0].strip().lstrip('*').strip()
+    return unicodedata.normalize('NFC', word).lower()
+
+# Purely grammatical affixes. Every word carrying one shares it, so following
+# them would swamp the roots that actually distinguish words from each other.
+# Classical combining forms (EPI-, NEURO-, -BLAST, -LOGY) are NOT listed here:
+# for a word like EPIBLAST they are the whole etymology.
+STOP_AFFIXES = {
+    's','es','ed','ing','er','ers','est','ly','y','ness','ment','able','ible',
+    'ful','less','ish','ic','ical','al','ous','ive','ity','ate','ize','ise',
+    'tion','ation','ent','ant','ary','ory','ism','ist','ian','ee','en','ed',
+    'like','hood','ship','dom','ward','wards','wise','let','ette','ling','th',
+    'age','ery','ry','or','ar','id','ine','ade','ance','ence','ancy','ency',
+    'o','i','a','e',   # interfixes: {{af|en|-o-}}
+}
+
+def affix_components(args, shape):
+    """
+    Yield the meaningful components of an affix template. `shape` says where
+    affixes sit: suffix templates put the base first, prefix templates last,
+    confix puts a prefix first and a suffix last.
+    """
+    args = [clean_arg(a) for a in args]
+    args = [a for a in args if a and not is_named(a)]
+    if not args: return
+    for i, a in enumerate(args):
+        first, last = i == 0, i == len(args) - 1
+        written_affix = a.startswith('-') or a.endswith('-')
+        if shape == 'suffix':   suffix = not first
+        elif shape == 'prefix': suffix = False
+        elif shape == 'confix': suffix = last and not first
+        else:                   suffix = a.startswith('-')
+        prefix = (shape == 'prefix' and first) or (shape == 'confix' and first) \
+                 or a.endswith('-')
+        bare = a.strip('-')
+        if not bare: continue
+        if (written_affix or suffix or prefix) and bare.lower() in STOP_AFFIXES:
+            continue
+        # Keep the hyphen: the page for -LOGY (Greek logos) is a different
+        # entry from LOGY (sluggish), and resolving the wrong one is how
+        # RADIOLOGY came out descended from a word meaning sluggish.
+        if suffix:   yield normalize('-' + bare)
+        elif prefix: yield normalize(bare + '-')
+        else:        yield normalize(bare)
+
+
+def extract(ety_text):
+    """returns (roots, english_components, flags)"""
+    roots, components, flags = set(), set(), set()
+    mentions = []
+    if not ety_text: return roots, components, flags
+
+    # Everything after "Compare"/"Cognate" lists relatives in other languages,
+    # not ancestors. -LOGY picked up German Terminologie that way.
+    ety_text = re.split(r'\b(?:Compare|Cognate|cognate with|Related to)\b',
+                        ety_text)[0]
+
+    def take_affix_args(args, shape):
+        components.update(affix_components(args, shape))
+
+    for name, args in iter_templates(ety_text):
+        base = name.rstrip('+')
+        if base in ('cog','noncog','w','q','qualifier','ref','r') or base.startswith('r:'):
+            continue
+        if base in IMITATIVE: flags.add('imitative'); continue
+        if base in UNKNOWN: flags.add('unknown'); continue
+
+        if base in ROOT_TEMPLATES and len(args) >= 3 and clean_arg(args[0]) == 'en':
+            lang = clean_arg(args[1]).lower()
+            word = clean_arg(args[2])
+            if lang and word and word != '-' and lang not in SKIP_LANGUAGES:
+                roots.add((lang, normalize(word)))
+        elif base in AFFIX_TEMPLATES and args and clean_arg(args[0]) == 'en':
+            shape = ('suffix' if base in ('suf','suffix') else
+                     'prefix' if base in ('pre','prefix') else
+                     'confix' if base in ('con','confix') else 'free')
+            take_affix_args(args[1:], shape)
+        elif base in ('etymon','ety') and len(args) >= 2 and clean_arg(args[0]) == 'en':
+            kind = clean_arg(args[1]).lstrip(':').lower()
+            rest = args[2:]
+            if kind == 'af':
+                take_affix_args(rest, 'free')
+            elif kind in ROOT_TEMPLATES and rest:
+                # these pack language and word into one argument: grc:ἐπῐ-
+                arg = clean_arg(rest[0])
+                if ':' in arg:
+                    lang, _, word = arg.partition(':')
+                    lang, word = lang.strip().lower(), word.strip()
+                    if lang and word and word != '-' and lang not in SKIP_LANGUAGES:
+                        roots.add((lang, normalize(word)))
+        elif base == 'm' and len(args) >= 2:
+            lang = clean_arg(args[0]).lower()
+            # English mentions are "influenced by" noise, not ancestors
+            if lang != 'en' and lang not in SKIP_LANGUAGES:
+                word = clean_arg(args[1])
+                if word and word != '-': mentions.append((lang, normalize(word)))
+
+    # A bare {{m}} is only trustworthy when the section states no derivation
+    # of its own ("From Middle English {{m|enm|bublen}}"). Where explicit
+    # templates exist, they are the etymology and mentions are commentary.
+    if not roots and mentions:
+        roots.update(mentions[:3])
+
+    roots = {(l, w) for l, w in roots if w not in ('-', '') and '-' * 2 not in w}
+    return roots, components, flags
 
 
 def load_scrabble_dictionary(url="https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt"):
@@ -58,66 +208,6 @@ def load_scrabble_dictionary(url="https://raw.githubusercontent.com/redbo/scrabb
     words = set(word.strip().upper() for word in text.split('\n') if word.strip())
     print(f"Loaded {len(words)} Scrabble words")
     return words
-
-
-def extract_etymology_from_text(wiki_text):
-    """
-    Extract ALL etymology information from wiki markup text.
-    Returns a list of root language:word strings, or None if none found.
-    Handles multiple etymology sections (Etymology 1, Etymology 2, etc.)
-    """
-    # Only process if it has an English section
-    if '==English==' not in wiki_text:
-        return None
-
-    # Extract the English section
-    english_match = re.search(r'==English==(.*?)(?=\n==[^=]|\Z)', wiki_text, re.DOTALL)
-    if not english_match:
-        return None
-
-    english_section = english_match.group(1)
-
-    # Find ALL etymology sections within English (Etymology, Etymology 1, Etymology 2, etc.)
-    etym_sections = re.findall(
-        r'===Etymology(?:\s*\d*)?===(.*?)(?=\n===|\Z)',
-        english_section,
-        re.DOTALL
-    )
-
-    if not etym_sections:
-        return None
-
-    # Extract etymology templates from ALL sections
-    # Patterns: {{der|en|la|word}}, {{inh|en|la|word}}, {{bor|en|la|word}}
-    # Also handles {{bor+|...}}, {{der+|...}}, {{inh+|...}} variants
-    pattern = r'\{\{(?:der|inh|bor|borrowed|derived|inherited)\+?\|en\|([a-z-]+)\|([^|}]+)'
-
-    all_etymologies = set()  # Use set to dedupe
-
-    for etymology_text in etym_sections:
-        for match in re.finditer(pattern, etymology_text, re.IGNORECASE):
-            lang_code = match.group(1).lower()
-            word = match.group(2).strip()
-
-            # Clean up the word
-            word = re.sub(r'<[^>]+>', '', word)  # Remove HTML
-            word = re.sub(r'\[\[([^\]|]+)(\|[^\]]+)?\]\]', r'\1', word)  # [[word|display]] -> word
-            word = word.split('|')[0].strip()
-            word = word.strip('*')  # Remove reconstructed word marker
-
-            # Skip PIE
-            if lang_code in SKIP_LANGUAGES:
-                continue
-
-            # Skip if word is just '-' (placeholder meaning "same as headword")
-            if word and len(word) > 0 and word != '-':
-                readable_lang = ROOT_LANGUAGES.get(lang_code, lang_code)
-                all_etymologies.add(f"{readable_lang}:{word.lower()}")
-
-    if not all_etymologies:
-        return None
-
-    return list(all_etymologies)
 
 
 def iter_wiktionary_pages(filepath):
@@ -182,38 +272,90 @@ def iter_wiktionary_pages(filepath):
     print(f"  Total pages processed: {page_count}")
 
 
+def english_etymology_section(wiki_text):
+    """Return the etymology wikitext inside the English section, if any."""
+    if not wiki_text or '==English==' not in wiki_text:
+        return None
+    english = re.split(r'\n==[^=]', wiki_text.split('==English==', 1)[1])[0]
+    sections = re.findall(r'\n=+\s*Etymology[^=\n]*=+\n(.*?)(?=\n=+[^=\n]|\Z)',
+                          english, re.DOTALL)
+    return '\n'.join(sections) if sections else None
+
+
+MAX_RESOLUTION_DEPTH = 4
+
+
+def resolve(title, pages, cache, seen=None):
+    """
+    Roots for a page, following affix and compound components when the page
+    states no roots of its own. QUINIC gives no root directly; it says it is
+    QUININE + -ic, so its roots are QUININE's.
+    """
+    if title in cache:
+        return cache[title]
+    seen = seen or set()
+    if title in seen or len(seen) >= MAX_RESOLUTION_DEPTH:
+        return set()
+    entry = pages.get(title)
+    if not entry:
+        return set()
+    roots, components = entry
+    if roots:
+        cache[title] = set(roots)
+        return cache[title]
+    resolved = set()
+    for component in components:
+        resolved |= resolve(component, pages, cache, seen | {title})
+    cache[title] = resolved
+    return resolved
+
+
 def build_etymology_dict(wiktionary_path, scrabble_words):
     """
-    Build etymology dictionary from Wiktionary dump.
+    Parse the dump, then resolve component links into roots.
+
+    Every English page is kept, not just the Scrabble words: QUINIC resolves
+    through QUININE and RADIOLOGY through -LOGY, and neither base has to be
+    playable for its roots to be the right answer.
     """
-    etymology_dict = {}
-    found = 0
-    checked = 0
+    pages = {}
+    flags = {}
+    page_count = 0
 
     for title, text in iter_wiktionary_pages(wiktionary_path):
-        # Skip proper nouns (titles starting with capital letter)
-        # These are names, German nouns, etc. - not valid Scrabble words
-        if title[0].isupper():
+        if title[:1].isupper():   # proper nouns are not Scrabble words
             continue
-
-        word_upper = title.upper()
-
-        # Only process words in Scrabble dictionary
-        if word_upper not in scrabble_words:
+        section = english_etymology_section(text)
+        if not section:
             continue
+        page_count += 1
+        if page_count % 100000 == 0:
+            print(f"  {page_count} pages with an etymology section...")
+        roots, components, page_flags = extract(section)
+        if roots or components:
+            pages[title.lower()] = (frozenset(roots), tuple(components))
+        if page_flags:
+            flags[title.lower()] = page_flags
 
-        checked += 1
-        if checked % 5000 == 0:
-            print(f"  Checked {checked} Scrabble words, found etymology for {found}...")
+    print(f"Pages with etymology data: {len(pages)}")
 
-        # Parse etymology
-        root = extract_etymology_from_text(text)
+    cache = {}
+    etymology_dict = {}
+    unresolved = 0
+    for word in scrabble_words:
+        roots = resolve(word.lower(), pages, cache)
+        if roots:
+            etymology_dict[word] = sorted(
+                f"{ROOT_LANGUAGES.get(lang, lang)}:{root}" for lang, root in roots)
+        elif word.lower() in pages:
+            unresolved += 1
 
-        if root:
-            etymology_dict[word_upper] = root
-            found += 1
-
-    print(f"\nFound etymology for {found} out of {len(scrabble_words)} Scrabble words ({100*found/len(scrabble_words):.1f}%)")
+    imitative = sum(1 for w in scrabble_words
+                    if w not in etymology_dict and 'imitative' in flags.get(w.lower(), ()))
+    print(f"Scrabble words with roots: {len(etymology_dict)} "
+          f"({100*len(etymology_dict)/len(scrabble_words):.1f}%)")
+    print(f"  had etymology data but resolved to no root: {unresolved}")
+    print(f"  no root, but marked imitative by Wiktionary: {imitative}")
     return etymology_dict
 
 
