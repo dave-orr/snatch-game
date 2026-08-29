@@ -76,6 +76,26 @@ LATIN_PLURALS = [
     ('I', 'US'),      # fungus -> fungi
 ]
 
+# Greek/Latin plurals, as (plural ending, singular ending, ending the
+# singular must have). These are checked only after ordinary English
+# morphology has failed, because the endings collide with English ones
+# (BASES is the plural of both BASE and BASIS).
+#
+# ES>IS is confined to Greek -sis/-xis singulars. Without that restriction
+# it also matches ordinary English plurals that happen to have an unrelated
+# -IS word nearby: TIKES>TIKIS, GELATES>GELATIS, GLACES>GLACIS.
+CLASSICAL_PLURALS = [
+    ('MATA', 'MA', ''),      # stoma -> stomata
+    ('INA', 'EN', ''),       # foramen -> foramina
+    ('ES', 'IS', ('SIS', 'XIS')),   # analysis -> analyses
+    ('A', 'UM', ''),         # datum -> data
+    ('A', 'ON', ''),         # criterion -> criteria
+    ('I', 'O', ''),          # libretto -> libretti
+]
+
+# Irregular plurals
+VES_SINGULARS = ['F', 'FE']   # aardwolf -> aardwolves, knife -> knives
+
 # Prefixes to try stripping
 PREFIXES = [
     'UNDER', 'SUPER', 'OVER', 'SEMI', 'ANTI', 'FORE',
@@ -112,10 +132,12 @@ def stem_variants(stem, suffix):
         yield stem + repair
 
 
-def candidate_bases(word):
+def candidate_bases(word, scrabble_words):
     """
     Yield (rule, base) pairs for a word, in priority order. A rule name is
     recorded alongside every propagated entry so the guess can be audited.
+    `scrabble_words` is used by rules that need to know whether a related
+    form is itself a word.
     """
     # Latin plurals first (special cases)
     for plural_suffix, singular_suffix in LATIN_PLURALS:
@@ -129,18 +151,36 @@ def candidate_bases(word):
             for base in stem_variants(word[:-len(suffix)], suffix):
                 yield (f'suffix:{suffix}', base)
 
+    # Irregular and classical plurals, after ordinary suffixes have failed
+    if word.endswith('VES') and len(word) > 5:
+        for singular in VES_SINGULARS:
+            yield ('plural:VES', word[:-3] + singular)
+
+    if word.endswith('MEN') and len(word) > 5:
+        yield ('plural:MEN', word[:-3] + 'MAN')
+
+    # A word that takes an English -S plural is a singular in its own right,
+    # not a classical plural: ALGA, GAMMA, LASSI, LATINA, OPERA, RAYA.
+    if word + 'S' not in scrabble_words:
+        for plural_suffix, singular_suffix, required in CLASSICAL_PLURALS:
+            if word.endswith(plural_suffix) and len(word) > len(plural_suffix) + 2:
+                base = word[:-len(plural_suffix)] + singular_suffix
+                if required and not base.endswith(required):
+                    continue
+                yield (f'classical_plural:{plural_suffix}>{singular_suffix}', base)
+
     # Prefix stripping
     for prefix in PREFIXES:
         if word.startswith(prefix) and len(word) > len(prefix) + 2:
             yield (f'prefix:{prefix}', word[len(prefix):])
 
 
-def find_base_word(word, etymology_dict):
+def find_base_word(word, etymology_dict, scrabble_words):
     """
     Try to find a base word that has etymology.
     Returns (base_word, etymology, rule) if found, else (None, None, None).
     """
-    for rule, base in candidate_bases(word):
+    for rule, base in candidate_bases(word, scrabble_words):
         if base in etymology_dict:
             return base, etymology_dict[base], rule
     return None, None, None
@@ -163,7 +203,7 @@ def expand_inflections(etymology_dict, scrabble_words, sources):
         if i > 0 and i % 10000 == 0:
             print(f"  Checked {i} words, propagated {propagated}...")
 
-        base, etym, rule = find_base_word(word, expanded)
+        base, etym, rule = find_base_word(word, expanded, scrabble_words)
         if base and etym:
             expanded[word] = list(etym)  # Copy the list
             sources[word] = {'rule': rule, 'base': base}
