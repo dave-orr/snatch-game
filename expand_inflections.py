@@ -154,6 +154,23 @@ PREFIXES = [
     'UN', 'RE', 'DE', 'BI', 'TRI', 'BE',
 ]
 
+# Further prefixes, matched only against a base of at least four letters.
+# Shorter remainders are where the false splits are: SUBBED>BED, ADMEN>MEN,
+# PSEUDOPOD>POD.
+#
+# PRO- and AB- are deliberately absent. Both attach to Latin stems that are
+# not English words, so what they matched was mostly coincidence: PRO- was
+# 43% wrong (PROLOGS>LOGS, PROLATE>LATE, PROCHAIN>CHAIN, PROMINE>MINE) and
+# AB- 25% (ABBES>BES, ABLUSH>LUSH, ABLINS>LINS, ABOUGHT>OUGHT).
+MIN_PREFIXED_BASE = 4
+MORE_PREFIXES = [
+    'COUNTER', 'ELECTRO', 'PSEUDO', 'THERMO', 'MICRO', 'MACRO', 'MULTI',
+    'INTER', 'INTRA', 'TRANS', 'ULTRA', 'QUASI', 'CROSS', 'AFTER',
+    'PHOTO', 'RADIO', 'HYDRO', 'SELF', 'HALF', 'AUTO', 'POLY', 'MONO',
+    'BACK', 'DOWN', 'MINI', 'POST', 'NEO', 'MID', 'SUB', 'UP',
+    'IN', 'IM', 'EN', 'EM', 'CO', 'EX', 'AD',
+]
+
 
 def load_scrabble_dictionary(source=DICTIONARY_URL):
     """Load the Scrabble dictionary from a URL or a local file."""
@@ -232,6 +249,10 @@ def candidate_bases(word, scrabble_words):
     # Prefix stripping
     for prefix in PREFIXES:
         if word.startswith(prefix) and len(word) > len(prefix) + 2:
+            yield (f'prefix:{prefix}', word[len(prefix):])
+
+    for prefix in MORE_PREFIXES:
+        if word.startswith(prefix) and len(word) >= len(prefix) + MIN_PREFIXED_BASE:
             yield (f'prefix:{prefix}', word[len(prefix):])
 
 
