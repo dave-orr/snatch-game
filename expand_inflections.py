@@ -68,6 +68,57 @@ SUFFIX_REPAIRS = {
 # Consonants that commonly double before suffixes
 DOUBLE_CONSONANTS = set('BCDFGKLMNPRSTVZ')
 
+# Derivational suffixes, as (suffix, replacements for the stripped stem).
+# Unlike the inflectional suffixes above these do not get the general stem
+# repairs, because a repair can beat the right answer to the punch: stripping
+# -ATION off CREATION leaves CRE, and CRE + E is CREE, a covered word.
+#
+# Native English suffixes attach to short words freely (SEEP, TENT, WORM), so
+# they are matched against bases of any length.
+NATIVE_SUFFIXES = [
+    ('LESSLY', ['']), ('LESS', ['']), ('LIKE', ['']),
+    ('SHIPS', ['']), ('SHIP', ['']), ('HOODS', ['']), ('HOOD', ['']),
+    ('DOMS', ['']), ('DOM', ['']), ('WARDS', ['']), ('WARD', ['']),
+    ('WISE', ['']), ('MOST', ['']),
+    ('FULLY', ['']), ('FULS', ['']), ('FUL', ['']),
+    ('AGES', ['', 'E']), ('AGE', ['', 'E']),
+]
+
+# Latinate and Greek suffixes need a base of at least MIN_LATINATE_BASE
+# letters. On shorter bases they are mostly coincidence rather than
+# derivation - CHOREIC>CHORE, ATONIC>ATONE, LITHIC>LITHE, HOLISM>HOLE,
+# IMPIOUS>IMPI, MARTIAN>MART - and auditing put the error rate on bases of
+# five letters or fewer at around 20%, against 3% above that.
+MIN_LATINATE_BASE = 6
+LATINATE_SUFFIXES = [
+    ('ATIONS', ['', 'ATE']), ('ATION', ['', 'ATE']), ('ATIVE', ['', 'ATE']),
+    ('ATORS', ['', 'ATE']), ('ATOR', ['', 'ATE']),
+    ('ANCIES', ['', 'E']), ('ANCES', ['', 'E']), ('ANCY', ['', 'E']), ('ANCE', ['', 'E']),
+    ('ENCIES', ['', 'E']), ('ENCES', ['', 'E']), ('ENCY', ['', 'E']), ('ENCE', ['', 'E']),
+    ('ARIES', ['', 'E']), ('ARY', ['', 'E']), ('ORIES', ['', 'E']), ('ORY', ['', 'E']),
+    ('OUSLY', ['', 'E', 'Y']), ('OUS', ['', 'E', 'Y']),
+    ('ISMS', ['', 'E', 'Y']), ('ISM', ['', 'E', 'Y']),
+    ('ITIES', ['', 'E', 'Y']), ('ITY', ['', 'E', 'Y']),
+    ('ISTIC', ['', 'E', 'Y']), ('ICS', ['', 'E', 'Y']), ('IC', ['', 'E', 'Y']),
+    ('ALLY', ['', 'E']), ('ALS', ['', 'E']), ('AL', ['', 'E']),
+    ('ANTS', ['', 'E']), ('ANT', ['', 'E']), ('ENTS', ['', 'E']), ('ENT', ['', 'E']),
+    ('OIDS', ['', 'E']), ('OID', ['', 'E']),
+    ('IANS', ['', 'A', 'Y']), ('IAN', ['', 'A', 'Y']),
+    ('ERIES', ['', 'E']), ('ERY', ['', 'E']), ('ETTES', ['', 'E']), ('ETTE', ['', 'E']),
+    ('INGLY', ['', 'E']), ('EDLY', ['', 'E']), ('ISHLY', ['']),
+    ('IFIES', ['Y', '']), ('IFIED', ['Y', '']), ('IFY', ['Y', '']),
+    ('TH', ['', 'E']),
+]
+
+# -ITE is deliberately absent: mineral and trade names in -ite come from
+# proper nouns or Greek roots, not from the English word left behind, and
+# half its matches were wrong (BARITE>BARE, KERNITE>KERN, LUCITE>LUCE,
+# STERNITE>STERN, RATITE>RATE).
+DERIVATIONAL_SUFFIXES = (
+    [(suffix, reps, 1) for suffix, reps in NATIVE_SUFFIXES] +
+    [(suffix, reps, MIN_LATINATE_BASE) for suffix, reps in LATINATE_SUFFIXES]
+)
+
 # Latin plurals (special handling needed)
 LATIN_PLURALS = [
     ('ICES', 'IX'),   # directrix -> directrices
@@ -150,6 +201,15 @@ def candidate_bases(word, scrabble_words):
         if word.endswith(suffix) and len(word) > len(suffix) + 2:
             for base in stem_variants(word[:-len(suffix)], suffix):
                 yield (f'suffix:{suffix}', base)
+
+    # Derivational suffixes, after inflection has failed
+    for suffix, replacements, min_base in DERIVATIONAL_SUFFIXES:
+        if word.endswith(suffix) and len(word) > len(suffix) + 2:
+            stem = word[:-len(suffix)]
+            for replacement in replacements:
+                base = stem + replacement
+                if len(base) >= min_base:
+                    yield (f'derivational:{suffix}', base)
 
     # Irregular and classical plurals, after ordinary suffixes have failed
     if word.endswith('VES') and len(word) > 5:
