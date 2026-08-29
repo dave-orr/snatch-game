@@ -7,12 +7,26 @@ appear to be inflected forms of words that DO have etymology.
 
 Only fills in blanks - never overwrites existing etymologies.
 
+Every propagated entry is recorded in etymology_sources.json with the rule
+that produced it and the base word it came from, so guesses can be audited
+and distinguished from entries parsed out of Wiktionary. Words absent from
+that file were not produced by this script.
+
 Usage:
-    python expand_inflections.py
+    python expand_inflections.py                # expand and save
+    python expand_inflections.py --audit        # report what each rule would
+                                                # do, with samples, saving nothing
 """
 
+import argparse
 import json
+import random
+from collections import Counter
 from pathlib import Path
+
+ETYMOLOGY_PATH = Path(__file__).parent / 'etymology.json'
+SOURCES_PATH = Path(__file__).parent / 'etymology_sources.json'
+DICTIONARY_URL = "https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt"
 
 
 # Suffixes to try stripping (order matters - try longer ones first)
@@ -21,7 +35,7 @@ SUFFIXES = [
     'ISATION', 'IZATION',  # nominalizations
     'URISTS', 'OLOGISTS', 'ISTS',  # agent plurals
     'IVENESS', 'FULNESS', 'LESSNESS',  # noun forms
-    'INESS', 'INESS',  # happiness
+    'INESS',  # happiness
     'NESSES', 'MENTS', 'ABLES', 'IBLES',  # plurals of noun forms
     'NESS', 'MENT', 'ABLE', 'IBLE', 'TION', 'SION',
     'URIST', 'OLOGIST',  # agent nouns
@@ -34,6 +48,22 @@ SUFFIXES = [
     'LY', 'ED', 'ER', 'ES', 'EN', 'EY',
     'Y', 'S', 'D',
 ]
+
+# Extra stem repairs that only make sense for particular suffixes.
+# Each entry maps a suffix to strings appended to the stripped stem.
+SUFFIX_REPAIRS = {
+    'IES': ['Y'],           # PARTIES -> PARTY
+    'IED': ['Y'],           # PARTIED -> PARTY
+    'IER': ['Y'],           # HAPPIER -> HAPPY
+    'IEST': ['Y'],          # HAPPIEST -> HAPPY
+    'INESS': ['Y'],         # HAPPINESS -> HAPPY
+    'ILY': ['Y'],           # FUNKILY -> FUNKY
+    'IST': ['Y', 'O'],      # COLONIST -> COLONY, LIBRETTIST -> LIBRETTO
+    'ISTS': ['Y', 'O'],     # COLONISTS -> COLONY
+    'ICALLY': ['IC', 'ICAL'],       # HISTORICALLY -> HISTORIC
+    'OLOGICALLY': ['OLOGY'],        # PHENOLOGICALLY -> PHENOLOGY
+    'IVE': ['ATE', 'E'],            # CREATIVE -> CREATE
+}
 
 # Consonants that commonly double before suffixes
 DOUBLE_CONSONANTS = set('BCDFGKLMNPRSTVZ')
@@ -54,146 +84,73 @@ PREFIXES = [
 ]
 
 
-def load_scrabble_dictionary(url="https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt"):
-    """Load the Scrabble dictionary."""
-    import urllib.request
-    print(f"Loading Scrabble dictionary from {url}...")
-    with urllib.request.urlopen(url) as response:
-        text = response.read().decode('utf-8')
+def load_scrabble_dictionary(source=DICTIONARY_URL):
+    """Load the Scrabble dictionary from a URL or a local file."""
+    print(f"Loading Scrabble dictionary from {source}...")
+    if str(source).startswith(('http://', 'https://')):
+        import urllib.request
+        with urllib.request.urlopen(source) as response:
+            text = response.read().decode('utf-8')
+    else:
+        text = Path(source).read_text(encoding='utf-8')
     words = set(word.strip().upper() for word in text.split('\n') if word.strip())
     print(f"Loaded {len(words)} Scrabble words")
     return words
 
 
-def find_base_word(word, etymology_dict, scrabble_words):
+def stem_variants(stem, suffix):
     """
-    Try to find a base word that has etymology.
-    Returns (base_word, etymology) if found, else (None, None).
+    Yield plausible base spellings for a stem left over after stripping `suffix`.
+    Handles the silent E (MAKING -> MAKE), doubled consonants (RUNNING -> RUN)
+    and any repairs specific to the suffix (PARTIES -> PARTY).
     """
-    # Try Latin plurals first (special cases)
+    yield stem
+    yield stem + 'E'
+    if len(stem) >= 3 and stem[-1] == stem[-2] and stem[-1] in DOUBLE_CONSONANTS:
+        yield stem[:-1]
+    for repair in SUFFIX_REPAIRS.get(suffix, ()):
+        yield stem + repair
+
+
+def candidate_bases(word):
+    """
+    Yield (rule, base) pairs for a word, in priority order. A rule name is
+    recorded alongside every propagated entry so the guess can be audited.
+    """
+    # Latin plurals first (special cases)
     for plural_suffix, singular_suffix in LATIN_PLURALS:
         if word.endswith(plural_suffix) and len(word) >= len(plural_suffix) + 2:
-            base = word[:-len(plural_suffix)] + singular_suffix
-            if base in etymology_dict:
-                return base, etymology_dict[base]
+            yield (f'latin_plural:{plural_suffix}>{singular_suffix}',
+                   word[:-len(plural_suffix)] + singular_suffix)
 
-    # Try removing suffixes
+    # Suffix stripping
     for suffix in SUFFIXES:
         if word.endswith(suffix) and len(word) > len(suffix) + 2:
-            base = word[:-len(suffix)]
+            for base in stem_variants(word[:-len(suffix)], suffix):
+                yield (f'suffix:{suffix}', base)
 
-            # Direct match
-            if base in etymology_dict:
-                return base, etymology_dict[base]
-
-            # Try adding back 'E' (e.g., MAKING -> MAKE)
-            base_e = base + 'E'
-            if base_e in etymology_dict:
-                return base_e, etymology_dict[base_e]
-
-            # Try doubling handling (e.g., RUNNING -> RUN, not RUNN)
-            # Also handles FROGGING -> FROG (doubled consonant before suffix)
-            if len(base) >= 3 and base[-1] == base[-2] and base[-1] in DOUBLE_CONSONANTS:
-                base_undoubled = base[:-1]
-                if base_undoubled in etymology_dict:
-                    return base_undoubled, etymology_dict[base_undoubled]
-
-            # Handle -IES -> -Y (e.g., PARTIES -> PARTY)
-            if suffix == 'IES':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-
-            # Handle -IED -> -Y (e.g., PARTIED -> PARTY)
-            if suffix == 'IED':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-
-            # Handle -IER -> -Y (e.g., HAPPIER -> HAPPY)
-            if suffix == 'IER':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-
-            # Handle -IEST -> -Y (e.g., HAPPIEST -> HAPPY)
-            if suffix == 'IEST':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-
-            # Handle -INESS -> -Y (e.g., HAPPINESS -> HAPPY)
-            if suffix == 'INESS':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-
-            # Handle -ILY -> -Y (e.g., FUNKILY -> FUNKY)
-            if suffix == 'ILY':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-
-            # Handle -IST -> -Y (e.g., COLONIST -> COLONY)
-            if suffix == 'IST':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-                # Also try -O base (Italian: LIBRETTO -> LIBRETTIST)
-                base_o = base + 'O'
-                if base_o in etymology_dict:
-                    return base_o, etymology_dict[base_o]
-
-            # Handle -ISTS -> -Y (e.g., COLONISTS -> COLONY)
-            if suffix == 'ISTS':
-                base_y = base + 'Y'
-                if base_y in etymology_dict:
-                    return base_y, etymology_dict[base_y]
-                # Also try -O base (Italian: LIBRETTO -> LIBRETTISTS)
-                base_o = base + 'O'
-                if base_o in etymology_dict:
-                    return base_o, etymology_dict[base_o]
-
-            # Handle -ICALLY -> -IC (e.g., HISTORICALLY -> HISTORIC)
-            if suffix == 'ICALLY':
-                base_ic = base + 'IC'
-                if base_ic in etymology_dict:
-                    return base_ic, etymology_dict[base_ic]
-                # Also try -ICAL base
-                base_ical = base + 'ICAL'
-                if base_ical in etymology_dict:
-                    return base_ical, etymology_dict[base_ical]
-
-            # Handle -OLOGICAL -> -OLOGY (e.g., PHENOLOGICAL -> PHENOLOGY... but also try PHENOMENON)
-            if suffix == 'OLOGICALLY':
-                base_ology = base + 'OLOGY'
-                if base_ology in etymology_dict:
-                    return base_ology, etymology_dict[base_ology]
-
-            # Handle -IVE with -ATE base (e.g., CREATIVE -> CREATE)
-            if suffix == 'IVE':
-                base_ate = base + 'ATE'
-                if base_ate in etymology_dict:
-                    return base_ate, etymology_dict[base_ate]
-                base_e = base + 'E'
-                if base_e in etymology_dict:
-                    return base_e, etymology_dict[base_e]
-
-    # Try removing prefixes
+    # Prefix stripping
     for prefix in PREFIXES:
         if word.startswith(prefix) and len(word) > len(prefix) + 2:
-            base = word[len(prefix):]
-            if base in etymology_dict:
-                return base, etymology_dict[base]
-
-    return None, None
+            yield (f'prefix:{prefix}', word[len(prefix):])
 
 
-def expand_inflections(etymology_dict, scrabble_words):
+def find_base_word(word, etymology_dict):
+    """
+    Try to find a base word that has etymology.
+    Returns (base_word, etymology, rule) if found, else (None, None, None).
+    """
+    for rule, base in candidate_bases(word):
+        if base in etymology_dict:
+            return base, etymology_dict[base], rule
+    return None, None, None
+
+
+def expand_inflections(etymology_dict, scrabble_words, sources):
     """
     Expand etymology dictionary by finding inflected forms.
     Only fills in blanks - never overwrites.
-    Etymology values are now lists of etymologies.
+    Records provenance for every entry it adds.
     """
     expanded = {k: list(v) for k, v in etymology_dict.items()}  # Deep copy lists
     propagated = 0
@@ -206,57 +163,108 @@ def expand_inflections(etymology_dict, scrabble_words):
         if i > 0 and i % 10000 == 0:
             print(f"  Checked {i} words, propagated {propagated}...")
 
-        base, etym = find_base_word(word, expanded, scrabble_words)
+        base, etym, rule = find_base_word(word, expanded)
         if base and etym:
             expanded[word] = list(etym)  # Copy the list
+            sources[word] = {'rule': rule, 'base': base}
             propagated += 1
 
     print(f"Propagated etymology to {propagated} inflected forms")
     return expanded
 
 
-def main():
-    # Load existing etymology dictionary
-    etym_path = Path(__file__).parent / 'etymology.json'
-    if etym_path.exists():
-        print(f"Loading existing etymology from {etym_path}...")
-        with open(etym_path, 'r', encoding='utf-8') as f:
-            etymology_dict = json.load(f)
-        print(f"Loaded {len(etymology_dict)} entries")
-    else:
-        print("No existing etymology.json found.")
-        return
-
-    # Load Scrabble dictionary
-    scrabble_words = load_scrabble_dictionary()
-
-    # Run multiple passes until no new entries are found
-    original_count = len(etymology_dict)
-    expanded_dict = etymology_dict
-    pass_num = 1
-
-    while True:
+def run_passes(etymology_dict, scrabble_words, sources, max_passes=10):
+    """Propagate repeatedly until no new entries are found."""
+    expanded = etymology_dict
+    for pass_num in range(1, max_passes + 1):
         print(f"\n=== Pass {pass_num}: Propagating to inflected forms ===")
-        before_count = len(expanded_dict)
-        expanded_dict = expand_inflections(expanded_dict, scrabble_words)
-        new_this_pass = len(expanded_dict) - before_count
+        before_count = len(expanded)
+        expanded = expand_inflections(expanded, scrabble_words, sources)
+        new_this_pass = len(expanded) - before_count
         print(f"Pass {pass_num} added {new_this_pass} entries")
 
         if new_this_pass == 0:
             print("No new entries found, stopping.")
             break
+    else:
+        print("Reached maximum passes, stopping.")
 
-        pass_num += 1
-        if pass_num > 10:  # Safety limit
-            print("Reached maximum passes, stopping.")
-            break
+    return expanded
 
-    # Save expanded dictionary
-    output_path = Path(__file__).parent / 'etymology.json'
-    with open(output_path, 'w', encoding='utf-8') as f:
+
+def report_audit(sources, sample_size, rules_filter=None):
+    """Print per-rule counts and random samples so guesses can be eyeballed."""
+    by_rule = {}
+    for word, info in sources.items():
+        by_rule.setdefault(info['rule'], []).append((word, info['base']))
+
+    counts = Counter({rule: len(v) for rule, v in by_rule.items()})
+    print(f"\n=== Provenance: {len(sources)} propagated entries, "
+          f"{len(counts)} rules ===")
+    for rule, count in counts.most_common():
+        print(f"{count:7d}  {rule}")
+
+    rng = random.Random(0)
+    for rule, count in counts.most_common():
+        if rules_filter and not any(rule.startswith(f) for f in rules_filter):
+            continue
+        pairs = sorted(by_rule[rule])
+        sample = rng.sample(pairs, min(sample_size, len(pairs)))
+        print(f"\n--- {rule} ({count}) ---")
+        for word, base in sample:
+            print(f"    {word} -> {base}")
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--audit', action='store_true',
+                        help="report what the rules would do, saving nothing")
+    parser.add_argument('--sample', type=int, default=15,
+                        help="samples per rule to print in audit mode")
+    parser.add_argument('--rules', nargs='*',
+                        help="only sample rules starting with these prefixes")
+    parser.add_argument('--dictionary', default=DICTIONARY_URL,
+                        help="Scrabble dictionary URL or local path")
+    args = parser.parse_args()
+
+    # Load existing etymology dictionary
+    if not ETYMOLOGY_PATH.exists():
+        print("No existing etymology.json found.")
+        return
+    print(f"Loading existing etymology from {ETYMOLOGY_PATH}...")
+    with open(ETYMOLOGY_PATH, 'r', encoding='utf-8') as f:
+        etymology_dict = json.load(f)
+    print(f"Loaded {len(etymology_dict)} entries")
+
+    # Load existing provenance, if any. Entries missing from this file were
+    # not produced by this script (they came out of the Wiktionary parse, or
+    # predate provenance tracking).
+    sources = {}
+    if SOURCES_PATH.exists():
+        with open(SOURCES_PATH, 'r', encoding='utf-8') as f:
+            sources = json.load(f)
+        print(f"Loaded provenance for {len(sources)} entries")
+
+    scrabble_words = load_scrabble_dictionary(args.dictionary)
+
+    original_count = len(etymology_dict)
+    new_sources = {}
+    expanded_dict = run_passes(etymology_dict, scrabble_words, new_sources)
+
+    if args.audit:
+        report_audit(new_sources, args.sample, args.rules)
+        print("\n(audit mode: nothing written)")
+        return
+
+    sources.update(new_sources)
+
+    with open(ETYMOLOGY_PATH, 'w', encoding='utf-8') as f:
         json.dump(expanded_dict, f, indent=2, sort_keys=True)
+    with open(SOURCES_PATH, 'w', encoding='utf-8') as f:
+        json.dump(sources, f, indent=2, sort_keys=True)
 
-    print(f"\nSaved expanded etymology dictionary to {output_path}")
+    print(f"\nSaved expanded etymology dictionary to {ETYMOLOGY_PATH}")
+    print(f"Saved provenance for {len(sources)} entries to {SOURCES_PATH}")
     print(f"Original entries: {original_count}")
     print(f"After expansion: {len(expanded_dict)}")
     print(f"New entries added: {len(expanded_dict) - original_count}")
