@@ -305,7 +305,11 @@ NOISE_AFFIXES = {
     'ist','ity','ive','ize','le','ly','ment','ness','or','ory','ose','ous','s',
     'y','ee','ery','age','able','ible','ability','abilitas','ablete','ful',
     'less','like','ling','ward','wise','let','ette','th','dom','hood','ship',
-    'a','acioun','uʀ','ur','ation','acion','for',
+    'a','acioun','uʀ','ur','ation','acion','for','di',
+    # spellings the same grammatical affixes take in older stages, found in
+    # entries whose only root was the suffix: BARRISTER had just -ESTRE
+    'um','ie','som','sam','sum','arie','estre','estere','astrija','ification',
+    'o','ar','ere','en','ende','inge','nesse','lich','liche',
 }
 
 
