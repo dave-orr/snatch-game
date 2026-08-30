@@ -135,7 +135,7 @@ def affix_components(args, shape):
         else:        yield normalize(bare)
 
 
-def extract(ety_text):
+def extract(ety_text, allow_mentions=True):
     """returns (roots, english_components, flags)"""
     roots, components, flags = set(), set(), set()
     mentions = []
@@ -189,7 +189,10 @@ def extract(ety_text):
     # A bare {{m}} is only trustworthy when the section states no derivation
     # of its own ("From Middle English {{m|enm|bublen}}"). Where explicit
     # templates exist, they are the etymology and mentions are commentary.
-    if not roots and mentions:
+    # On an affix page the mentions are illustrations - the page for -ON
+    # cites CARBON - so a word resolving through the affix would inherit the
+    # example: BOSON came out descended from Latin carbo that way.
+    if not roots and mentions and allow_mentions:
         roots.update(mentions[:3])
 
     roots = {(l, w) for l, w in roots if w not in ('-', '') and '-' * 2 not in w}
@@ -302,7 +305,7 @@ NOISE_AFFIXES = {
     'ist','ity','ive','ize','le','ly','ment','ness','or','ory','ose','ous','s',
     'y','ee','ery','age','able','ible','ability','abilitas','ablete','ful',
     'less','like','ling','ward','wise','let','ette','th','dom','hood','ship',
-    'a','acioun','uʀ','ur','ation','acion',
+    'a','acioun','uʀ','ur','ation','acion','for',
 }
 
 
@@ -382,7 +385,9 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
         page_count += 1
         if page_count % 100000 == 0:
             print(f"  {page_count} pages with an etymology section...")
-        roots, components, page_flags = extract(section)
+        title_is_affix = title.startswith('-') or title.endswith('-')
+        roots, components, page_flags = extract(section,
+                                               allow_mentions=not title_is_affix)
         if roots or components:
             pages[title.lower()] = (frozenset(roots), tuple(components))
         if page_flags:
