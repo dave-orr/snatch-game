@@ -12,8 +12,20 @@ that produced it and the base word it came from, so guesses can be audited
 and distinguished from entries parsed out of Wiktionary. Words absent from
 that file were not produced by this script.
 
+The pipeline is build_etymology.py first, then this script. A parse
+overwrites etymology.json with parsed entries only, so run this straight
+after it with no flags, and delete a stale etymology_sources.json first.
+
+--rebuild is for the other case: changing a rule here and re-expanding
+without re-parsing. It drops every entry the provenance file lists, so
+running it against fresh parse output would also drop a word the parse had
+just produced legitimately.
+
 Usage:
+    python build_etymology.py <dump.xml.bz2>    # parse, then:
     python expand_inflections.py                # expand and save
+    python expand_inflections.py --rebuild      # re-expand, dropping the
+                                                # previous propagation first
     python expand_inflections.py --audit        # report what each rule would
                                                 # do, with samples, saving nothing
 """
