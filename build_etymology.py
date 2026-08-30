@@ -90,6 +90,23 @@ def iter_templates(text):
         parts = split_template(m.group(1))
         yield parts[0].strip().lower(), parts[1:]
 
+NAMESPACES = ('appendix', 'reconstruction', 'thesaurus', 'category', 'w:',
+              'wikipedia', 'wikisource', 'file', 'image')
+
+
+def valid_root(word):
+    """
+    Reject links to Wiktionary's own pages and leftover markup. An etymology
+    citing Appendix:Arabic roots/ن ج ل gave GOSSIPMONGERS a root that also
+    broke the lang:root format the game splits on.
+    """
+    if not word or word == '-':
+        return False
+    if any(ch in word for ch in ':#{}|[]'):
+        return False
+    return not word.lower().startswith(NAMESPACES)
+
+
 def valid_lang(code):
     return (bool(re.fullmatch(r'[a-z][a-z0-9-]{0,15}', code))
             and code not in SKIP_LANGUAGES)
@@ -159,7 +176,7 @@ def extract(ety_text, allow_mentions=True):
         if base in ROOT_TEMPLATES and len(args) >= 3 and clean_arg(args[0]) == 'en':
             lang = clean_arg(args[1]).lower().strip('.,;:')
             word = clean_arg(args[2])
-            if valid_lang(lang) and word and word != '-':
+            if valid_lang(lang) and valid_root(normalize(word)):
                 roots.add((lang, normalize(word)))
         elif base in AFFIX_TEMPLATES and args and clean_arg(args[0]) == 'en':
             shape = ('suffix' if base in ('suf','suffix') else
@@ -177,14 +194,14 @@ def extract(ety_text, allow_mentions=True):
                 if ':' in arg:
                     lang, _, word = arg.partition(':')
                     lang, word = lang.strip().lower().strip('.,;:'), word.strip()
-                    if valid_lang(lang) and word and word != '-':
+                    if valid_lang(lang) and valid_root(normalize(word)):
                         roots.add((lang, normalize(word)))
         elif base == 'm' and len(args) >= 2:
             lang = clean_arg(args[0]).lower().strip('.,;:')
             # English mentions are "influenced by" noise, not ancestors
             if lang != 'en' and valid_lang(lang):
-                word = clean_arg(args[1])
-                if word and word != '-': mentions.append((lang, normalize(word)))
+                word = normalize(clean_arg(args[1]))
+                if valid_root(word): mentions.append((lang, word))
 
     # A bare {{m}} is only trustworthy when the section states no derivation
     # of its own ("From Middle English {{m|enm|bublen}}"). Where explicit
