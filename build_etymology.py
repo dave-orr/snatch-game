@@ -101,19 +101,6 @@ def normalize(word):
     word = word.split(',')[0].strip().lstrip('*').strip()
     return unicodedata.normalize('NFC', word).lower()
 
-# Purely grammatical affixes. Every word carrying one shares it, so following
-# them would swamp the roots that actually distinguish words from each other.
-# Classical combining forms (EPI-, NEURO-, -BLAST, -LOGY) are NOT listed here:
-# for a word like EPIBLAST they are the whole etymology.
-STOP_AFFIXES = {
-    's','es','ed','ing','er','ers','est','ly','y','ness','ment','able','ible',
-    'ful','less','ish','ic','ical','al','ous','ive','ity','ate','ize','ise',
-    'tion','ation','ent','ant','ary','ory','ism','ist','ian','ee','en','ed',
-    'like','hood','ship','dom','ward','wards','wise','let','ette','ling','th',
-    'age','ery','ry','or','ar','id','ine','ade','ance','ence','ancy','ency',
-    'o','i','a','e',   # interfixes: {{af|en|-o-}}
-}
-
 def affix_components(args, shape):
     """
     Yield the meaningful components of an affix template. `shape` says where
@@ -134,7 +121,7 @@ def affix_components(args, shape):
                  or a.endswith('-')
         bare = a.strip('-')
         if not bare: continue
-        if (written_affix or suffix or prefix) and bare.lower() in STOP_AFFIXES:
+        if (written_affix or suffix or prefix) and bare.lower() in NOISE_AFFIXES:
             continue
         # Keep the hyphen: the page for -LOGY (Greek logos) is a different
         # entry from LOGY (sluggish), and resolving the wrong one is how
@@ -290,32 +277,50 @@ def english_etymology_section(wiki_text):
 
 MAX_RESOLUTION_DEPTH = 4
 
-# An affix shared by thousands of words says nothing about any of them: UN-
-# reached 4,983 words and RE- 3,246, which in a game about shared roots is
-# pure noise. Contentful combining forms stay well under this (-λογία 326,
-# -φοβία 108), so frequency separates the two without a hand-kept list.
-AFFIX_NOISE_LIMIT = 1000
+# Positional, quantitative and grammatical affixes. Sharing one of these
+# tells a player nothing: every negated word has UN-, every repeated action
+# RE-. Substantive combining forms are deliberately absent, because sharing
+# -LOGY, BIO-, HYDRO- or -PHOBIA is exactly the connection worth showing.
+#
+# Frequency cannot make this split. Counted across languages the two groups
+# interleave - SUB- 362, UNDER- 336, DE- 333 against -LOGIA 350, BIO- 268,
+# -OID 218 - so the line has to be drawn by what the affix means.
+NOISE_AFFIXES = {
+    # negation, repetition, position, degree, number
+    'un','re','non','nan','in','im','ir','il','dis','de','ab','ad','ex','ob',
+    'per','pro','trans','pre','prae','post','ante','anti','over','ofer','under',
+    'sub','super','hyper','out','ut','up','fore','back','co','com','con','inter',
+    'intra','semi','multi','bi','tri','mono','uni','be','mis','mys','missa',
+    'αντι','υπερ','υπο','επι','προ','συν','κατα','δια','παρα','αμφι',
+    # grammatical endings
+    'ally','ial','al','alis','an','ian','ate','ed','en','er','es','est','ial',
+    'ic','ical','ide','ile','ine','ing','ion','tio','tion','ise','ish','ism',
+    'ist','ity','ive','ize','le','ly','ment','ness','or','ory','ose','ous','s',
+    'y','ee','ery','age','able','ible','ability','abilitas','ablete','ful',
+    'less','like','ling','ward','wise','let','ette','th','dom','hood','ship',
+}
+
+
+def affix_key(root):
+    """The bare affix, without language, hyphens or diacritics."""
+    word = root.split(':', 1)[1] if ':' in root else root
+    word = word.strip('-')
+    return ''.join(c for c in unicodedata.normalize('NFD', word)
+                   if not unicodedata.combining(c)).lower()
 
 
 def drop_noisy_affixes(etymology_dict):
-    """Remove affix roots that are too widespread to distinguish anything."""
-    frequency = defaultdict(int)
-    for roots in etymology_dict.values():
-        for root in roots:
-            frequency[root] += 1
-    noisy = {root for root, n in frequency.items()
-             if n > AFFIX_NOISE_LIMIT and is_affix_root(root)}
-    if noisy:
-        print(f"Dropping {len(noisy)} affix roots seen in more than "
-              f"{AFFIX_NOISE_LIMIT} words: "
-              f"{', '.join(sorted(noisy, key=lambda r: -frequency[r])[:8])}")
-    trimmed = {}
+    """Remove affixes too general to connect one word to another."""
+    trimmed, dropped = {}, 0
     for word, roots in etymology_dict.items():
-        kept = [r for r in roots if r not in noisy]
+        kept = [r for r in roots
+                if not (is_affix_root(r) and affix_key(r) in NOISE_AFFIXES)]
+        dropped += len(roots) - len(kept)
         if kept:
             trimmed[word] = kept
+    print(f"Dropped {dropped} grammatical affix roots")
     print(f"Words left with at least one root: {len(trimmed)} "
-          f"(lost {len(etymology_dict) - len(trimmed)} that had only noise)")
+          f"(lost {len(etymology_dict) - len(trimmed)} that had only affixes)")
     return trimmed
 
 
