@@ -388,6 +388,13 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
         title_is_affix = title.startswith('-') or title.endswith('-')
         roots, components, page_flags = extract(section,
                                                allow_mentions=not title_is_affix)
+        if title_is_affix:
+            # An affix contributes its own roots and nothing else. Its page
+            # also links the words it was formed from or alongside - -ON is
+            # a back-formation from CARBON - and following those made every
+            # word ending in the affix a relative of the example. BOSON came
+            # out descended from Latin carbo that way.
+            components = ()
         if roots or components:
             pages[title.lower()] = (frozenset(roots), tuple(components))
         if page_flags:
