@@ -107,10 +107,14 @@ def affix_components(args, shape):
     affixes sit: suffix templates put the base first, prefix templates last,
     confix puts a prefix first and a suffix last.
     """
-    args = [clean_arg(a) for a in args]
-    args = [a for a in args if a and not is_named(a)]
-    if not args: return
+    # Keep empty positional arguments while deciding which slot is the affix.
+    # {{suffix|en||an}} names its base through a separate template, and
+    # compacting the blank away promotes -AN into the base slot, which is how
+    # MESOZOAN came to take its etymology from the word AN.
+    args = [clean_arg(a) for a in args if not is_named(clean_arg(a))]
+    if not any(args): return
     for i, a in enumerate(args):
+        if not a: continue
         first, last = i == 0, i == len(args) - 1
         written_affix = a.startswith('-') or a.endswith('-')
         if shape == 'suffix':   suffix = not first
@@ -298,6 +302,7 @@ NOISE_AFFIXES = {
     'ist','ity','ive','ize','le','ly','ment','ness','or','ory','ose','ous','s',
     'y','ee','ery','age','able','ible','ability','abilitas','ablete','ful',
     'less','like','ling','ward','wise','let','ette','th','dom','hood','ship',
+    'a','acioun','uʀ','ur','ation','acion',
 }
 
 
