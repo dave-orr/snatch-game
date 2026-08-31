@@ -56,8 +56,9 @@ const MIN_PREFIX_MATCH_LENGTH = 7;
 
 // The eight survivors of that review: long roots where a word coincidentally
 // begins with an unrelated one. No length rule separates them, so they are
-// listed. Regenerating etymology.json can introduce more, and the review is
-// worth redoing when it is.
+// listed. The verdicts for all 879 pairs are in prefix_pair_review.json;
+// after regenerating etymology.json run check_prefix_review.py, which reports
+// the pairs that are new and so still unreviewed.
 const UNRELATED_PREFIX_PAIRS = new Set([
     'enm:chaunce|chaunceler',              // cadentia vs cancellarius
     'enm:entrete|entretenement',           // tractare vs inter + tenere
