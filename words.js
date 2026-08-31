@@ -2,7 +2,7 @@
 // Pure word validation functions with minimal state dependencies
 
 import { getDictionary, getIsLoaded, getEtymology } from './state.js';
-import { normalizeRoot } from './etymology.js';
+import { rootsMatch } from './etymology.js';
 
 export const MIN_WORD_LENGTH = 4;
 export const MIN_MERGE_LENGTH = MIN_WORD_LENGTH * 2 + 1; // 9 letters minimum for merge steals
@@ -87,24 +87,9 @@ function etymologiesMatch(etym1, etym2) {
         return true;
     }
 
-    // Check if they share the same language and have similar roots
-    // e.g., "latin:fīxus" and "latin:suffīxus" both end in "fixus"
     const [lang1, root1] = etym1.split(':');
     const [lang2, root2] = etym2.split(':');
-
-    if (lang1 === lang2 && root1 && root2) {
-        // Check if one root contains the other (for Latin affixed forms)
-        // e.g., "fixus" is contained in "suffixus", "affixus", "praefixus"
-        const r1 = normalizeRoot(root1);
-        const r2 = normalizeRoot(root2);
-        if (r1.length >= 3 && r2.length >= 3) {
-            if (r2.endsWith(r1) || r1.endsWith(r2)) {
-                return true;
-            }
-        }
-    }
-
-    return false;
+    return rootsMatch(lang1, root1, lang2, root2);
 }
 
 // Check if two words share ANY etymological root
