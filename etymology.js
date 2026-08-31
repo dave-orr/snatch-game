@@ -35,6 +35,17 @@ export function formatEtymologySimple(word) {
     return etymList.map(formatEtymologyEntry).join(', ');
 }
 
+// Normalize a root for comparison: lowercase, strip diacritics, and drop the
+// hyphens that mark an affix. Without the last step the combining form
+// -phobia never matches the hydrophobia it appears in.
+export function normalizeRoot(root) {
+    return root
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/^-+|-+$/g, '');
+}
+
 // Get shared etymologies between two words
 export function getSharedEtymologies(word1, word2) {
     const etymology = getEtymology();
@@ -52,8 +63,8 @@ export function getSharedEtymologies(word1, word2) {
                     const [lang1, root1] = etym1.split(':');
                     const [lang2, root2] = etym2.split(':');
                     if (lang1 === lang2 && root1 && root2) {
-                        const r1 = root1.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-                        const r2 = root2.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                        const r1 = normalizeRoot(root1);
+                        const r2 = normalizeRoot(root2);
                         if (r1.length >= 3 && r2.length >= 3) {
                             if (r2.endsWith(r1) || r1.endsWith(r2)) {
                                 // Return the shorter root as the "base"
