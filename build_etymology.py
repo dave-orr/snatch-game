@@ -299,6 +299,8 @@ def english_etymology_section(wiki_text):
     return '\n'.join(sections) if sections else None
 
 
+IMITATIVE_MARKER = 'imitative'
+
 MAX_RESOLUTION_DEPTH = 4
 
 # Positional, quantitative and grammatical affixes. Sharing one of these
@@ -436,12 +438,23 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
 
     etymology_dict = drop_noisy_affixes(etymology_dict)
 
-    imitative = sum(1 for w in scrabble_words
-                    if w not in etymology_dict and 'imitative' in flags.get(w.lower(), ()))
-    print(f"Scrabble words with roots: {len(etymology_dict)} "
-          f"({100*len(etymology_dict)/len(scrabble_words):.1f}%)")
+    with_roots = len(etymology_dict)
+
+    # Words Wiktionary calls imitative have no ancestor to record: BUZZ and
+    # HISS were each coined in imitation rather than inherited. The marker
+    # says so instead of leaving them indistinguishable from words nobody has
+    # researched. It carries no root, and etymology.js never counts a rootless
+    # entry as shared, because two imitative words are not relatives.
+    imitative = 0
+    for word in scrabble_words:
+        if word not in etymology_dict and 'imitative' in flags.get(word.lower(), ()):
+            etymology_dict[word] = [f'{IMITATIVE_MARKER}:-']
+            imitative += 1
+
+    print(f"Scrabble words with roots: {with_roots} "
+          f"({100*with_roots/len(scrabble_words):.1f}%)")
     print(f"  had etymology data but resolved to no root: {unresolved}")
-    print(f"  no root, but marked imitative by Wiktionary: {imitative}")
+    print(f"  no root, marked imitative instead: {imitative}")
     return etymology_dict
 
 

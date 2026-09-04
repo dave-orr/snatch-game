@@ -46,6 +46,16 @@ export function normalizeRoot(root) {
         .replace(/^-+|-+$/g, '');
 }
 
+// An entry with no root - imitative:- - says how a word was formed, not what
+// it descends from. Two imitative words were each coined in imitation rather
+// than inherited from a common ancestor, so they are not relatives and must
+// never count as sharing a root. rootsMatch already rejects them, since a
+// bare hyphen normalizes to nothing; this guards the exact-match path.
+export function carriesRoot(entry) {
+    const [, root] = entry.split(':');
+    return Boolean(root) && root !== '-';
+}
+
 // Roots shorter than this are not compared by prefix. A short root is the
 // opening of many unrelated longer ones - enm:dri starts drinkere, latin:qua
 // starts quadriceps, old_english:ban starts bana - and matching them made
@@ -104,7 +114,9 @@ export function getSharedEtymologies(word1, word2) {
             for (const etym2 of etymList2) {
                 // Check if they match
                 if (etym1 === etym2) {
-                    shared.push(etym1);
+                    if (carriesRoot(etym1)) {
+                        shared.push(etym1);
+                    }
                 } else {
                     const [lang1, root1] = etym1.split(':');
                     const [lang2, root2] = etym2.split(':');

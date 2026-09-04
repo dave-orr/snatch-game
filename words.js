@@ -2,7 +2,7 @@
 // Pure word validation functions with minimal state dependencies
 
 import { getDictionary, getIsLoaded, getEtymology } from './state.js';
-import { rootsMatch } from './etymology.js';
+import { rootsMatch, carriesRoot } from './etymology.js';
 
 export const MIN_WORD_LENGTH = 4;
 export const MIN_MERGE_LENGTH = MIN_WORD_LENGTH * 2 + 1; // 9 letters minimum for merge steals
@@ -82,9 +82,9 @@ const IRREGULAR_VERB_PAIRS = new Map([
 
 // Check if two etymology strings are related
 function etymologiesMatch(etym1, etym2) {
-    // Same exact etymology = same root
+    // Same exact etymology = same root, unless it records no root at all
     if (etym1 === etym2) {
-        return true;
+        return carriesRoot(etym1);
     }
 
     const [lang1, root1] = etym1.split(':');
