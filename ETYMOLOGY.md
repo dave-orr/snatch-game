@@ -30,8 +30,9 @@ rebuild will not reproduce these numbers exactly.
 | `etymology_sources.json` | for each propagated word, the rule and base word it came from. Words absent from it were parsed |
 | `prefix_pair_review.json` | hand-checked verdicts for the root pairs `etymology.js` matches by prefix |
 
-Coverage as built: 154,592 of 178,691 words (86.5%), of which 73,486 parsed and
-81,106 propagated.
+Coverage as built: 155,062 of 178,691 words (86.8%), of which 73,587 parsed and
+81,475 propagated. 528 of those carry only an imitative marker rather than a
+root, so coverage by real roots is 86.5%.
 
 ## Two stages
 
@@ -40,7 +41,7 @@ Beyond the `der`/`inh`/`bor` family it reads `uder`, `lbor`, the structured
 `{{etymon}}`/`{{ety}}` forms, and the affix family (`{{compound}}`,
 `{{confix}}`, `{{suffix}}`, `{{af}}`). Affix templates name *English* base
 words, so QUINIC resolves through QUININE to Quechua *kina-kina*. That
-resolution is what makes the parse worth more than its 73,486 direct hits.
+resolution is what makes the parse worth more than its 73,478 direct hits.
 
 **Propagation** (`expand_inflections.py`) fills gaps morphologically, recording
 provenance for every entry. About 61% of the words the parse misses do have a
@@ -116,7 +117,11 @@ these rules were set.
 - Reverse propagation mis-fires on words ending in `-I` whose `-ES` form belongs
   to a `-Y` word (DENI < DENIES), 4 cases in 730.
 - SETA > SETON and UNCI > UNCO survive the classical-plural guards.
-- 109 words Wiktionary marks imitative (BUBBLE among them) are not written to
-  `etymology.json`. Writing them would show "Etymology: imitative" instead of
-  "unknown", but would also make every imitative word share a root during
-  steals.
+- Words Wiktionary marks imitative (109 of them, reaching 528 once inflections
+  inherit the marker) carry `imitative:-` rather than a root. It displays as
+  "Etymology: imitative" and never counts as a shared root, because imitative
+  describes how a word was formed rather than what it descends from: BUZZ and
+  HISS were each coined independently. Count them separately when quoting
+  coverage.
+- The 394 words Wiktionary marks `{{unk}}` are deliberately not marked. "Origin
+  unknown" and "we have no data" both read as "unknown" to a player.

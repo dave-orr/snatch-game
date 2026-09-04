@@ -4177,22 +4177,6 @@
     "latin:accr\u0113sco",
     "old_french:acreue"
   ],
-  "ACCULTURATE": [
-    "frm:culture",
-    "latin:cult\u016bra"
-  ],
-  "ACCULTURATED": [
-    "frm:culture",
-    "latin:cult\u016bra"
-  ],
-  "ACCULTURATES": [
-    "frm:culture",
-    "latin:cult\u016bra"
-  ],
-  "ACCULTURATING": [
-    "frm:culture",
-    "latin:cult\u016bra"
-  ],
   "ACCULTURATION": [
     "frm:culture",
     "latin:cult\u016bra"
@@ -4202,10 +4186,6 @@
     "latin:cult\u016bra"
   ],
   "ACCULTURATIONS": [
-    "frm:culture",
-    "latin:cult\u016bra"
-  ],
-  "ACCULTURATIVE": [
     "frm:culture",
     "latin:cult\u016bra"
   ],
@@ -4899,6 +4879,9 @@
     "greek:\u03c0\u03bb\u03ac\u03c3\u03b9\u03c2",
     "greek:\u03c7\u03cc\u03bd\u03b4\u03c1\u03bf\u03c2",
     "la-new:-plasia"
+  ],
+  "ACHOO": [
+    "imitative:-"
   ],
   "ACHROMATIC": [
     "greek:\u1f00\u03c7\u03c1\u03c9\u03bc\u03ac\u03c4\u03b9\u03c3\u03c4\u03bf\u03c2"
@@ -8896,24 +8879,20 @@
     "old_french:advertir"
   ],
   "ADVERTIZEMENT": [
-    "enm:adverten",
-    "latin:advertere",
-    "old_french:advertir"
+    "frm:advertissement"
   ],
   "ADVERTIZEMENTS": [
+    "frm:advertissement"
+  ],
+  "ADVERTIZES": [
     "enm:adverten",
     "latin:advertere",
     "old_french:advertir"
   ],
-  "ADVERTIZES": [
+  "ADVERTIZING": [
     "enm:advertisen",
     "frm:advertir",
     "xno:advertir"
-  ],
-  "ADVERTIZING": [
-    "enm:adverten",
-    "latin:advertere",
-    "old_french:advertir"
   ],
   "ADVERTORIAL": [
     "frm:advertissement",
@@ -12498,6 +12477,9 @@
     "gmw-pro:haubud",
     "old_english:h\u0113afod"
   ],
+  "AHEM": [
+    "imitative:-"
+  ],
   "AHI": [
     "haw:\u02bbahi"
   ],
@@ -14286,7 +14268,8 @@
     "spanish:\u00e1lamo"
   ],
   "ALAN": [
-    "latin:-\u0101nus"
+    "enm:aland",
+    "old_english:on lande"
   ],
   "ALAND": [
     "enm:aland",
@@ -14316,7 +14299,8 @@
     "latin:alcohol dehydrogenatus"
   ],
   "ALANS": [
-    "latin:-\u0101nus"
+    "enm:aland",
+    "old_english:on lande"
   ],
   "ALANYL": [
     "french:m\u00e9thyl\u00e8ne",
@@ -19099,7 +19083,7 @@
     "latin:ambulatus"
   ],
   "AMBULATORIES": [
-    "latin:ambulatus"
+    "latin:ambulatorius"
   ],
   "AMBULATORILY": [
     "latin:ambulatorius"
@@ -21145,6 +21129,7 @@
     "la-med:analysis"
   ],
   "ANALYSES": [
+    "frm:analyser",
     "greek:\u1f00\u03bd\u03ac\u03bb\u03c5\u03c3\u03b9\u03c2",
     "la-med:analysis"
   ],
@@ -26531,8 +26516,10 @@
     "latin:antinomia"
   ],
   "ANTINOMIES": [
-    "greek:\u1f00\u03bd\u03c4\u03b9\u03bd\u03bf\u03bc\u03af\u03b1",
-    "latin:antinomia"
+    "french:-n\u00f4me",
+    "french:nome",
+    "greek:\u03bd\u03bf\u03bc\u03cc\u03c2",
+    "greek:\u03bd\u03cc\u03bc\u03bf\u03c2"
   ],
   "ANTINOMY": [
     "greek:\u1f00\u03bd\u03c4\u03b9\u03bd\u03bf\u03bc\u03af\u03b1",
@@ -27486,7 +27473,10 @@
     "old_english:sticca"
   ],
   "ANTISTORIES": [
-    "enm:store"
+    "enm:storie",
+    "greek:\u1fd0\u0314\u03c3\u03c4\u03bf\u03c1\u1fd0\u0301\u1fb1",
+    "latin:historia",
+    "xno:estorie"
   ],
   "ANTISTORY": [
     "enm:storie",
@@ -28950,9 +28940,9 @@
     "greek:\u1f00\u03c0\u03bf\u03bb\u03bf\u03b3\u03af\u03b1"
   ],
   "APOLOGIES": [
-    "french:apologue",
-    "greek:\u1f00\u03c0\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2",
-    "latin:apologus"
+    "french:apologie",
+    "greek:\u1f00\u03c0\u03bf\u03bb\u03bf\u03b3\u03af\u03b1",
+    "la-lat:apologia"
   ],
   "APOLOGISE": [
     "french:apologie",
@@ -28978,9 +28968,9 @@
     "french:apologiste"
   ],
   "APOLOGISTS": [
-    "french:apologue",
-    "greek:\u1f00\u03c0\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2",
-    "latin:apologus"
+    "french:apologie",
+    "greek:\u1f00\u03c0\u03bf\u03bb\u03bf\u03b3\u03af\u03b1",
+    "la-lat:apologia"
   ],
   "APOLOGIZE": [
     "greek:\u1f00\u03c0\u03bf\u03bb\u03bf\u03b3\u03ad\u03bf\u03bc\u03b1\u03b9",
@@ -32593,6 +32583,12 @@
   "ARETES": [
     "greek:\u1f00\u03c1\u03b5\u03c4\u03ae"
   ],
+  "ARF": [
+    "imitative:-"
+  ],
+  "ARFS": [
+    "imitative:-"
+  ],
   "ARGAL": [
     "latin:erg\u014d"
   ],
@@ -33403,18 +33399,20 @@
     "xno:armure"
   ],
   "ARMOURER": [
-    "enm:armurer",
-    "old_french:armurier"
-  ],
-  "ARMOURERS": [
-    "enm:armurer",
-    "old_french:armurier"
-  ],
-  "ARMOURIES": [
     "enm:armure",
     "latin:arm\u0101t\u016bra",
     "old_french:arme\u00fcre",
     "xno:armure"
+  ],
+  "ARMOURERS": [
+    "enm:armure",
+    "latin:arm\u0101t\u016bra",
+    "old_french:arme\u00fcre",
+    "xno:armure"
+  ],
+  "ARMOURIES": [
+    "enm:armerie",
+    "xno:armurrie"
   ],
   "ARMOURING": [
     "enm:armure",
@@ -34977,17 +34975,8 @@
   ],
   "ASCENDANCIES": [
     "enm:ascenden",
-    "enm:ascendent",
-    "greek:-\u03b9\u03b1",
-    "greek:-\u03ba\u03b9\u03b1",
-    "latin:-antia",
-    "latin:-cia",
-    "latin:-ia",
-    "latin:ascendentem",
     "latin:ascend\u014d",
-    "old_french:ascendant",
-    "old_french:ascendre",
-    "xno:-cie"
+    "old_french:ascendre"
   ],
   "ASCENDANCY": [
     "enm:ascenden",
@@ -35732,19 +35721,39 @@
     "latin:aspersus"
   ],
   "ASPERSED": [
-    "latin:aspersus"
+    "enm:aspe",
+    "gmw-pro:aspu",
+    "greek:\u1f00\u03c3\u03c0\u03af\u03c2",
+    "latin:aspis",
+    "old_english:\u00e6spe",
+    "old_french:aspe"
   ],
   "ASPERSER": [
     "latin:aspersus"
   ],
   "ASPERSERS": [
-    "latin:aspersus"
+    "enm:aspe",
+    "gmw-pro:aspu",
+    "greek:\u1f00\u03c3\u03c0\u03af\u03c2",
+    "latin:aspis",
+    "old_english:\u00e6spe",
+    "old_french:aspe"
   ],
   "ASPERSES": [
-    "latin:aspersus"
+    "enm:aspe",
+    "gmw-pro:aspu",
+    "greek:\u1f00\u03c3\u03c0\u03af\u03c2",
+    "latin:aspis",
+    "old_english:\u00e6spe",
+    "old_french:aspe"
   ],
   "ASPERSING": [
-    "latin:aspersus"
+    "enm:aspe",
+    "gmw-pro:aspu",
+    "greek:\u1f00\u03c3\u03c0\u03af\u03c2",
+    "latin:aspis",
+    "old_english:\u00e6spe",
+    "old_french:aspe"
   ],
   "ASPERSION": [
     "latin:aspersi\u014dnem"
@@ -40167,10 +40176,10 @@
     "xno:autour"
   ],
   "AUTHORISING": [
-    "enm:auctorisen",
-    "la-med:auctorizo",
+    "enm:auctour",
     "latin:auctor",
-    "old_french:auctorisier"
+    "old_french:autor",
+    "xno:autour"
   ],
   "AUTHORITARIAN": [
     "enm:auctorite",
@@ -40693,13 +40702,10 @@
     "greek:\u03b1\u1f50\u03c4\u03bf-"
   ],
   "AUTOLYSED": [
-    "greek:\u03bb\u03cd\u03c3\u03b9\u03c2",
-    "latin:lysis"
+    "greek:\u03b1\u1f50\u03c4\u03bf-"
   ],
   "AUTOLYSES": [
-    "greek:\u03b1\u1f50\u03c4\u03bf-",
-    "greek:\u03bb\u03cd\u03c3\u03b9\u03c2",
-    "greek:\u03bb\u1fe0\u0301\u03c3\u1fd0\u03c2"
+    "greek:\u03b1\u1f50\u03c4\u03bf-"
   ],
   "AUTOLYSIN": [
     "greek:\u03b1\u1f50\u03c4\u03bf-",
@@ -41040,9 +41046,8 @@
     "latin:radius"
   ],
   "AUTORADIOGRAPHY": [
-    "french:-graphie",
-    "greek:-\u03b3\u03c1\u03b1\u03c6\u03af\u03b1",
-    "latin:-graphia",
+    "greek:-\u03b3\u03c1\u03ac\u03c6\u03bf\u03c2",
+    "greek:-\u03b3\u03c1\u1fb0\u0301\u03c6\u03bf\u03c2",
     "latin:radius"
   ],
   "AUTOROTATE": [
@@ -41650,10 +41655,16 @@
     "latin:\u0101versi\u014d"
   ],
   "AVERSIVE": [
-    "latin:aversus"
+    "enm:averren",
+    "la-eme:adv\u0113r\u014d",
+    "latin:v\u0113rus",
+    "old_french:averer"
   ],
   "AVERSIVELY": [
-    "latin:aversus"
+    "enm:averren",
+    "la-eme:adv\u0113r\u014d",
+    "latin:v\u0113rus",
+    "old_french:averer"
   ],
   "AVERSIVENESS": [
     "latin:aversus"
@@ -42846,14 +42857,6 @@
     "arabic:\u0633\u0645\u0648\u062a",
     "old_french:azimut"
   ],
-  "AZINE": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "AZINES": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
   "AZOIC": [
     "greek:\u03b6\u03c9\u03ca\u03ba\u03cc\u03c2"
   ],
@@ -43153,6 +43156,9 @@
     "la-vul:babuinare",
     "old_french:babouin"
   ],
+  "BABU": [
+    "imitative:-"
+  ],
   "BABUL": [
     "french:baboul",
     "hindi:\u092c\u092c\u0942\u0932",
@@ -43162,6 +43168,9 @@
     "french:baboul",
     "hindi:\u092c\u092c\u0942\u0932",
     "sanskrit:\u0935\u0935\u094d\u0935\u094b\u0932"
+  ],
+  "BABUS": [
+    "imitative:-"
   ],
   "BABUSHKA": [
     "orv:\u0431\u0430\u0431\u0443\u0448\u043a\u0430",
@@ -47205,6 +47214,9 @@
     "italian:balaustrata",
     "latin:balaustium"
   ],
+  "BAM": [
+    "imitative:-"
+  ],
   "BAMBINI": [
     "italian:bambino"
   ],
@@ -47225,6 +47237,15 @@
     "kn:\u0cac\u0c82\u0cac\u0cc1",
     "ms:bambu",
     "portuguese:bambu"
+  ],
+  "BAMMED": [
+    "imitative:-"
+  ],
+  "BAMMING": [
+    "imitative:-"
+  ],
+  "BAMS": [
+    "imitative:-"
   ],
   "BAN": [
     "enm:bannen",
@@ -53698,6 +53719,18 @@
     "gmw-pro:bl\u014dd",
     "old_english:bl\u014dd"
   ],
+  "BEBOP": [
+    "imitative:-"
+  ],
+  "BEBOPPER": [
+    "imitative:-"
+  ],
+  "BEBOPPERS": [
+    "imitative:-"
+  ],
+  "BEBOPS": [
+    "imitative:-"
+  ],
   "BECALM": [
     "enm:calm",
     "frm:calme",
@@ -54501,9 +54534,8 @@
     "old_english:dell"
   ],
   "BEDELLS": [
-    "enm:delle",
-    "gmw-pro:dallj\u0101",
-    "old_english:dell"
+    "enm:bedel",
+    "la-med:pedellus"
   ],
   "BEDELS": [
     "enm:bedel",
@@ -56988,9 +57020,8 @@
     "old_english:beh\u014df"
   ],
   "BEHOOVED": [
-    "enm:behoof",
-    "gmw-pro:bih\u014df",
-    "old_english:beh\u014df"
+    "enm:hoved",
+    "old_english:\u0121eh\u014dfod"
   ],
   "BEHOOVES": [
     "enm:behoof",
@@ -60158,9 +60189,12 @@
     "old_english:sp\u0101ca"
   ],
   "BESPOKEN": [
+    "enm:-n",
     "enm:spoke",
     "gmw-pro:spaik\u0101",
-    "old_english:sp\u0101ca"
+    "old_english:-n",
+    "old_english:sp\u0101ca",
+    "old_norse:-inn"
   ],
   "BESPOUSE": [
     "enm:bispusen"
@@ -60586,6 +60620,18 @@
   ],
   "BETHS": [
     "sem-pro:bayt-"
+  ],
+  "BETHUMP": [
+    "imitative:-"
+  ],
+  "BETHUMPED": [
+    "imitative:-"
+  ],
+  "BETHUMPING": [
+    "imitative:-"
+  ],
+  "BETHUMPS": [
+    "imitative:-"
   ],
   "BETIDE": [
     "enm:bityden",
@@ -66205,8 +66251,9 @@
     "old_english:bita"
   ],
   "BITINGLY": [
-    "enm:bitte",
-    "old_english:bita"
+    "enm:tingen",
+    "enm:tinglen",
+    "old_english:tinclian"
   ],
   "BITMAP": [
     "enm:bitte",
@@ -66282,8 +66329,7 @@
     "old_norse:biti"
   ],
   "BITTED": [
-    "enm:bitte",
-    "old_english:bita"
+    "old_norse:biti"
   ],
   "BITTEN": [
     "enm:bitte",
@@ -66395,8 +66441,7 @@
     "old_norse:r\u00f3t"
   ],
   "BITTERS": [
-    "enm:bitte",
-    "old_english:bita"
+    "old_norse:biti"
   ],
   "BITTERSWEET": [
     "enm:bitterswete"
@@ -66427,8 +66472,7 @@
     "old_english:w\u0113od"
   ],
   "BITTIER": [
-    "enm:bitte",
-    "old_english:bita"
+    "old_norse:biti"
   ],
   "BITTIEST": [
     "enm:bitte",
@@ -67569,6 +67613,12 @@
     "dutch:balg",
     "french:blaguer"
   ],
+  "BLAH": [
+    "imitative:-"
+  ],
+  "BLAHS": [
+    "imitative:-"
+  ],
   "BLAIN": [
     "enm:blein",
     "old_english:ble\u0121en"
@@ -68191,11 +68241,7 @@
     "old_english:bl\u01e3st"
   ],
   "BLAT": [
-    "enm:bleth",
-    "gmw-pro:blait",
-    "old_english:blat",
-    "old_english:bl\u0113a\u00fe",
-    "sco:blate"
+    "imitative:-"
   ],
   "BLATANT": [
     "latin:blati\u014d",
@@ -68249,18 +68295,10 @@
     "old_norse:sk\u00edtr"
   ],
   "BLATS": [
-    "enm:bleth",
-    "gmw-pro:blait",
-    "old_english:blat",
-    "old_english:bl\u0113a\u00fe",
-    "sco:blate"
+    "imitative:-"
   ],
   "BLATTED": [
-    "enm:bleth",
-    "gmw-pro:blait",
-    "old_english:blat",
-    "old_english:bl\u0113a\u00fe",
-    "sco:blate"
+    "imitative:-"
   ],
   "BLATTER": [
     "latin:blater\u0101re"
@@ -68272,14 +68310,10 @@
     "latin:blater\u0101re"
   ],
   "BLATTERS": [
-    "latin:blater\u0101re"
+    "imitative:-"
   ],
   "BLATTING": [
-    "enm:bleth",
-    "gmw-pro:blait",
-    "old_english:blat",
-    "old_english:bl\u0113a\u00fe",
-    "sco:blate"
+    "imitative:-"
   ],
   "BLAXPLOITATION": [
     "enm:blak",
@@ -68559,6 +68593,21 @@
     "gmw-pro:bl\u0101tijan",
     "old_english:bl\u01e3tan"
   ],
+  "BLEB": [
+    "imitative:-"
+  ],
+  "BLEBBING": [
+    "imitative:-"
+  ],
+  "BLEBBINGS": [
+    "imitative:-"
+  ],
+  "BLEBBY": [
+    "imitative:-"
+  ],
+  "BLEBS": [
+    "imitative:-"
+  ],
   "BLED": [
     "arabic:\u0628\u0650\u0644\u064e\u0627\u062f",
     "french:bled"
@@ -68592,6 +68641,24 @@
     "enm:bleden",
     "gmw-pro:bl\u014ddijan",
     "old_english:bl\u0113dan"
+  ],
+  "BLEEP": [
+    "imitative:-"
+  ],
+  "BLEEPED": [
+    "imitative:-"
+  ],
+  "BLEEPER": [
+    "imitative:-"
+  ],
+  "BLEEPERS": [
+    "imitative:-"
+  ],
+  "BLEEPING": [
+    "imitative:-"
+  ],
+  "BLEEPS": [
+    "imitative:-"
   ],
   "BLEMISH": [
     "enm:blemisshen",
@@ -68845,6 +68912,24 @@
     "enm:bleighte",
     "gmw-pro:blaik",
     "old_english:bl\u01e3c\u00fea"
+  ],
+  "BLIMP": [
+    "imitative:-"
+  ],
+  "BLIMPISH": [
+    "imitative:-"
+  ],
+  "BLIMPISHLY": [
+    "imitative:-"
+  ],
+  "BLIMPISHNESS": [
+    "imitative:-"
+  ],
+  "BLIMPISHNESSES": [
+    "imitative:-"
+  ],
+  "BLIMPS": [
+    "imitative:-"
   ],
   "BLIN": [
     "enm:blinnen",
@@ -69973,6 +70058,24 @@
     "old_english:bl\u014dma",
     "old_norse:bl\u00f3m"
   ],
+  "BLOOP": [
+    "imitative:-"
+  ],
+  "BLOOPED": [
+    "imitative:-"
+  ],
+  "BLOOPER": [
+    "imitative:-"
+  ],
+  "BLOOPERS": [
+    "imitative:-"
+  ],
+  "BLOOPING": [
+    "imitative:-"
+  ],
+  "BLOOPS": [
+    "imitative:-"
+  ],
   "BLOSSOM": [
     "enm:blosme",
     "old_english:blostm"
@@ -70514,6 +70617,12 @@
     "old_english:bl\u0101w",
     "old_english:bl\u0101wan"
   ],
+  "BLUB": [
+    "imitative:-"
+  ],
+  "BLUBBED": [
+    "imitative:-"
+  ],
   "BLUBBER": [
     "enm:blober",
     "enm:bloberen"
@@ -70535,12 +70644,17 @@
     "enm:bloberen"
   ],
   "BLUBBERS": [
-    "enm:blober",
-    "enm:bloberen"
+    "imitative:-"
   ],
   "BLUBBERY": [
     "enm:blober",
     "enm:bloberen"
+  ],
+  "BLUBBING": [
+    "imitative:-"
+  ],
+  "BLUBS": [
+    "imitative:-"
   ],
   "BLUDGEON": [
     "frm:bougeon"
@@ -73058,6 +73172,18 @@
     "en:boing",
     "japanese:\u30dc\u30a4\u30f3"
   ],
+  "BOINK": [
+    "imitative:-"
+  ],
+  "BOINKED": [
+    "imitative:-"
+  ],
+  "BOINKING": [
+    "imitative:-"
+  ],
+  "BOINKS": [
+    "imitative:-"
+  ],
   "BOISERIE": [
     "french:boiserie"
   ],
@@ -74070,6 +74196,21 @@
   "BONITOS": [
     "spanish:bonito"
   ],
+  "BONK": [
+    "imitative:-"
+  ],
+  "BONKED": [
+    "imitative:-"
+  ],
+  "BONKERS": [
+    "imitative:-"
+  ],
+  "BONKING": [
+    "imitative:-"
+  ],
+  "BONKS": [
+    "imitative:-"
+  ],
   "BONNE": [
     "french:bonne"
   ],
@@ -74179,6 +74320,9 @@
     "japanese:\u51e1\u50e7",
     "portuguese:bonzo"
   ],
+  "BOO": [
+    "imitative:-"
+  ],
   "BOOBIE": [
     "latin:balbus",
     "spanish:bobo"
@@ -74241,6 +74385,9 @@
   "BOODY": [
     "french:bouder"
   ],
+  "BOOED": [
+    "imitative:-"
+  ],
   "BOOGIE": [
     "french:bouger"
   ],
@@ -74272,6 +74419,9 @@
   ],
   "BOOGYMEN": [
     "enm:-man"
+  ],
+  "BOOING": [
+    "imitative:-"
   ],
   "BOOK": [
     "enm:bok",
@@ -74823,6 +74973,9 @@
   "BOORS": [
     "dutch:boer"
   ],
+  "BOOS": [
+    "imitative:-"
+  ],
   "BOOT": [
     "enm:boote",
     "frk:butt",
@@ -75128,6 +75281,24 @@
     "enm:buty",
     "gml:b\u01d6te",
     "old_french:butin"
+  ],
+  "BOP": [
+    "imitative:-"
+  ],
+  "BOPPED": [
+    "imitative:-"
+  ],
+  "BOPPER": [
+    "imitative:-"
+  ],
+  "BOPPERS": [
+    "imitative:-"
+  ],
+  "BOPPING": [
+    "imitative:-"
+  ],
+  "BOPS": [
+    "imitative:-"
   ],
   "BORA": [
     "italian:borea",
@@ -76472,9 +76643,8 @@
     "greek:\u03b2\u03bf\u03c5\u03bb\u03ae"
   ],
   "BOULLES": [
-    "french:boules",
-    "french:de",
-    "french:jeu"
+    "french:boule",
+    "greek:\u03b2\u03bf\u03c5\u03bb\u03ae"
   ],
   "BOUNCE": [
     "enm:bounsen"
@@ -76873,14 +77043,18 @@
     "old_french:bodne"
   ],
   "BOURNES": [
-    "enm:born",
-    "gmw-pro:boran",
-    "old_english:boren"
+    "enm:bourne",
+    "frm:borne",
+    "la-med:bodina",
+    "old_english:burna",
+    "old_french:bodne"
   ],
   "BOURNS": [
-    "enm:born",
-    "gmw-pro:boran",
-    "old_english:boren"
+    "enm:bourne",
+    "frm:borne",
+    "la-med:bodina",
+    "old_english:burna",
+    "old_french:bodne"
   ],
   "BOURSE": [
     "french:bourse",
@@ -77243,9 +77417,8 @@
     "enm:bousen"
   ],
   "BOWSED": [
-    "enm:bowe",
-    "gmw-pro:bog\u014d",
-    "old_english:boga"
+    "dum:b\u016bsen",
+    "enm:bousen"
   ],
   "BOWSES": [
     "dum:b\u016bsen",
@@ -77743,7 +77916,7 @@
     "latin:brachi\u0101tus"
   ],
   "BRACHIATION": [
-    "latin:brachi\u0101tus"
+    "latin:bracchium"
   ],
   "BRACHIATIONS": [
     "latin:brachi\u0101tus"
@@ -78762,8 +78935,7 @@
     "french:brassi\u00e8re"
   ],
   "BRASSIERES": [
-    "enm:bras",
-    "old_english:br\u00e6s"
+    "french:brassi\u00e8re"
   ],
   "BRASSIES": [
     "enm:bras",
@@ -82865,9 +83037,9 @@
     "old_french:brouster"
   ],
   "BROWSABLES": [
-    "enm:browsen",
-    "frk:brust",
-    "old_french:brouster"
+    "enm:browe",
+    "gmw-pro:br\u0101wu",
+    "old_english:br\u016b"
   ],
   "BROWSE": [
     "enm:browsen",
@@ -82890,14 +83062,14 @@
     "old_french:brouster"
   ],
   "BROWSES": [
-    "enm:browe",
-    "gmw-pro:br\u0101wu",
-    "old_english:br\u016b"
+    "enm:browsen",
+    "frk:brust",
+    "old_french:brouster"
   ],
   "BROWSING": [
-    "enm:browe",
-    "gmw-pro:br\u0101wu",
-    "old_english:br\u016b"
+    "enm:browsen",
+    "frk:brust",
+    "old_french:brouster"
   ],
   "BRUCELLA": [
     "mul:brucella"
@@ -83308,7 +83480,8 @@
     "french:brusquerie"
   ],
   "BRUSQUERIES": [
-    "french:brusquerie"
+    "french:brusque",
+    "italian:brusco"
   ],
   "BRUSQUEST": [
     "french:brusque",
@@ -83568,14 +83741,10 @@
     "pdc:bub"
   ],
   "BUBBLE": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLED": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLEGUM": [
     "enm:gom",
@@ -83603,34 +83772,22 @@
     "old_english:h\u0113afod"
   ],
   "BUBBLER": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLERS": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLES": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLIER": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLIES": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLIEST": [
-    "enm:bab",
-    "german:bub",
-    "pdc:bub"
+    "imitative:-"
   ],
   "BUBBLING": [
     "enm:bab",
@@ -86561,7 +86718,7 @@
     "french:bureaucrate"
   ],
   "BUREAUCRATISES": [
-    "french:bureaucrate"
+    "french:bureaucratiser"
   ],
   "BUREAUCRATISING": [
     "french:bureaucrate"
@@ -87096,6 +87253,18 @@
   ],
   "BURNT": [
     "enm:brent"
+  ],
+  "BURP": [
+    "imitative:-"
+  ],
+  "BURPED": [
+    "imitative:-"
+  ],
+  "BURPING": [
+    "imitative:-"
+  ],
+  "BURPS": [
+    "imitative:-"
   ],
   "BURQA": [
     "arabic:\u0628\u064f\u0631\u0652\u0642\u064f\u0639",
@@ -88050,10 +88219,7 @@
     "enm:busten"
   ],
   "BUSTLINGLY": [
-    "enm:busken",
-    "enm:busten",
-    "enm:bustlen",
-    "old_norse:b\u00faa"
+    "enm:busten"
   ],
   "BUSTS": [
     "enm:busten"
@@ -88264,9 +88430,9 @@
     "old_french:buttiler"
   ],
   "BUTLERS": [
-    "enm:but",
-    "gmw-pro:bi\u016btan",
-    "old_english:b\u016btan"
+    "enm:butler",
+    "la-med:botell\u0101rius",
+    "old_french:buttiler"
   ],
   "BUTLERY": [
     "enm:buttillary",
@@ -102861,6 +103027,18 @@
     "portuguese:\u00e7avia",
     "tpw:sauj\u00e1"
   ],
+  "CAW": [
+    "imitative:-"
+  ],
+  "CAWED": [
+    "imitative:-"
+  ],
+  "CAWING": [
+    "imitative:-"
+  ],
+  "CAWS": [
+    "imitative:-"
+  ],
   "CAY": [
     "spanish:cayo"
   ],
@@ -109175,6 +109353,24 @@
     "gmw-pro:k\u0101k\u0101",
     "old_english:\u010b\u0113ce"
   ],
+  "CHEEP": [
+    "imitative:-"
+  ],
+  "CHEEPED": [
+    "imitative:-"
+  ],
+  "CHEEPER": [
+    "imitative:-"
+  ],
+  "CHEEPERS": [
+    "imitative:-"
+  ],
+  "CHEEPING": [
+    "imitative:-"
+  ],
+  "CHEEPS": [
+    "imitative:-"
+  ],
   "CHEER": [
     "enm:chere",
     "la-lat:cara",
@@ -110320,11 +110516,7 @@
     "french:chicane"
   ],
   "CHICANERIES": [
-    "french:chicanerie",
-    "frm:chicaner",
-    "gml:schicken",
-    "gmw-pro:skikkijan",
-    "osx:skikkian"
+    "french:chicane"
   ],
   "CHICANERS": [
     "french:chicane"
@@ -110507,16 +110699,16 @@
     "old_english:\u010b\u012bdan"
   ],
   "CHIDED": [
-    "greek:\u03c7\u03b5\u1fd6",
-    "latin:ch\u012b"
+    "enm:chiden",
+    "old_english:\u010b\u012bdan"
   ],
   "CHIDER": [
     "enm:chiden",
     "old_english:\u010b\u012bdan"
   ],
   "CHIDERS": [
-    "greek:\u03c7\u03b5\u1fd6",
-    "latin:ch\u012b"
+    "enm:chiden",
+    "old_english:\u010b\u012bdan"
   ],
   "CHIDES": [
     "enm:chiden",
@@ -110614,6 +110806,12 @@
   ],
   "CHIELS": [
     "sco:chield"
+  ],
+  "CHIFFCHAFF": [
+    "imitative:-"
+  ],
+  "CHIFFCHAFFS": [
+    "imitative:-"
   ],
   "CHIFFON": [
     "enm:chip",
@@ -110971,12 +111169,9 @@
     "old_english:\u010bilian"
   ],
   "CHILLINESSES": [
-    "enm:chele",
-    "enm:chillen",
-    "gmw-pro:kali",
-    "gmw-pro:kil\u0113n",
-    "old_english:\u010biele",
-    "old_english:\u010bilian"
+    "nci:ch\u012blli",
+    "spanish:chile",
+    "spanish:chile con carne"
   ],
   "CHILLING": [
     "enm:chilling"
@@ -115136,7 +115331,7 @@
     "latin:cilia"
   ],
   "CILIATIONS": [
-    "latin:cilia"
+    "la-new:cili\u0101tus"
   ],
   "CILICE": [
     "french:cilice",
@@ -117126,6 +117321,21 @@
   "CLANDESTINITY": [
     "latin:clandestinitas"
   ],
+  "CLANG": [
+    "imitative:-"
+  ],
+  "CLANGED": [
+    "imitative:-"
+  ],
+  "CLANGER": [
+    "imitative:-"
+  ],
+  "CLANGERS": [
+    "imitative:-"
+  ],
+  "CLANGING": [
+    "imitative:-"
+  ],
   "CLANGOR": [
     "latin:clangor"
   ],
@@ -117155,6 +117365,33 @@
   ],
   "CLANGOURS": [
     "latin:clangor"
+  ],
+  "CLANGS": [
+    "imitative:-"
+  ],
+  "CLANK": [
+    "imitative:-"
+  ],
+  "CLANKED": [
+    "imitative:-"
+  ],
+  "CLANKIER": [
+    "imitative:-"
+  ],
+  "CLANKIEST": [
+    "imitative:-"
+  ],
+  "CLANKING": [
+    "imitative:-"
+  ],
+  "CLANKINGLY": [
+    "imitative:-"
+  ],
+  "CLANKS": [
+    "imitative:-"
+  ],
+  "CLANKY": [
+    "imitative:-"
   ],
   "CLANNISH": [
     "ga:clann",
@@ -117428,6 +117665,24 @@
     "enm:clarie",
     "la-med:sclar\u0113ia",
     "xno:sclaree"
+  ],
+  "CLASH": [
+    "imitative:-"
+  ],
+  "CLASHED": [
+    "imitative:-"
+  ],
+  "CLASHER": [
+    "imitative:-"
+  ],
+  "CLASHERS": [
+    "imitative:-"
+  ],
+  "CLASHES": [
+    "imitative:-"
+  ],
+  "CLASHING": [
+    "imitative:-"
   ],
   "CLASP": [
     "enm:claspe",
@@ -118133,19 +118388,22 @@
     "enm:clansere"
   ],
   "CLEANSERS": [
-    "enm:clene",
+    "enm:clensen",
+    "gmw-pro:klainis\u014dn",
     "gmw-pro:klain\u012b",
-    "old_english:cl\u01e3ne"
+    "old_english:cl\u01e3nsian"
   ],
   "CLEANSES": [
-    "enm:clene",
+    "enm:clensen",
+    "gmw-pro:klainis\u014dn",
     "gmw-pro:klain\u012b",
-    "old_english:cl\u01e3ne"
+    "old_english:cl\u01e3nsian"
   ],
   "CLEANSING": [
-    "enm:clene",
+    "enm:clensen",
+    "gmw-pro:klainis\u014dn",
     "gmw-pro:klain\u012b",
-    "old_english:cl\u01e3ne"
+    "old_english:cl\u01e3nsian"
   ],
   "CLEAR": [
     "enm:clere",
@@ -118745,6 +119003,30 @@
   "CLEWS": [
     "enm:clew",
     "old_english:cl\u0113owen"
+  ],
+  "CLICK": [
+    "imitative:-"
+  ],
+  "CLICKABLE": [
+    "imitative:-"
+  ],
+  "CLICKED": [
+    "imitative:-"
+  ],
+  "CLICKER": [
+    "imitative:-"
+  ],
+  "CLICKERS": [
+    "imitative:-"
+  ],
+  "CLICKING": [
+    "imitative:-"
+  ],
+  "CLICKLESS": [
+    "imitative:-"
+  ],
+  "CLICKS": [
+    "imitative:-"
   ],
   "CLICKWRAP": [
     "enm:wrappen"
@@ -119368,6 +119650,18 @@
     "fro-nor:cloque",
     "la-med:clocca"
   ],
+  "CLOBBER": [
+    "imitative:-"
+  ],
+  "CLOBBERED": [
+    "imitative:-"
+  ],
+  "CLOBBERING": [
+    "imitative:-"
+  ],
+  "CLOBBERS": [
+    "imitative:-"
+  ],
   "CLOCHARD": [
     "french:clochard"
   ],
@@ -119717,6 +120011,18 @@
   ],
   "CLONISMS": [
     "greek:\u03ba\u03bb\u03ce\u03bd"
+  ],
+  "CLONK": [
+    "imitative:-"
+  ],
+  "CLONKED": [
+    "imitative:-"
+  ],
+  "CLONKING": [
+    "imitative:-"
+  ],
+  "CLONKS": [
+    "imitative:-"
   ],
   "CLONS": [
     "greek:\u03ba\u03bb\u03ce\u03bd"
@@ -120802,6 +121108,33 @@
   "CLUMSY": [
     "enm:clumsen",
     "old_norse:klumsa"
+  ],
+  "CLUNK": [
+    "imitative:-"
+  ],
+  "CLUNKED": [
+    "imitative:-"
+  ],
+  "CLUNKER": [
+    "imitative:-"
+  ],
+  "CLUNKERS": [
+    "imitative:-"
+  ],
+  "CLUNKIER": [
+    "imitative:-"
+  ],
+  "CLUNKIEST": [
+    "imitative:-"
+  ],
+  "CLUNKING": [
+    "imitative:-"
+  ],
+  "CLUNKS": [
+    "imitative:-"
+  ],
+  "CLUNKY": [
+    "imitative:-"
   ],
   "CLUPEOID": [
     "mul:clupea"
@@ -123298,9 +123631,9 @@
     "old_french:code"
   ],
   "CODERIVING": [
-    "enm:deriven",
-    "latin:d\u0113r\u012bv\u014d",
-    "old_french:deriver"
+    "enm:code",
+    "latin:c\u014ddex",
+    "old_french:code"
   ],
   "CODERS": [
     "enm:cod",
@@ -126811,8 +127144,11 @@
     "latin:c\u014flon"
   ],
   "COLONISATIONS": [
-    "enm:colane",
-    "latin:col\u014dnia"
+    "french:colon",
+    "greek:\u03ba\u03cc\u03bb\u03bf\u03bd",
+    "greek:\u03ba\u1ff6\u03bb\u03bf\u03bd",
+    "latin:c\u014dlon",
+    "latin:c\u014flon"
   ],
   "COLONISE": [
     "french:colon",
@@ -127410,10 +127746,7 @@
     "xno:colur"
   ],
   "COLOURING": [
-    "enm:colour",
-    "latin:color",
-    "old_french:colour",
-    "xno:colur"
+    "enm:louryng"
   ],
   "COLOURS": [
     "enm:colour",
@@ -135758,14 +136091,7 @@
   ],
   "CONSISTENCIES": [
     "frm:consister",
-    "greek:-\u03b9\u03b1",
-    "greek:-\u03ba\u03b9\u03b1",
-    "latin:-cia",
-    "latin:-entia",
-    "latin:-ia",
-    "latin:consistens",
-    "latin:consist\u014d",
-    "xno:-cie"
+    "latin:consist\u014d"
   ],
   "CONSISTENCY": [
     "frm:consister",
@@ -139402,9 +139728,7 @@
     "la-lat:cooper\u0101tus"
   ],
   "COOPERATIVELY": [
-    "enm:operative",
-    "frm:operatif",
-    "latin:oper\u0101t\u012bvus"
+    "la-lat:cooper\u0101tus"
   ],
   "COOPERATIVENESS": [
     "la-lat:cooper\u0101tus"
@@ -157808,8 +158132,10 @@
     "old_english:corsian"
   ],
   "CURSERS": [
-    "enm:curre",
-    "old_norse:kurr"
+    "enm:curse",
+    "enm:cursen",
+    "old_english:cors",
+    "old_english:corsian"
   ],
   "CURSES": [
     "enm:curse",
@@ -159928,7 +160254,8 @@
     "greek:\u03ba\u03af\u03bd\u03b7\u03c3\u03b9\u03c2"
   ],
   "CYTOKINESES": [
-    "greek:\u03ba\u03af\u03bd\u03b7\u03c3\u03b9\u03c2"
+    "greek:\u03ba\u03af\u03bd\u03b7\u03c3\u03b9\u03c2",
+    "greek:\u03ba\u03cd\u03c4\u03bf\u03c2"
   ],
   "CYTOKINESIS": [
     "greek:\u03ba\u03af\u03bd\u03b7\u03c3\u03b9\u03c2",
@@ -160297,11 +160624,26 @@
   "DAD": [
     "enm:dadde"
   ],
+  "DADA": [
+    "imitative:-"
+  ],
   "DADAISM": [
     "french:dada\u00efsme"
   ],
   "DADAISMS": [
     "french:dada\u00efsme"
+  ],
+  "DADAIST": [
+    "imitative:-"
+  ],
+  "DADAISTIC": [
+    "imitative:-"
+  ],
+  "DADAISTS": [
+    "imitative:-"
+  ],
+  "DADAS": [
+    "imitative:-"
   ],
   "DADDIES": [
     "enm:dadde"
@@ -161462,6 +161804,9 @@
   "DANSEUSES": [
     "french:danseuse"
   ],
+  "DAP": [
+    "imitative:-"
+  ],
   "DAPHNE": [
     "greek:\u03b4\u03ac\u03c6\u03bd\u03b7",
     "mul:daphne"
@@ -161475,6 +161820,9 @@
   ],
   "DAPHNIAS": [
     "mul:daphnia"
+  ],
+  "DAPPED": [
+    "imitative:-"
   ],
   "DAPPER": [
     "dum:dapper",
@@ -161505,6 +161853,24 @@
     "dum:dapper",
     "enm:daper",
     "old_dutch:dapar"
+  ],
+  "DAPPING": [
+    "imitative:-"
+  ],
+  "DAPPLE": [
+    "imitative:-"
+  ],
+  "DAPPLED": [
+    "imitative:-"
+  ],
+  "DAPPLES": [
+    "imitative:-"
+  ],
+  "DAPPLING": [
+    "imitative:-"
+  ],
+  "DAPS": [
+    "imitative:-"
   ],
   "DARE": [
     "enm:durren",
@@ -166656,9 +167022,9 @@
     "latin:decor\u0101tus"
   ],
   "DECOYED": [
-    "frm:compression",
-    "latin:compressi\u014d",
-    "latin:decor\u0101tus"
+    "enm:coy",
+    "latin:quies",
+    "old_french:coi"
   ],
   "DECOYER": [
     "frm:compression",
@@ -166676,9 +167042,9 @@
     "latin:decor\u0101tus"
   ],
   "DECOYS": [
-    "frm:compression",
-    "latin:compressi\u014d",
-    "latin:decor\u0101tus"
+    "enm:coy",
+    "latin:quies",
+    "old_french:coi"
   ],
   "DECREASE": [
     "enm:decresen",
@@ -168223,7 +168589,20 @@
     "old_french:fil"
   ],
   "DEFILING": [
-    "frm:d\u00e9finitif"
+    "enm:defilen",
+    "enm:foulen",
+    "ett:\ud800\udf18\ud800\udf16\ud800\udf0b\ud800\udf16",
+    "french:d\u00e9filer",
+    "french:d\u00e9fil\u00e9",
+    "gmw-pro:f\u016blijan",
+    "la-lat:fil\u0101re",
+    "la-vul:full\u0101re",
+    "latin:full\u014d",
+    "latin:f\u012blum",
+    "old_english:f\u016blian",
+    "old_english:f\u0233lan",
+    "old_french:defoler",
+    "old_french:fil"
   ],
   "DEFINABLE": [
     "enm:definen",
@@ -170015,9 +170394,7 @@
     "old_english:l\u01e3fan"
   ],
   "DELEAVED": [
-    "enm:leven",
-    "gmw-pro:laibijan",
-    "old_english:l\u01e3fan"
+    "enm:leuued"
   ],
   "DELEAVES": [
     "enm:leven",
@@ -170272,9 +170649,9 @@
     "latin:delicatus"
   ],
   "DELICATESSENS": [
-    "enm:delicat",
-    "itc-pro:lakj\u014d",
-    "latin:d\u0113lic\u0101tus"
+    "french:d\u00e9licatesse",
+    "german:delikatessen",
+    "latin:delicatus"
   ],
   "DELICIOUS": [
     "enm:delicious",
@@ -176681,26 +177058,6 @@
     "latin:d\u0113stru\u014d",
     "old_french:destruire"
   ],
-  "DESTRUCT": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
-  ],
-  "DESTRUCTED": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
-  ],
-  "DESTRUCTIBLE": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
-  ],
-  "DESTRUCTING": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
-  ],
   "DESTRUCTION": [
     "enm:destruccioun",
     "latin:destructio",
@@ -176745,11 +177102,6 @@
     "enm:destructyve",
     "frm:destructif",
     "latin:d\u0113str\u016bct\u012bvus"
-  ],
-  "DESTRUCTS": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
   ],
   "DESUETUDE": [
     "enm:desuetude",
@@ -180746,9 +181098,7 @@
     "old_english:bedidrian"
   ],
   "DIDDLY": [
-    "enm:bididren",
-    "enm:dideren",
-    "old_english:bedidrian"
+    "imitative:-"
   ],
   "DIDGERIDOO": [
     "ga:d\u00fadaire dubh",
@@ -180893,13 +181243,7 @@
     "german:diesel"
   ],
   "DIESES": [
-    "enm:dee",
-    "enm:deyen",
-    "latin:datum",
-    "latin:die",
-    "latin:dies",
-    "old_french:de",
-    "old_norse:deyja"
+    "greek:\u03b4\u03af\u03b5\u03c3\u03b9\u03c2"
   ],
   "DIESINKER": [
     "enm:dee",
@@ -187770,9 +188114,9 @@
     "old_french:desjoindre"
   ],
   "DISJOINTEDNESS": [
-    "enm:joynt",
-    "latin:i\u016bnctus",
-    "old_french:joint"
+    "enm:disjoynen",
+    "latin:disiung\u014d",
+    "old_french:desjoindre"
   ],
   "DISJOINTING": [
     "enm:disjoynen",
@@ -193456,6 +193800,12 @@
   ],
   "DOILY": [
     "old_french:oeil"
+  ],
+  "DOING": [
+    "imitative:-"
+  ],
+  "DOINGS": [
+    "imitative:-"
   ],
   "DOIT": [
     "gml:doyt"
@@ -201296,6 +201646,9 @@
     "old_english:deon",
     "sv:d\u00e4gga"
   ],
+  "DUH": [
+    "imitative:-"
+  ],
   "DUIKER": [
     "af:duiker",
     "dum:dukere",
@@ -204956,11 +205309,9 @@
     "old_french:eban"
   ],
   "EBONISED": [
-    "egy:hbnj",
-    "enm:ebenif",
     "greek:\u1f14\u03b2\u03b5\u03bd\u03bf\u03c2",
-    "latin:ebenius",
-    "latin:hebenus"
+    "latin:ebenus",
+    "old_french:eban"
   ],
   "EBONISES": [
     "greek:\u1f14\u03b2\u03b5\u03bd\u03bf\u03c2",
@@ -206651,6 +207002,9 @@
     "frm:\u00e9ducation",
     "latin:\u0113duc\u0101ti\u014d",
     "old_french:entretenement"
+  ],
+  "EEK": [
+    "imitative:-"
   ],
   "EEL": [
     "enm:el",
@@ -210024,6 +210378,9 @@
   "ELYTROUS": [
     "greek:\u1f14\u03bb\u03c5\u03c4\u03c1\u03bf\u03bd"
   ],
+  "EM": [
+    "imitative:-"
+  ],
   "EMACIATE": [
     "latin:\u0113maci\u0101tus"
   ],
@@ -210529,12 +210886,14 @@
     "old_french:beee"
   ],
   "EMBED": [
-    "enm:bedding",
-    "old_english:bedding"
+    "enm:bed",
+    "gmw-pro:badi",
+    "old_english:bedd"
   ],
   "EMBEDDED": [
-    "enm:bedding",
-    "old_english:bedding"
+    "enm:bed",
+    "gmw-pro:badi",
+    "old_english:bedd"
   ],
   "EMBEDDING": [
     "enm:bedding",
@@ -210545,16 +210904,19 @@
     "old_english:bedding"
   ],
   "EMBEDMENT": [
-    "enm:bedding",
-    "old_english:bedding"
+    "enm:bed",
+    "gmw-pro:badi",
+    "old_english:bedd"
   ],
   "EMBEDMENTS": [
-    "enm:bedding",
-    "old_english:bedding"
+    "enm:bed",
+    "gmw-pro:badi",
+    "old_english:bedd"
   ],
   "EMBEDS": [
-    "enm:bedding",
-    "old_english:bedding"
+    "enm:bed",
+    "gmw-pro:badi",
+    "old_english:bedd"
   ],
   "EMBELLISH": [
     "enm:embelishen",
@@ -211719,7 +212081,8 @@
     "old_english:\u0113am"
   ],
   "EMESES": [
-    "greek:\u1f14\u03bc\u03b5\u03c3\u03b9\u03c2"
+    "enm:\u00e9am",
+    "old_english:\u0113am"
   ],
   "EMESIS": [
     "greek:\u1f14\u03bc\u03b5\u03c3\u03b9\u03c2"
@@ -211881,7 +212244,7 @@
     "german:emmer"
   ],
   "EMMERS": [
-    "german:emmer"
+    "imitative:-"
   ],
   "EMMET": [
     "enm:ampte",
@@ -211892,6 +212255,12 @@
     "enm:ampte",
     "gmw-pro:\u0101maitij\u0101",
     "old_english:\u01e3mete"
+  ],
+  "EMMY": [
+    "imitative:-"
+  ],
+  "EMMYS": [
+    "imitative:-"
   ],
   "EMOLLIENT": [
     "french:\u00e9mollient",
@@ -213012,8 +213381,10 @@
     "old_french:amor"
   ],
   "ENAMOURS": [
-    "enm:enamouren",
-    "old_french:enamore"
+    "enm:amour",
+    "frm:amour",
+    "latin:amor",
+    "old_french:amor"
   ],
   "ENANTIOMER": [
     "greek:\u03bc\u03ad\u03c1\u03bf\u03c2",
@@ -217299,24 +217670,28 @@
   ],
   "ENSHEATHED": [
     "enm:sheth",
+    "enm:shethen",
     "gmw-pro:skai\u00feiju",
+    "old_english:sc\u0113a\u00feian",
     "old_english:s\u010b\u0113a\u00fe"
   ],
   "ENSHEATHES": [
     "enm:sheth",
+    "enm:shethen",
     "gmw-pro:skai\u00feiju",
+    "old_english:sc\u0113a\u00feian",
     "old_english:s\u010b\u0113a\u00fe"
   ],
   "ENSHEATHING": [
     "enm:sheth",
+    "enm:shethen",
     "gmw-pro:skai\u00feiju",
+    "old_english:sc\u0113a\u00feian",
     "old_english:s\u010b\u0113a\u00fe"
   ],
   "ENSHEATHS": [
     "enm:sheth",
-    "enm:shethen",
     "gmw-pro:skai\u00feiju",
-    "old_english:sc\u0113a\u00feian",
     "old_english:s\u010b\u0113a\u00fe"
   ],
   "ENSHRINE": [
@@ -218912,12 +219287,8 @@
     "xno:ure"
   ],
   "ENURESES": [
-    "enm:ure",
-    "frm:ure",
-    "latin:opera",
-    "latin:\u016brus",
-    "old_french:uevre",
-    "xno:ure"
+    "greek:\u1f10\u03bd\u03bf\u03cd\u03c1\u03b7\u03c3\u03b9\u03c2",
+    "latin:enuresis"
   ],
   "ENURESIS": [
     "greek:\u1f10\u03bd\u03bf\u03cd\u03c1\u03b7\u03c3\u03b9\u03c2",
@@ -221412,6 +221783,9 @@
     "la-lat:aequivocus",
     "latin:aequus"
   ],
+  "ER": [
+    "imitative:-"
+  ],
   "ERA": [
     "la-lat:aera"
   ],
@@ -223765,9 +224139,7 @@
     "old_french:eterne"
   ],
   "ETERNISED": [
-    "enm:eterne",
-    "latin:aeternus",
-    "old_french:eterne"
+    "frm:\u00e9terniser"
   ],
   "ETERNISES": [
     "enm:eterne",
@@ -223775,7 +224147,9 @@
     "old_french:eterne"
   ],
   "ETERNISING": [
-    "frm:\u00e9terniser"
+    "enm:eterne",
+    "latin:aeternus",
+    "old_french:eterne"
   ],
   "ETERNITIES": [
     "enm:eternyte",
@@ -229282,7 +229656,15 @@
     "latin:expect\u0101re"
   ],
   "EXPECTANCIES": [
-    "latin:expect\u0101re"
+    "greek:-\u03b9\u03b1",
+    "greek:-\u03ba\u03b9\u03b1",
+    "latin:-antia",
+    "latin:-cia",
+    "latin:-ia",
+    "latin:expectans",
+    "latin:expect\u0101re",
+    "old_french:expectant",
+    "xno:-cie"
   ],
   "EXPECTANCY": [
     "greek:-\u03b9\u03b1",
@@ -230204,10 +230586,10 @@
     "old_french:exposer"
   ],
   "EXPOSED": [
-    "enm:exposen",
-    "latin:exp\u014dn\u014d",
-    "old_french:espondre",
-    "old_french:exposer"
+    "enm:exposicioun",
+    "french:exposition",
+    "latin:expositi\u014d",
+    "old_french:esposicion"
   ],
   "EXPOSER": [
     "enm:exposen",
@@ -230216,16 +230598,16 @@
     "old_french:exposer"
   ],
   "EXPOSERS": [
-    "enm:exposicioun",
-    "french:exposition",
-    "latin:expositi\u014d",
-    "old_french:esposicion"
+    "enm:exposen",
+    "latin:exp\u014dn\u014d",
+    "old_french:espondre",
+    "old_french:exposer"
   ],
   "EXPOSES": [
-    "enm:exposicioun",
-    "french:exposition",
-    "latin:expositi\u014d",
-    "old_french:esposicion"
+    "enm:exposen",
+    "latin:exp\u014dn\u014d",
+    "old_french:espondre",
+    "old_french:exposer"
   ],
   "EXPOSING": [
     "enm:exposen",
@@ -231194,9 +231576,7 @@
     "latin:extoll\u014d"
   ],
   "EXTOLLERS": [
-    "enm:toll",
-    "gmw-pro:toll",
-    "old_english:toll"
+    "latin:extoll\u014d"
   ],
   "EXTOLLING": [
     "latin:extoll\u014d"
@@ -232012,8 +232392,7 @@
     "latin:exu\u014d"
   ],
   "EXUVIATIONS": [
-    "latin:exuviae",
-    "latin:exu\u014d"
+    "latin:exuviae"
   ],
   "EXUVIUM": [
     "latin:exuviae",
@@ -237245,6 +237624,9 @@
   "FAUCIAL": [
     "latin:fauces"
   ],
+  "FAUGH": [
+    "imitative:-"
+  ],
   "FAULD": [
     "enm:fold"
   ],
@@ -237519,10 +237901,7 @@
     "xno:favour"
   ],
   "FAVOURER": [
-    "enm:favour",
-    "latin:favor",
-    "old_french:favor",
-    "xno:favour"
+    "enm:favourer"
   ],
   "FAVOURERS": [
     "enm:favour",
@@ -242461,8 +242840,6 @@
     "latin:f\u012blum"
   ],
   "FILAMENTS": [
-    "la-lat:f\u012bl\u014d",
-    "la-med:f\u012bl\u0101mentum",
     "latin:f\u012blum"
   ],
   "FILAR": [
@@ -242600,16 +242977,16 @@
     "sv:fil"
   ],
   "FILET": [
-    "sv:fil"
+    "latin:f\u012blum"
   ],
   "FILETED": [
-    "sv:fil"
+    "latin:f\u012blum"
   ],
   "FILETING": [
     "latin:f\u012blum"
   ],
   "FILETS": [
-    "sv:fil"
+    "latin:f\u012blum"
   ],
   "FILIAL": [
     "enm:filial",
@@ -245878,6 +246255,30 @@
     "enm:gig",
     "spanish:fisga"
   ],
+  "FIZZ": [
+    "imitative:-"
+  ],
+  "FIZZED": [
+    "imitative:-"
+  ],
+  "FIZZER": [
+    "imitative:-"
+  ],
+  "FIZZERS": [
+    "imitative:-"
+  ],
+  "FIZZES": [
+    "imitative:-"
+  ],
+  "FIZZIER": [
+    "imitative:-"
+  ],
+  "FIZZIEST": [
+    "imitative:-"
+  ],
+  "FIZZING": [
+    "imitative:-"
+  ],
   "FIZZLE": [
     "enm:fysel"
   ],
@@ -245888,7 +246289,10 @@
     "enm:fysel"
   ],
   "FIZZLING": [
-    "enm:fysel"
+    "imitative:-"
+  ],
+  "FIZZY": [
+    "imitative:-"
   ],
   "FJELD": [
     "da:fjeld"
@@ -246568,13 +246972,9 @@
     "latin:inflammo"
   ],
   "FLAMMABLES": [
-    "enm:flawme",
-    "enm:flawmen",
-    "itc-pro:flagm\u0101",
-    "latin:flamma",
-    "latin:flammula",
-    "old_french:flamber",
-    "old_french:flame"
+    "frm:inflammable",
+    "la-med:\u012bnflamm\u0101bilis",
+    "latin:inflammo"
   ],
   "FLAMMED": [
     "enm:flawme",
@@ -250738,6 +251138,18 @@
   "FLUMMERY": [
     "cy:llymru"
   ],
+  "FLUMP": [
+    "imitative:-"
+  ],
+  "FLUMPED": [
+    "imitative:-"
+  ],
+  "FLUMPING": [
+    "imitative:-"
+  ],
+  "FLUMPS": [
+    "imitative:-"
+  ],
   "FLUNK": [
     "frk:hlankijan",
     "frm:flenchir",
@@ -251033,14 +251445,10 @@
     "latin:sal ammoniacus"
   ],
   "FLUPHENAZINE": [
-    "french:azote",
-    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
-    "greek:\u1f00-"
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "FLUPHENAZINES": [
-    "french:azote",
-    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
-    "greek:\u1f00-"
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "FLUS": [
     "italian:influenza",
@@ -262688,8 +263096,11 @@
     "old_english:fulnes"
   ],
   "FULNESSES": [
-    "enm:fulnesse",
-    "old_english:fulnes"
+    "enm:ful",
+    "enm:fulle",
+    "gmw-pro:full",
+    "old_english:full",
+    "old_english:fyllu"
   ],
   "FULSOME": [
     "enm:fulsom"
@@ -264341,6 +264752,33 @@
     "german:herumfurzen",
     "yi:\u05d0\u05b7\u05e8\u05d5\u05de\u05e4\u05bf\u05d0\u05b7\u05e8\u05e6\u05df"
   ],
+  "FUZZ": [
+    "imitative:-"
+  ],
+  "FUZZED": [
+    "imitative:-"
+  ],
+  "FUZZES": [
+    "imitative:-"
+  ],
+  "FUZZIER": [
+    "imitative:-"
+  ],
+  "FUZZIEST": [
+    "imitative:-"
+  ],
+  "FUZZILY": [
+    "imitative:-"
+  ],
+  "FUZZINESS": [
+    "imitative:-"
+  ],
+  "FUZZINESSES": [
+    "imitative:-"
+  ],
+  "FUZZING": [
+    "imitative:-"
+  ],
   "FUZZTONE": [
     "enm:ton",
     "enm:tone",
@@ -264354,6 +264792,9 @@
     "greek:\u03c4\u03cc\u03bd\u03bf\u03c2",
     "latin:tonus",
     "old_french:ton"
+  ],
+  "FUZZY": [
+    "imitative:-"
   ],
   "FYKE": [
     "dum:vuyke",
@@ -265990,7 +266431,9 @@
     "old_english:gamen"
   ],
   "GAMESTERS": [
-    "italian:gamba"
+    "enm:game",
+    "gmw-pro:gaman",
+    "old_english:gamen"
   ],
   "GAMETAL": [
     "greek:\u03b3\u03b1\u03bc\u03b5\u03c4\u03ae"
@@ -269452,7 +269895,7 @@
     "french:gendarmerie"
   ],
   "GENDARMERIES": [
-    "french:gendarme"
+    "french:gendarmerie"
   ],
   "GENDARMERY": [
     "french:gendarme"
@@ -269804,8 +270247,16 @@
     "xno:general"
   ],
   "GENESES": [
-    "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
-    "latin:genesis"
+    "enm:argent",
+    "enm:generacioun",
+    "enm:general",
+    "frm:general",
+    "latin:argentum",
+    "latin:gener\u0101lis",
+    "latin:gener\u0101ti\u014d",
+    "old_french:argent",
+    "old_french:generacion",
+    "xno:general"
   ],
   "GENESIS": [
     "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
@@ -271968,6 +272419,7 @@
     "mul:giardia"
   ],
   "GIARDIASES": [
+    "greek:\u1f34\u03b1\u03c3\u03b9\u03c2",
     "mul:giardia"
   ],
   "GIARDIASIS": [
@@ -275459,6 +275911,27 @@
     "gmw-pro:gl\u014dm",
     "old_english:gl\u014dm"
   ],
+  "GLOP": [
+    "imitative:-"
+  ],
+  "GLOPPED": [
+    "imitative:-"
+  ],
+  "GLOPPIER": [
+    "imitative:-"
+  ],
+  "GLOPPIEST": [
+    "imitative:-"
+  ],
+  "GLOPPING": [
+    "imitative:-"
+  ],
+  "GLOPPY": [
+    "imitative:-"
+  ],
+  "GLOPS": [
+    "imitative:-"
+  ],
   "GLORIA": [
     "latin:gloria"
   ],
@@ -276028,6 +276501,18 @@
   ],
   "GLUEYNESSES": [
     "enm:glewy"
+  ],
+  "GLUG": [
+    "imitative:-"
+  ],
+  "GLUGGED": [
+    "imitative:-"
+  ],
+  "GLUGGING": [
+    "imitative:-"
+  ],
+  "GLUGS": [
+    "imitative:-"
   ],
   "GLUHWEIN": [
     "german:gl\u00fchwein"
@@ -278139,6 +278624,9 @@
   "GONZO": [
     "french:gonze"
   ],
+  "GOO": [
+    "imitative:-"
+  ],
   "GOOBER": [
     "kg:nguba"
   ],
@@ -278249,6 +278737,15 @@
     "gmw-pro:g\u014dd",
     "old_english:g\u014dd"
   ],
+  "GOOEY": [
+    "imitative:-"
+  ],
+  "GOOEYNESS": [
+    "imitative:-"
+  ],
+  "GOOEYNESSES": [
+    "imitative:-"
+  ],
   "GOOF": [
     "enm:goffen",
     "old_english:gaf"
@@ -278303,6 +278800,12 @@
   "GOOGOLPLEXES": [
     "latin:-plex"
   ],
+  "GOOIER": [
+    "imitative:-"
+  ],
+  "GOOIEST": [
+    "imitative:-"
+  ],
   "GOOK": [
     "korean:\u7f8e\u570b"
   ],
@@ -278350,9 +278853,7 @@
     "enm:gone"
   ],
   "GOOS": [
-    "enm:goos",
-    "gmw-pro:gans",
-    "old_english:g\u014ds"
+    "imitative:-"
   ],
   "GOOSANDER": [
     "enm:gandre",
@@ -278481,9 +278982,7 @@
     "old_english:g\u014ds"
   ],
   "GOOSIER": [
-    "enm:goos",
-    "gmw-pro:gans",
-    "old_english:g\u014ds"
+    "imitative:-"
   ],
   "GOOSIEST": [
     "enm:goos",
@@ -278762,8 +279261,7 @@
     "old_french:gormant"
   ],
   "GORMANDIZES": [
-    "enm:gourmaunt",
-    "old_french:gormant"
+    "french:gourmandise"
   ],
   "GORMANDIZING": [
     "enm:gourmaunt",
@@ -279192,8 +279690,7 @@
     "old_french:gormant"
   ],
   "GOURMANDIZES": [
-    "enm:gourmaunt",
-    "old_french:gormant"
+    "french:gourmandise"
   ],
   "GOURMANDIZING": [
     "enm:gourmaunt",
@@ -285188,8 +285685,9 @@
     "old_english:gr\u0101f"
   ],
   "GROVELINGLY": [
-    "enm:grovelen",
-    "old_norse:grufla"
+    "enm:grove",
+    "gmw-pro:graib",
+    "old_english:gr\u0101f"
   ],
   "GROVELLED": [
     "enm:grovelen",
@@ -286500,6 +286998,18 @@
   "GUESTS": [
     "enm:gest",
     "old_norse:gestr"
+  ],
+  "GUFFAW": [
+    "imitative:-"
+  ],
+  "GUFFAWED": [
+    "imitative:-"
+  ],
+  "GUFFAWING": [
+    "imitative:-"
+  ],
+  "GUFFAWS": [
+    "imitative:-"
   ],
   "GUID": [
     "enm:guide",
@@ -294593,6 +295103,18 @@
     "old_english:heorot",
     "old_english:horn"
   ],
+  "HARUMPH": [
+    "imitative:-"
+  ],
+  "HARUMPHED": [
+    "imitative:-"
+  ],
+  "HARUMPHING": [
+    "imitative:-"
+  ],
+  "HARUMPHS": [
+    "imitative:-"
+  ],
   "HARUSPEX": [
     "latin:haruspex"
   ],
@@ -295764,7 +296286,7 @@
     "xno:haucier"
   ],
   "HAWSERS": [
-    "enm:ha"
+    "enm:halse"
   ],
   "HAWSES": [
     "enm:ha"
@@ -298629,6 +299151,12 @@
   "HEGUMENY": [
     "greek:\u1f21\u03b3\u03bf\u03cd\u03bc\u03b5\u03bd\u03bf\u03c2"
   ],
+  "HEH": [
+    "imitative:-"
+  ],
+  "HEHS": [
+    "imitative:-"
+  ],
   "HEIFER": [
     "enm:heyfre",
     "old_english:heahfore"
@@ -300921,10 +301449,8 @@
     "la-ecc:haeresiarcha"
   ],
   "HERESIES": [
-    "enm:heresie",
-    "greek:\u03b1\u1f35\u03c1\u03b5\u03c3\u03b9\u03c2",
-    "latin:haeresis",
-    "old_french:heresie"
+    "enm:here",
+    "old_english:hire"
   ],
   "HERESY": [
     "enm:heresie",
@@ -302305,6 +302831,9 @@
     "la-lat:hibiscus",
     "latin:hibiscum"
   ],
+  "HIC": [
+    "imitative:-"
+  ],
   "HICCUP": [
     "gml:huckup",
     "gml:hueckup",
@@ -302335,11 +302864,32 @@
     "gml:hueckup",
     "sco:hix"
   ],
+  "HICK": [
+    "imitative:-"
+  ],
+  "HICKEY": [
+    "imitative:-"
+  ],
+  "HICKEYS": [
+    "imitative:-"
+  ],
+  "HICKIE": [
+    "imitative:-"
+  ],
+  "HICKIES": [
+    "imitative:-"
+  ],
+  "HICKISH": [
+    "imitative:-"
+  ],
   "HICKORIES": [
     "alq:pawcohiccora"
   ],
   "HICKORY": [
     "alq:pawcohiccora"
+  ],
+  "HICKS": [
+    "imitative:-"
   ],
   "HIDABLE": [
     "enm:hiden",
@@ -307159,6 +307709,39 @@
   "HONING": [
     "enm:hon",
     "old_english:h\u0101n"
+  ],
+  "HONK": [
+    "imitative:-"
+  ],
+  "HONKED": [
+    "imitative:-"
+  ],
+  "HONKER": [
+    "imitative:-"
+  ],
+  "HONKERS": [
+    "imitative:-"
+  ],
+  "HONKEY": [
+    "imitative:-"
+  ],
+  "HONKEYS": [
+    "imitative:-"
+  ],
+  "HONKIE": [
+    "imitative:-"
+  ],
+  "HONKIES": [
+    "imitative:-"
+  ],
+  "HONKING": [
+    "imitative:-"
+  ],
+  "HONKS": [
+    "imitative:-"
+  ],
+  "HONKY": [
+    "imitative:-"
   ],
   "HONOR": [
     "enm:honour",
@@ -315705,9 +316288,7 @@
     "la-new:hypochondria"
   ],
   "HYPOCHONDRIASES": [
-    "greek:\u1f34\u03b1\u03c3\u03b9\u03c2",
-    "greek:\u1f51\u03c0\u03bf\u03c7\u03cc\u03bd\u03b4\u03c1\u03b9\u03bf\u03bd",
-    "la-new:hypochondrium"
+    "la-new:hypochondria"
   ],
   "HYPOCHONDRIASIS": [
     "greek:\u1f34\u03b1\u03c3\u03b9\u03c2",
@@ -316861,6 +317442,33 @@
     "enm:is",
     "gmw-pro:\u012bs",
     "old_english:\u012bs"
+  ],
+  "ICK": [
+    "imitative:-"
+  ],
+  "ICKER": [
+    "imitative:-"
+  ],
+  "ICKERS": [
+    "imitative:-"
+  ],
+  "ICKIER": [
+    "imitative:-"
+  ],
+  "ICKIEST": [
+    "imitative:-"
+  ],
+  "ICKILY": [
+    "imitative:-"
+  ],
+  "ICKINESS": [
+    "imitative:-"
+  ],
+  "ICKINESSES": [
+    "imitative:-"
+  ],
+  "ICKY": [
+    "imitative:-"
   ],
   "ICON": [
     "greek:\u03b5\u1f30\u03ba\u03ce\u03bd",
@@ -321524,11 +322132,7 @@
     "latin:imping\u014d"
   ],
   "IMPINGED": [
-    "enm:impen",
-    "gmw-pro:imp\u014dn",
-    "greek:\u1f14\u03bc\u03c6\u1fe0\u03c4\u03bf\u03c2",
-    "la-vul:imput\u014d",
-    "old_english:impian"
+    "latin:imping\u014d"
   ],
   "IMPINGEMENT": [
     "latin:imping\u014d"
@@ -321547,18 +322151,10 @@
     "old_english:impian"
   ],
   "IMPINGES": [
-    "enm:impen",
-    "gmw-pro:imp\u014dn",
-    "greek:\u1f14\u03bc\u03c6\u1fe0\u03c4\u03bf\u03c2",
-    "la-vul:imput\u014d",
-    "old_english:impian"
+    "latin:imping\u014d"
   ],
   "IMPINGING": [
-    "enm:impen",
-    "gmw-pro:imp\u014dn",
-    "greek:\u1f14\u03bc\u03c6\u1fe0\u03c4\u03bf\u03c2",
-    "la-vul:imput\u014d",
-    "old_english:impian"
+    "latin:imping\u014d"
   ],
   "IMPINGS": [
     "enm:impen",
@@ -324713,10 +325309,20 @@
     "old_french:clos"
   ],
   "INCLOSER": [
-    "enm:closere"
+    "enm:clos",
+    "enm:closen",
+    "enm:clusen",
+    "latin:clausus",
+    "old_english:cl\u0233san",
+    "old_french:clos"
   ],
   "INCLOSERS": [
-    "enm:closere"
+    "enm:clos",
+    "enm:closen",
+    "enm:clusen",
+    "latin:clausus",
+    "old_english:cl\u0233san",
+    "old_french:clos"
   ],
   "INCLOSES": [
     "enm:clos",
@@ -326373,16 +326979,6 @@
     "enm:descriven",
     "latin:d\u0113scr\u012bb\u014d",
     "old_french:descrivre"
-  ],
-  "INDESTRUCTIBLE": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
-  ],
-  "INDESTRUCTIBLY": [
-    "enm:destruccioun",
-    "latin:destructio",
-    "old_french:destrucion"
   ],
   "INDETERMINABLE": [
     "frm:indeterminable",
@@ -333073,16 +333669,20 @@
     "old_french:installer"
   ],
   "INSTALMENT": [
-    "enm:installen",
-    "frk:stall",
-    "la-med:\u012bnstall\u014d",
-    "old_french:installer"
+    "la-med:installare",
+    "la-med:stallum",
+    "old_french:estal",
+    "old_french:installer",
+    "old_high_german:stal",
+    "xno:estaler"
   ],
   "INSTALMENTS": [
-    "enm:installen",
-    "frk:stall",
-    "la-med:\u012bnstall\u014d",
-    "old_french:installer"
+    "la-med:installare",
+    "la-med:stallum",
+    "old_french:estal",
+    "old_french:installer",
+    "old_high_german:stal",
+    "xno:estaler"
   ],
   "INSTALS": [
     "enm:installen",
@@ -338103,7 +338703,9 @@
     "old_english:titul"
   ],
   "INTITLING": [
-    "is:titlingr"
+    "enm:title",
+    "latin:titulus",
+    "old_english:titul"
   ],
   "INTO": [
     "enm:in-to",
@@ -340304,7 +340906,7 @@
     "enm:wrappen"
   ],
   "INWRAPPING": [
-    "enm:wrappen"
+    "enm:wrappinge"
   ],
   "INWRAPS": [
     "enm:wrappen"
@@ -345876,13 +346478,8 @@
     "xno:juel"
   ],
   "JEWELLERIES": [
-    "arabic:\u062c\u064e\u0648\u0652\u0647\u064e\u0631",
-    "enm:juel",
-    "french:joyau",
-    "latin:gaudium",
-    "latin:iocus",
-    "old_french:jouel",
-    "xno:juel"
+    "enm:juelrye",
+    "old_french:juelerye"
   ],
   "JEWELLERS": [
     "arabic:\u062c\u064e\u0648\u0652\u0647\u064e\u0631",
@@ -346218,6 +346815,24 @@
   ],
   "JINGOISTS": [
     "eu:jainko"
+  ],
+  "JINK": [
+    "imitative:-"
+  ],
+  "JINKED": [
+    "imitative:-"
+  ],
+  "JINKER": [
+    "imitative:-"
+  ],
+  "JINKERS": [
+    "imitative:-"
+  ],
+  "JINKING": [
+    "imitative:-"
+  ],
+  "JINKS": [
+    "imitative:-"
   ],
   "JINN": [
     "arabic:pos=collective noun"
@@ -349888,6 +350503,12 @@
   "KATSURAS": [
     "japanese:\u6842"
   ],
+  "KATYDID": [
+    "imitative:-"
+  ],
+  "KATYDIDS": [
+    "imitative:-"
+  ],
   "KATZENJAMMER": [
     "german:katzenjammer"
   ],
@@ -349975,6 +350596,12 @@
   "KAZATSKY": [
     "ru:\u043a\u0430\u0437\u0430\u0301\u0446\u043a\u0438\u0439"
   ],
+  "KAZOO": [
+    "imitative:-"
+  ],
+  "KAZOOS": [
+    "imitative:-"
+  ],
   "KEA": [
     "mi:kea"
   ],
@@ -349994,6 +350621,30 @@
   ],
   "KEBBUCKS": [
     "gd:c\u00e0baig"
+  ],
+  "KECK": [
+    "imitative:-"
+  ],
+  "KECKED": [
+    "imitative:-"
+  ],
+  "KECKING": [
+    "imitative:-"
+  ],
+  "KECKLE": [
+    "imitative:-"
+  ],
+  "KECKLED": [
+    "imitative:-"
+  ],
+  "KECKLES": [
+    "imitative:-"
+  ],
+  "KECKLING": [
+    "imitative:-"
+  ],
+  "KECKS": [
+    "imitative:-"
   ],
   "KEDDAH": [
     "as:\u0996\u09c7\u09a6\u09be"
@@ -350649,6 +351300,9 @@
     "enm:keverchef",
     "old_french:couvrechief"
   ],
+  "KERCHOO": [
+    "imitative:-"
+  ],
   "KERF": [
     "enm:kerf",
     "gmw-pro:kurbi",
@@ -350730,10 +351384,10 @@
     "old_english:cyrnel"
   ],
   "KERNELING": [
-    "enm:kernel",
-    "enm:kirnel",
-    "gmw-pro:kurnil",
-    "old_english:cyrnel"
+    "enm:curn",
+    "enm:kerne",
+    "french:carne",
+    "mga:ceithern"
   ],
   "KERNELLED": [
     "enm:kernel",
@@ -351976,6 +352630,12 @@
   ],
   "KILLABLE": [
     "enm:killen"
+  ],
+  "KILLDEER": [
+    "imitative:-"
+  ],
+  "KILLDEERS": [
+    "imitative:-"
   ],
   "KILLED": [
     "enm:killen"
@@ -353476,6 +354136,12 @@
     "dum:kitte",
     "enm:kyt"
   ],
+  "KITTIWAKE": [
+    "imitative:-"
+  ],
+  "KITTIWAKES": [
+    "imitative:-"
+  ],
   "KITTLE": [
     "enm:kitelen",
     "gmw-pro:kitil\u014dn",
@@ -353593,6 +354259,12 @@
   "KLEZMERS": [
     "he:\u05db\u05b0\u05bc\u05dc\u05b5\u05d9 \u05d6\u05b6\u05de\u05b6\u05e8",
     "yi:\u05e7\u05dc\u05e2\u05d6\u05de\u05e2\u05e8"
+  ],
+  "KLICK": [
+    "imitative:-"
+  ],
+  "KLICKS": [
+    "imitative:-"
   ],
   "KLISTER": [
     "sv:klister"
@@ -358304,13 +358976,19 @@
   ],
   "LANDSLID": [
     "enm:lond",
+    "enm:sliden",
     "gmw-pro:land",
-    "old_english:land"
+    "gmw-pro:sl\u012bdan",
+    "old_english:land",
+    "old_english:sl\u012bdan"
   ],
   "LANDSLIDDEN": [
     "enm:lond",
+    "enm:sliden",
     "gmw-pro:land",
-    "old_english:land"
+    "gmw-pro:sl\u012bdan",
+    "old_english:land",
+    "old_english:sl\u012bdan"
   ],
   "LANDSLIDE": [
     "enm:lond",
@@ -358322,8 +359000,11 @@
   ],
   "LANDSLIDES": [
     "enm:lond",
+    "enm:sliden",
     "gmw-pro:land",
-    "old_english:land"
+    "gmw-pro:sl\u012bdan",
+    "old_english:land",
+    "old_english:sl\u012bdan"
   ],
   "LANDSLIDING": [
     "enm:lond",
@@ -358956,9 +359637,8 @@
     "old_english:l\u00e6ppa"
   ],
   "LAPSABLE": [
-    "enm:lappe",
-    "gmw-pro:lapp\u014d",
-    "old_english:l\u00e6ppa"
+    "frm:laps",
+    "latin:l\u0101psus"
   ],
   "LAPSE": [
     "frm:laps",
@@ -358973,8 +359653,9 @@
     "latin:l\u0101psus"
   ],
   "LAPSERS": [
-    "frm:laps",
-    "latin:l\u0101psus"
+    "enm:lappe",
+    "gmw-pro:lapp\u014d",
+    "old_english:l\u00e6ppa"
   ],
   "LAPSES": [
     "frm:laps",
@@ -358985,9 +359666,8 @@
     "latin:l\u0101psus"
   ],
   "LAPSING": [
-    "enm:lappe",
-    "gmw-pro:lapp\u014d",
-    "old_english:l\u00e6ppa"
+    "frm:laps",
+    "latin:l\u0101psus"
   ],
   "LAPSTRAKE": [
     "enm:lappe",
@@ -359238,10 +359918,9 @@
     "xno:largece"
   ],
   "LARGESSES": [
-    "enm:larges",
-    "frm:largece",
-    "old_french:largesce",
-    "xno:largece"
+    "enm:large",
+    "latin:larga",
+    "old_french:large"
   ],
   "LARGEST": [
     "enm:large",
@@ -377544,10 +378223,10 @@
     "french:lyophile"
   ],
   "LYOPHILISED": [
-    "greek:\u03bb\u03cd\u03c9"
+    "french:lyophile"
   ],
   "LYOPHILISES": [
-    "greek:\u03bb\u03cd\u03c9"
+    "french:lyophile"
   ],
   "LYOPHILISING": [
     "french:lyophile"
@@ -382115,7 +382794,8 @@
     "latin:mand\u0101tus"
   ],
   "MANDATORIES": [
-    "la-lat:mandatorius"
+    "latin:mand\u0101tum",
+    "latin:mand\u0101tus"
   ],
   "MANDATORILY": [
     "la-lat:mandatorius"
@@ -384391,11 +385071,9 @@
     "spanish:marina"
   ],
   "MARINATIONS": [
-    "french:mariner",
-    "italian:marinare",
-    "la-lat:marina",
-    "latin:mare",
-    "latin:marinus"
+    "italian:marina",
+    "latin:marinus",
+    "spanish:marina"
   ],
   "MARINE": [
     "enm:marin",
@@ -385363,11 +386041,10 @@
     "spanish:alm\u00e1rtaga"
   ],
   "MARTINGALS": [
-    "dum:mart",
-    "la-lat:marc\u0101tus",
-    "latin:merc\u0101tus",
-    "latin:m\u0101rs",
-    "old_dutch:markat"
+    "frm:martingale",
+    "latin:maritima",
+    "oc:martegalo",
+    "spanish:alm\u00e1rtaga"
   ],
   "MARTINS": [
     "frm:martin"
@@ -388320,7 +388997,9 @@
     "enm:mazednesse"
   ],
   "MAZEDNESSES": [
-    "enm:mazednesse"
+    "enm:mase",
+    "enm:masen",
+    "old_english:m\u00e6s"
   ],
   "MAZELIKE": [
     "enm:mase",
@@ -392066,7 +392745,12 @@
     "enm:marchaundising"
   ],
   "MERCHANDIZINGS": [
-    "enm:marchaundising"
+    "enm:marchaundise",
+    "enm:marchaundisen",
+    "latin:merc\u0101tus",
+    "old_french:marcheandise",
+    "old_french:marcheant",
+    "xno:marchaundise"
   ],
   "MERCHANT": [
     "enm:marchaunt",
@@ -395033,12 +395717,7 @@
     "xno:mue"
   ],
   "MEWING": [
-    "enm:mewe",
-    "enm:mewen",
-    "frm:mue",
-    "gmw-pro:maiw\u012b",
-    "old_english:m\u01e3w",
-    "xno:mue"
+    "imitative:-"
   ],
   "MEWL": [
     "enm:mewen"
@@ -399722,10 +400401,10 @@
     "latin:minimus"
   ],
   "MINIMISES": [
-    "french:mise"
+    "french:minime"
   ],
   "MINIMISING": [
-    "latin:minimus"
+    "french:minime"
   ],
   "MINIMIZATION": [
     "latin:minimus"
@@ -401196,9 +401875,9 @@
     "old_english:beginnan"
   ],
   "MISBEGINNING": [
-    "enm:begynnyng",
-    "enm:biginning",
-    "old_english:beginnende"
+    "enm:beginnen",
+    "gmw-pro:biginnan",
+    "old_english:beginnan"
   ],
   "MISBEGINS": [
     "enm:beginnen",
@@ -401692,8 +402371,9 @@
     "latin:causa"
   ],
   "MISCHOSEN": [
-    "frm:chose",
-    "latin:causa"
+    "enm:chosen",
+    "old_english:coren",
+    "old_english:\u010b\u0113osan"
   ],
   "MISCIBILITIES": [
     "enm:miscible",
@@ -403730,9 +404410,9 @@
     "old_english:leornian"
   ],
   "MISLEARNING": [
-    "enm:lernyng",
-    "gmw-pro:li\u0280nungu",
-    "old_english:leornung"
+    "enm:lernen",
+    "gmw-pro:li\u0280n\u014dn",
+    "old_english:leornian"
   ],
   "MISLEARNS": [
     "enm:lernen",
@@ -407546,9 +408226,7 @@
     "latin:modo"
   ],
   "MODERNISED": [
-    "frm:moderne",
-    "la-lat:modernus",
-    "latin:modo"
+    "french:moderniser"
   ],
   "MODERNISES": [
     "frm:moderne",
@@ -407556,9 +408234,7 @@
     "latin:modo"
   ],
   "MODERNISING": [
-    "frm:moderne",
-    "la-lat:modernus",
-    "latin:modo"
+    "french:moderniser"
   ],
   "MODERNISM": [
     "frm:moderne",
@@ -409940,20 +410616,23 @@
     "gkm:\u03bc\u03bf\u03bd\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
   ],
   "MONOLOGGED": [
-    "frm:monologue",
-    "gkm:\u03bc\u03bf\u03bd\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
+    "enm:logge",
+    "old_norse:liggja",
+    "old_norse:l\u00f3g"
   ],
   "MONOLOGGING": [
-    "frm:monologue",
-    "gkm:\u03bc\u03bf\u03bd\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
+    "enm:logge",
+    "old_norse:liggja",
+    "old_norse:l\u00f3g"
   ],
   "MONOLOGIC": [
     "frm:monologue",
     "gkm:\u03bc\u03bf\u03bd\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
   ],
   "MONOLOGIES": [
-    "frm:monologue",
-    "gkm:\u03bc\u03bf\u03bd\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
+    "french:-logie",
+    "greek:-\u03bb\u03bf\u03b3\u03af\u03b1",
+    "latin:-logia"
   ],
   "MONOLOGIST": [
     "japanese:\u30e2\u30f3",
@@ -410213,16 +410892,16 @@
     "la-lat:monop\u014dlium"
   ],
   "MONOPOLISED": [
+    "frm:monopole",
+    "la-lat:monop\u014dlium"
+  ],
+  "MONOPOLISES": [
     "greek:\u03bc\u03bf\u03bd\u03bf\u03c0\u03ce\u03bb\u03b9\u03bf\u03bd",
     "latin:monop\u014dlium"
   ],
-  "MONOPOLISES": [
-    "frm:monopole",
-    "la-lat:monop\u014dlium"
-  ],
   "MONOPOLISING": [
-    "frm:monopole",
-    "la-lat:monop\u014dlium"
+    "greek:\u03bc\u03bf\u03bd\u03bf\u03c0\u03ce\u03bb\u03b9\u03bf\u03bd",
+    "latin:monop\u014dlium"
   ],
   "MONOPOLIST": [
     "greek:\u03bc\u03bf\u03bd\u03bf\u03c0\u03ce\u03bb\u03b9\u03bf\u03bd",
@@ -410776,6 +411455,9 @@
     "greek:-\u1fd1\u0301\u03c4\u03b7\u03c2",
     "latin:-\u012bt\u0113s"
   ],
+  "MOO": [
+    "imitative:-"
+  ],
   "MOOCH": [
     "enm:moochen",
     "frk:mukkjan",
@@ -410841,6 +411523,12 @@
   "MOODY": [
     "enm:mody",
     "old_english:m\u014ddi\u0121"
+  ],
+  "MOOED": [
+    "imitative:-"
+  ],
+  "MOOING": [
+    "imitative:-"
   ],
   "MOON": [
     "enm:mone",
@@ -411482,6 +412170,9 @@
     "gmw-pro:m\u014dr",
     "old_english:m\u0101rian",
     "old_english:m\u014dr"
+  ],
+  "MOOS": [
+    "imitative:-"
   ],
   "MOOSE": [
     "alg-pro:mo\u00b7swa",
@@ -412307,8 +412998,8 @@
     "mul:morpho"
   ],
   "MORPHOSES": [
-    "greek:\u03bc\u03cc\u03c1\u03c6\u03c9\u03c3\u03b9\u03c2",
-    "la-lat:morphosis"
+    "greek:\u03bc\u03bf\u03c1\u03c6\u03ce",
+    "mul:morpho"
   ],
   "MORPHOSIS": [
     "greek:\u03bc\u03cc\u03c1\u03c6\u03c9\u03c3\u03b9\u03c2",
@@ -415900,9 +416591,10 @@
     "old_english:myl"
   ],
   "MULLEYS": [
-    "enm:molle",
-    "gmw-pro:muli",
-    "old_english:myl"
+    "enm:mule",
+    "latin:m\u016blus",
+    "old_english:m\u016bl",
+    "xno:mule"
   ],
   "MULLIGATAWNIES": [
     "tamil:\u0bae\u0bbf\u0bb3\u0b95\u0bc1\u0ba4\u0bcd\u0ba4\u0ba3\u0bcd\u0ba3\u0bc0\u0bb0\u0bcd"
@@ -417825,6 +418517,9 @@
     "latin:murmur",
     "old_french:murmure"
   ],
+  "MURR": [
+    "imitative:-"
+  ],
   "MURRAIN": [
     "enm:morein",
     "frm:morine",
@@ -417841,6 +418536,18 @@
     "old_french:morine",
     "xno:morine"
   ],
+  "MURRE": [
+    "imitative:-"
+  ],
+  "MURRELET": [
+    "imitative:-"
+  ],
+  "MURRELETS": [
+    "imitative:-"
+  ],
+  "MURRES": [
+    "imitative:-"
+  ],
   "MURREY": [
     "enm:murrey",
     "frm:mor\u00e9",
@@ -417855,7 +418562,10 @@
     "latin:murrhinus"
   ],
   "MURRIES": [
-    "xdk:mari"
+    "imitative:-"
+  ],
+  "MURRS": [
+    "imitative:-"
   ],
   "MURRY": [
     "xdk:mari"
@@ -421329,9 +422039,7 @@
     "old_english:hn\u00e6p"
   ],
   "NAPPINESSES": [
-    "enm:nap",
-    "gmw-pro:hnapp",
-    "old_english:hn\u00e6p"
+    "french:nappe"
   ],
   "NAPPING": [
     "french:nappe"
@@ -422188,6 +422896,18 @@
     "french:natron",
     "greek:\u03bd\u03af\u03c4\u03c1\u03bf\u03bd",
     "spanish:natr\u00f3n"
+  ],
+  "NATTER": [
+    "imitative:-"
+  ],
+  "NATTERED": [
+    "imitative:-"
+  ],
+  "NATTERING": [
+    "imitative:-"
+  ],
+  "NATTERS": [
+    "imitative:-"
   ],
   "NATTIER": [
     "enm:natural",
@@ -424393,7 +425113,10 @@
     "la-lat:orthodoxus"
   ],
   "NEOORTHODOXIES": [
-    "greek:\u1f40\u03c1\u03b8\u03bf\u03b4\u03bf\u03be\u03af\u03b1"
+    "enm:orthodoxe",
+    "frm:orthodoxe",
+    "greek:\u1f40\u03c1\u03b8\u03cc\u03b4\u03bf\u03be\u03bf\u03c2",
+    "la-lat:orthodoxus"
   ],
   "NEOORTHODOXY": [
     "greek:\u1f40\u03c1\u03b8\u03bf\u03b4\u03bf\u03be\u03af\u03b1"
@@ -428939,6 +429662,9 @@
     "old_french:enoiier",
     "old_french:noise"
   ],
+  "NOM": [
+    "imitative:-"
+  ],
   "NOMA": [
     "greek:\u03bd\u03bf\u03bc\u03ae",
     "la-new:noma",
@@ -429018,10 +429744,7 @@
     "latin:n\u014dmencl\u0101t\u016bra"
   ],
   "NOMES": [
-    "french:-n\u00f4me",
-    "french:nome",
-    "greek:\u03bd\u03bf\u03bc\u03cc\u03c2",
-    "greek:\u03bd\u03cc\u03bc\u03bf\u03c2"
+    "imitative:-"
   ],
   "NOMINA": [
     "latin:n\u014dmen"
@@ -429181,10 +429904,7 @@
     "greek:\u03bd\u03bf\u03bc\u03bf\u03b8\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2"
   ],
   "NOMS": [
-    "french:-n\u00f4me",
-    "french:nome",
-    "greek:\u03bd\u03bf\u03bc\u03cc\u03c2",
-    "greek:\u03bd\u03cc\u03bc\u03bf\u03c2"
+    "imitative:-"
   ],
   "NONABRASIVE": [
     "la-med:abr\u0101s\u012bvus"
@@ -430983,7 +431703,7 @@
     "enm:dauncer"
   ],
   "NONDANCERS": [
-    "enm:dauncer"
+    "french:dancing"
   ],
   "NONDANCES": [
     "french:dancing"
@@ -431762,10 +432482,10 @@
     "latin:explosus"
   ],
   "NONEXPOSED": [
-    "enm:exposen",
-    "latin:exp\u014dn\u014d",
-    "old_french:espondre",
-    "old_french:exposer"
+    "enm:exposicioun",
+    "french:exposition",
+    "latin:expositi\u014d",
+    "old_french:esposicion"
   ],
   "NONEXTANT": [
     "latin:extantem"
@@ -434398,8 +435118,6 @@
     "latin:rel\u0101tus"
   ],
   "NONRELATIVES": [
-    "frm:relatif",
-    "la-lat:rel\u0101t\u012bvus",
     "latin:rel\u0101tus"
   ],
   "NONRELATIVISTIC": [
@@ -436507,8 +437225,10 @@
     "old_english:nosu"
   ],
   "NOSEDIVES": [
+    "enm:diven",
     "enm:nose",
     "gmw-pro:nosu",
+    "old_english:d\u0233fan",
     "old_english:nosu"
   ],
   "NOSEDIVING": [
@@ -444432,8 +445152,7 @@
     "la-new:onco-"
   ],
   "ONCOGENESES": [
-    "german:gen",
-    "greek:\u03b3\u03b5\u03bd\u03b5\u03ac",
+    "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
     "greek:\u1f44\u03b3\u03ba\u03bf\u03c2",
     "la-new:onco-"
   ],
@@ -445064,6 +445783,12 @@
   "OOLONGS": [
     "cmn:\u70cf\u9f8d",
     "nan-hbl:\u70cf\u9f8d"
+  ],
+  "OOMPH": [
+    "imitative:-"
+  ],
+  "OOMPHS": [
+    "imitative:-"
   ],
   "OOPHORECTOMIES": [
     "greek:\u1f10\u03ba\u03c4\u03bf\u03bc\u03ae"
@@ -448502,7 +449227,7 @@
     "french:orthop\u00e9dique"
   ],
   "ORTHOPAEDICS": [
-    "greek:\u03c0\u03b1\u03b9\u03b4\u03b5\u03af\u03b1"
+    "french:orthop\u00e9dique"
   ],
   "ORTHOPEDIC": [
     "french:orthop\u00e9dique"
@@ -450738,8 +451463,9 @@
     "old_english:\u010b\u012bdan"
   ],
   "OUTCITIES": [
-    "latin:cito",
-    "old_french:citer"
+    "enm:cite",
+    "la-lat:civitas",
+    "old_french:citet"
   ],
   "OUTCITY": [
     "enm:cite",
@@ -453808,12 +454534,10 @@
     "xno:pit\u00e9"
   ],
   "OUTPITIES": [
-    "dum:pitte",
-    "dutch:pit",
-    "enm:pit",
-    "gmw-pro:puti",
-    "latin:puteus",
-    "old_english:pytt"
+    "enm:pitye",
+    "latin:piet\u0101s",
+    "old_french:pitet",
+    "xno:pit\u00e9"
   ],
   "OUTPITY": [
     "enm:pitye",
@@ -454541,7 +455265,9 @@
     "french:rang"
   ],
   "OUTRANGES": [
-    "french:rang"
+    "enm:rengen",
+    "frk:hring",
+    "old_french:rengier"
   ],
   "OUTRANGING": [
     "french:rang"
@@ -457243,16 +457969,14 @@
     "enm:outwriten"
   ],
   "OUTWRITES": [
-    "enm:writ",
-    "old_english:writ"
+    "enm:outwriten"
   ],
   "OUTWRITING": [
     "enm:outwriten"
   ],
   "OUTWRITTEN": [
-    "enm:writen",
-    "gmw-pro:wr\u012btan",
-    "old_english:wr\u012btan"
+    "enm:writ",
+    "old_english:writ"
   ],
   "OUTWROUGHT": [
     "enm:worchen",
@@ -470008,9 +470732,11 @@
     "latin:-genus"
   ],
   "PANGENESES": [
-    "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
+    "french:-g\u00e8ne",
+    "german:-gen",
+    "greek:-\u03b3\u03b5\u03bd\u03ae\u03c2",
     "greek:\u03c0\u1fb0\u03bd-",
-    "latin:genesis"
+    "latin:-genus"
   ],
   "PANGENESIS": [
     "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
@@ -471878,8 +472604,8 @@
     "french:paralyser"
   ],
   "PARALYSES": [
-    "greek:\u03c0\u03b1\u03c1\u03ac\u03bb\u03c5\u03c3\u03b9\u03c2",
-    "latin:paralysis"
+    "enm:paralysie",
+    "french:paralyser"
   ],
   "PARALYSING": [
     "enm:paralysie",
@@ -473134,9 +473860,7 @@
     "latin:p\u0101r"
   ],
   "PARESES": [
-    "french:par",
-    "latin:per",
-    "latin:p\u0101r"
+    "greek:\u03c0\u03ac\u03c1\u03b5\u03c3\u03b9\u03c2"
   ],
   "PARESIS": [
     "greek:\u03c0\u03ac\u03c1\u03b5\u03c3\u03b9\u03c2"
@@ -476185,7 +476909,9 @@
     "greek:\u03b3\u03ad\u03bd\u03bf\u03c2"
   ],
   "PATHOGENESES": [
-    "greek:\u03b3\u03ad\u03bd\u03bf\u03c2"
+    "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
+    "greek:\u03c0\u03ac\u03b8\u03bf\u03c2",
+    "greek:\u03c0\u1fb0\u0301\u03b8\u03bf\u03c2"
   ],
   "PATHOGENESIS": [
     "greek:\u03b3\u03ad\u03bd\u03b5\u03c3\u03b9\u03c2",
@@ -479436,6 +480162,12 @@
     "latin:perversus",
     "old_french:espave"
   ],
+  "PEEWIT": [
+    "imitative:-"
+  ],
+  "PEEWITS": [
+    "imitative:-"
+  ],
   "PEG": [
     "dum:pegge",
     "enm:pegge",
@@ -480849,6 +481581,12 @@
   "PENTAMETERS": [
     "frm:pentam\u00e8tre"
   ],
+  "PENTANE": [
+    "latin:-\u0101nus"
+  ],
+  "PENTANES": [
+    "latin:-\u0101nus"
+  ],
   "PENTANGLE": [
     "enm:pentangel"
   ],
@@ -480857,10 +481595,12 @@
   ],
   "PENTANOL": [
     "greek:\u1f14\u03bb\u03b1\u03b9\u03bf\u03bd",
+    "latin:-\u0101nus",
     "latin:oleum"
   ],
   "PENTANOLS": [
     "greek:\u1f14\u03bb\u03b1\u03b9\u03bf\u03bd",
+    "latin:-\u0101nus",
     "latin:oleum"
   ],
   "PENTAPEPTIDE": [
@@ -480972,11 +481712,13 @@
   ],
   "PENTOBARBITAL": [
     "french:m\u00e9thyl\u00e8ne",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "PENTOBARBITALS": [
     "french:m\u00e9thyl\u00e8ne",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "PENTODE": [
     "greek:-\u03ce\u03b4\u03b7\u03c2"
@@ -481006,11 +481748,13 @@
   ],
   "PENTYL": [
     "french:m\u00e9thyl\u00e8ne",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "PENTYLS": [
     "french:m\u00e9thyl\u00e8ne",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "PENUCHE": [
     "italian:panucci"
@@ -486188,14 +486932,10 @@
     "la-lat:phaenomenon"
   ],
   "PHENOTHIAZINE": [
-    "french:azote",
-    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
-    "greek:\u1f00-"
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "PHENOTHIAZINES": [
-    "french:azote",
-    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
-    "greek:\u1f00-"
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "PHENOTYPE": [
     "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
@@ -486289,6 +487029,9 @@
   ],
   "PHEROMONES": [
     "greek:\u03c6\u03ad\u03c1\u03c9"
+  ],
+  "PHEW": [
+    "imitative:-"
   ],
   "PHI": [
     "greek:\u03c6\u03b5\u1fd6",
@@ -486524,10 +487267,16 @@
     "french:philosophe"
   ],
   "PHILOSOPHISED": [
-    "french:philosophe"
+    "enm:philosophie",
+    "greek:\u03c6\u03b9\u03bb\u03bf\u03c3\u03bf\u03c6\u03af\u03b1",
+    "latin:philosophia",
+    "old_french:philosophie"
   ],
   "PHILOSOPHISES": [
-    "french:philosophe"
+    "enm:philosophie",
+    "greek:\u03c6\u03b9\u03bb\u03bf\u03c3\u03bf\u03c6\u03af\u03b1",
+    "latin:philosophia",
+    "old_french:philosophie"
   ],
   "PHILOSOPHISING": [
     "french:philosophe"
@@ -488932,8 +489681,8 @@
     "old_french:filatiere"
   ],
   "PHYLAE": [
-    "greek:\u03c6\u1fe1\u03bb\u03ae",
-    "la-new:ph\u0233l\u0113"
+    "greek:\u03c6\u1fe6\u03bb\u03bf\u03bd",
+    "latin:phylum"
   ],
   "PHYLAXIS": [
     "greek:\u03c6\u03cd\u03bb\u03b1\u03be\u03b9\u03c2"
@@ -491040,6 +491789,9 @@
     "old_english:picga",
     "old_english:w\u0113od"
   ],
+  "PIKA": [
+    "imitative:-"
+  ],
   "PIKAKE": [
     "en:peacock",
     "haw:p\u012bkake"
@@ -491047,6 +491799,9 @@
   "PIKAKES": [
     "en:peacock",
     "haw:p\u012bkake"
+  ],
+  "PIKAS": [
+    "imitative:-"
   ],
   "PIKE": [
     "enm:pyke",
@@ -492367,10 +493122,16 @@
     "old_english:\u0113age"
   ],
   "PINKEYES": [
-    "dutch:pink"
+    "dutch:pink",
+    "enm:e",
+    "gmw-pro:aug\u0101",
+    "old_english:\u0113age"
   ],
   "PINKEYS": [
-    "dutch:pink"
+    "dutch:pink",
+    "enm:e",
+    "gmw-pro:aug\u0101",
+    "old_english:\u0113age"
   ],
   "PINKIE": [
     "dutch:pinkje",
@@ -492483,7 +493244,7 @@
     "latin:pinna"
   ],
   "PINNATIONS": [
-    "latin:pinna"
+    "latin:pinn\u0101tus"
   ],
   "PINNED": [
     "enm:pinne",
@@ -498271,6 +499032,18 @@
   "PLODS": [
     "enm:plodden"
   ],
+  "PLOP": [
+    "imitative:-"
+  ],
+  "PLOPPED": [
+    "imitative:-"
+  ],
+  "PLOPPING": [
+    "imitative:-"
+  ],
+  "PLOPS": [
+    "imitative:-"
+  ],
   "PLOSIVE": [
     "latin:explosus"
   ],
@@ -498995,6 +499768,33 @@
     "enm:plungen",
     "old_french:plongier",
     "xno:plungier"
+  ],
+  "PLUNK": [
+    "imitative:-"
+  ],
+  "PLUNKED": [
+    "imitative:-"
+  ],
+  "PLUNKER": [
+    "imitative:-"
+  ],
+  "PLUNKERS": [
+    "imitative:-"
+  ],
+  "PLUNKIER": [
+    "imitative:-"
+  ],
+  "PLUNKIEST": [
+    "imitative:-"
+  ],
+  "PLUNKING": [
+    "imitative:-"
+  ],
+  "PLUNKS": [
+    "imitative:-"
+  ],
+  "PLUNKY": [
+    "imitative:-"
   ],
   "PLUPERFECT": [
     "latin:plusquamperfectum"
@@ -500282,10 +501082,8 @@
     "xno:pois"
   ],
   "POISED": [
-    "enm:poys",
-    "frm:pois",
-    "latin:p\u0113nsum",
-    "xno:pois"
+    "haw:poi",
+    "mi:poi"
   ],
   "POISER": [
     "enm:poys",
@@ -500294,22 +501092,16 @@
     "xno:pois"
   ],
   "POISERS": [
-    "enm:poys",
-    "frm:pois",
-    "latin:p\u0113nsum",
-    "xno:pois"
+    "haw:poi",
+    "mi:poi"
   ],
   "POISES": [
-    "enm:poys",
-    "frm:pois",
-    "latin:p\u0113nsum",
-    "xno:pois"
+    "haw:poi",
+    "mi:poi"
   ],
   "POISING": [
-    "enm:poys",
-    "frm:pois",
-    "latin:p\u0113nsum",
-    "xno:pois"
+    "haw:poi",
+    "mi:poi"
   ],
   "POISON": [
     "enm:poysoun",
@@ -503296,6 +504088,12 @@
   "POOED": [
     "hindi:\u091a\u093e\u0901\u092a\u094b"
   ],
+  "POOF": [
+    "imitative:-"
+  ],
+  "POOFS": [
+    "imitative:-"
+  ],
   "POOFY": [
     "enm:puff",
     "gmw-pro:puf(f)-",
@@ -503460,6 +504258,12 @@
   ],
   "POOS": [
     "hindi:\u091a\u093e\u0901\u092a\u094b"
+  ],
+  "POOVE": [
+    "imitative:-"
+  ],
+  "POOVES": [
+    "imitative:-"
   ],
   "POP": [
     "cu:\u043f\u043e\u043f\u044a",
@@ -507757,6 +508561,9 @@
     "latin:paupert\u0101s",
     "old_french:povert\u00e9"
   ],
+  "POW": [
+    "imitative:-"
+  ],
   "POWDER": [
     "enm:poudre",
     "latin:pulverem",
@@ -507886,10 +508693,10 @@
     "enm:pouerles"
   ],
   "POWERS": [
-    "enm:power",
-    "la-vul:posso",
-    "latin:possum",
-    "old_french:poeir"
+    "imitative:-"
+  ],
+  "POWS": [
+    "imitative:-"
   ],
   "POWWOW": [
     "alg-pro:pawe\u00b7wa",
@@ -508547,11 +509354,9 @@
     "old_english:pr\u00e6t"
   ],
   "PRATTLINGLY": [
-    "enm:praten",
-    "gml:praten",
+    "enm:prat",
     "gmw-pro:prattu",
-    "old_english:pr\u00e6tt",
-    "osx:pratt"
+    "old_english:pr\u00e6t"
   ],
   "PRAWN": [
     "enm:prane",
@@ -510122,7 +510927,8 @@
     "latin:praec\u012bsus"
   ],
   "PRECISED": [
-    "latin:cis"
+    "frm:pr\u00e9cis",
+    "latin:praec\u012bsus"
   ],
   "PRECISELY": [
     "frm:pr\u00e9cis",
@@ -510137,13 +510943,16 @@
     "latin:praec\u012bsus"
   ],
   "PRECISER": [
-    "latin:cis"
+    "frm:pr\u00e9cis",
+    "latin:praec\u012bsus"
   ],
   "PRECISES": [
-    "latin:cis"
+    "frm:pr\u00e9cis",
+    "latin:praec\u012bsus"
   ],
   "PRECISEST": [
-    "latin:cis"
+    "frm:pr\u00e9cis",
+    "latin:praec\u012bsus"
   ],
   "PRECISIAN": [
     "frm:pr\u00e9cis",
@@ -510154,7 +510963,8 @@
     "latin:praec\u012bsus"
   ],
   "PRECISING": [
-    "latin:cis"
+    "frm:pr\u00e9cis",
+    "latin:praec\u012bsus"
   ],
   "PRECISION": [
     "frm:precision"
@@ -510285,9 +511095,9 @@
     "old_french:code"
   ],
   "PRECODED": [
-    "enm:code",
-    "latin:c\u014ddex",
-    "old_french:code"
+    "enm:cod",
+    "greek:\u03b3\u03ac\u03b4\u03bf\u03c2",
+    "latin:gadus"
   ],
   "PRECODES": [
     "enm:code",
@@ -510295,9 +511105,9 @@
     "old_french:code"
   ],
   "PRECODING": [
-    "enm:code",
-    "latin:c\u014ddex",
-    "old_french:code"
+    "enm:cod",
+    "greek:\u03b3\u03ac\u03b4\u03bf\u03c2",
+    "latin:gadus"
   ],
   "PRECOGNITION": [
     "frm:precognition",
@@ -513286,7 +514096,7 @@
     "latin:n\u014dmen"
   ],
   "PRENOMINA": [
-    "latin:praen\u014dmen"
+    "latin:n\u014dmen"
   ],
   "PRENOMINATE": [
     "latin:praenominatus"
@@ -513682,9 +514492,7 @@
     "old_french:paver"
   ],
   "PREPAVED": [
-    "la-vul:pav\u0101re",
-    "latin:pavi\u014d",
-    "old_french:paver"
+    "enm:paved"
   ],
   "PREPAVES": [
     "la-vul:pav\u0101re",
@@ -522394,8 +523202,10 @@
     "latin:pr\u014dsequor"
   ],
   "PROSED": [
-    "enm:pro",
-    "latin:pr\u014d"
+    "enm:prose",
+    "itc-ola:pr\u014dvorsus",
+    "latin:pr\u014dsa",
+    "old_french:prose"
   ],
   "PROSELYTE": [
     "greek:\u03c0\u03c1\u03bf\u03c3\u03ae\u03bb\u03c5\u03c4\u03bf\u03c2",
@@ -522529,8 +523339,10 @@
     "old_french:prose"
   ],
   "PROSES": [
-    "enm:pro",
-    "latin:pr\u014d"
+    "enm:prose",
+    "itc-ola:pr\u014dvorsus",
+    "latin:pr\u014dsa",
+    "old_french:prose"
   ],
   "PROSIER": [
     "enm:prose",
@@ -524996,6 +525808,9 @@
     "greek:\u03c8\u03ce\u03c1\u03b1",
     "la-lat:ps\u014driasis"
   ],
+  "PSST": [
+    "imitative:-"
+  ],
   "PSYCH": [
     "french:psychiatrie",
     "french:psychologie",
@@ -525869,11 +526684,17 @@
     "greek:\u03c0\u03c4\u1ff6\u03bc\u03b1",
     "italian:ptomaina"
   ],
+  "PTOOEY": [
+    "imitative:-"
+  ],
   "PTOSES": [
     "greek:\u03c0\u03c4\u1ff6\u03c3\u03b9\u03c2"
   ],
   "PTOSIS": [
     "greek:\u03c0\u03c4\u1ff6\u03c3\u03b9\u03c2"
+  ],
+  "PTUI": [
+    "imitative:-"
   ],
   "PTYALIN": [
     "greek:\u03c0\u03c4\u03cd\u03b1\u03bb\u03bf\u03bd"
@@ -526930,12 +527751,7 @@
     "persian:\u067e\u0648\u0644"
   ],
   "PULSES": [
-    "enm:pous",
-    "enm:pulse",
-    "frm:pouls",
-    "latin:pulsus",
-    "old_french:pous",
-    "xno:puls"
+    "persian:\u067e\u0648\u0644"
   ],
   "PULSING": [
     "persian:\u067e\u0648\u0644"
@@ -528559,19 +529375,19 @@
     "old_english:purs"
   ],
   "PURSES": [
-    "enm:pure",
-    "latin:p\u016brus",
-    "old_french:pur"
+    "enm:purs",
+    "gmw-pro:pus\u014d",
+    "old_english:purs"
   ],
   "PURSIER": [
-    "enm:pure",
-    "latin:p\u016brus",
-    "old_french:pur"
+    "enm:purs",
+    "gmw-pro:pus\u014d",
+    "old_english:purs"
   ],
   "PURSIEST": [
-    "enm:pure",
-    "latin:p\u016brus",
-    "old_french:pur"
+    "enm:purs",
+    "gmw-pro:pus\u014d",
+    "old_english:purs"
   ],
   "PURSILY": [
     "enm:pursyf",
@@ -528589,9 +529405,9 @@
     "old_french:pousser"
   ],
   "PURSING": [
-    "enm:purs",
-    "gmw-pro:pus\u014d",
-    "old_english:purs"
+    "enm:pure",
+    "latin:p\u016brus",
+    "old_french:pur"
   ],
   "PURSLANE": [
     "old_french:porcelaine"
@@ -531696,8 +532512,7 @@
     "french:quarte"
   ],
   "QUARTETTES": [
-    "french:quartette",
-    "italian:quartetto"
+    "french:quarte"
   ],
   "QUARTIC": [
     "french:quarte"
@@ -533225,9 +534040,8 @@
     "latin:quintus"
   ],
   "QUINTETTE": [
-    "french:quintette",
-    "italian:quintetto",
-    "latin:quintus"
+    "frm:quint",
+    "latin:qu\u012bntus"
   ],
   "QUINTETTES": [
     "french:quintette",
@@ -535623,10 +536437,14 @@
     "old_norse:r\u01ebgg"
   ],
   "RAGGIES": [
-    "enm:ragged"
+    "enm:ragge",
+    "old_english:ragg",
+    "old_norse:r\u01ebgg"
   ],
   "RAGGING": [
-    "enm:ragged"
+    "enm:ragge",
+    "old_english:ragg",
+    "old_norse:r\u01ebgg"
   ],
   "RAGGLE": [
     "enm:ragge",
@@ -536421,8 +537239,8 @@
     "old_norse:reisa"
   ],
   "RAISES": [
-    "th:\u0e44\u0e23\u0e48",
-    "yap:raay"
+    "enm:reysen",
+    "old_norse:reisa"
   ],
   "RAISIN": [
     "enm:raysyn",
@@ -536603,6 +537421,18 @@
     "french:railler",
     "frm:rallier",
     "old_french:ralier"
+  ],
+  "RALPH": [
+    "imitative:-"
+  ],
+  "RALPHED": [
+    "imitative:-"
+  ],
+  "RALPHING": [
+    "imitative:-"
+  ],
+  "RALPHS": [
+    "imitative:-"
   ],
   "RAM": [
     "enm:ram",
@@ -538104,6 +538934,12 @@
   "RATAFIAS": [
     "french:ratafia"
   ],
+  "RATATAT": [
+    "imitative:-"
+  ],
+  "RATATATS": [
+    "imitative:-"
+  ],
   "RATATOUILLE": [
     "latin:tudicul\u014d",
     "oc:ratatolha"
@@ -538855,9 +539691,10 @@
     "old_english:r\u00e6t"
   ],
   "RATTLINGLY": [
-    "enm:raat",
-    "gmw-pro:ratt",
-    "old_english:r\u00e6t"
+    "arabic:\u0631\u064e\u0637\u0652\u0644",
+    "dum:ratelen",
+    "enm:ratelen",
+    "greek:\u03bb\u03af\u03c4\u03c1\u03b1"
   ],
   "RATTLINGS": [
     "arabic:\u0631\u064e\u0637\u0652\u0644",
@@ -542286,6 +543123,12 @@
     "frk:butt",
     "old_french:bot",
     "old_french:bote"
+  ],
+  "REBOP": [
+    "imitative:-"
+  ],
+  "REBOPS": [
+    "imitative:-"
   ],
   "REBORE": [
     "enm:boren",
@@ -547548,10 +548391,9 @@
     "xno:dissoldre"
   ],
   "REDISTILL": [
-    "enm:distillen",
-    "latin:dist\u012bll\u0101re",
-    "latin:d\u0113st\u012bll\u0101re",
-    "old_french:distiller"
+    "enm:til",
+    "old_english:til",
+    "old_norse:til"
   ],
   "REDISTILLATION": [
     "enm:distillacioun",
@@ -547570,10 +548412,9 @@
     "old_french:distiller"
   ],
   "REDISTILLING": [
-    "enm:distillen",
-    "latin:dist\u012bll\u0101re",
-    "latin:d\u0113st\u012bll\u0101re",
-    "old_french:distiller"
+    "enm:til",
+    "old_english:til",
+    "old_norse:til"
   ],
   "REDISTILLS": [
     "enm:distillen",
@@ -553281,9 +554122,8 @@
     "xno:reherser"
   ],
   "REHEARSED": [
-    "enm:har",
-    "gmw-pro:hau\u0280ijan",
-    "old_english:h\u0113ran"
+    "enm:rehersen",
+    "xno:reherser"
   ],
   "REHEARSER": [
     "enm:rehersen",
@@ -561862,12 +562702,7 @@
     "xno:puls"
   ],
   "REPULSING": [
-    "enm:pous",
-    "enm:pulse",
-    "frm:pouls",
-    "latin:pulsus",
-    "old_french:pous",
-    "xno:puls"
+    "persian:\u067e\u0648\u0644"
   ],
   "REPULSION": [
     "frm:r\u00e9pulsion",
@@ -568240,8 +569075,10 @@
     "old_norse:tor-"
   ],
   "RETORSIONS": [
-    "enm:tor",
-    "old_norse:tor-"
+    "enm:torcion",
+    "frm:torsion",
+    "la-lat:torsi\u014d",
+    "latin:torti\u014d"
   ],
   "RETORT": [
     "enm:retorte",
@@ -574260,11 +575097,8 @@
     "old_english:rinnan"
   ],
   "RINSABLE": [
-    "enm:rinsen",
-    "fro-nor:ra\u00efncer",
-    "latin:recento",
-    "old_french:rincier",
-    "old_norse:hreinsa"
+    "enm:rinnen",
+    "old_english:rinnan"
   ],
   "RINSE": [
     "enm:rinsen",
@@ -574274,11 +575108,8 @@
     "old_norse:hreinsa"
   ],
   "RINSED": [
-    "enm:rinsen",
-    "fro-nor:ra\u00efncer",
-    "latin:recento",
-    "old_french:rincier",
-    "old_norse:hreinsa"
+    "enm:rinnen",
+    "old_english:rinnan"
   ],
   "RINSER": [
     "enm:rinsen",
@@ -574288,33 +575119,27 @@
     "old_norse:hreinsa"
   ],
   "RINSERS": [
-    "enm:rinsen",
-    "fro-nor:ra\u00efncer",
-    "latin:recento",
-    "old_french:rincier",
-    "old_norse:hreinsa"
+    "enm:rinnen",
+    "old_english:rinnan"
   ],
   "RINSES": [
     "enm:rinnen",
     "old_english:rinnan"
   ],
   "RINSIBLE": [
-    "enm:rinsen",
-    "fro-nor:ra\u00efncer",
-    "latin:recento",
-    "old_french:rincier",
-    "old_norse:hreinsa"
-  ],
-  "RINSING": [
     "enm:rinnen",
     "old_english:rinnan"
   ],
-  "RINSINGS": [
+  "RINSING": [
     "enm:rinsen",
     "fro-nor:ra\u00efncer",
     "latin:recento",
     "old_french:rincier",
     "old_norse:hreinsa"
+  ],
+  "RINSINGS": [
+    "enm:rinnen",
+    "old_english:rinnan"
   ],
   "RIOT": [
     "enm:riot",
@@ -576857,6 +577682,24 @@
     "frm:rolle",
     "la-med:rotulus",
     "old_french:role"
+  ],
+  "ROLF": [
+    "imitative:-"
+  ],
+  "ROLFED": [
+    "imitative:-"
+  ],
+  "ROLFER": [
+    "imitative:-"
+  ],
+  "ROLFERS": [
+    "imitative:-"
+  ],
+  "ROLFING": [
+    "imitative:-"
+  ],
+  "ROLFS": [
+    "imitative:-"
   ],
   "ROLL": [
     "enm:rolle",
@@ -580022,17 +580865,18 @@
     "old_french:post"
   ],
   "RUDDERS": [
-    "enm:rude",
-    "latin:rudis",
-    "old_french:rude"
+    "enm:rodder",
+    "enm:rother",
+    "gmw-pro:r\u014d\u00fer",
+    "old_english:r\u014d\u00feor"
   ],
   "RUDDIER": [
-    "enm:rody"
-  ],
-  "RUDDIEST": [
     "enm:rude",
     "latin:rudis",
     "old_french:rude"
+  ],
+  "RUDDIEST": [
+    "enm:rody"
   ],
   "RUDDILY": [
     "enm:rody"
@@ -580066,9 +580910,8 @@
     "old_english:rudian"
   ],
   "RUDDLING": [
-    "enm:rude",
-    "latin:rudis",
-    "old_french:rude"
+    "enm:rudden",
+    "old_english:rudian"
   ],
   "RUDDOCK": [
     "enm:ruddocke",
@@ -587800,15 +588643,15 @@
     "xno:savorer"
   ],
   "SAVORIER": [
-    "enm:savour",
-    "enm:savouren",
-    "frm:savorer",
-    "la-lat:sap\u014dr\u0101re",
+    "enm:saverey",
+    "enm:savory",
+    "la-lat:sap\u014dr\u014d",
     "latin:sapor",
-    "old_french:saveur",
-    "old_french:savorer",
-    "xno:saveur",
-    "xno:savorer"
+    "latin:satureia",
+    "old_english:s\u00e6\u00feerie",
+    "old_french:savereie",
+    "old_french:savourer",
+    "old_french:savour\u00e9"
   ],
   "SAVORIES": [
     "enm:savour",
@@ -595559,11 +596402,13 @@
   ],
   "SECOBARBITAL": [
     "french:m\u00e9thyl\u00e8ne",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "SECOBARBITALS": [
     "french:m\u00e9thyl\u00e8ne",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "SECOND": [
     "enm:secunde",
@@ -596830,6 +597675,18 @@
     "latin:vid\u0113",
     "old_english:s\u0113on"
   ],
+  "SEESAW": [
+    "imitative:-"
+  ],
+  "SEESAWED": [
+    "imitative:-"
+  ],
+  "SEESAWING": [
+    "imitative:-"
+  ],
+  "SEESAWS": [
+    "imitative:-"
+  ],
   "SEETHE": [
     "enm:sethen",
     "gmw-pro:seu\u00fean",
@@ -597059,10 +597916,7 @@
     "no:seihval"
   ],
   "SEISABLE": [
-    "enm:seisen",
-    "frk:sakjan",
-    "la-eme:sacio",
-    "old_french:seisir"
+    "no:seihval"
   ],
   "SEISE": [
     "enm:seisen",
@@ -597077,10 +597931,7 @@
     "old_french:seisir"
   ],
   "SEISER": [
-    "enm:seisen",
-    "frk:sakjan",
-    "la-eme:sacio",
-    "old_french:seisir"
+    "no:seihval"
   ],
   "SEISERS": [
     "enm:seisen",
@@ -597106,10 +597957,7 @@
     "old_french:seisir"
   ],
   "SEISINGS": [
-    "enm:seisen",
-    "frk:sakjan",
-    "la-eme:sacio",
-    "old_french:seisir"
+    "no:seihval"
   ],
   "SEISINS": [
     "enm:seisin",
@@ -613433,6 +614281,9 @@
     "jv:cambuk",
     "persian:\u0686\u0627\u0628\u06a9"
   ],
+  "SKA": [
+    "imitative:-"
+  ],
   "SKALD": [
     "old_norse:skald"
   ],
@@ -613447,6 +614298,9 @@
   ],
   "SKALDSHIPS": [
     "old_norse:skald"
+  ],
+  "SKAS": [
+    "imitative:-"
   ],
   "SKAT": [
     "german:skat"
@@ -617813,6 +618667,27 @@
     "old_english:slop",
     "old_english:weorc"
   ],
+  "SLOSH": [
+    "imitative:-"
+  ],
+  "SLOSHED": [
+    "imitative:-"
+  ],
+  "SLOSHES": [
+    "imitative:-"
+  ],
+  "SLOSHIER": [
+    "imitative:-"
+  ],
+  "SLOSHIEST": [
+    "imitative:-"
+  ],
+  "SLOSHING": [
+    "imitative:-"
+  ],
+  "SLOSHY": [
+    "imitative:-"
+  ],
   "SLOT": [
     "enm:slot",
     "old_french:esclot",
@@ -618371,6 +619246,36 @@
   ],
   "SLURS": [
     "enm:sloor"
+  ],
+  "SLUSH": [
+    "imitative:-"
+  ],
+  "SLUSHED": [
+    "imitative:-"
+  ],
+  "SLUSHES": [
+    "imitative:-"
+  ],
+  "SLUSHIER": [
+    "imitative:-"
+  ],
+  "SLUSHIEST": [
+    "imitative:-"
+  ],
+  "SLUSHILY": [
+    "imitative:-"
+  ],
+  "SLUSHINESS": [
+    "imitative:-"
+  ],
+  "SLUSHINESSES": [
+    "imitative:-"
+  ],
+  "SLUSHING": [
+    "imitative:-"
+  ],
+  "SLUSHY": [
+    "imitative:-"
   ],
   "SLUT": [
     "enm:slutt",
@@ -625981,7 +626886,11 @@
     "spanish:son"
   ],
   "SONSIER": [
-    "gd:sonasach"
+    "enm:sonen",
+    "enm:sonn",
+    "gmw-pro:sunu",
+    "old_english:sunu",
+    "spanish:son"
   ],
   "SONSIEST": [
     "gd:sonasach"
@@ -626078,9 +626987,9 @@
     "old_english:s\u014d\u00fe"
   ],
   "SOOTHINGLY": [
-    "enm:sothen",
-    "gmw-pro:san\u00fe\u014dn",
-    "old_english:s\u014d\u00feian"
+    "enm:sooth",
+    "gmw-pro:san\u00fe",
+    "old_english:s\u014d\u00fe"
   ],
   "SOOTHINGNESS": [
     "enm:sooth",
@@ -627543,12 +628452,12 @@
     "old_french:sous"
   ],
   "SOUSED": [
+    "french:sou"
+  ],
+  "SOUSES": [
     "enm:souse",
     "frk:sultija",
     "old_french:sous"
-  ],
-  "SOUSES": [
-    "french:sou"
   ],
   "SOUSING": [
     "enm:souse",
@@ -628656,6 +629565,27 @@
     "old_french:espaigneul",
     "pro:espaignol"
   ],
+  "SPANK": [
+    "imitative:-"
+  ],
+  "SPANKED": [
+    "imitative:-"
+  ],
+  "SPANKER": [
+    "imitative:-"
+  ],
+  "SPANKERS": [
+    "imitative:-"
+  ],
+  "SPANKING": [
+    "imitative:-"
+  ],
+  "SPANKINGS": [
+    "imitative:-"
+  ],
+  "SPANKS": [
+    "imitative:-"
+  ],
   "SPANLESS": [
     "enm:spanne",
     "old_english:spann"
@@ -628985,9 +629915,7 @@
     "latin:sparsus"
   ],
   "SPARSEST": [
-    "dum:sparre",
-    "enm:sparre",
-    "gml:sparre"
+    "latin:sparsus"
   ],
   "SPARSITIES": [
     "latin:sparsus"
@@ -632765,6 +633693,18 @@
     "gmw-pro:splittjan",
     "gmw-pro:spl\u012btan"
   ],
+  "SPLOSH": [
+    "imitative:-"
+  ],
+  "SPLOSHED": [
+    "imitative:-"
+  ],
+  "SPLOSHES": [
+    "imitative:-"
+  ],
+  "SPLOSHING": [
+    "imitative:-"
+  ],
   "SPLOTCHIER": [
     "enm:splotty"
   ],
@@ -632845,6 +633785,27 @@
     "old_french:sourgeon",
     "old_french:surgir",
     "roa-oca:surgir"
+  ],
+  "SPLUTTER": [
+    "imitative:-"
+  ],
+  "SPLUTTERED": [
+    "imitative:-"
+  ],
+  "SPLUTTERER": [
+    "imitative:-"
+  ],
+  "SPLUTTERERS": [
+    "imitative:-"
+  ],
+  "SPLUTTERING": [
+    "imitative:-"
+  ],
+  "SPLUTTERS": [
+    "imitative:-"
+  ],
+  "SPLUTTERY": [
+    "imitative:-"
   ],
   "SPODUMENE": [
     "greek:\u03c3\u03c0\u03bf\u03b4\u03cc\u03c2"
@@ -635461,19 +636422,19 @@
     "sv:skvabb"
   ],
   "SQUABBLE": [
-    "sv:skvabb"
+    "imitative:-"
   ],
   "SQUABBLED": [
-    "sv:skvabb"
+    "imitative:-"
   ],
   "SQUABBLER": [
-    "sv:skvabb"
+    "imitative:-"
   ],
   "SQUABBLERS": [
-    "sv:skvabb"
+    "imitative:-"
   ],
   "SQUABBLES": [
-    "sv:skvabb"
+    "imitative:-"
   ],
   "SQUABBLING": [
     "sv:skvabb"
@@ -637756,10 +638717,9 @@
     "spanish:estampida"
   ],
   "STAMPEDED": [
-    "es-mx:estampida",
-    "got:\ud800\udf43\ud800\udf44\ud800\udf30\ud800\udf3c\ud800\udf40\ud800\udf3e\ud800\udf30\ud800\udf3d",
-    "pro:estampida",
-    "spanish:estampida"
+    "enm:stampen",
+    "gmw-pro:stamp\u014dn",
+    "old_english:stampian"
   ],
   "STAMPEDER": [
     "es-mx:estampida",
@@ -637768,21 +638728,20 @@
     "spanish:estampida"
   ],
   "STAMPEDERS": [
-    "es-mx:estampida",
-    "got:\ud800\udf43\ud800\udf44\ud800\udf30\ud800\udf3c\ud800\udf40\ud800\udf3e\ud800\udf30\ud800\udf3d",
-    "pro:estampida",
-    "spanish:estampida"
-  ],
-  "STAMPEDES": [
-    "es-mx:estampida",
-    "got:\ud800\udf43\ud800\udf44\ud800\udf30\ud800\udf3c\ud800\udf40\ud800\udf3e\ud800\udf30\ud800\udf3d",
-    "pro:estampida",
-    "spanish:estampida"
-  ],
-  "STAMPEDING": [
     "enm:stampen",
     "gmw-pro:stamp\u014dn",
     "old_english:stampian"
+  ],
+  "STAMPEDES": [
+    "enm:stampen",
+    "gmw-pro:stamp\u014dn",
+    "old_english:stampian"
+  ],
+  "STAMPEDING": [
+    "es-mx:estampida",
+    "got:\ud800\udf43\ud800\udf44\ud800\udf30\ud800\udf3c\ud800\udf40\ud800\udf3e\ud800\udf30\ud800\udf3d",
+    "pro:estampida",
+    "spanish:estampida"
   ],
   "STAMPER": [
     "enm:stampen",
@@ -638713,8 +639672,10 @@
     "old_english:styrtan"
   ],
   "STARTLINGLY": [
-    "enm:startlen",
-    "old_english:steartlian"
+    "enm:stert",
+    "enm:sterten",
+    "gmw-pro:sturtijan",
+    "old_english:styrtan"
   ],
   "STARTS": [
     "enm:stert",
@@ -640579,8 +641540,10 @@
     "latin:-graphia"
   ],
   "STENOSES": [
-    "greek:\u03c3\u03c4\u03ad\u03bd\u03c9\u03c3\u03b9\u03c2",
-    "la-new:sten\u014dsis"
+    "french:-graphie",
+    "greek:-\u03b3\u03c1\u03b1\u03c6\u03af\u03b1",
+    "greek:\u03c3\u03c4\u03b5\u03bd\u03cc\u03c2",
+    "latin:-graphia"
   ],
   "STENOSIS": [
     "greek:\u03c3\u03c4\u03ad\u03bd\u03c9\u03c3\u03b9\u03c2",
@@ -646513,13 +647476,9 @@
     "old_english:str\u012bdan"
   ],
   "STRIDENCIES": [
-    "french:strident",
-    "greek:-\u03b9\u03b1",
-    "greek:-\u03ba\u03b9\u03b1",
-    "latin:-cia",
-    "latin:-ia",
-    "latin:str\u012bd\u0113ns",
-    "xno:-cie"
+    "enm:striden",
+    "gmw-pro:str\u012bdan",
+    "old_english:str\u012bdan"
   ],
   "STRIDENCY": [
     "french:strident",
@@ -648928,12 +649887,9 @@
     "old_french:base"
   ],
   "SUBBASSES": [
-    "enm:base",
-    "greek:\u03b2\u03ac\u03c3\u03b9\u03c2",
-    "la-lat:bassus",
-    "latin:basis",
-    "old_french:bas",
-    "old_french:base"
+    "enm:bace",
+    "gmw-pro:bars",
+    "old_english:b\u00e6rs"
   ],
   "SUBBED": [
     "latin:sub"
@@ -649629,8 +650585,8 @@
     "old_french:depost"
   ],
   "SUBDEPUTIES": [
-    "french:d\u00e9puter",
-    "latin:deputo"
+    "french:d\u00e9put\u00e9",
+    "la-lat:deputatus"
   ],
   "SUBDEPUTY": [
     "french:d\u00e9put\u00e9",
@@ -652047,7 +653003,10 @@
     "latin:subs\u012bd\u014d"
   ],
   "SUBSIDISING": [
-    "latin:subs\u012bd\u014d"
+    "enm:subsidy",
+    "latin:subsidium",
+    "old_french:subside",
+    "xno:subsidee"
   ],
   "SUBSIDIZATION": [
     "enm:subsidy",
@@ -653840,18 +654799,10 @@
     "french:gant de su\u00e8de"
   ],
   "SUEDED": [
-    "enm:seuen",
-    "la-vul:sequere",
-    "latin:sequi",
-    "old_french:sivre",
-    "xno:suer"
+    "french:gant de su\u00e8de"
   ],
   "SUEDES": [
-    "enm:seuen",
-    "la-vul:sequere",
-    "latin:sequi",
-    "old_french:sivre",
-    "xno:suer"
+    "french:gant de su\u00e8de"
   ],
   "SUEDING": [
     "french:gant de su\u00e8de"
@@ -660362,10 +661313,12 @@
     "roa-oca:surgir"
   ],
   "SURGERIES": [
-    "enm:surgerie",
-    "greek:\u03c7\u03b5\u03b9\u03c1\u03bf\u03c5\u03c1\u03b3\u03af\u03b1",
-    "latin:chirurgia",
-    "old_french:surgerie"
+    "enm:sourge",
+    "frm:sourgir",
+    "latin:surg\u014d",
+    "old_french:sourgeon",
+    "old_french:surgir",
+    "roa-oca:surgir"
   ],
   "SURGERS": [
     "enm:sourge",
@@ -663162,9 +664115,9 @@
     "old_english:swingan"
   ],
   "SWINGINGLY": [
-    "enm:swengen",
-    "gmw-pro:swangijan",
-    "old_english:swen\u0121an"
+    "enm:swyngen",
+    "gmw-pro:swingan",
+    "old_english:swingan"
   ],
   "SWINGINGS": [
     "enm:swyngen",
@@ -668776,16 +669729,10 @@
     "old_french:tan"
   ],
   "TANSIES": [
-    "cel-gau:tannos",
-    "cel-pro:tannos",
-    "enm:tan",
-    "enm:tannen",
-    "gmw-pro:tain",
-    "hy:\u0569\u0561\u0576",
-    "latin:tannare",
-    "old_english:tannian",
-    "old_english:t\u0101n",
-    "old_french:tan"
+    "enm:tansy",
+    "greek:\u1f00\u03b8\u03b1\u03bd\u03b1\u03c3\u03af\u03b1",
+    "la-med:tanacetum",
+    "old_french:tanesie"
   ],
   "TANSY": [
     "enm:tansy",
@@ -669711,11 +670658,7 @@
     "latin:tarsus"
   ],
   "TARSIERS": [
-    "arabic:\u0637\u0627\u0631",
-    "enm:ter",
-    "gmw-pro:teru",
-    "old_english:teoru",
-    "persian:\u062a\u0627\u0631"
+    "la-new:tarsus"
   ],
   "TARSOMETATARSI": [
     "latin:metatarsus"
@@ -671703,15 +672646,15 @@
     "old_english:t\u01e3san"
   ],
   "TEASERS": [
+    "enm:tesen",
+    "gmw-pro:taisijan",
+    "old_english:t\u01e3san"
+  ],
+  "TEASES": [
     "chinese:\u8336",
     "dutch:thee",
     "nan-hbl:\u8336",
     "sit-pro:s-la"
-  ],
-  "TEASES": [
-    "enm:tesen",
-    "gmw-pro:taisijan",
-    "old_english:t\u01e3san"
   ],
   "TEASING": [
     "enm:tesen",
@@ -674954,9 +675897,10 @@
     "latin:tensus"
   ],
   "TENSIVE": [
-    "enm:ten",
-    "gmw-pro:tehun",
-    "old_english:t\u012ben"
+    "enm:tens",
+    "latin:tempus",
+    "latin:t\u0113nsus",
+    "old_french:tens"
   ],
   "TENSOR": [
     "german:tensor",
@@ -678092,7 +679036,7 @@
     "greek:\u03b8\u03b5\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
   ],
   "THEOLOGISES": [
-    "greek:\u03b8\u03b5\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
+    "latin:theologiz\u0101re"
   ],
   "THEOLOGISING": [
     "greek:\u03b8\u03b5\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2"
@@ -679145,22 +680089,6 @@
     "greek:\u03b8\u03b5\u1fd6\u03bf\u03bd",
     "greek:\u1f00-"
   ],
-  "THIAZIN": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "THIAZINE": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "THIAZINES": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "THIAZINS": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
   "THIAZOL": [
     "greek:\u03b8\u03b5\u1fd6\u03bf\u03bd",
     "latin:oleum"
@@ -679669,12 +680597,14 @@
   "THIOPENTAL": [
     "french:m\u00e9thyl\u00e8ne",
     "greek:\u03b8\u03b5\u1fd6\u03bf\u03bd",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "THIOPENTALS": [
     "french:m\u00e9thyl\u00e8ne",
     "greek:\u03b8\u03b5\u1fd6\u03bf\u03bd",
-    "greek:\u1f55\u03bb\u03b7"
+    "greek:\u1f55\u03bb\u03b7",
+    "latin:-\u0101nus"
   ],
   "THIOPHEN": [
     "french:ph\u00e8ne",
@@ -679697,16 +680627,12 @@
     "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "THIORIDAZINE": [
-    "french:azote",
     "greek:\u03b8\u03b5\u1fd6\u03bf\u03bd",
-    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
-    "greek:\u1f00-"
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "THIORIDAZINES": [
-    "french:azote",
     "greek:\u03b8\u03b5\u1fd6\u03bf\u03bd",
-    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
-    "greek:\u1f00-"
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9"
   ],
   "THIOSULFATE": [
     "french:sulfate",
@@ -681457,6 +682383,24 @@
     "old_english:hw\u0113ol",
     "old_english:\u00fe\u016bma"
   ],
+  "THUMP": [
+    "imitative:-"
+  ],
+  "THUMPED": [
+    "imitative:-"
+  ],
+  "THUMPER": [
+    "imitative:-"
+  ],
+  "THUMPERS": [
+    "imitative:-"
+  ],
+  "THUMPING": [
+    "imitative:-"
+  ],
+  "THUMPS": [
+    "imitative:-"
+  ],
   "THUNDER": [
     "enm:thunder",
     "gmw-pro:\u00feunr",
@@ -681669,6 +682613,18 @@
     "enm:thunder",
     "gmw-pro:\u00feunr",
     "old_english:\u00feunor"
+  ],
+  "THUNK": [
+    "imitative:-"
+  ],
+  "THUNKED": [
+    "imitative:-"
+  ],
+  "THUNKING": [
+    "imitative:-"
+  ],
+  "THUNKS": [
+    "imitative:-"
   ],
   "THURIBLE": [
     "enm:turrible",
@@ -682281,25 +683237,16 @@
     "old_english:we\u0121"
   ],
   "TIDIED": [
-    "enm:tiding",
-    "gmw-pro:t\u012bdung\u014d",
-    "old_english:t\u012bdung",
-    "old_norse:t\u00ed\u00f0indi"
+    "enm:tidy"
   ],
   "TIDIER": [
     "enm:tidy"
   ],
   "TIDIERS": [
-    "enm:tiding",
-    "gmw-pro:t\u012bdung\u014d",
-    "old_english:t\u012bdung",
-    "old_norse:t\u00ed\u00f0indi"
+    "enm:tidy"
   ],
   "TIDIES": [
-    "enm:tiding",
-    "gmw-pro:t\u012bdung\u014d",
-    "old_english:t\u012bdung",
-    "old_norse:t\u00ed\u00f0indi"
+    "enm:tidy"
   ],
   "TIDIEST": [
     "enm:tidy"
@@ -686730,6 +687677,18 @@
     "hindi:\u0924\u0942\u0928",
     "sanskrit:\u0924\u0941\u0923\u093f"
   ],
+  "TOOT": [
+    "imitative:-"
+  ],
+  "TOOTED": [
+    "imitative:-"
+  ],
+  "TOOTER": [
+    "imitative:-"
+  ],
+  "TOOTERS": [
+    "imitative:-"
+  ],
   "TOOTH": [
     "enm:toth",
     "gmw-pro:tan\u00fe",
@@ -686896,6 +687855,42 @@
     "enm:toth",
     "gmw-pro:tan\u00fe",
     "old_english:t\u014d\u00fe"
+  ],
+  "TOOTING": [
+    "imitative:-"
+  ],
+  "TOOTLE": [
+    "imitative:-"
+  ],
+  "TOOTLED": [
+    "imitative:-"
+  ],
+  "TOOTLER": [
+    "imitative:-"
+  ],
+  "TOOTLERS": [
+    "imitative:-"
+  ],
+  "TOOTLES": [
+    "imitative:-"
+  ],
+  "TOOTLING": [
+    "imitative:-"
+  ],
+  "TOOTS": [
+    "imitative:-"
+  ],
+  "TOOTSES": [
+    "imitative:-"
+  ],
+  "TOOTSIE": [
+    "imitative:-"
+  ],
+  "TOOTSIES": [
+    "imitative:-"
+  ],
+  "TOOTSY": [
+    "imitative:-"
   ],
   "TOP": [
     "enm:top",
@@ -687579,10 +688574,7 @@
     "french:torch\u00e8re"
   ],
   "TORCHIERES": [
-    "enm:torch",
-    "la-vul:torca",
-    "latin:torqua",
-    "old_french:torche"
+    "french:torch\u00e8re"
   ],
   "TORCHIERS": [
     "enm:torch",
@@ -687959,11 +688951,11 @@
     "latin:torque\u014d"
   ],
   "TORSES": [
-    "french:torse",
-    "frm:torse",
-    "italian:torso",
-    "latin:thyrsus",
-    "latin:torque\u014d"
+    "enm:tor",
+    "greek:\u03c4\u03cd\u03c1\u03c1\u03b9\u03c2",
+    "latin:turris",
+    "old_english:torr",
+    "owl:tor"
   ],
   "TORSI": [
     "greek:\u03b8\u03cd\u03c1\u03c3\u03bf\u03c2",
@@ -691551,20 +692543,16 @@
     "latin:tranquillus"
   ],
   "TRANQUILLIZER": [
-    "frm:tranquille",
-    "latin:tranquillus"
+    "frm:tranquiliser"
   ],
   "TRANQUILLIZERS": [
-    "frm:tranquille",
-    "latin:tranquillus"
+    "frm:tranquiliser"
   ],
   "TRANQUILLIZES": [
-    "frm:tranquille",
-    "latin:tranquillus"
+    "frm:tranquiliser"
   ],
   "TRANQUILLIZING": [
-    "frm:tranquille",
-    "latin:tranquillus"
+    "frm:tranquiliser"
   ],
   "TRANQUILLY": [
     "frm:tranquille",
@@ -694884,6 +695872,7 @@
     "la-cla:angul\u0101tus"
   ],
   "TRIANGULATED": [
+    "enm:angulatit",
     "la-cla:angul\u0101tus"
   ],
   "TRIANGULATES": [
@@ -694938,22 +695927,6 @@
   ],
   "TRIAXIALITY": [
     "latin:axis"
-  ],
-  "TRIAZIN": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "TRIAZINE": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "TRIAZINES": [
-    "french:azote",
-    "greek:\u1f00-"
-  ],
-  "TRIAZINS": [
-    "french:azote",
-    "greek:\u1f00-"
   ],
   "TRIAZOLE": [
     "latin:oleum"
@@ -699755,6 +700728,18 @@
   "TSETSES": [
     "tn:ts\u00eats\u00ea"
   ],
+  "TSK": [
+    "imitative:-"
+  ],
+  "TSKED": [
+    "imitative:-"
+  ],
+  "TSKING": [
+    "imitative:-"
+  ],
+  "TSKS": [
+    "imitative:-"
+  ],
   "TSUBA": [
     "japanese:\u9354"
   ],
@@ -702387,6 +703372,51 @@
     "gmw-pro:twai-",
     "old_english:tw\u0113\u0121en"
   ],
+  "TWANG": [
+    "imitative:-"
+  ],
+  "TWANGED": [
+    "imitative:-"
+  ],
+  "TWANGER": [
+    "imitative:-"
+  ],
+  "TWANGERS": [
+    "imitative:-"
+  ],
+  "TWANGIER": [
+    "imitative:-"
+  ],
+  "TWANGIEST": [
+    "imitative:-"
+  ],
+  "TWANGING": [
+    "imitative:-"
+  ],
+  "TWANGLE": [
+    "imitative:-"
+  ],
+  "TWANGLED": [
+    "imitative:-"
+  ],
+  "TWANGLER": [
+    "imitative:-"
+  ],
+  "TWANGLERS": [
+    "imitative:-"
+  ],
+  "TWANGLES": [
+    "imitative:-"
+  ],
+  "TWANGLING": [
+    "imitative:-"
+  ],
+  "TWANGS": [
+    "imitative:-"
+  ],
+  "TWANGY": [
+    "imitative:-"
+  ],
   "TWEAK": [
     "enm:twikken",
     "gmw-pro:twekk\u014dn",
@@ -702447,16 +703477,13 @@
     "sco:tweedling"
   ],
   "TWEEDLE": [
-    "enm:twel",
-    "sco:tweedling"
+    "imitative:-"
   ],
   "TWEEDLED": [
-    "enm:twel",
-    "sco:tweedling"
+    "imitative:-"
   ],
   "TWEEDLES": [
-    "enm:twel",
-    "sco:tweedling"
+    "imitative:-"
   ],
   "TWEEDLING": [
     "enm:twel",
@@ -702567,6 +703594,24 @@
     "old_english:t\u0113ona",
     "old_english:t\u0113onian",
     "old_english:t\u0233nan"
+  ],
+  "TWEET": [
+    "imitative:-"
+  ],
+  "TWEETED": [
+    "imitative:-"
+  ],
+  "TWEETER": [
+    "imitative:-"
+  ],
+  "TWEETERS": [
+    "imitative:-"
+  ],
+  "TWEETING": [
+    "imitative:-"
+  ],
+  "TWEETS": [
+    "imitative:-"
   ],
   "TWEEZE": [
     "french:\u00e9tuis",
@@ -704196,6 +705241,9 @@
   "UGSOME": [
     "enm:ugsom"
   ],
+  "UH": [
+    "imitative:-"
+  ],
   "UHLAN": [
     "french:uhlan",
     "german:uhlan",
@@ -705166,6 +706214,9 @@
     "latin:ulva",
     "mul:ulva"
   ],
+  "UM": [
+    "imitative:-"
+  ],
   "UMAMI": [
     "japanese:\u65e8\u5473"
   ],
@@ -705602,10 +706653,6 @@
     "enm:acrewen",
     "latin:accr\u0113sco",
     "old_french:acreue"
-  ],
-  "UNACCULTURATED": [
-    "frm:culture",
-    "latin:cult\u016bra"
   ],
   "UNACCUSTOMED": [
     "enm:accustomen",
@@ -706996,8 +708043,7 @@
     "old_english:unbindan"
   ],
   "UNBITTED": [
-    "enm:bitte",
-    "old_english:bita"
+    "old_norse:biti"
   ],
   "UNBITTEN": [
     "enm:bitte",
@@ -712573,13 +713619,9 @@
     "greek:\u03b4\u03b9\u03b4\u03b1\u03ba\u03c4\u03b9\u03ba\u03cc\u03c2"
   ],
   "UNDIES": [
-    "enm:dee",
-    "enm:deyen",
-    "latin:datum",
-    "latin:die",
-    "latin:dies",
-    "old_french:de",
-    "old_norse:deyja"
+    "enm:deye",
+    "gmw-pro:daugu",
+    "old_english:d\u0113ah"
   ],
   "UNDIGESTED": [
     "enm:digesten",
@@ -713032,22 +714074,14 @@
     "enm:duete"
   ],
   "UNDY": [
-    "enm:dee",
-    "enm:deyen",
-    "latin:datum",
-    "latin:die",
-    "latin:dies",
-    "old_french:de",
-    "old_norse:deyja"
+    "enm:deye",
+    "gmw-pro:daugu",
+    "old_english:d\u0113ah"
   ],
   "UNDYED": [
-    "enm:dee",
-    "enm:deyen",
-    "latin:datum",
-    "latin:die",
-    "latin:dies",
-    "old_french:de",
-    "old_norse:deyja"
+    "enm:deye",
+    "gmw-pro:daugu",
+    "old_english:d\u0113ah"
   ],
   "UNDYING": [
     "enm:dee",
@@ -713676,10 +714710,10 @@
     "latin:expl\u014dr\u014d"
   ],
   "UNEXPOSED": [
-    "enm:exposen",
-    "latin:exp\u014dn\u014d",
-    "old_french:espondre",
-    "old_french:exposer"
+    "enm:exposicioun",
+    "french:exposition",
+    "latin:expositi\u014d",
+    "old_french:esposicion"
   ],
   "UNEXPRESSED": [
     "french:expr\u00e8s",
@@ -716036,10 +717070,7 @@
     "old_french:union"
   ],
   "UNIONISED": [
-    "enm:unyoun",
-    "la-lat:\u016bni\u014d",
-    "latin:\u016bnus",
-    "old_french:union"
+    "greek:\u1f30\u03cc\u03bd"
   ],
   "UNIONISES": [
     "enm:unyoun",
@@ -716048,10 +717079,7 @@
     "old_french:union"
   ],
   "UNIONISING": [
-    "enm:unyoun",
-    "la-lat:\u016bni\u014d",
-    "latin:\u016bnus",
-    "old_french:union"
+    "greek:\u1f30\u03cc\u03bd"
   ],
   "UNIONISM": [
     "enm:unyoun",
@@ -716102,16 +717130,10 @@
     "old_french:union"
   ],
   "UNIONIZER": [
-    "enm:unyoun",
-    "la-lat:\u016bni\u014d",
-    "latin:\u016bnus",
-    "old_french:union"
+    "greek:\u1f30\u03cc\u03bd"
   ],
   "UNIONIZERS": [
-    "enm:unyoun",
-    "la-lat:\u016bni\u014d",
-    "latin:\u016bnus",
-    "old_french:union"
+    "greek:\u1f30\u03cc\u03bd"
   ],
   "UNIONIZES": [
     "enm:unyoun",
@@ -719029,10 +720051,8 @@
     "old_french:pointier"
   ],
   "UNPOISED": [
-    "enm:poys",
-    "frm:pois",
-    "latin:p\u0113nsum",
-    "xno:pois"
+    "haw:poi",
+    "mi:poi"
   ],
   "UNPOLARIZED": [
     "french:polariser"
@@ -719855,9 +720875,8 @@
     "latin:regulatus"
   ],
   "UNREHEARSED": [
-    "enm:har",
-    "gmw-pro:hau\u0280ijan",
-    "old_english:h\u0113ran"
+    "enm:rehersen",
+    "xno:reherser"
   ],
   "UNRELATED": [
     "latin:rel\u0101tus"
@@ -720246,11 +721265,8 @@
     "old_english:hr\u012bm"
   ],
   "UNRINSED": [
-    "enm:rinsen",
-    "fro-nor:ra\u00efncer",
-    "latin:recento",
-    "old_french:rincier",
-    "old_norse:hreinsa"
+    "enm:rinnen",
+    "old_english:rinnan"
   ],
   "UNRIP": [
     "enm:rippen"
@@ -720537,10 +721553,7 @@
     "old_french:sauf"
   ],
   "UNSAFELY": [
-    "enm:sauf",
-    "itc-pro:salawos",
-    "latin:salvus",
-    "old_french:sauf"
+    "enm:savely"
   ],
   "UNSAFETIES": [
     "enm:savete",
@@ -721157,13 +722170,9 @@
     "old_english:settan"
   ],
   "UNSETTLINGLY": [
-    "enm:sahtlen",
-    "enm:setlen",
-    "enm:settle",
-    "old_english:saht",
-    "old_english:sahtlian",
-    "old_english:setl",
-    "old_english:setlan"
+    "enm:setten",
+    "gmw-pro:sattjan",
+    "old_english:settan"
   ],
   "UNSEW": [
     "enm:sewen",
@@ -724328,6 +725337,18 @@
     "greek:\u03b6\u1fc6\u03bb\u03bf\u03c2",
     "latin:z\u0113l\u014dsus"
   ],
+  "UNZIP": [
+    "imitative:-"
+  ],
+  "UNZIPPED": [
+    "imitative:-"
+  ],
+  "UNZIPPING": [
+    "imitative:-"
+  ],
+  "UNZIPS": [
+    "imitative:-"
+  ],
   "UNZONED": [
     "greek:\u03b6\u03ce\u03bd\u03b7",
     "latin:z\u014dna"
@@ -725703,16 +726724,12 @@
   ],
   "UPROOTEDNESS": [
     "enm:rote",
-    "enm:wroten",
     "old_english:r\u014dt",
-    "old_english:wr\u014dtan",
     "old_norse:r\u00f3t"
   ],
   "UPROOTEDNESSES": [
     "enm:rote",
-    "enm:wroten",
     "old_english:r\u014dt",
-    "old_english:wr\u014dtan",
     "old_norse:r\u00f3t"
   ],
   "UPROOTER": [
@@ -738545,6 +739562,18 @@
   "VOYEURS": [
     "french:voyeur"
   ],
+  "VROOM": [
+    "imitative:-"
+  ],
+  "VROOMED": [
+    "imitative:-"
+  ],
+  "VROOMING": [
+    "imitative:-"
+  ],
+  "VROOMS": [
+    "imitative:-"
+  ],
   "VROUW": [
     "dutch:vrouw"
   ],
@@ -746723,10 +747752,10 @@
     "old_english:hw\u00e6l"
   ],
   "WHANG": [
-    "cmn:\u9ec3\u85dc"
+    "imitative:-"
   ],
   "WHANGED": [
-    "cmn:\u9ec3\u85dc"
+    "imitative:-"
   ],
   "WHANGEE": [
     "cmn:\u9ec3\u85dc"
@@ -746735,10 +747764,10 @@
     "cmn:\u9ec3\u85dc"
   ],
   "WHANGING": [
-    "cmn:\u9ec3\u85dc"
+    "imitative:-"
   ],
   "WHANGS": [
-    "cmn:\u9ec3\u85dc"
+    "imitative:-"
   ],
   "WHARF": [
     "enm:wharf",
@@ -748817,6 +749846,9 @@
     "gmw-pro:hw\u012bt",
     "old_english:hw\u012bt"
   ],
+  "WHIZ": [
+    "imitative:-"
+  ],
   "WHIZBANG": [
     "enm:bangen",
     "old_english:bangian",
@@ -748826,6 +749858,33 @@
     "enm:bangen",
     "old_english:bangian",
     "old_norse:banga"
+  ],
+  "WHIZZ": [
+    "imitative:-"
+  ],
+  "WHIZZED": [
+    "imitative:-"
+  ],
+  "WHIZZER": [
+    "imitative:-"
+  ],
+  "WHIZZERS": [
+    "imitative:-"
+  ],
+  "WHIZZES": [
+    "imitative:-"
+  ],
+  "WHIZZIER": [
+    "imitative:-"
+  ],
+  "WHIZZIEST": [
+    "imitative:-"
+  ],
+  "WHIZZING": [
+    "imitative:-"
+  ],
+  "WHIZZY": [
+    "imitative:-"
   ],
   "WHO": [
     "enm:who",
@@ -749056,6 +750115,18 @@
     "gmw-pro:w\u014dp",
     "old_english:w\u014dp",
     "old_french:houper"
+  ],
+  "WHOOSH": [
+    "imitative:-"
+  ],
+  "WHOOSHED": [
+    "imitative:-"
+  ],
+  "WHOOSHES": [
+    "imitative:-"
+  ],
+  "WHOOSHING": [
+    "imitative:-"
   ],
   "WHOP": [
     "enm:whappen"
@@ -749901,10 +750972,9 @@
     "old_english:wild\u0113ornes"
   ],
   "WILDERNESSES": [
-    "enm:wilderne",
-    "enm:wildernes",
-    "old_english:wildde\u014dren",
-    "old_english:wild\u0113ornes"
+    "enm:weilde",
+    "gmw-pro:wil\u00fe\u012b",
+    "old_english:wilde"
   ],
   "WILDERS": [
     "enm:weilde",
@@ -750148,9 +751218,7 @@
     "old_english:willan"
   ],
   "WILLET": [
-    "enm:wile",
-    "fro-nor:wile",
-    "old_english:w\u012bl"
+    "imitative:-"
   ],
   "WILLETS": [
     "enm:wile",
@@ -757445,6 +758513,27 @@
   "YANTRAS": [
     "sanskrit:\u092f\u0928\u094d\u0924\u094d\u0930"
   ],
+  "YAP": [
+    "imitative:-"
+  ],
+  "YAPPED": [
+    "imitative:-"
+  ],
+  "YAPPER": [
+    "imitative:-"
+  ],
+  "YAPPERS": [
+    "imitative:-"
+  ],
+  "YAPPING": [
+    "imitative:-"
+  ],
+  "YAPPINGLY": [
+    "imitative:-"
+  ],
+  "YAPS": [
+    "imitative:-"
+  ],
   "YAR": [
     "enm:\u021daren",
     "gmw-pro:gerran",
@@ -758672,6 +759761,9 @@
   "YIPPED": [
     "enm:\u021dyppe"
   ],
+  "YIPPEE": [
+    "imitative:-"
+  ],
   "YIPPIE": [
     "enm:\u021dyppe"
   ],
@@ -759208,11 +760300,59 @@
   "YUCCAS": [
     "car:yuca"
   ],
+  "YUCK": [
+    "imitative:-"
+  ],
+  "YUCKED": [
+    "imitative:-"
+  ],
+  "YUCKIER": [
+    "imitative:-"
+  ],
+  "YUCKIEST": [
+    "imitative:-"
+  ],
+  "YUCKINESS": [
+    "imitative:-"
+  ],
+  "YUCKINESSES": [
+    "imitative:-"
+  ],
+  "YUCKING": [
+    "imitative:-"
+  ],
+  "YUCKS": [
+    "imitative:-"
+  ],
+  "YUCKY": [
+    "imitative:-"
+  ],
   "YUGA": [
     "sanskrit:\u092f\u0941\u0917"
   ],
   "YUGAS": [
     "sanskrit:\u092f\u0941\u0917"
+  ],
+  "YUK": [
+    "imitative:-"
+  ],
+  "YUKKED": [
+    "imitative:-"
+  ],
+  "YUKKIER": [
+    "imitative:-"
+  ],
+  "YUKKIEST": [
+    "imitative:-"
+  ],
+  "YUKKING": [
+    "imitative:-"
+  ],
+  "YUKKY": [
+    "imitative:-"
+  ],
+  "YUKS": [
+    "imitative:-"
   ],
   "YULETIDE": [
     "enm:-tide",
@@ -759221,6 +760361,27 @@
   "YULETIDES": [
     "enm:-tide",
     "old_english:t\u012bd"
+  ],
+  "YUM": [
+    "imitative:-"
+  ],
+  "YUMMIER": [
+    "imitative:-"
+  ],
+  "YUMMIES": [
+    "imitative:-"
+  ],
+  "YUMMIEST": [
+    "imitative:-"
+  ],
+  "YUMMINESS": [
+    "imitative:-"
+  ],
+  "YUMMINESSES": [
+    "imitative:-"
+  ],
+  "YUMMY": [
+    "imitative:-"
   ],
   "YUPPIFIED": [
     "enm:-ifien",
@@ -759364,6 +760525,9 @@
     "frm:zani",
     "italian:zanni"
   ],
+  "ZAP": [
+    "imitative:-"
+  ],
   "ZAPATEADO": [
     "spanish:zapateado"
   ],
@@ -759375,6 +760539,30 @@
   ],
   "ZAPATEOS": [
     "spanish:zapateo"
+  ],
+  "ZAPPED": [
+    "imitative:-"
+  ],
+  "ZAPPER": [
+    "imitative:-"
+  ],
+  "ZAPPERS": [
+    "imitative:-"
+  ],
+  "ZAPPIER": [
+    "imitative:-"
+  ],
+  "ZAPPIEST": [
+    "imitative:-"
+  ],
+  "ZAPPING": [
+    "imitative:-"
+  ],
+  "ZAPPY": [
+    "imitative:-"
+  ],
+  "ZAPS": [
+    "imitative:-"
   ],
   "ZAPTIEH": [
     "arabic:\u0636\u064e\u0628\u0652\u0637\u0650\u064a\u064e\u0651\u0629",
@@ -760060,6 +761248,33 @@
   "ZINFANDELS": [
     "german:zierfandler"
   ],
+  "ZING": [
+    "imitative:-"
+  ],
+  "ZINGED": [
+    "imitative:-"
+  ],
+  "ZINGER": [
+    "imitative:-"
+  ],
+  "ZINGERS": [
+    "imitative:-"
+  ],
+  "ZINGIER": [
+    "imitative:-"
+  ],
+  "ZINGIEST": [
+    "imitative:-"
+  ],
+  "ZINGING": [
+    "imitative:-"
+  ],
+  "ZINGS": [
+    "imitative:-"
+  ],
+  "ZINGY": [
+    "imitative:-"
+  ],
   "ZINNIA": [
     "mul:zinnia"
   ],
@@ -760068,6 +761283,42 @@
   ],
   "ZINS": [
     "german:zierfandler"
+  ],
+  "ZIP": [
+    "imitative:-"
+  ],
+  "ZIPLESS": [
+    "imitative:-"
+  ],
+  "ZIPPED": [
+    "imitative:-"
+  ],
+  "ZIPPER": [
+    "imitative:-"
+  ],
+  "ZIPPERED": [
+    "imitative:-"
+  ],
+  "ZIPPERING": [
+    "imitative:-"
+  ],
+  "ZIPPERS": [
+    "imitative:-"
+  ],
+  "ZIPPIER": [
+    "imitative:-"
+  ],
+  "ZIPPIEST": [
+    "imitative:-"
+  ],
+  "ZIPPING": [
+    "imitative:-"
+  ],
+  "ZIPPY": [
+    "imitative:-"
+  ],
+  "ZIPS": [
+    "imitative:-"
   ],
   "ZIRCON": [
     "arabic:\u0632\u064e\u0631\u0652\u0642\u064f\u0648\u0646",
@@ -760243,6 +761494,18 @@
   "ZONING": [
     "greek:\u03b6\u03ce\u03bd\u03b7",
     "latin:z\u014dna"
+  ],
+  "ZONK": [
+    "imitative:-"
+  ],
+  "ZONKED": [
+    "imitative:-"
+  ],
+  "ZONKING": [
+    "imitative:-"
+  ],
+  "ZONKS": [
+    "imitative:-"
   ],
   "ZONULA": [
     "latin:z\u014dnula"
