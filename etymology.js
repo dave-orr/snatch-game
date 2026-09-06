@@ -60,13 +60,13 @@ export function carriesRoot(entry) {
 // opening of many unrelated longer ones - enm:dri starts drinkere, latin:qua
 // starts quadriceps, old_english:ban starts bana - and matching them made
 // about 60% of the pairs it found wrong. At seven letters and up the rule is
-// reliable: all 879 pairs it matches in the current data were reviewed by
-// hand and 871 are genuine.
+// reliable: all 997 pairs it matches in the current data were reviewed by
+// hand and 988 are genuine.
 const MIN_PREFIX_MATCH_LENGTH = 7;
 
-// The eight survivors of that review: long roots where a word coincidentally
+// The nine survivors of that review: long roots where a word coincidentally
 // begins with an unrelated one. No length rule separates them, so they are
-// listed. The verdicts for all 879 pairs are in prefix_pair_review.json;
+// listed. The verdicts for all 997 pairs are in prefix_pair_review.json;
 // after regenerating etymology.json run check_prefix_review.py, which reports
 // the pairs that are new and so still unreviewed.
 const UNRELATED_PREFIX_PAIRS = new Set([
@@ -78,6 +78,7 @@ const UNRELATED_PREFIX_PAIRS = new Set([
     'old_french:controver|controversie',   // contrive vs controversy
     'old_french:marchie|marchier',         // mercatus (market) vs marcare
     'xno:plainte|plainteine',              // planctus (plaint) vs plantago
+    'frm:content|contentieux',             // continere (content) vs contendere
 ]);
 
 // Do two roots of the same language descend from the same source?

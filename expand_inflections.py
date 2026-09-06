@@ -379,26 +379,40 @@ def find_base_word(word, etymology_dict, scrabble_words):
     return None, None, None
 
 
-def expand_inflections(etymology_dict, scrabble_words, sources):
+def marker_only(entry):
+    """An entry like ['imitative:-'] records no root, only a label."""
+    return all(e.endswith(':-') for e in entry)
+
+
+def expand_inflections(etymology_dict, scrabble_words, sources, markers_as_bases=False):
     """
     Expand etymology dictionary by finding inflected forms.
-    Only fills in blanks - never overwrites.
     Records provenance for every entry it adds.
+
+    A word carrying only a marker ('imitative:-', 'french:-') still counts as
+    a blank here, because a real root found through a relative is better than
+    a label: WANNING once kept a marker from the Chinese city Wanning while
+    WAN, its actual base, had roots. Markers themselves are used as bases only
+    in the final pass (markers_as_bases), so BUBBLES still inherits BUBBLE's
+    marker once nothing better has turned up.
     """
     expanded = {k: list(v) for k, v in etymology_dict.items()}  # Deep copy lists
     propagated = 0
 
-    # Find all words without etymology
-    words_without = [w for w in scrabble_words if w not in expanded]
+    bases = expanded if markers_as_bases else \
+        {k: v for k, v in expanded.items() if not marker_only(v)}
+    words_without = [w for w in scrabble_words
+                     if w not in expanded or (not markers_as_bases and marker_only(expanded[w]))]
     print(f"Words without etymology: {len(words_without)}")
 
     for i, word in enumerate(words_without):
         if i > 0 and i % 10000 == 0:
             print(f"  Checked {i} words, propagated {propagated}...")
 
-        base, etym, rule = find_base_word(word, expanded, scrabble_words)
+        base, etym, rule = find_base_word(word, bases, scrabble_words)
         if base and etym:
             expanded[word] = list(etym)  # Copy the list
+            bases[word] = expanded[word]
             sources[word] = {'rule': rule, 'base': base}
             propagated += 1
 
@@ -422,6 +436,8 @@ def run_passes(etymology_dict, scrabble_words, sources, max_passes=10):
     else:
         print("Reached maximum passes, stopping.")
 
+    print("\n=== Final pass: markers to inflections of marker-only words ===")
+    expanded = expand_inflections(expanded, scrabble_words, sources, markers_as_bases=True)
     return expanded
 
 

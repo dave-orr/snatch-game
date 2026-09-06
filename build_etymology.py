@@ -55,7 +55,8 @@ ROOT_TEMPLATES = ('der','inh','bor','borrowed','derived','inherited','uder','lbo
 # {{tmpl|en|WORD|WORD}} - English components
 AFFIX_TEMPLATES = ('af','affix','suf','suffix','pre','prefix','con','confix',
                    'com','compound','blend','univerbation','back-form',
-                   'back-formation','clipping','rebracketing','surf')
+                   'back-formation','clipping','clip','contraction','contr',
+                   'rebracketing','surf')
 IMITATIVE = ('onom','onomatopoeic','imitative','ideophonic')
 UNKNOWN = ('unk','unknown','rfe')
 
@@ -102,14 +103,16 @@ def valid_root(word):
     """
     if not word or word == '-':
         return False
-    if any(ch in word for ch in ':#{}|[]'):
+    if any(ch in word for ch in ':#{}|[]='):
         return False
     return not word.lower().startswith(NAMESPACES)
 
 
 def valid_lang(code):
+    # English cannot be an ancestor of an English word; an "en" root is a
+    # self-reference that slipped through a template (AIRLINE = en:line).
     return (bool(re.fullmatch(r'[a-z][a-z0-9-]{0,15}', code))
-            and code not in SKIP_LANGUAGES)
+            and code not in SKIP_LANGUAGES and code != 'en')
 
 
 def normalize(word):
@@ -152,16 +155,88 @@ def affix_components(args, shape):
         else:        yield normalize(bare)
 
 
+# Plain-prose etymologies: "From French." or "From Latin ''ursa''". Only the
+# languages named here are recognised, mapped to the codes the templates use.
+PROSE_LANGUAGES = {
+    'Latin': 'la', 'Ancient Greek': 'grc', 'Greek': 'el', 'French': 'fr',
+    'Old French': 'fro', 'Middle French': 'frm', 'Anglo-Norman': 'xno',
+    'Italian': 'it', 'Spanish': 'es', 'Portuguese': 'pt', 'German': 'de',
+    'Dutch': 'nl', 'Middle Dutch': 'dum', 'Old English': 'ang',
+    'Middle English': 'enm', 'Old Norse': 'non', 'Scots': 'sco',
+    'Irish': 'ga', 'Scottish Gaelic': 'gd', 'Welsh': 'cy', 'Arabic': 'ar',
+    'Persian': 'fa', 'Hindi': 'hi', 'Sanskrit': 'sa', 'Hebrew': 'he',
+    'Yiddish': 'yi', 'Japanese': 'ja', 'Chinese': 'zh', 'Russian': 'ru',
+    'Turkish': 'tr', 'Malay': 'ms', 'Hawaiian': 'haw', 'Afrikaans': 'af',
+    'Swedish': 'sv', 'Danish': 'da', 'Norwegian': 'no', 'Icelandic': 'is',
+}
+PROSE_FROM = re.compile(
+    r"\bFrom (?:the )?(" + '|'.join(sorted(PROSE_LANGUAGES, key=len, reverse=True))
+    + r")\b(?:\s+(?:word\s+)?''([^']+)'')?")
+
+
+def prose_roots(text):
+    """Roots and language flags stated in plain prose rather than templates."""
+    roots, flags = set(), set()
+    for m in PROSE_FROM.finditer(text):
+        code = PROSE_LANGUAGES[m.group(1)]
+        word = normalize(m.group(2)) if m.group(2) else ''
+        if word and valid_root(word) and ' ' not in word:
+            roots.add((code, word))
+        else:
+            flags.add(f'from:{code}')
+    return roots, flags
+
+
+COGNATE_CUE = re.compile(r'\b(?:Compare|Cognates?(?:\s+with)?|cognate with|Related to)\b')
+
+
+def drop_cognate_sentences(text):
+    """
+    Remove each sentence that lists cognates. "Compare German Terminologie"
+    names a relative, not an ancestor, and -LOGY once inherited it. Only the
+    sentence goes: cutting everything after the cue threw away HEALTH's
+    "Analyzable as {{suffix|en|heal|th}}", which came after "Cognate with".
+    """
+    out, i = [], 0
+    while True:
+        m = COGNATE_CUE.search(text, i)
+        if not m:
+            out.append(text[i:])
+            break
+        out.append(text[i:m.start()])
+        # skip to the next full stop outside any template or link
+        depth, j = 0, m.end()
+        while j < len(text):
+            ch = text[j]
+            if ch in '{[': depth += 1
+            elif ch in '}]': depth -= 1
+            elif ch == '.' and depth <= 0:
+                j += 1
+                break
+            j += 1
+        i = j
+    return ''.join(out)
+
+
+# An English word named right after one of these is the base this word was
+# formed from: "Derived from {{m|en|asquint}}", "Shortening of {{m|en|X}}".
+# Elsewhere an English mention is commentary ("compare", "influenced by").
+DERIVATION_CUE = re.compile(
+    r'\b(?:From|Derived from|Shortening of|Short for|Shortened from|Variant of|'
+    r'Alteration of|Altered from|Back-formation from|Clipping of|Clipped from|'
+    r'Contraction of|Abbreviation of|Aphetic form of|Reduplication of)\s+'
+    r'(?:the\s+|an?\s+)?\{\{[ml]\|en\|([^|}\[\]]+)', re.IGNORECASE)
+
+
 def extract(ety_text, allow_mentions=True):
     """returns (roots, english_components, flags)"""
     roots, components, flags = set(), set(), set()
     mentions = []
     if not ety_text: return roots, components, flags
 
-    # Everything after "Compare"/"Cognate" lists relatives in other languages,
-    # not ancestors. -LOGY picked up German Terminologie that way.
-    ety_text = re.split(r'\b(?:Compare|Cognate|cognate with|Related to)\b',
-                        ety_text)[0]
+    ety_text = drop_cognate_sentences(ety_text)
+    for m in DERIVATION_CUE.finditer(ety_text):
+        components.add(normalize(m.group(1)))
 
     def take_affix_args(args, shape):
         components.update(affix_components(args, shape))
@@ -173,19 +248,43 @@ def extract(ety_text, allow_mentions=True):
         if base in IMITATIVE: flags.add('imitative'); continue
         if base in UNKNOWN: flags.add('unknown'); continue
 
-        if base in ROOT_TEMPLATES and len(args) >= 3 and clean_arg(args[0]) == 'en':
-            lang = clean_arg(args[1]).lower().strip('.,;:')
-            word = clean_arg(args[2])
+        # Named arguments can sit anywhere: {{bor|en|ja|sc=Jpan|鯉|tr=koi}}.
+        # Read the language and word from the positional ones only, or the
+        # word comes out as "sc=jpan" and KOI loses its root.
+        positional = [clean_arg(a) for a in args if not is_named(clean_arg(a))]
+        if base in ROOT_TEMPLATES and len(positional) >= 3 and positional[0] == 'en':
+            lang = positional[1].lower().strip('.,;:')
+            word = positional[2]
             if valid_lang(lang) and valid_root(normalize(word)):
                 roots.add((lang, normalize(word)))
+            elif valid_lang(lang) and word.strip() == '-':
+                # "From French." - the language is given but no word. Kept
+                # as a display-only marker when nothing better turns up.
+                flags.add(f'from:{lang}')
+        elif base in ROOT_TEMPLATES and len(positional) == 2 and positional[0] == 'en':
+            lang = positional[1].lower().strip('.,;:')
+            if valid_lang(lang):
+                flags.add(f'from:{lang}')      # {{der|en|fr}} with no word at all
         elif base in AFFIX_TEMPLATES and args and clean_arg(args[0]) == 'en':
             shape = ('suffix' if base in ('suf','suffix') else
                      'prefix' if base in ('pre','prefix') else
                      'confix' if base in ('con','confix') else 'free')
             take_affix_args(args[1:], shape)
-        elif base in ('etymon','ety') and len(args) >= 2 and clean_arg(args[0]) == 'en':
-            kind = clean_arg(args[1]).lstrip(':').lower()
-            rest = args[2:]
+        elif base in AFFIX_TEMPLATES and args and valid_lang(clean_arg(args[0]).lower()) \
+                and clean_arg(args[0]).lower() != 'en':
+            # {{compound|nl|de|kooi}}: the parts are words of that language
+            lang = clean_arg(args[0]).lower()
+            for part in affix_components(args[1:], 'free'):
+                if not (part.startswith('-') or part.endswith('-')) and valid_root(part):
+                    roots.add((lang, part))
+        elif base in ('etymon','ety') and args and clean_arg(args[0]) == 'en':
+            # a named id= can come before the kind:
+            # {{etymon|en|id=lack of illness|:inh|enm:helthe}}
+            positional = [a for a in args[1:] if not is_named(clean_arg(a))]
+            if not positional:
+                continue
+            kind = clean_arg(positional[0]).lstrip(':').lower()
+            rest = positional[1:]
             if kind == 'af':
                 take_affix_args(rest, 'free')
             elif kind in ROOT_TEMPLATES and rest:
@@ -202,6 +301,13 @@ def extract(ety_text, allow_mentions=True):
             if lang != 'en' and valid_lang(lang):
                 word = normalize(clean_arg(args[1]))
                 if valid_root(word): mentions.append((lang, word))
+
+    # Prose is the last resort: only when no template gave a root
+    if not roots:
+        prose_r, prose_f = prose_roots(ety_text)
+        roots |= prose_r
+        if not roots:
+            flags |= prose_f
 
     # A bare {{m}} is only trustworthy when the section states no derivation
     # of its own ("From Middle English {{m|enm|bublen}}"). Where explicit
@@ -289,6 +395,79 @@ def iter_wiktionary_pages(filepath):
     print(f"  Total pages processed: {page_count}")
 
 
+# A definition that reads "alternative form of X", "plural of X" or "obsolete
+# spelling of X" names the word this one is a form of, and X's roots are its
+# roots. These live in the definition line, not the etymology section, so
+# HOMMOCK (alternative form of hummock) had no etymology at all. "synonym of"
+# is deliberately absent: synonyms are not relatives.
+FORM_OF = re.compile(
+    r'\{\{(?:alternative form of|alt form|altform|alternative spelling of|alt sp|'
+    r'altsp|plural of|obsolete form of|obsolete spelling of|archaic form of|'
+    r'archaic spelling of|dated form of|dated spelling of|misspelling of|'
+    r'nonstandard spelling of|nonstandard form of|eye dialect of|clipping of|'
+    r'abbreviation of|short for|rare form of|rare spelling of|informal form of|'
+    r'standard spelling of|less common spelling of|uncommon spelling of|'
+    r'feminine of|diminutive of|augmentative of|inflection of|infl of|form of|'
+    r'en-past of|en-simple past of|en-third-person singular of|'
+    r'en-third person singular of|en-ing form of|en-comparative of|'
+    r'en-superlative of|en-irregular plural of|past participle of|'
+    r'present participle of|comparative of|superlative of)'
+    r'\|en\|([^|}]+)', re.IGNORECASE)
+
+
+# The en- inflection templates predate the language argument, so the target
+# is usually the first argument: {{en-third-person singular of|Russify}}.
+EN_INFLECTION = re.compile(r'\{\{en-[a-z -]+ of\|(?:en\|)?([^|}]+)', re.IGNORECASE)
+
+
+def form_of_targets(english_section):
+    """Words this entry is declared a form of."""
+    targets = set()
+    for regex in (FORM_OF, EN_INFLECTION):
+        for m in regex.finditer(english_section):
+            target = clean_arg(m.group(1))
+            if target and target != '-' and '[' not in target:
+                targets.add(normalize(target))
+    return targets
+
+
+# A foreign page that is itself an inflected form: French "russifies" is a
+# verb form of russifier, not a word English borrowed.
+INFLECTION_PAGE = re.compile(
+    r'\{\{(?:inflection of|plural of|conjugation of|[a-z]{2,3}-[a-z]+ form of|'
+    r'[a-z]{2,3}-form-of|(?:feminine|masculine) (?:singular|plural)? ?of|'
+    r'[a-z ]*form of)\|', re.IGNORECASE)
+
+
+def language_section(wiki_text, language):
+    """The wikitext of one language's section, or None."""
+    marker = f'=={language}=='
+    if marker not in wiki_text:
+        return None
+    return re.split(r'\n==[^=]', wiki_text.split(marker, 1)[1])[0]
+
+
+def etymology_of_section(section):
+    """Etymology wikitext within one language section, if any."""
+    found = re.findall(r'\n=+\s*Etymology[^=\n]*=+\n(.*?)(?=\n=+[^=\n]|\Z)',
+                       section, re.DOTALL)
+    return '\n'.join(found) if found else None
+
+
+# Scrabble words that Wiktionary files under another language, in the order
+# to try them. Scots first: Collins admits a great many Scots words (GLAIKET,
+# SICCAN, WAEFUL) that have no English entry. Latin before the Romance
+# languages, because URSA is Latin even though Esperanto also has a page.
+OTHER_LANGUAGE_SECTIONS = [
+    ('Scots', 'sco'), ('Middle English', 'enm'), ('Latin', 'la'),
+    ('Italian', 'it'), ('French', 'fr'), ('Spanish', 'es'), ('German', 'de'),
+    ('Dutch', 'nl'), ('Portuguese', 'pt'), ('Yola', 'yol'), ('Irish', 'ga'),
+    ('Scottish Gaelic', 'gd'), ('Welsh', 'cy'), ('Hawaiian', 'haw'),
+    ('Maori', 'mi'), ('Afrikaans', 'af'), ('Yiddish', 'yi'), ('Hebrew', 'he'),
+    ('Japanese', 'ja'), ('Old English', 'ang'), ('Old Norse', 'non'),
+]
+
+
 def english_etymology_section(wiki_text):
     """Return the etymology wikitext inside the English section, if any."""
     if not wiki_text or '==English==' not in wiki_text:
@@ -301,7 +480,7 @@ def english_etymology_section(wiki_text):
 
 IMITATIVE_MARKER = 'imitative'
 
-MAX_RESOLUTION_DEPTH = 4
+MAX_RESOLUTION_DEPTH = 6
 
 # Positional, quantitative and grammatical affixes. Sharing one of these
 # tells a player nothing: every negated word has UN-, every repeated action
@@ -329,6 +508,7 @@ NOISE_AFFIXES = {
     # entries whose only root was the suffix: BARRISTER had just -ESTRE
     'um','ie','som','sam','sum','arie','estre','estere','astrija','ification',
     'o','ar','ere','en','ende','inge','nesse','lich','liche',
+    'ance','ence','ancy','ency','aunce','entia','antia','antie','encie',
 }
 
 
@@ -370,19 +550,88 @@ def resolve(title, pages, cache, seen=None):
         return cache[title]
     seen = seen or set()
     if title in seen or len(seen) >= MAX_RESOLUTION_DEPTH:
-        return set()
+        # Cut short by a cycle or the depth limit. Return None rather than an
+        # empty set so the caller does not cache "no roots" for a word that
+        # would resolve fine from the top.
+        return None
     entry = pages.get(title)
     if not entry:
-        return set()
+        cache[title] = set()
+        return cache[title]
     roots, components = entry
     if roots:
         cache[title] = set(roots)
         return cache[title]
-    resolved = set()
+    resolved, complete = set(), True
     for component in components:
-        resolved |= resolve(component, pages, cache, seen | {title})
-    cache[title] = resolved
-    return resolved
+        found = resolve(component, pages, cache, seen | {title})
+        if found is None:
+            complete = False
+        else:
+            resolved |= found
+    if complete or resolved:
+        cache[title] = resolved
+        return resolved
+    return None
+
+
+def analyze_page(title, text, scrabble_words, playable):
+    """
+    What one dump page says about its word: (roots, components, flags, tier).
+    English pages are read for their etymology and form-of templates; a
+    playable word with no English entry is read from its source language.
+    The tier ranks pages for the same word: a lowercase English page (0)
+    beats a capitalized one (1), which beats a foreign-language page (2).
+    """
+    # Only a title that is entirely lowercase is the word's own page. The
+    # page "pIg" (an abbreviation of polyclonal immunoglobulin) starts with a
+    # lowercase letter but is not the page for PIG, and keyed by lowercase it
+    # once overwrote the real one.
+    lowercase = title == title.lower()
+    capitalized = not lowercase
+    tier = None
+    # The XML dump escapes markup, so <t:...> annotations arrive as
+    # &lt;t:...&gt; and survive the stripper unless unescaped first.
+    text = html.unescape(text)
+    key = title.lower()
+    english = language_section(text, 'English')
+
+    roots, components, page_flags = set(), set(), set()
+    if english:
+        tier = 0 if lowercase else 1
+        section = etymology_of_section(english)
+        if section:
+            title_is_affix = title.startswith('-') or title.endswith('-')
+            roots, components, page_flags = extract(
+                section, allow_mentions=not title_is_affix)
+            if title_is_affix:
+                # An affix contributes its own roots and nothing else. Its
+                # page also links the words it was formed from or alongside
+                # - -ON is a back-formation from CARBON - and following
+                # those made every word ending in the affix a relative of
+                # the example. BOSON came out descended from Latin carbo.
+                components = set()
+        components = set(components) | form_of_targets(english)
+    elif playable and not capitalized:
+        # No English entry, but the word is playable: it is a borrowing
+        # Wiktionary files under its source language. The word itself in
+        # that language is its root, as {{bor}} would have recorded.
+        # Capitalized pages are excluded because German capitalizes every
+        # noun, and Wiktionary's German entries for PIXEL, REPRESSOR and
+        # FLIRT would otherwise label English words as German borrowings
+        # when German borrowed them from English.
+        for language, code in OTHER_LANGUAGE_SECTIONS:
+            other = language_section(text, language)
+            if other and not INFLECTION_PAGE.search(other):
+                tier = 2
+                roots = {(code, normalize(title))}
+                section = etymology_of_section(other)
+                if section:
+                    deeper, _, _ = extract(section)
+                    roots |= deeper
+                break
+
+    return roots, components, page_flags, tier
 
 
 def build_etymology_dict(wiktionary_path, scrabble_words):
@@ -397,31 +646,44 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     flags = {}
     page_count = 0
 
+    tiers = ({}, {}, {})          # lowercase English, capitalized English, foreign
+    tier_flags = ({}, {}, {})
+
     for title, text in iter_wiktionary_pages(wiktionary_path):
-        if title[:1].isupper():   # proper nouns are not Scrabble words
+        capitalized = title[:1].isupper()
+        playable = title.upper() in scrabble_words
+        # Proper nouns are skipped unless the Scrabble list has the word:
+        # CHUNNEL, MIRANDIZE and EGYPTIAN are playable but Wiktionary files
+        # them capitalized.
+        if capitalized and not playable:
             continue
-        # The XML dump escapes markup, so <t:...> annotations arrive as
-        # &lt;t:...&gt; and survive the stripper unless unescaped first.
-        section = english_etymology_section(html.unescape(text))
-        if not section:
+        roots, components, page_flags, tier = analyze_page(
+            title, text, scrabble_words, playable)
+        if tier is None:
             continue
-        page_count += 1
-        if page_count % 100000 == 0:
-            print(f"  {page_count} pages with an etymology section...")
-        title_is_affix = title.startswith('-') or title.endswith('-')
-        roots, components, page_flags = extract(section,
-                                               allow_mentions=not title_is_affix)
-        if title_is_affix:
-            # An affix contributes its own roots and nothing else. Its page
-            # also links the words it was formed from or alongside - -ON is
-            # a back-formation from CARBON - and following those made every
-            # word ending in the affix a relative of the example. BOSON came
-            # out descended from Latin carbo that way.
-            components = ()
+        key = title.lower()
         if roots or components:
-            pages[title.lower()] = (frozenset(roots), tuple(components))
-        if page_flags:
-            flags[title.lower()] = page_flags
+            page_count += 1
+            if page_count % 100000 == 0:
+                print(f"  {page_count} pages with etymology data...")
+            # Several titles can share a key (PIG, Pig, PIGs). Within a tier
+            # keep whichever has roots; never let a rootless page replace one
+            # that resolved.
+            existing = tiers[tier].get(key)
+            if existing is None or (not existing[0] and roots):
+                tiers[tier][key] = (frozenset(roots), tuple(sorted(components)))
+        # Markers come only from a word's own lowercase English page. The
+        # capitalized page for the Chinese city Wanning is not evidence about
+        # the English word WANNING.
+        if page_flags and tier == 0:
+            tier_flags[tier][key] = page_flags
+
+    # A lower tier fills in only where no better page said anything.
+    for tier_pages, tier_flag in zip(tiers, tier_flags):
+        for key, value in tier_pages.items():
+            pages.setdefault(key, value)
+        for key, value in tier_flag.items():
+            flags.setdefault(key, value)
 
     print(f"Pages with etymology data: {len(pages)}")
 
@@ -429,7 +691,7 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     etymology_dict = {}
     unresolved = 0
     for word in scrabble_words:
-        roots = resolve(word.lower(), pages, cache)
+        roots = resolve(word.lower(), pages, cache) or set()
         if roots:
             etymology_dict[word] = sorted(
                 f"{ROOT_LANGUAGES.get(lang, lang)}:{root}" for lang, root in roots)
@@ -445,16 +707,26 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     # says so instead of leaving them indistinguishable from words nobody has
     # researched. It carries no root, and etymology.js never counts a rootless
     # entry as shared, because two imitative words are not relatives.
-    imitative = 0
+    imitative = language_only = 0
     for word in scrabble_words:
-        if word not in etymology_dict and 'imitative' in flags.get(word.lower(), ()):
+        if word in etymology_dict:
+            continue
+        word_flags = flags.get(word.lower(), ())
+        if 'imitative' in word_flags:
             etymology_dict[word] = [f'{IMITATIVE_MARKER}:-']
             imitative += 1
+            continue
+        languages = sorted(f[5:] for f in word_flags if f.startswith('from:'))
+        if languages:
+            # "From French." with no word given: show the language at least
+            etymology_dict[word] = [f'{ROOT_LANGUAGES.get(l, l)}:-' for l in languages]
+            language_only += 1
 
     print(f"Scrabble words with roots: {with_roots} "
           f"({100*with_roots/len(scrabble_words):.1f}%)")
     print(f"  had etymology data but resolved to no root: {unresolved}")
     print(f"  no root, marked imitative instead: {imitative}")
+    print(f"  no root, source language only: {language_only}")
     return etymology_dict
 
 
