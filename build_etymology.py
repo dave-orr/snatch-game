@@ -121,8 +121,10 @@ def valid_root(word):
         return False
     if any(ch in word for ch in ':#{}|[]='):
         return False
-    # a lone letter with an apostrophe is a clitic article (French l'), not a word
-    if len(word.strip("'-")) < 2:
+    # a lone Latin letter with an apostrophe is a clitic article (French l'),
+    # not a word. One character is a whole word in Japanese (鯉) or Korean (밥).
+    bare = word.strip("'-")
+    if len(bare) < 2 and (not bare or bare.isascii()):
         return False
     return not word.lower().startswith(NAMESPACES)
 
