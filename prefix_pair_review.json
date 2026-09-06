@@ -1,14 +1,26 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (three review rounds: 879 pairs, 118 after the parser was widened, 1 after the final rebuild)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (four review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links were added)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 998,
-  "related": 989,
+  "reviewed": 1018,
+  "related": 1009,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
  "pairs": [
+  [
+   "cy",
+   "eistedd",
+   "eisteddfod",
+   true
+  ],
+  [
+   "dutch",
+   "keeshond",
+   "keeshonden",
+   true
+  ],
   [
    "dutch",
    "scheper",
@@ -529,6 +541,12 @@
    "enm",
    "consecrat",
    "consecraten",
+   true
+  ],
+  [
+   "enm",
+   "consummat",
+   "consummaten",
    true
   ],
   [
@@ -2657,6 +2675,12 @@
   ],
   [
    "french",
+   "attache",
+   "attachement",
+   true
+  ],
+  [
+   "french",
    "baccara",
    "baccarat",
    true
@@ -2689,6 +2713,12 @@
    "french",
    "bourgeois",
    "bourgeoise",
+   true
+  ],
+  [
+   "french",
+   "bourgeois",
+   "bourgeoisie",
    true
   ],
   [
@@ -2753,6 +2783,12 @@
   ],
   [
    "french",
+   "chateau",
+   "chateaubriand",
+   true
+  ],
+  [
+   "french",
    "chemise",
    "chemisette",
    true
@@ -2773,6 +2809,12 @@
    "french",
    "chiffon",
    "chiffonnier",
+   true
+  ],
+  [
+   "french",
+   "collage",
+   "collagene",
    true
   ],
   [
@@ -2815,6 +2857,12 @@
    "french",
    "confident",
    "confidente",
+   true
+  ],
+  [
+   "french",
+   "confident",
+   "confidentiel",
    true
   ],
   [
@@ -3017,6 +3065,12 @@
   ],
   [
    "french",
+   "libertin",
+   "libertinage",
+   true
+  ],
+  [
+   "french",
    "marabou",
    "marabout",
    true
@@ -3091,6 +3145,12 @@
    "french",
    "rapport",
    "rapporteur",
+   true
+  ],
+  [
+   "french",
+   "recherche",
+   "rechercher",
    true
   ],
   [
@@ -3833,6 +3893,12 @@
   ],
   [
    "latin",
+   "acicula",
+   "acicularis",
+   true
+  ],
+  [
+   "latin",
    "admonitor",
    "admonitorium",
    true
@@ -4061,6 +4127,18 @@
   ],
   [
    "latin",
+   "confirma",
+   "confirmandus",
+   true
+  ],
+  [
+   "latin",
+   "confirma",
+   "confirmatio",
+   true
+  ],
+  [
+   "latin",
    "consulto",
    "consultor",
    true
@@ -4247,6 +4325,18 @@
   ],
   [
    "latin",
+   "fenestra",
+   "fenestratio",
+   true
+  ],
+  [
+   "latin",
+   "fenestra",
+   "fenestratus",
+   true
+  ],
+  [
+   "latin",
    "fortuna",
    "fortunatus",
    true
@@ -4255,6 +4345,12 @@
    "latin",
    "gallica",
    "gallicanus",
+   true
+  ],
+  [
+   "latin",
+   "gladiator",
+   "gladiatorius",
    true
   ],
   [
@@ -4487,6 +4583,12 @@
   ],
   [
    "latin",
+   "musculus",
+   "musculus zygomaticus",
+   true
+  ],
+  [
+   "latin",
    "nugator",
    "nugatorius",
    true
@@ -4607,6 +4709,12 @@
   ],
   [
    "latin",
+   "problema",
+   "problematicus",
+   true
+  ],
+  [
+   "latin",
    "proconsul",
    "proconsularis",
    true
@@ -4615,6 +4723,12 @@
    "latin",
    "proconsul",
    "proconsulatus",
+   true
+  ],
+  [
+   "latin",
+   "professor",
+   "professorius",
    true
   ],
   [
@@ -4801,6 +4915,12 @@
    "latin",
    "seditio",
    "seditiosus",
+   true
+  ],
+  [
+   "latin",
+   "senator",
+   "senatorius",
    true
   ],
   [

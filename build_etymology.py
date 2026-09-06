@@ -121,6 +121,9 @@ def valid_root(word):
         return False
     if any(ch in word for ch in ':#{}|[]='):
         return False
+    # a lone letter with an apostrophe is a clitic article (French l'), not a word
+    if len(word.strip("'-")) < 2:
+        return False
     return not word.lower().startswith(NAMESPACES)
 
 
@@ -140,6 +143,8 @@ def normalize(word):
     # {{ubor|en|fr|(dialectal) beige}}, {{bor|en|ko|합기도(合氣道)}},
     # {{der|en|la|ammōn (cornū)}}: the parenthesis is a note, not the word
     word = re.sub(r'\s*\([^()]*\)', '', word)
+    # wiki italics around a word: ''sē-''
+    word = re.sub(r"''+", '', word)
     word = word.split(',')[0].strip().lstrip('*').strip()
     return unicodedata.normalize('NFC', word).lower()
 
@@ -579,8 +584,9 @@ NOISE_AFFIXES = {
     # classifying suffixes: a mineral named after a person has -ITE as its
     # only root, and BARITE and LUCITE are not relatives for sharing it
     'ite','ites','ia','ια','cia','kia','κια','osis','oid','oides','ides',
-    # Old English inflectional endings, reached through the page for -s
-    'as','eþ','eth',
+    # Old English inflectional endings, reached through the page for -s.
+    # Not 'eth': that is the prefix of ETHYLENE.
+    'as','eþ',
 }
 
 
