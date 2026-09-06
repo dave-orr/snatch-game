@@ -401,8 +401,11 @@ def expand_inflections(etymology_dict, scrabble_words, sources, markers_as_bases
 
     bases = expanded if markers_as_bases else \
         {k: v for k, v in expanded.items() if not marker_only(v)}
-    words_without = [w for w in scrabble_words
-                     if w not in expanded or (not markers_as_bases and marker_only(expanded[w]))]
+    # Sorted, because a word propagated earlier in a pass is a base for the
+    # rest of it; iterating a set made that order, and so the output, depend
+    # on the hash seed.
+    words_without = sorted(w for w in scrabble_words
+                           if w not in expanded or (not markers_as_bases and marker_only(expanded[w])))
     print(f"Words without etymology: {len(words_without)}")
 
     for i, word in enumerate(words_without):
@@ -436,8 +439,12 @@ def run_passes(etymology_dict, scrabble_words, sources, max_passes=10):
     else:
         print("Reached maximum passes, stopping.")
 
-    print("\n=== Final pass: markers to inflections of marker-only words ===")
-    expanded = expand_inflections(expanded, scrabble_words, sources, markers_as_bases=True)
+    for pass_num in range(1, max_passes + 1):
+        print(f"\n=== Marker pass {pass_num}: markers to inflections of marker-only words ===")
+        before_count = len(expanded)
+        expanded = expand_inflections(expanded, scrabble_words, sources, markers_as_bases=True)
+        if len(expanded) == before_count:
+            break
     return expanded
 
 

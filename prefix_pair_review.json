@@ -1,10 +1,10 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (two review rounds: 879 pairs, then 118 after the parser was widened)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (three review rounds: 879 pairs, 118 after the parser was widened, 1 after the final rebuild)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 997,
-  "related": 988,
+  "reviewed": 998,
+  "related": 989,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
@@ -13,6 +13,12 @@
    "dutch",
    "scheper",
    "scheperke",
+   true
+  ],
+  [
+   "enm",
+   "abandoun",
+   "abandounen",
    true
   ],
   [
@@ -125,6 +131,12 @@
   ],
   [
    "enm",
+   "answere",
+   "answeren",
+   true
+  ],
+  [
+   "enm",
    "appropriat",
    "appropriaten",
    true
@@ -203,6 +215,12 @@
   ],
   [
    "enm",
+   "aventure",
+   "aventuren",
+   true
+  ],
+  [
+   "enm",
    "baptist",
    "baptistery",
    true
@@ -229,6 +247,12 @@
    "enm",
    "bestial",
    "bestially",
+   true
+  ],
+  [
+   "enm",
+   "biqueste",
+   "biquesten",
    true
   ],
   [
@@ -269,8 +293,38 @@
   ],
   [
    "enm",
+   "brighte",
+   "brighten",
+   true
+  ],
+  [
+   "enm",
+   "brother",
+   "brotherhod",
+   true
+  ],
+  [
+   "enm",
+   "brother",
+   "brotherly",
+   true
+  ],
+  [
+   "enm",
+   "brother",
+   "brotherrede",
+   true
+  ],
+  [
+   "enm",
    "capitain",
    "capitainship",
+   true
+  ],
+  [
+   "enm",
+   "capital",
+   "capitale",
    true
   ],
   [
@@ -289,6 +343,12 @@
    "enm",
    "cataract",
    "cataractes",
+   true
+  ],
+  [
+   "enm",
+   "celebrat",
+   "celebraten",
    true
   ],
   [
@@ -378,6 +438,12 @@
   [
    "enm",
    "chirche",
+   "chirchetoun",
+   true
+  ],
+  [
+   "enm",
+   "chirche",
    "chircheyerd",
    true
   ],
@@ -449,6 +515,18 @@
   ],
   [
    "enm",
+   "conglutinat",
+   "conglutinaten",
+   true
+  ],
+  [
+   "enm",
+   "conquest",
+   "conquesten",
+   true
+  ],
+  [
+   "enm",
    "consecrat",
    "consecraten",
    true
@@ -515,6 +593,18 @@
   ],
   [
    "enm",
+   "cratche",
+   "cratchen",
+   true
+  ],
+  [
+   "enm",
+   "crouche",
+   "crouchen",
+   true
+  ],
+  [
+   "enm",
    "crucifix",
    "crucifixioun",
    true
@@ -563,6 +653,12 @@
   ],
   [
    "enm",
+   "derkely",
+   "derkelyng",
+   true
+  ],
+  [
+   "enm",
    "derogat",
    "derogaten",
    true
@@ -583,6 +679,18 @@
    "enm",
    "destitute",
    "destituten",
+   true
+  ],
+  [
+   "enm",
+   "determinat",
+   "determinate",
+   true
+  ],
+  [
+   "enm",
+   "determinat",
+   "determinaten",
    true
   ],
   [
@@ -635,8 +743,26 @@
   ],
   [
    "enm",
+   "dissimulat",
+   "dissimulaten",
+   true
+  ],
+  [
+   "enm",
    "distresse",
    "distressen",
+   true
+  ],
+  [
+   "enm",
+   "diverse",
+   "diverseliche",
+   true
+  ],
+  [
+   "enm",
+   "diverse",
+   "diversen",
    true
   ],
   [
@@ -701,6 +827,12 @@
   ],
   [
    "enm",
+   "entaille",
+   "entaillen",
+   true
+  ],
+  [
+   "enm",
    "entrete",
    "entreten",
    true
@@ -743,6 +875,12 @@
   ],
   [
    "enm",
+   "estover",
+   "estovers",
+   true
+  ],
+  [
+   "enm",
    "eternal",
    "eternally",
    true
@@ -769,6 +907,12 @@
    "enm",
    "excellen",
    "excellent",
+   true
+  ],
+  [
+   "enm",
+   "extinct",
+   "extincten",
    true
   ],
   [
@@ -817,6 +961,12 @@
    "enm",
    "forecast",
    "forecasten",
+   true
+  ],
+  [
+   "enm",
+   "foretokne",
+   "foretoknen",
    true
   ],
   [
@@ -889,6 +1039,12 @@
    "enm",
    "froward",
    "frowardnesse",
+   true
+  ],
+  [
+   "enm",
+   "frustrat",
+   "frustraten",
    true
   ],
   [
@@ -977,6 +1133,12 @@
   ],
   [
    "enm",
+   "grapple",
+   "grapplen",
+   true
+  ],
+  [
+   "enm",
    "graunge",
    "graunger",
    true
@@ -989,6 +1151,12 @@
   ],
   [
    "enm",
+   "grucche",
+   "grucchen",
+   true
+  ],
+  [
+   "enm",
    "heighte",
    "heightenen",
    true
@@ -997,6 +1165,12 @@
    "enm",
    "helping",
    "helpinge",
+   true
+  ],
+  [
+   "enm",
+   "herberwe",
+   "herberweles",
    true
   ],
   [
@@ -1157,6 +1331,12 @@
   ],
   [
    "enm",
+   "manifold",
+   "manifolden",
+   true
+  ],
+  [
+   "enm",
    "marchaundise",
    "marchaundisen",
    true
@@ -1177,6 +1357,12 @@
    "enm",
    "meritorious",
    "meritoriously",
+   true
+  ],
+  [
+   "enm",
+   "merveilous",
+   "merveilously",
    true
   ],
   [
@@ -1213,6 +1399,12 @@
    "enm",
    "moderat",
    "moderately",
+   true
+  ],
+  [
+   "enm",
+   "moderat",
+   "moderaten",
    true
   ],
   [
@@ -1283,6 +1475,12 @@
   ],
   [
    "enm",
+   "openyng",
+   "openynge",
+   true
+  ],
+  [
+   "enm",
    "original",
    "originali",
    true
@@ -1345,6 +1543,18 @@
    "enm",
    "overclose",
    "overclosen",
+   true
+  ],
+  [
+   "enm",
+   "overthrow",
+   "overthrowen",
+   true
+  ],
+  [
+   "enm",
+   "paramour",
+   "paramouren",
    true
   ],
   [
@@ -1565,6 +1775,12 @@
   ],
   [
    "enm",
+   "repulse",
+   "repulsen",
+   true
+  ],
+  [
+   "enm",
    "residen",
    "residence",
    true
@@ -1607,6 +1823,12 @@
   ],
   [
    "enm",
+   "sacrifice",
+   "sacrificen",
+   true
+  ],
+  [
+   "enm",
    "scapelar",
    "scapelarie",
    true
@@ -1615,6 +1837,18 @@
    "enm",
    "scathel",
    "scatheles",
+   true
+  ],
+  [
+   "enm",
+   "schadowe",
+   "schadowen",
+   true
+  ],
+  [
+   "enm",
+   "schagge",
+   "schaggen",
    true
   ],
   [
@@ -1645,6 +1879,12 @@
    "enm",
    "schewyng",
    "schewynge",
+   true
+  ],
+  [
+   "enm",
+   "schirte",
+   "schirten",
    true
   ],
   [
@@ -1687,6 +1927,18 @@
    "enm",
    "schrewed",
    "schrewednesse",
+   true
+  ],
+  [
+   "enm",
+   "schroud",
+   "schrouded",
+   true
+  ],
+  [
+   "enm",
+   "schroud",
+   "schrouden",
    true
   ],
   [
@@ -1739,6 +1991,12 @@
   ],
   [
    "enm",
+   "skipper",
+   "skippere",
+   true
+  ],
+  [
+   "enm",
    "slipper",
    "slipperie",
    true
@@ -1783,6 +2041,12 @@
    "enm",
    "sorweful",
    "sorwefulnesse",
+   true
+  ],
+  [
+   "enm",
+   "sounden",
+   "soundenes",
    true
   ],
   [
@@ -1843,6 +2107,12 @@
    "enm",
    "specifieng",
    "specifienge",
+   true
+  ],
+  [
+   "enm",
+   "speking",
+   "spekinge",
    true
   ],
   [
@@ -1937,6 +2207,12 @@
   ],
   [
    "enm",
+   "subiugat",
+   "subiugate",
+   true
+  ],
+  [
+   "enm",
    "suffocat",
    "suffocation",
    true
@@ -1973,6 +2249,12 @@
   ],
   [
    "enm",
+   "swingel",
+   "swingelen",
+   true
+  ],
+  [
+   "enm",
    "talkyng",
    "talkynge",
    true
@@ -1981,6 +2263,12 @@
    "enm",
    "teching",
    "techinge",
+   true
+  ],
+  [
+   "enm",
+   "terminat",
+   "terminaten",
    true
   ],
   [
@@ -1999,6 +2287,24 @@
    "enm",
    "thousend",
    "thousendfold",
+   true
+  ],
+  [
+   "enm",
+   "threten",
+   "thretenen",
+   true
+  ],
+  [
+   "enm",
+   "threten",
+   "thretenyng",
+   true
+  ],
+  [
+   "enm",
+   "travail",
+   "travailen",
    true
   ],
   [
@@ -2179,6 +2485,12 @@
    "enm",
    "wastful",
    "wastfulnes",
+   true
+  ],
+  [
+   "enm",
+   "welcome",
+   "welcomen",
    true
   ],
   [
@@ -2381,6 +2693,12 @@
   ],
   [
    "french",
+   "bourguignon",
+   "bourguignonne",
+   true
+  ],
+  [
+   "french",
    "brillant",
    "brillantine",
    true
@@ -2417,6 +2735,12 @@
   ],
   [
    "french",
+   "centime",
+   "centimetre",
+   true
+  ],
+  [
+   "french",
    "chanson",
    "chansonnier",
    true
@@ -2449,6 +2773,18 @@
    "french",
    "chiffon",
    "chiffonnier",
+   true
+  ],
+  [
+   "french",
+   "comedie",
+   "comedien",
+   true
+  ],
+  [
+   "french",
+   "comedie",
+   "comedienne",
    true
   ],
   [
@@ -2519,8 +2855,20 @@
   ],
   [
    "french",
+   "couturier",
+   "couturiere",
+   true
+  ],
+  [
+   "french",
    "culotte",
    "culottes",
+   true
+  ],
+  [
+   "french",
+   "dauphin",
+   "dauphine",
    true
   ],
   [
@@ -2609,6 +2957,12 @@
   ],
   [
    "french",
+   "fracture",
+   "fracturer",
+   true
+  ],
+  [
+   "french",
    "gelatine",
    "gelatineux",
    true
@@ -2681,6 +3035,12 @@
   ],
   [
    "french",
+   "neglige",
+   "negligee",
+   true
+  ],
+  [
+   "french",
    "palatin",
    "palatine",
    true
@@ -2705,8 +3065,20 @@
   ],
   [
    "french",
+   "patrouille",
+   "patrouiller",
+   true
+  ],
+  [
+   "french",
    "planche",
    "planchette",
+   true
+  ],
+  [
+   "french",
+   "protege",
+   "protegee",
    true
   ],
   [
@@ -2747,6 +3119,18 @@
   ],
   [
    "french",
+   "torcher",
+   "torchere",
+   true
+  ],
+  [
+   "french",
+   "torsade",
+   "torsader",
+   true
+  ],
+  [
+   "french",
    "transit",
    "transitivite",
    true
@@ -2774,6 +3158,18 @@
    "combust",
    "combustible",
    true
+  ],
+  [
+   "frm",
+   "content",
+   "contentement",
+   true
+  ],
+  [
+   "frm",
+   "content",
+   "contentieux",
+   false
   ],
   [
    "frm",
@@ -2903,6 +3299,12 @@
   ],
   [
    "frm",
+   "replique",
+   "repliquer",
+   true
+  ],
+  [
+   "frm",
    "retrograde",
    "retrograder",
    true
@@ -2932,6 +3334,18 @@
    true
   ],
   [
+   "gd",
+   "ceilidh",
+   "ceilidhean",
+   true
+  ],
+  [
+   "german",
+   "bildung",
+   "bildungsroman",
+   true
+  ],
+  [
    "german",
    "extravert",
    "extravertiert",
@@ -2947,6 +3361,18 @@
    "german",
    "gastrula",
    "gastrulation",
+   true
+  ],
+  [
+   "german",
+   "gelande",
+   "gelandesprung",
+   true
+  ],
+  [
+   "german",
+   "hamburg",
+   "hamburger",
    true
   ],
   [
@@ -2969,6 +3395,18 @@
   ],
   [
    "german",
+   "narziss",
+   "narzissismus",
+   true
+  ],
+  [
+   "german",
+   "narziss",
+   "narzissmus",
+   true
+  ],
+  [
+   "german",
    "phagocyt",
    "phagocytosis",
    true
@@ -2977,6 +3415,12 @@
    "german",
    "plankton",
    "planktonisch",
+   true
+  ],
+  [
+   "german",
+   "rottweil",
+   "rottweiler",
    true
   ],
   [
@@ -2993,6 +3437,12 @@
   ],
   [
    "german",
+   "spiegel",
+   "spiegeleisen",
+   true
+  ],
+  [
+   "german",
    "trommel",
    "trommelfeuer",
    true
@@ -3005,6 +3455,12 @@
   ],
   [
    "gmw-pro",
+   "haubida",
+   "haubidamann",
+   true
+  ],
+  [
+   "gmw-pro",
    "jukkjan",
    "jukkjandi",
    true
@@ -3013,6 +3469,18 @@
    "gmw-pro",
    "kussijan",
    "kussijandi",
+   true
+  ],
+  [
+   "gmw-pro",
+   "kwallja",
+   "kwalljan",
+   true
+  ],
+  [
+   "gmw-pro",
+   "laidijan",
+   "laidijandi",
    true
   ],
   [
@@ -3065,6 +3533,12 @@
   ],
   [
    "greek",
+   "αντιδοτον",
+   "αντιδοτον φαρμακον",
+   true
+  ],
+  [
+   "greek",
    "αποφθεγμα",
    "αποφθεγματικος",
    true
@@ -3101,6 +3575,12 @@
   ],
   [
    "greek",
+   "πολεμων",
+   "πολεμωνιον",
+   true
+  ],
+  [
+   "greek",
    "προβλημα",
    "προβληματικος",
    true
@@ -3127,6 +3607,12 @@
    "greek",
    "χαρακτηρ",
    "χαρακτηριστικος",
+   true
+  ],
+  [
+   "hu",
+   "paprika",
+   "paprikas",
    true
   ],
   [
@@ -3605,6 +4091,12 @@
   ],
   [
    "latin",
+   "cyprium",
+   "cyprium aes",
+   true
+  ],
+  [
+   "latin",
    "decemvir",
    "decemviralis",
    true
@@ -3677,6 +4169,12 @@
   ],
   [
    "latin",
+   "emerita",
+   "emeritas",
+   true
+  ],
+  [
+   "latin",
    "epistola",
    "epistolarius",
    true
@@ -3691,6 +4189,12 @@
    "latin",
    "exemplar",
    "exemplarium",
+   true
+  ],
+  [
+   "latin",
+   "exhibitor",
+   "exhibitorius",
    true
   ],
   [
@@ -3745,6 +4249,12 @@
    "latin",
    "fortuna",
    "fortunatus",
+   true
+  ],
+  [
+   "latin",
+   "gallica",
+   "gallicanus",
    true
   ],
   [
@@ -3809,6 +4319,12 @@
   ],
   [
    "latin",
+   "intestinum",
+   "intestinum caecus",
+   true
+  ],
+  [
+   "latin",
    "introductio",
    "introductionem",
    true
@@ -3817,6 +4333,18 @@
    "latin",
    "irreligio",
    "irreligiosus",
+   true
+  ],
+  [
+   "latin",
+   "lachryma",
+   "lachrymatus",
+   true
+  ],
+  [
+   "latin",
+   "lacrima",
+   "lacrimatio",
    true
   ],
   [
@@ -3953,6 +4481,18 @@
   ],
   [
    "latin",
+   "musculus",
+   "musculus rectus",
+   true
+  ],
+  [
+   "latin",
+   "nugator",
+   "nugatorius",
+   true
+  ],
+  [
+   "latin",
    "oblivio",
    "obliviosus",
    true
@@ -4027,6 +4567,12 @@
    "latin",
    "placenta",
    "placentalis",
+   true
+  ],
+  [
+   "latin",
+   "plumbum",
+   "plumbum nigrum",
    true
   ],
   [
@@ -4219,6 +4765,12 @@
    "latin",
    "scapula",
    "scapulare",
+   true
+  ],
+  [
+   "latin",
+   "scapula",
+   "scapularis",
    true
   ],
   [
@@ -4421,6 +4973,12 @@
   ],
   [
    "old_english",
+   "bealluc",
+   "beallucas",
+   true
+  ],
+  [
+   "old_english",
    "carleas",
    "carleasnes",
    true
@@ -4441,6 +4999,12 @@
    "old_english",
    "cræftig",
    "cræftiglice",
+   true
+  ],
+  [
+   "old_english",
+   "deadlic",
+   "deadlice",
    true
   ],
   [
@@ -4493,6 +5057,12 @@
   ],
   [
    "old_english",
+   "foretacn",
+   "foretacnian",
+   true
+  ],
+  [
+   "old_english",
    "forloren",
    "forlorenes",
    true
@@ -4501,6 +5071,24 @@
    "old_english",
    "forþriht",
    "forþrihte",
+   true
+  ],
+  [
+   "old_english",
+   "freolic",
+   "freolice",
+   true
+  ],
+  [
+   "old_english",
+   "freondlic",
+   "freondlice",
+   true
+  ],
+  [
+   "old_english",
+   "fæderlic",
+   "fæderlice",
    true
   ],
   [
@@ -4523,8 +5111,26 @@
   ],
   [
    "old_english",
+   "godspell",
+   "godspellian",
+   true
+  ],
+  [
+   "old_english",
+   "grimlic",
+   "grimlice",
+   true
+  ],
+  [
+   "old_english",
    "hamweard",
    "hamweardes",
+   true
+  ],
+  [
+   "old_english",
+   "hengest",
+   "hengestmann",
    true
   ],
   [
@@ -4565,6 +5171,12 @@
   ],
   [
    "old_english",
+   "hweorfa",
+   "hweorfan",
+   true
+  ],
+  [
+   "old_english",
    "hwistle",
    "hwistlere",
    true
@@ -4589,8 +5201,20 @@
   ],
   [
    "old_english",
+   "manigfeald",
+   "manigfealdan",
+   true
+  ],
+  [
+   "old_english",
    "nihtlang",
    "nihtlanges",
+   true
+  ],
+  [
+   "old_english",
+   "nihtlic",
+   "nihtlice",
    true
   ],
   [
@@ -4667,6 +5291,12 @@
   ],
   [
    "old_english",
+   "syndrig",
+   "syndrige",
+   true
+  ],
+  [
+   "old_english",
    "toweard",
    "toweardes",
    true
@@ -4675,6 +5305,12 @@
    "old_english",
    "twentig",
    "twentigoþa",
+   true
+  ],
+  [
+   "old_english",
+   "unfreondlic",
+   "unfreondlice",
    true
   ],
   [
@@ -4697,6 +5333,12 @@
   ],
   [
    "old_french",
+   "abandon",
+   "abandoner",
+   true
+  ],
+  [
+   "old_french",
    "arbitre",
    "arbitrement",
    true
@@ -4711,6 +5353,12 @@
    "old_french",
    "assigne",
    "assigner",
+   true
+  ],
+  [
+   "old_french",
+   "aventure",
+   "aventurer",
    true
   ],
   [
@@ -4801,6 +5449,12 @@
    "old_french",
    "chariot",
    "charioteur",
+   true
+  ],
+  [
+   "old_french",
+   "chastel",
+   "chastelein",
    true
   ],
   [
@@ -4897,6 +5551,12 @@
    "old_french",
    "enchanter",
    "enchanteresse",
+   true
+  ],
+  [
+   "old_french",
+   "encombre",
+   "encombrer",
    true
   ],
   [
@@ -5009,6 +5669,18 @@
   ],
   [
    "old_french",
+   "hermine",
+   "hermines",
+   true
+  ],
+  [
+   "old_french",
+   "hermine",
+   "herminet",
+   true
+  ],
+  [
+   "old_french",
    "hospital",
    "hospitalite",
    true
@@ -5065,6 +5737,12 @@
    "old_french",
    "pardurable",
    "pardurablete",
+   true
+  ],
+  [
+   "old_french",
+   "patrouille",
+   "patrouiller",
    true
   ],
   [
@@ -5135,6 +5813,12 @@
   ],
   [
    "old_french",
+   "sofiste",
+   "sofisterie",
+   true
+  ],
+  [
+   "old_french",
    "soverain",
    "soverainete",
    true
@@ -5200,6 +5884,12 @@
    true
   ],
   [
+   "old_french",
+   "victorie",
+   "victorier",
+   true
+  ],
+  [
    "roa-oit",
    "taranto",
    "tarantola",
@@ -5215,6 +5905,24 @@
    "ru",
    "большевик",
    "большевики",
+   true
+  ],
+  [
+   "sco",
+   "trauchle",
+   "trauchled",
+   true
+  ],
+  [
+   "sco",
+   "waesuck",
+   "waesucks",
+   true
+  ],
+  [
+   "spanish",
+   "barrica",
+   "barricada",
    true
   ],
   [
@@ -5255,6 +5963,12 @@
   ],
   [
    "xno",
+   "escheke",
+   "escheker",
+   true
+  ],
+  [
+   "xno",
    "estaunche",
    "estauncher",
    true
@@ -5281,714 +5995,6 @@
    "xno",
    "warrant",
    "warrantie",
-   true
-  ],
-  [
-   "enm",
-   "abandoun",
-   "abandounen",
-   true
-  ],
-  [
-   "enm",
-   "answere",
-   "answeren",
-   true
-  ],
-  [
-   "enm",
-   "aventure",
-   "aventuren",
-   true
-  ],
-  [
-   "enm",
-   "biqueste",
-   "biquesten",
-   true
-  ],
-  [
-   "enm",
-   "brighte",
-   "brighten",
-   true
-  ],
-  [
-   "enm",
-   "brother",
-   "brotherhod",
-   true
-  ],
-  [
-   "enm",
-   "brother",
-   "brotherly",
-   true
-  ],
-  [
-   "enm",
-   "brother",
-   "brotherrede",
-   true
-  ],
-  [
-   "enm",
-   "capital",
-   "capitale",
-   true
-  ],
-  [
-   "enm",
-   "celebrat",
-   "celebraten",
-   true
-  ],
-  [
-   "enm",
-   "chirche",
-   "chirchetoun",
-   true
-  ],
-  [
-   "enm",
-   "conglutinat",
-   "conglutinaten",
-   true
-  ],
-  [
-   "enm",
-   "conquest",
-   "conquesten",
-   true
-  ],
-  [
-   "enm",
-   "cratche",
-   "cratchen",
-   true
-  ],
-  [
-   "enm",
-   "crouche",
-   "crouchen",
-   true
-  ],
-  [
-   "enm",
-   "derkely",
-   "derkelyng",
-   true
-  ],
-  [
-   "enm",
-   "determinat",
-   "determinate",
-   true
-  ],
-  [
-   "enm",
-   "determinat",
-   "determinaten",
-   true
-  ],
-  [
-   "enm",
-   "dissimulat",
-   "dissimulaten",
-   true
-  ],
-  [
-   "enm",
-   "diverse",
-   "diverseliche",
-   true
-  ],
-  [
-   "enm",
-   "diverse",
-   "diversen",
-   true
-  ],
-  [
-   "enm",
-   "entaille",
-   "entaillen",
-   true
-  ],
-  [
-   "enm",
-   "estover",
-   "estovers",
-   true
-  ],
-  [
-   "enm",
-   "extinct",
-   "extincten",
-   true
-  ],
-  [
-   "enm",
-   "foretokne",
-   "foretoknen",
-   true
-  ],
-  [
-   "enm",
-   "frustrat",
-   "frustraten",
-   true
-  ],
-  [
-   "enm",
-   "grapple",
-   "grapplen",
-   true
-  ],
-  [
-   "enm",
-   "grucche",
-   "grucchen",
-   true
-  ],
-  [
-   "enm",
-   "herberwe",
-   "herberweles",
-   true
-  ],
-  [
-   "enm",
-   "manifold",
-   "manifolden",
-   true
-  ],
-  [
-   "enm",
-   "merveilous",
-   "merveilously",
-   true
-  ],
-  [
-   "enm",
-   "moderat",
-   "moderaten",
-   true
-  ],
-  [
-   "enm",
-   "openyng",
-   "openynge",
-   true
-  ],
-  [
-   "enm",
-   "overthrow",
-   "overthrowen",
-   true
-  ],
-  [
-   "enm",
-   "paramour",
-   "paramouren",
-   true
-  ],
-  [
-   "enm",
-   "repulse",
-   "repulsen",
-   true
-  ],
-  [
-   "enm",
-   "sacrifice",
-   "sacrificen",
-   true
-  ],
-  [
-   "enm",
-   "schadowe",
-   "schadowen",
-   true
-  ],
-  [
-   "enm",
-   "schagge",
-   "schaggen",
-   true
-  ],
-  [
-   "enm",
-   "schirte",
-   "schirten",
-   true
-  ],
-  [
-   "enm",
-   "schroud",
-   "schrouded",
-   true
-  ],
-  [
-   "enm",
-   "schroud",
-   "schrouden",
-   true
-  ],
-  [
-   "enm",
-   "skipper",
-   "skippere",
-   true
-  ],
-  [
-   "enm",
-   "sounden",
-   "soundenes",
-   true
-  ],
-  [
-   "enm",
-   "speking",
-   "spekinge",
-   true
-  ],
-  [
-   "enm",
-   "subiugat",
-   "subiugate",
-   true
-  ],
-  [
-   "enm",
-   "swingel",
-   "swingelen",
-   true
-  ],
-  [
-   "enm",
-   "terminat",
-   "terminaten",
-   true
-  ],
-  [
-   "enm",
-   "threten",
-   "thretenen",
-   true
-  ],
-  [
-   "enm",
-   "threten",
-   "thretenyng",
-   true
-  ],
-  [
-   "enm",
-   "travail",
-   "travailen",
-   true
-  ],
-  [
-   "enm",
-   "welcome",
-   "welcomen",
-   true
-  ],
-  [
-   "french",
-   "bourguignon",
-   "bourguignonne",
-   true
-  ],
-  [
-   "french",
-   "centime",
-   "centimetre",
-   true
-  ],
-  [
-   "french",
-   "comedie",
-   "comedien",
-   true
-  ],
-  [
-   "french",
-   "comedie",
-   "comedienne",
-   true
-  ],
-  [
-   "french",
-   "couturier",
-   "couturiere",
-   true
-  ],
-  [
-   "french",
-   "dauphin",
-   "dauphine",
-   true
-  ],
-  [
-   "french",
-   "fracture",
-   "fracturer",
-   true
-  ],
-  [
-   "french",
-   "neglige",
-   "negligee",
-   true
-  ],
-  [
-   "french",
-   "patrouille",
-   "patrouiller",
-   true
-  ],
-  [
-   "french",
-   "protege",
-   "protegee",
-   true
-  ],
-  [
-   "french",
-   "torcher",
-   "torchere",
-   true
-  ],
-  [
-   "french",
-   "torsade",
-   "torsader",
-   true
-  ],
-  [
-   "frm",
-   "content",
-   "contentement",
-   true
-  ],
-  [
-   "frm",
-   "content",
-   "contentieux",
-   false
-  ],
-  [
-   "frm",
-   "replique",
-   "repliquer",
-   true
-  ],
-  [
-   "gd",
-   "ceilidh",
-   "ceilidhean",
-   true
-  ],
-  [
-   "german",
-   "bildung",
-   "bildungsroman",
-   true
-  ],
-  [
-   "german",
-   "gelande",
-   "gelandesprung",
-   true
-  ],
-  [
-   "german",
-   "hamburg",
-   "hamburger",
-   true
-  ],
-  [
-   "german",
-   "narziss",
-   "narzissismus",
-   true
-  ],
-  [
-   "german",
-   "narziss",
-   "narzissmus",
-   true
-  ],
-  [
-   "german",
-   "rottweil",
-   "rottweiler",
-   true
-  ],
-  [
-   "german",
-   "spiegel",
-   "spiegeleisen",
-   true
-  ],
-  [
-   "gmw-pro",
-   "haubida",
-   "haubidamann",
-   true
-  ],
-  [
-   "gmw-pro",
-   "kwallja",
-   "kwalljan",
-   true
-  ],
-  [
-   "gmw-pro",
-   "laidijan",
-   "laidijandi",
-   true
-  ],
-  [
-   "greek",
-   "αντιδοτον",
-   "αντιδοτον φαρμακον",
-   true
-  ],
-  [
-   "greek",
-   "πολεμων",
-   "πολεμωνιον",
-   true
-  ],
-  [
-   "hu",
-   "paprika",
-   "paprikas",
-   true
-  ],
-  [
-   "latin",
-   "cyprium",
-   "cyprium aes",
-   true
-  ],
-  [
-   "latin",
-   "emerita",
-   "emeritas",
-   true
-  ],
-  [
-   "latin",
-   "exhibitor",
-   "exhibitorius",
-   true
-  ],
-  [
-   "latin",
-   "gallica",
-   "gallicanus",
-   true
-  ],
-  [
-   "latin",
-   "intestinum",
-   "intestinum caecus",
-   true
-  ],
-  [
-   "latin",
-   "lachryma",
-   "lachrymatus",
-   true
-  ],
-  [
-   "latin",
-   "lacrima",
-   "lacrimatio",
-   true
-  ],
-  [
-   "latin",
-   "musculus",
-   "musculus rectus",
-   true
-  ],
-  [
-   "latin",
-   "nugator",
-   "nugatorius",
-   true
-  ],
-  [
-   "latin",
-   "scapula",
-   "scapularis",
-   true
-  ],
-  [
-   "old_english",
-   "bealluc",
-   "beallucas",
-   true
-  ],
-  [
-   "old_english",
-   "deadlic",
-   "deadlice",
-   true
-  ],
-  [
-   "old_english",
-   "foretacn",
-   "foretacnian",
-   true
-  ],
-  [
-   "old_english",
-   "freolic",
-   "freolice",
-   true
-  ],
-  [
-   "old_english",
-   "freondlic",
-   "freondlice",
-   true
-  ],
-  [
-   "old_english",
-   "fæderlic",
-   "fæderlice",
-   true
-  ],
-  [
-   "old_english",
-   "godspell",
-   "godspellian",
-   true
-  ],
-  [
-   "old_english",
-   "grimlic",
-   "grimlice",
-   true
-  ],
-  [
-   "old_english",
-   "hengest",
-   "hengestmann",
-   true
-  ],
-  [
-   "old_english",
-   "hweorfa",
-   "hweorfan",
-   true
-  ],
-  [
-   "old_english",
-   "manigfeald",
-   "manigfealdan",
-   true
-  ],
-  [
-   "old_english",
-   "nihtlic",
-   "nihtlice",
-   true
-  ],
-  [
-   "old_english",
-   "syndrig",
-   "syndrige",
-   true
-  ],
-  [
-   "old_english",
-   "unfreondlic",
-   "unfreondlice",
-   true
-  ],
-  [
-   "old_french",
-   "abandon",
-   "abandoner",
-   true
-  ],
-  [
-   "old_french",
-   "aventure",
-   "aventurer",
-   true
-  ],
-  [
-   "old_french",
-   "chastel",
-   "chastelein",
-   true
-  ],
-  [
-   "old_french",
-   "encombre",
-   "encombrer",
-   true
-  ],
-  [
-   "old_french",
-   "hermine",
-   "hermines",
-   true
-  ],
-  [
-   "old_french",
-   "hermine",
-   "herminet",
-   true
-  ],
-  [
-   "old_french",
-   "patrouille",
-   "patrouiller",
-   true
-  ],
-  [
-   "old_french",
-   "sofiste",
-   "sofisterie",
-   true
-  ],
-  [
-   "old_french",
-   "victorie",
-   "victorier",
-   true
-  ],
-  [
-   "sco",
-   "trauchle",
-   "trauchled",
-   true
-  ],
-  [
-   "sco",
-   "waesuck",
-   "waesucks",
-   true
-  ],
-  [
-   "spanish",
-   "barrica",
-   "barricada",
-   true
-  ],
-  [
-   "xno",
-   "escheke",
-   "escheker",
    true
   ]
  ]

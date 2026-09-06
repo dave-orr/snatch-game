@@ -412,12 +412,12 @@ FORM_OF = re.compile(
     r'en-third person singular of|en-ing form of|en-comparative of|'
     r'en-superlative of|en-irregular plural of|past participle of|'
     r'present participle of|comparative of|superlative of)'
-    r'\|en\|([^|}]+)', re.IGNORECASE)
+    r'\|en\|([^}]*?)\}\}', re.IGNORECASE)
 
 
 # The en- inflection templates predate the language argument, so the target
 # is usually the first argument: {{en-third-person singular of|Russify}}.
-EN_INFLECTION = re.compile(r'\{\{en-[a-z -]+ of\|(?:en\|)?([^|}]+)', re.IGNORECASE)
+EN_INFLECTION = re.compile(r'\{\{en-[a-z -]+ of\|(?:en\|)?([^}]*?)\}\}', re.IGNORECASE)
 
 
 def form_of_targets(english_section):
@@ -425,7 +425,12 @@ def form_of_targets(english_section):
     targets = set()
     for regex in (FORM_OF, EN_INFLECTION):
         for m in regex.finditer(english_section):
-            target = clean_arg(m.group(1))
+            # The target is the first positional argument. Named ones can
+            # come first: {{standard spelling of|en|from=Non-Oxford British
+            # spelling|recognize}} once made RECOGNISE a form of "from=...".
+            positional = [clean_arg(a) for a in m.group(1).split('|')
+                          if not is_named(clean_arg(a))]
+            target = positional[0] if positional else ''
             if target and target != '-' and '[' not in target:
                 targets.add(normalize(target))
     return targets
@@ -480,7 +485,9 @@ def english_etymology_section(wiki_text):
 
 IMITATIVE_MARKER = 'imitative'
 
-MAX_RESOLUTION_DEPTH = 6
+# Deep enough that no real chain of English components is cut short:
+# OXYCODONE reaches Greek through hydroxy, hydroxyl, hydro- and -oxyl.
+MAX_RESOLUTION_DEPTH = 10
 
 # Positional, quantitative and grammatical affixes. Sharing one of these
 # tells a player nothing: every negated word has UN-, every repeated action
@@ -546,14 +553,16 @@ def resolve(title, pages, cache, seen=None):
     states no roots of its own. QUINIC gives no root directly; it says it is
     QUININE + -ic, so its roots are QUININE's.
     """
-    if title in cache:
-        return cache[title]
     seen = seen or set()
     if title in seen or len(seen) >= MAX_RESOLUTION_DEPTH:
         # Cut short by a cycle or the depth limit. Return None rather than an
         # empty set so the caller does not cache "no roots" for a word that
-        # would resolve fine from the top.
+        # would resolve fine from the top. This check comes before the cache
+        # so that a chain too deep to follow is too deep whatever was
+        # visited before it; otherwise the answer depended on visit order.
         return None
+    if title in cache:
+        return cache[title]
     entry = pages.get(title)
     if not entry:
         cache[title] = set()
@@ -569,10 +578,15 @@ def resolve(title, pages, cache, seen=None):
             complete = False
         else:
             resolved |= found
-    if complete or resolved:
+    if complete:
         cache[title] = resolved
         return resolved
-    return None
+    # Incomplete: some component was cut off by the depth limit. Return what
+    # was found but do not cache it, since the same component may resolve
+    # fully when reached from a shallower start. Caching partial results made
+    # the output depend on the order words were visited in, which for a set
+    # is the hash seed, so two runs of the same dump disagreed.
+    return resolved or None
 
 
 def analyze_page(title, text, scrabble_words, playable):
@@ -690,7 +704,7 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     cache = {}
     etymology_dict = {}
     unresolved = 0
-    for word in scrabble_words:
+    for word in sorted(scrabble_words):
         roots = resolve(word.lower(), pages, cache) or set()
         if roots:
             etymology_dict[word] = sorted(
@@ -708,7 +722,7 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     # researched. It carries no root, and etymology.js never counts a rootless
     # entry as shared, because two imitative words are not relatives.
     imitative = language_only = 0
-    for word in scrabble_words:
+    for word in sorted(scrabble_words):
         if word in etymology_dict:
             continue
         word_flags = flags.get(word.lower(), ())
