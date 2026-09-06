@@ -136,7 +136,10 @@ def valid_lang(code):
 
 def normalize(word):
     """Match the conventions of the existing data: one word, no reconstruction
-    marker, lowercase."""
+    marker, no parenthesised qualifier, lowercase."""
+    # {{ubor|en|fr|(dialectal) beige}}, {{bor|en|ko|합기도(合氣道)}},
+    # {{der|en|la|ammōn (cornū)}}: the parenthesis is a note, not the word
+    word = re.sub(r'\s*\([^()]*\)', '', word)
     word = word.split(',')[0].strip().lstrip('*').strip()
     return unicodedata.normalize('NFC', word).lower()
 
@@ -338,8 +341,11 @@ def extract(ety_text, allow_mentions=True):
                 elif current is not None:
                     current[1].append(a)
             for kind, rest in segments:
-                if kind == 'af' or kind in AFFIX_TEMPLATES:
+                if kind in ('af', 'afeq') or kind in AFFIX_TEMPLATES:
                     # {{etymon|en|:blend|elevator|aileron}}, {{etymon|en|:clip|business}}
+                    # :afeq is an equivalent analysis of the same word
+                    # (CONICAL as cone + -ic + -al beside conic + -al), so
+                    # its parts are relatives too.
                     take_affix_args(rest, affix_shape(kind))
                 elif kind in ROOT_TEMPLATES and rest:
                     # these pack language and word into one argument: grc:ἐπῐ-
@@ -570,6 +576,11 @@ NOISE_AFFIXES = {
     'um','ie','som','sam','sum','arie','estre','estere','astrija','ification',
     'o','ar','ere','en','ende','inge','nesse','lich','liche',
     'ance','ence','ancy','ency','aunce','entia','antia','antie','encie',
+    # classifying suffixes: a mineral named after a person has -ITE as its
+    # only root, and BARITE and LUCITE are not relatives for sharing it
+    'ite','ites','ia','ια','cia','kia','κια','osis','oid','oides','ides',
+    # Old English inflectional endings, reached through the page for -s
+    'as','eþ','eth',
 }
 
 
