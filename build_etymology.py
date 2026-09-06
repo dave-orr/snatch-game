@@ -55,13 +55,17 @@ ROOT_LANGUAGES = {
 
 SKIP_LANGUAGES = {'ine-pro', 'ine-bsl-pro', 'gem-pro'}
 
-# {{tmpl|en|LANG|WORD}} - a root in another language
+# {{tmpl|en|LANG|WORD}} - a root in another language. {{semantic loan}} is
+# absent on purpose: HAVE took a sense from French avoir, not the word, and
+# the two do not share a root.
 ROOT_TEMPLATES = ('der','inh','bor','borrowed','derived','inherited','uder','lbor',
                   'slbor','obor','ubor','abor','cal','calque','clq','pcal','pclq',
-                  'partial calque','translit','psm','sl','semantic loan',
+                  'partial calque','translit','psm',
                   'learned borrowing','semi-learned borrowing',
                   'orthographic borrowing','unadapted borrowing',
-                  'adapted borrowing','phono-semantic matching')
+                  'adapted borrowing','phono-semantic matching',
+                  # the -lite variants take the same arguments
+                  'der-lite','inh-lite','bor-lite')
 # {{doublet|en|WORD}}: an English word that shares this one's ultimate source
 DOUBLET_TEMPLATES = ('doublet','dbt')
 # {{tmpl|en|WORD|WORD}} - English components
@@ -123,7 +127,10 @@ def valid_root(word):
 def valid_lang(code):
     # English cannot be an ancestor of an English word; an "en" root is a
     # self-reference that slipped through a template (AIRLINE = en:line).
-    return (bool(re.fullmatch(r'[a-z][a-z0-9-]{0,15}', code))
+    # Codes are two or three letters, optionally with family or variety
+    # suffixes (gmw-pro, la-new, cmn-pinyin). Anything else that reaches here
+    # is a namespace read as a code: w:Mafeking gave 81 roots in language "w".
+    return (bool(re.fullmatch(r'[a-z]{2,3}(-[a-z]{2,6})*', code))
             and code not in SKIP_LANGUAGES and code != 'en')
 
 
@@ -252,14 +259,18 @@ def extract(ety_text, allow_mentions=True):
 
     def take_affix_args(args, shape):
         for part in affix_components(args, shape):
-            # {{af|en|la:cāseus|-ous}} names a Latin word, not an English
-            # component: CASEOUS was left looking for a page called la:cāseus.
+            # {{af|en|la:cāseus|-ous}} names a Latin word among the parts. It
+            # stays a component, written lang:word, and scan_dump gives every
+            # such part a page of its own holding that one root. Turning it
+            # into a root here would make resolve() stop at it and drop the
+            # English parts beside it: ARCHAEBACTERIUM, grc:ἀρχαῖος +
+            # bacterium, lost bacterium that way.
             lang, sep, word = part.partition(':')
             if sep and lang == 'en':
                 components.add(normalize(word))
             elif sep and valid_lang(lang):
                 if valid_root(normalize(word)):
-                    roots.add((lang, normalize(word)))
+                    components.add(f'{lang}:{normalize(word)}')
             else:
                 components.add(part)
 
@@ -270,7 +281,7 @@ def extract(ety_text, allow_mentions=True):
 
     for name, args in iter_templates(ety_text):
         base = name.rstrip('+')
-        if base in ('cog','noncog','w','q','qualifier','ref','r') or base.startswith('r:'):
+        if base in ('cog','cog-lite','noncog','w','q','qualifier','ref','r') or base.startswith('r:'):
             continue
         if base in IMITATIVE: flags.add('imitative'); continue
         if base in UNKNOWN: flags.add('unknown'); continue
@@ -338,7 +349,7 @@ def extract(ety_text, allow_mentions=True):
                         lang, word = lang.strip().lower().strip('.,;:'), word.strip()
                         if valid_lang(lang) and valid_root(normalize(word)):
                             roots.add((lang, normalize(word)))
-        elif base == 'm' and len(args) >= 2:
+        elif base in ('m', 'm-lite') and len(args) >= 2:
             lang = clean_arg(args[0]).lower().strip('.,;:')
             # English mentions are "influenced by" noise, not ancestors
             if lang != 'en' and valid_lang(lang):
@@ -595,6 +606,11 @@ def resolve(title, pages, cache, seen=None):
     Roots for a page, following affix and compound components when the page
     states no roots of its own. QUINIC gives no root directly; it says it is
     QUININE + -ic, so its roots are QUININE's.
+
+    A hyphenated component is looked up only as written. -ONE and -ON have
+    pages that state nothing parseable, and an experiment that fell back to
+    the bare word gave 386 chemical names roots meaning "one" and "on";
+    restricted to affixes with no page at all it gained three words.
     """
     seen = seen or set()
     if title in seen or len(seen) >= MAX_RESOLUTION_DEPTH:
@@ -607,11 +623,6 @@ def resolve(title, pages, cache, seen=None):
     if title in cache:
         return cache[title]
     entry = pages.get(title)
-    if not entry and (title.startswith('-') or title.endswith('-')):
-        # {{confix|en|fluoro|chrome}} asks for -chrome, which has no page;
-        # chrome does. Only when the hyphenated page is absent: -LOGY and
-        # LOGY are both real and different.
-        entry = pages.get(title.strip('-'))
     if not entry:
         cache[title] = set()
         return cache[title]
@@ -648,8 +659,28 @@ LIST_ITEM = re.compile(
     r'|\{\{(l|link|der\d|rel\d|col\d|col|col-auto|der-top\d?|rel-top\d?)\|en\|([^}]*)\}\}')
 
 
-def derived_terms(english, scrabble_words):
-    """Playable words the English section lists under Derived terms."""
+def plausibly_derived(item, base):
+    """
+    Does the listed word visibly contain the base? Derived-terms lists carry
+    topical entries too - BUDDLEIA under BUTTERFLY (butterfly bush),
+    LEPIDOPTERIST under BUTTERFLY - and those would take the base's roots.
+    A real derivative either contains the base's stem (SANDPIPER, PIPER) or
+    opens with the same four letters (PSORIATIC, PSORIASIS).
+    """
+    stem = base[:max(3, len(base) - 2)]
+    return stem in item or shared_stem(item, base) >= 4
+
+
+def shared_stem(a, b):
+    n = 0
+    while n < min(len(a), len(b)) and a[n] == b[n]:
+        n += 1
+    return n
+
+
+def derived_terms(english, scrabble_words, title):
+    """Playable words the English section lists under Derived terms, and
+    that look derived from this page's word."""
     found = set()
     for body in DERIVED_SECTION.findall(english):
         for m in LIST_ITEM.finditer(body):
@@ -662,7 +693,8 @@ def derived_terms(english, scrabble_words):
             for item in items:
                 item = item.strip()
                 if item and ' ' not in item and item == item.lower() \
-                        and item.upper() in scrabble_words:
+                        and item.upper() in scrabble_words \
+                        and plausibly_derived(item, title):
                     found.add(item)
     return found
 
@@ -679,13 +711,6 @@ DEFINITION_LINE = re.compile(r'\n# ?([^\n]*)')
 DEFINITION_LINK = re.compile(
     r'\[\[([^\]|#]+)(?:[|#][^\]]*)?\]\]|\{\{(?:l|m)\|en\|([^|}]+)')
 MIN_SHARED_STEM = 5
-
-
-def shared_stem(a, b):
-    n = 0
-    while n < min(len(a), len(b)) and a[n] == b[n]:
-        n += 1
-    return n
 
 
 def definition_link(english, title):
@@ -747,7 +772,7 @@ def analyze_page(title, text, scrabble_words, playable):
                 components = set()
         components = set(components) | form_of_targets(english)
         if lowercase and not title_is_affix:
-            derived = derived_terms(english, scrabble_words)
+            derived = derived_terms(english, scrabble_words, title)
             if not roots and not components and 'unknown' not in page_flags:
                 def_link = definition_link(english, title)
     elif playable and not capitalized:
@@ -830,6 +855,14 @@ def scan_dump(wiktionary_path, scrabble_words):
             pages.setdefault(key, value)
         for key, value in tier_flag.items():
             flags.setdefault(key, value)
+    # A foreign part of an affix template (la:cāseus) gets a page holding
+    # that root, so it resolves like any other component. No real title
+    # contains a colon; the reader skips namespaced pages.
+    for key, (_, components) in list(pages.items()):
+        for component in components:
+            lang, sep, word = component.partition(':')
+            if sep and valid_lang(lang) and component not in pages:
+                pages[component] = (frozenset({(lang, word)}), ())
 
     print(f"Pages with etymology data: {len(pages)}")
     print(f"Words listed as derived terms: {len(derived_from)}")
