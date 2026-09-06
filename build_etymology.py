@@ -7,9 +7,15 @@ Usage:
    https://dumps.wikimedia.org/enwiktionary/latest/enwiktionary-latest-pages-articles.xml.bz2
 
 2. Run this script:
-   python build_etymology.py enwiktionary-latest-pages-articles.xml.bz2
+   python build_etymology.py enwiktionary-latest-pages-articles.xml.bz2 [--save-scan scan.json.gz]
 
-3. Output will be etymology.json
+3. Output is etymology.json (word -> roots) and etymology_links.json (the
+   playable words each still-rootless word is linked to, for
+   expand_inflections.py to finish once propagation covers a target).
+
+The dump takes about 40 minutes to read. --save-scan keeps what was read;
+passing that .json.gz file instead of the dump reruns only the resolution,
+in seconds.
 """
 
 import bz2
@@ -51,7 +57,13 @@ SKIP_LANGUAGES = {'ine-pro', 'ine-bsl-pro', 'gem-pro'}
 
 # {{tmpl|en|LANG|WORD}} - a root in another language
 ROOT_TEMPLATES = ('der','inh','bor','borrowed','derived','inherited','uder','lbor',
-                  'slbor','obor','cal','calque','clq','translit','psm','sl')
+                  'slbor','obor','ubor','abor','cal','calque','clq','pcal','pclq',
+                  'partial calque','translit','psm','sl','semantic loan',
+                  'learned borrowing','semi-learned borrowing',
+                  'orthographic borrowing','unadapted borrowing',
+                  'adapted borrowing','phono-semantic matching')
+# {{doublet|en|WORD}}: an English word that shares this one's ultimate source
+DOUBLET_TEMPLATES = ('doublet','dbt')
 # {{tmpl|en|WORD|WORD}} - English components
 AFFIX_TEMPLATES = ('af','affix','suf','suffix','pre','prefix','con','confix',
                    'com','compound','blend','univerbation','back-form',
@@ -239,7 +251,22 @@ def extract(ety_text, allow_mentions=True):
         components.add(normalize(m.group(1)))
 
     def take_affix_args(args, shape):
-        components.update(affix_components(args, shape))
+        for part in affix_components(args, shape):
+            # {{af|en|la:cāseus|-ous}} names a Latin word, not an English
+            # component: CASEOUS was left looking for a page called la:cāseus.
+            lang, sep, word = part.partition(':')
+            if sep and lang == 'en':
+                components.add(normalize(word))
+            elif sep and valid_lang(lang):
+                if valid_root(normalize(word)):
+                    roots.add((lang, normalize(word)))
+            else:
+                components.add(part)
+
+    def affix_shape(name):
+        return ('suffix' if name in ('suf','suffix') else
+                'prefix' if name in ('pre','prefix') else
+                'confix' if name in ('con','confix') else 'free')
 
     for name, args in iter_templates(ety_text):
         base = name.rstrip('+')
@@ -265,11 +292,20 @@ def extract(ety_text, allow_mentions=True):
             lang = positional[1].lower().strip('.,;:')
             if valid_lang(lang):
                 flags.add(f'from:{lang}')      # {{der|en|fr}} with no word at all
+        elif base == 'surf' and args and clean_arg(args[0]).startswith('+'):
+            # {{surf|+com|en|short|fall}}: the kind comes first
+            kind = clean_arg(args[0])[1:]
+            if len(args) > 1 and clean_arg(args[1]) == 'en':
+                take_affix_args(args[2:], affix_shape(kind))
         elif base in AFFIX_TEMPLATES and args and clean_arg(args[0]) == 'en':
-            shape = ('suffix' if base in ('suf','suffix') else
-                     'prefix' if base in ('pre','prefix') else
-                     'confix' if base in ('con','confix') else 'free')
-            take_affix_args(args[1:], shape)
+            take_affix_args(args[1:], affix_shape(base))
+        elif base in DOUBLET_TEMPLATES and positional and positional[0] == 'en':
+            # LIQUEUR is a doublet of LIQUOR: same source by definition, so
+            # the doublet's roots stand in when the page states none.
+            for word in positional[1:]:
+                word = normalize(word)
+                if valid_root(word) and ' ' not in word:
+                    components.add(word)
         elif base in AFFIX_TEMPLATES and args and valid_lang(clean_arg(args[0]).lower()) \
                 and clean_arg(args[0]).lower() != 'en':
             # {{compound|nl|de|kooi}}: the parts are words of that language
@@ -281,20 +317,27 @@ def extract(ety_text, allow_mentions=True):
             # a named id= can come before the kind:
             # {{etymon|en|id=lack of illness|:inh|enm:helthe}}
             positional = [a for a in args[1:] if not is_named(clean_arg(a))]
-            if not positional:
-                continue
-            kind = clean_arg(positional[0]).lstrip(':').lower()
-            rest = positional[1:]
-            if kind == 'af':
-                take_affix_args(rest, 'free')
-            elif kind in ROOT_TEMPLATES and rest:
-                # these pack language and word into one argument: grc:ἐπῐ-
-                arg = clean_arg(rest[0])
-                if ':' in arg:
-                    lang, _, word = arg.partition(':')
-                    lang, word = lang.strip().lower().strip('.,;:'), word.strip()
-                    if valid_lang(lang) and valid_root(normalize(word)):
-                        roots.add((lang, normalize(word)))
+            # One template can chain several kinds:
+            # {{ety|en|:af|la:cōnfīdentia|-al|:calque|fr:confidentiel}}
+            segments, current = [], None
+            for a in positional:
+                if clean_arg(a).startswith(':'):
+                    current = [clean_arg(a).lstrip(':').lower(), []]
+                    segments.append(current)
+                elif current is not None:
+                    current[1].append(a)
+            for kind, rest in segments:
+                if kind == 'af' or kind in AFFIX_TEMPLATES:
+                    # {{etymon|en|:blend|elevator|aileron}}, {{etymon|en|:clip|business}}
+                    take_affix_args(rest, affix_shape(kind))
+                elif kind in ROOT_TEMPLATES and rest:
+                    # these pack language and word into one argument: grc:ἐπῐ-
+                    arg = clean_arg(rest[0])
+                    if ':' in arg:
+                        lang, _, word = arg.partition(':')
+                        lang, word = lang.strip().lower().strip('.,;:'), word.strip()
+                        if valid_lang(lang) and valid_root(normalize(word)):
+                            roots.add((lang, normalize(word)))
         elif base == 'm' and len(args) >= 2:
             lang = clean_arg(args[0]).lower().strip('.,;:')
             # English mentions are "influenced by" noise, not ancestors
@@ -564,6 +607,11 @@ def resolve(title, pages, cache, seen=None):
     if title in cache:
         return cache[title]
     entry = pages.get(title)
+    if not entry and (title.startswith('-') or title.endswith('-')):
+        # {{confix|en|fluoro|chrome}} asks for -chrome, which has no page;
+        # chrome does. Only when the hyphenated page is absent: -LOGY and
+        # LOGY are both real and different.
+        entry = pages.get(title.strip('-'))
     if not entry:
         cache[title] = set()
         return cache[title]
@@ -589,13 +637,84 @@ def resolve(title, pages, cache, seen=None):
     return resolved or None
 
 
+# A base word's page lists the words formed from it under "Derived terms".
+# For a word whose own page says nothing about its origin, that listing is
+# the only statement Wiktionary makes: TELLURITE has no etymology section,
+# but TELLURIUM lists it.
+DERIVED_SECTION = re.compile(
+    r'\n=+\s*Derived terms\s*=+\n(.*?)(?=\n=+[^=\n]|\Z)', re.DOTALL)
+LIST_ITEM = re.compile(
+    r'\[\[([^\]|#]+)(?:[|#][^\]]*)?\]\]'
+    r'|\{\{(l|link|der\d|rel\d|col\d|col|col-auto|der-top\d?|rel-top\d?)\|en\|([^}]*)\}\}')
+
+
+def derived_terms(english, scrabble_words):
+    """Playable words the English section lists under Derived terms."""
+    found = set()
+    for body in DERIVED_SECTION.findall(english):
+        for m in LIST_ITEM.finditer(body):
+            if m.group(1):
+                items = [m.group(1)]
+            elif m.group(2) in ('l', 'link'):
+                items = m.group(3).split('|')[:1]     # the rest is a gloss
+            else:
+                items = [a for a in m.group(3).split('|') if a and '=' not in a]
+            for item in items:
+                item = item.strip()
+                if item and ' ' not in item and item == item.lower() \
+                        and item.upper() in scrabble_words:
+                    found.add(item)
+    return found
+
+
+# A definition often names the word it is built on: ILEAC is "Pertaining to
+# the [[ileum]]", EXORBITANCE "The state of being [[exorbitant]]". Used only
+# where the page has no etymology to read, and only for a link the headword
+# visibly contains: they must share an opening stem of MIN_SHARED_STEM
+# letters that reaches to within four letters of the link's end, so
+# ESCHATOLOGICAL takes eschatology but OSMOLE does not take mole. In a
+# blind sample of 100 no-etymology pages this fired on 23 and all 23 were
+# right.
+DEFINITION_LINE = re.compile(r'\n# ?([^\n]*)')
+DEFINITION_LINK = re.compile(
+    r'\[\[([^\]|#]+)(?:[|#][^\]]*)?\]\]|\{\{(?:l|m)\|en\|([^|}]+)')
+MIN_SHARED_STEM = 5
+
+
+def shared_stem(a, b):
+    n = 0
+    while n < min(len(a), len(b)) and a[n] == b[n]:
+        n += 1
+    return n
+
+
+def definition_link(english, title):
+    """The linked word this one is visibly built on, as a one-element set."""
+    best = None
+    for line in DEFINITION_LINE.findall(english)[:3]:
+        for m in DEFINITION_LINK.finditer(line):
+            link = (m.group(1) or m.group(2)).strip()
+            if ' ' in link or link != link.lower() or link == title:
+                continue
+            shared = shared_stem(title, link)
+            if shared >= MIN_SHARED_STEM and shared >= len(link) - 4 \
+                    and (best is None or shared > best[1]):
+                best = (link, shared)
+    return {normalize(best[0])} if best else set()
+
+
 def analyze_page(title, text, scrabble_words, playable):
     """
-    What one dump page says about its word: (roots, components, flags, tier).
+    What one dump page says about its word:
+    (roots, components, flags, tier, derived_terms, definition_link).
     English pages are read for their etymology and form-of templates; a
     playable word with no English entry is read from its source language.
     The tier ranks pages for the same word: a lowercase English page (0)
     beats a capitalized one (1), which beats a foreign-language page (2).
+    derived_terms are the playable words this page lists as formed from it;
+    definition_link is the word this page's definition shows it is built on,
+    found only when the page states no etymology of its own. Both are kept
+    apart from components so the resolution can weigh them separately.
     """
     # Only a title that is entirely lowercase is the word's own page. The
     # page "pIg" (an abbreviation of polyclonal immunoglobulin) starts with a
@@ -611,11 +730,12 @@ def analyze_page(title, text, scrabble_words, playable):
     english = language_section(text, 'English')
 
     roots, components, page_flags = set(), set(), set()
+    derived, def_link = set(), set()
     if english:
         tier = 0 if lowercase else 1
+        title_is_affix = title.startswith('-') or title.endswith('-')
         section = etymology_of_section(english)
         if section:
-            title_is_affix = title.startswith('-') or title.endswith('-')
             roots, components, page_flags = extract(
                 section, allow_mentions=not title_is_affix)
             if title_is_affix:
@@ -626,6 +746,10 @@ def analyze_page(title, text, scrabble_words, playable):
                 # the example. BOSON came out descended from Latin carbo.
                 components = set()
         components = set(components) | form_of_targets(english)
+        if lowercase and not title_is_affix:
+            derived = derived_terms(english, scrabble_words)
+            if not roots and not components and 'unknown' not in page_flags:
+                def_link = definition_link(english, title)
     elif playable and not capitalized:
         # No English entry, but the word is playable: it is a borrowing
         # Wiktionary files under its source language. The word itself in
@@ -645,23 +769,24 @@ def analyze_page(title, text, scrabble_words, playable):
                     roots |= deeper
                 break
 
-    return roots, components, page_flags, tier
+    return roots, components, page_flags, tier, derived, def_link
 
 
-def build_etymology_dict(wiktionary_path, scrabble_words):
+def scan_dump(wiktionary_path, scrabble_words):
     """
-    Parse the dump, then resolve component links into roots.
+    Read the dump once. Returns everything resolution needs, keyed by
+    lowercase title: pages (roots and components), flags, the derived-terms
+    listings inverted to derivative -> bases, and definition links.
 
     Every English page is kept, not just the Scrabble words: QUINIC resolves
     through QUININE and RADIOLOGY through -LOGY, and neither base has to be
     playable for its roots to be the right answer.
     """
-    pages = {}
-    flags = {}
-    page_count = 0
-
     tiers = ({}, {}, {})          # lowercase English, capitalized English, foreign
     tier_flags = ({}, {}, {})
+    derived_from = defaultdict(set)
+    definition_links = {}
+    page_count = 0
 
     for title, text in iter_wiktionary_pages(wiktionary_path):
         capitalized = title[:1].isupper()
@@ -671,7 +796,7 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
         # them capitalized.
         if capitalized and not playable:
             continue
-        roots, components, page_flags, tier = analyze_page(
+        roots, components, page_flags, tier, derived, def_link = analyze_page(
             title, text, scrabble_words, playable)
         if tier is None:
             continue
@@ -686,12 +811,19 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
             existing = tiers[tier].get(key)
             if existing is None or (not existing[0] and roots):
                 tiers[tier][key] = (frozenset(roots), tuple(sorted(components)))
-        # Markers come only from a word's own lowercase English page. The
-        # capitalized page for the Chinese city Wanning is not evidence about
-        # the English word WANNING.
-        if page_flags and tier == 0:
-            tier_flags[tier][key] = page_flags
+        # Markers, derived terms and definition links come only from a word's
+        # own lowercase English page. The capitalized page for the Chinese
+        # city Wanning is not evidence about the English word WANNING.
+        if tier == 0:
+            if page_flags:
+                tier_flags[tier][key] = page_flags
+            for item in derived:
+                if item != key:
+                    derived_from[item].add(key)
+            if def_link:
+                definition_links.setdefault(key, def_link)
 
+    pages, flags = {}, {}
     # A lower tier fills in only where no better page said anything.
     for tier_pages, tier_flag in zip(tiers, tier_flags):
         for key, value in tier_pages.items():
@@ -700,17 +832,90 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
             flags.setdefault(key, value)
 
     print(f"Pages with etymology data: {len(pages)}")
+    print(f"Words listed as derived terms: {len(derived_from)}")
+    print(f"Pages with a definition link: {len(definition_links)}")
+    return {'pages': pages, 'flags': flags, 'derived_from': dict(derived_from),
+            'definition_links': definition_links}
+
+
+def save_scan(scan, path):
+    """Keep the scan so resolution can be rerun without another 40-minute
+    pass over the dump."""
+    import gzip
+    data = {
+        'pages': {k: [sorted(r), list(c)] for k, (r, c) in scan['pages'].items()},
+        'flags': {k: sorted(v) for k, v in scan['flags'].items()},
+        'derived_from': {k: sorted(v) for k, v in scan['derived_from'].items()},
+        'definition_links': {k: sorted(v) for k, v in scan['definition_links'].items()},
+    }
+    with gzip.open(path, 'wt', encoding='utf-8') as f:
+        json.dump(data, f, ensure_ascii=False)
+    print(f"Saved scan to {path}")
+
+
+def load_scan(path):
+    import gzip
+    with gzip.open(path, 'rt', encoding='utf-8') as f:
+        data = json.load(f)
+    return {
+        'pages': {k: (frozenset(tuple(x) for x in r), tuple(c))
+                  for k, (r, c) in data['pages'].items()},
+        'flags': {k: set(v) for k, v in data['flags'].items()},
+        'derived_from': {k: set(v) for k, v in data['derived_from'].items()},
+        'definition_links': {k: set(v) for k, v in data['definition_links'].items()},
+    }
+
+
+def build_etymology_dict(scan, scrabble_words, use_derived=True, use_definitions=True):
+    """
+    Resolve a scan into word -> roots, plus the links left unresolved.
+
+    Derived-terms listings and definition links stand in only for a word
+    whose own page states nothing: no roots, no components, no form-of
+    target, and no "unknown". A page that says "origin unknown" is not
+    overruled by a definition that happens to link a lookalike.
+
+    The second return value maps each still-rootless playable word to the
+    playable words it is linked to, so expand_inflections can finish the
+    job once propagation has covered a target the parse could not.
+    """
+    pages = dict(scan['pages'])
+    flags = scan['flags']
+    fallback = {}     # key -> 'derived' / 'definition' / 'derived+definition'
+
+    def own_statement(key):
+        entry = pages.get(key)
+        return bool(entry and (entry[0] or entry[1])) or 'unknown' in flags.get(key, ())
+
+    if use_definitions:
+        for key, links in scan['definition_links'].items():
+            if not own_statement(key):
+                pages[key] = (frozenset(), tuple(sorted(links)))
+                fallback[key] = 'definition'
+    if use_derived:
+        for key, bases in scan['derived_from'].items():
+            if own_statement(key) and key not in fallback:
+                continue
+            existing = pages.get(key, (frozenset(), ()))
+            pages[key] = (frozenset(), tuple(sorted(set(existing[1]) | bases)))
+            fallback[key] = 'derived+definition' if key in fallback else 'derived'
 
     cache = {}
     etymology_dict = {}
+    links = {}
     unresolved = 0
     for word in sorted(scrabble_words):
-        roots = resolve(word.lower(), pages, cache) or set()
+        key = word.lower()
+        roots = resolve(key, pages, cache) or set()
         if roots:
             etymology_dict[word] = sorted(
                 f"{ROOT_LANGUAGES.get(lang, lang)}:{root}" for lang, root in roots)
-        elif word.lower() in pages:
+        elif key in pages:
             unresolved += 1
+            targets = sorted(t.upper() for t in pages[key][1]
+                             if t.upper() in scrabble_words and t != key)
+            if targets:
+                links[word] = {'kind': fallback.get(key, 'stated'), 'targets': targets}
 
     etymology_dict = drop_noisy_affixes(etymology_dict)
 
@@ -739,9 +944,10 @@ def build_etymology_dict(wiktionary_path, scrabble_words):
     print(f"Scrabble words with roots: {with_roots} "
           f"({100*with_roots/len(scrabble_words):.1f}%)")
     print(f"  had etymology data but resolved to no root: {unresolved}")
+    print(f"  of which linked to other playable words: {len(links)}")
     print(f"  no root, marked imitative instead: {imitative}")
     print(f"  no root, source language only: {language_only}")
-    return etymology_dict
+    return etymology_dict, links
 
 
 def main():
@@ -751,50 +957,47 @@ def main():
         print("Download from: https://dumps.wikimedia.org/enwiktionary/latest/enwiktionary-latest-pages-articles.xml.bz2")
         sys.exit(1)
 
-    wiktionary_path = sys.argv[1]
+    source = sys.argv[1]
+    save_to = None
+    if '--save-scan' in sys.argv:
+        save_to = sys.argv[sys.argv.index('--save-scan') + 1]
 
-    if not Path(wiktionary_path).exists():
-        print(f"Error: File not found: {wiktionary_path}")
+    if not Path(source).exists():
+        print(f"Error: File not found: {source}")
         sys.exit(1)
 
-    # Load Scrabble dictionary
     scrabble_words = load_scrabble_dictionary()
 
-    # Build etymology dictionary
-    etymology_dict = build_etymology_dict(wiktionary_path, scrabble_words)
+    if source.endswith('.json.gz'):
+        scan = load_scan(source)
+    else:
+        scan = scan_dump(source, scrabble_words)
+        if save_to:
+            save_scan(scan, save_to)
 
-    # Save to JSON
-    output_path = Path(__file__).parent / 'etymology.json'
-    with open(output_path, 'w', encoding='utf-8') as f:
+    etymology_dict, links = build_etymology_dict(scan, scrabble_words)
+
+    here = Path(__file__).parent
+    with open(here / 'etymology.json', 'w', encoding='utf-8') as f:
         json.dump(etymology_dict, f, indent=2, sort_keys=True)
+    with open(here / 'etymology_links.json', 'w', encoding='utf-8') as f:
+        json.dump(links, f, indent=1, sort_keys=True, ensure_ascii=False)
 
-    print(f"\nSaved etymology dictionary to {output_path}")
+    print(f"\nSaved etymology dictionary to {here / 'etymology.json'}")
+    print(f"Saved {len(links)} unresolved links to {here / 'etymology_links.json'}")
     print(f"Total entries: {len(etymology_dict)}")
 
-    # Print some stats
     roots = defaultdict(int)
     multi_etym_count = 0
     for word, etym_list in etymology_dict.items():
         if len(etym_list) > 1:
             multi_etym_count += 1
         for etym in etym_list:
-            lang = etym.split(':')[0]
-            roots[lang] += 1
-
+            roots[etym.split(':')[0]] += 1
     print(f"Words with multiple etymologies: {multi_etym_count}")
-
     print("\nBreakdown by root language:")
     for lang, count in sorted(roots.items(), key=lambda x: -x[1])[:20]:
         print(f"  {lang}: {count}")
-
-    # Show some examples (write to file to avoid Unicode issues)
-    with open('etymology_samples.txt', 'w', encoding='utf-8') as f:
-        f.write("Sample entries:\n")
-        examples = ['FIX', 'AFFIX', 'SUFFIX', 'PREFIX', 'BANG', 'BANGLE', 'WIND', 'WINDY']
-        for word in examples:
-            if word in etymology_dict:
-                f.write(f"  {word}: {etymology_dict[word]}\n")
-    print("\nSample entries written to etymology_samples.txt")
 
 
 if __name__ == '__main__':

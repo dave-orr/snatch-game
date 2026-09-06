@@ -38,6 +38,7 @@ from pathlib import Path
 
 ETYMOLOGY_PATH = Path(__file__).parent / 'etymology.json'
 SOURCES_PATH = Path(__file__).parent / 'etymology_sources.json'
+LINKS_PATH = Path(__file__).parent / 'etymology_links.json'
 DICTIONARY_URL = "https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt"
 
 
@@ -423,12 +424,62 @@ def expand_inflections(etymology_dict, scrabble_words, sources, markers_as_bases
     return expanded
 
 
-def run_passes(etymology_dict, scrabble_words, sources, max_passes=10):
-    """Propagate repeatedly until no new entries are found."""
+def load_links():
+    """
+    The links build_etymology.py could not resolve: for each still-rootless
+    playable word, the playable words its page (or a base's page) ties it
+    to. The parse resolves such links only through parsed roots, so a word
+    whose target is covered by propagation - FEOFFOR, "alternative form of
+    feoffer", where FEOFFER came from a suffix rule - stays blank without
+    this step.
+    """
+    if not LINKS_PATH.exists():
+        return {}
+    with open(LINKS_PATH, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def follow_links(etymology_dict, links, sources, markers_as_bases=False):
+    """
+    Give each linked word the roots of the targets that now have some.
+    Provenance records the kind of link: 'stated' for a form-of or
+    component on the word's own page, 'derived' for a listing under a base
+    word's Derived terms, 'definition' for a definition that links the word
+    it is built on.
+    """
+    expanded = {k: list(v) for k, v in etymology_dict.items()}
+    followed = 0
+    for word in sorted(links):
+        if word in expanded and (markers_as_bases or not marker_only(expanded[word])):
+            continue
+        targets = [t for t in links[word]['targets'] if t in expanded]
+        real = [t for t in targets if not marker_only(expanded[t])]
+        # A real root beats a marker; markers pass on only among themselves.
+        chosen = real or (targets if markers_as_bases else [])
+        if not chosen:
+            continue
+        roots = set()
+        for t in chosen:
+            roots.update(expanded[t])
+        expanded[word] = sorted(roots)
+        sources[word] = {'rule': f"link:{links[word]['kind']}", 'base': chosen[0]}
+        followed += 1
+    print(f"Followed links for {followed} words")
+    return expanded
+
+
+def run_passes(etymology_dict, scrabble_words, sources, links=None, max_passes=10):
+    """
+    Propagate repeatedly until no new entries are found. Each pass follows
+    links first, then the morphological rules: a link is something
+    Wiktionary states, a rule is a guess.
+    """
     expanded = etymology_dict
+    links = links or {}
     for pass_num in range(1, max_passes + 1):
         print(f"\n=== Pass {pass_num}: Propagating to inflected forms ===")
         before_count = len(expanded)
+        expanded = follow_links(expanded, links, sources)
         expanded = expand_inflections(expanded, scrabble_words, sources)
         new_this_pass = len(expanded) - before_count
         print(f"Pass {pass_num} added {new_this_pass} entries")
@@ -442,6 +493,7 @@ def run_passes(etymology_dict, scrabble_words, sources, max_passes=10):
     for pass_num in range(1, max_passes + 1):
         print(f"\n=== Marker pass {pass_num}: markers to inflections of marker-only words ===")
         before_count = len(expanded)
+        expanded = follow_links(expanded, links, sources, markers_as_bases=True)
         expanded = expand_inflections(expanded, scrabble_words, sources, markers_as_bases=True)
         if len(expanded) == before_count:
             break
@@ -513,10 +565,12 @@ def main():
         sources = {}
 
     scrabble_words = load_scrabble_dictionary(args.dictionary)
+    links = load_links()
+    print(f"Loaded {len(links)} unresolved links from the parse")
 
     original_count = len(etymology_dict)
     new_sources = {}
-    expanded_dict = run_passes(etymology_dict, scrabble_words, new_sources)
+    expanded_dict = run_passes(etymology_dict, scrabble_words, new_sources, links)
 
     if args.audit:
         report_audit(new_sources, args.sample, args.rules)
