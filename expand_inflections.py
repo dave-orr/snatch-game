@@ -13,11 +13,12 @@ and distinguished from entries parsed out of Wiktionary. Words absent from
 that file were not produced by this script.
 
 The pipeline is build_etymology.py first, then this script. A parse
-overwrites etymology.json with parsed entries only, so run this straight
-after it with no flags, and delete a stale etymology_sources.json first.
+overwrites etymology.json with parsed entries only and starts a fresh
+etymology_sources.json, so run this straight after it with no flags.
 
 --rebuild is for the other case: changing a rule here and re-expanding
-without re-parsing. It drops every entry the provenance file lists, so
+without re-parsing. It drops every entry this script's rules produced
+(entries the parse recorded, such as Merriam-Webster fills, stay), so
 running it against fresh parse output would also drop a word the parse had
 just produced legitimately.
 
@@ -558,11 +559,13 @@ def main():
         print(f"Loaded provenance for {len(sources)} entries")
 
     if args.rebuild and sources:
+        kept = {word: source for word, source in sources.items()
+                if source['rule'] == 'merriam-webster'}
         etymology_dict = {word: etym for word, etym in etymology_dict.items()
-                          if word not in sources}
-        print(f"Dropped {len(sources)} previously propagated entries, "
+                          if word not in sources or word in kept}
+        print(f"Dropped {len(sources) - len(kept)} previously propagated entries, "
               f"{len(etymology_dict)} parsed entries remain")
-        sources = {}
+        sources = kept
 
     scrabble_words = load_scrabble_dictionary(args.dictionary)
     links = load_links()

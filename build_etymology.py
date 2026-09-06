@@ -9,9 +9,11 @@ Usage:
 2. Run this script:
    python build_etymology.py enwiktionary-latest-pages-articles.xml.bz2 [--save-scan scan.json.gz]
 
-3. Output is etymology.json (word -> roots) and etymology_links.json (the
+3. Output is etymology.json (word -> roots), etymology_links.json (the
    playable words each still-rootless word is linked to, for
-   expand_inflections.py to finish once propagation covers a target).
+   expand_inflections.py to finish once propagation covers a target) and
+   etymology_sources.json, started with the words filled from
+   etymology_mw.json (see mw_lookup.py) when that file is present.
 
 The dump takes about 40 minutes to read. --save-scan keeps what was read;
 passing that .json.gz file instead of the dump reruns only the resolution,
@@ -929,7 +931,8 @@ def build_etymology_dict(scan, scrabble_words, use_derived=True, use_definitions
 
     The second return value maps each still-rootless playable word to the
     playable words it is linked to, so expand_inflections can finish the
-    job once propagation has covered a target the parse could not.
+    job once propagation has covered a target the parse could not. The
+    third is provenance for the words filled from Merriam-Webster.
     """
     pages = dict(scan['pages'])
     flags = scan['flags']
@@ -970,6 +973,7 @@ def build_etymology_dict(scan, scrabble_words, use_derived=True, use_definitions
                 links[word] = {'kind': fallback.get(key, 'stated'), 'targets': targets}
 
     etymology_dict = drop_noisy_affixes(etymology_dict)
+    sources = merge_merriam_webster(etymology_dict, scrabble_words, flags)
 
     with_roots = len(etymology_dict)
 
@@ -999,7 +1003,47 @@ def build_etymology_dict(scan, scrabble_words, use_derived=True, use_definitions
     print(f"  of which linked to other playable words: {len(links)}")
     print(f"  no root, marked imitative instead: {imitative}")
     print(f"  no root, source language only: {language_only}")
-    return etymology_dict, links
+    return etymology_dict, links, sources
+
+
+MW_PATH = Path(__file__).parent / 'etymology_mw.json'
+MW_RULE = 'merriam-webster'
+
+
+def merge_merriam_webster(etymology_dict, scrabble_words, flags):
+    """
+    Fill words the parse left blank from etymology_mw.json, the roots
+    mw_lookup.py read out of Merriam-Webster's Collegiate API for words
+    Wiktionary has no etymology for. Wiktionary stays the primary source: a
+    word with parsed roots is never changed. Components ("cable + cast") are
+    resolved against the roots already found. Words filled here are returned
+    so they can be recorded in etymology_sources.json under MW_RULE.
+    """
+    if not MW_PATH.exists():
+        return {}
+    with open(MW_PATH, encoding='utf-8') as f:
+        looked_up = json.load(f)
+    filled = {}
+    for word in sorted(looked_up):
+        if word not in scrabble_words or word in etymology_dict:
+            continue
+        entry = looked_up[word]
+        roots = set()
+        for root in entry.get('roots', []):
+            lang, _, form = root.partition(':')
+            if valid_lang(lang) and valid_root(form):
+                roots.add(f"{ROOT_LANGUAGES.get(lang, lang)}:{form}")
+        for component in entry.get('components', []):
+            roots.update(etymology_dict.get(component.upper(), []))
+        roots = {r for r in roots if not r.endswith(':-')}
+        if roots:
+            etymology_dict[word] = sorted(roots)
+            filled[word] = {'rule': MW_RULE, 'base': word}
+        elif entry.get('flags'):
+            # nothing better than Wiktionary's own marker, if it had one
+            flags.setdefault(word.lower(), set()).update(entry['flags'])
+    print(f"Filled {len(filled)} words from Merriam-Webster")
+    return filled
 
 
 def main():
@@ -1027,13 +1071,17 @@ def main():
         if save_to:
             save_scan(scan, save_to)
 
-    etymology_dict, links = build_etymology_dict(scan, scrabble_words)
+    etymology_dict, links, sources = build_etymology_dict(scan, scrabble_words)
 
     here = Path(__file__).parent
     with open(here / 'etymology.json', 'w', encoding='utf-8') as f:
         json.dump(etymology_dict, f, indent=2, sort_keys=True)
     with open(here / 'etymology_links.json', 'w', encoding='utf-8') as f:
         json.dump(links, f, indent=1, sort_keys=True, ensure_ascii=False)
+    # Provenance starts here, with the Merriam-Webster fills; the expansion
+    # adds its own entries to the same file.
+    with open(here / 'etymology_sources.json', 'w', encoding='utf-8') as f:
+        json.dump(sources, f, indent=2, sort_keys=True)
 
     print(f"\nSaved etymology dictionary to {here / 'etymology.json'}")
     print(f"Saved {len(links)} unresolved links to {here / 'etymology_links.json'}")

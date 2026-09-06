@@ -25,3 +25,4 @@ __pycache__/
 
 # Debug output from build_etymology.py
 etymology_samples.txt
+mw_cache/
