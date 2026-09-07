@@ -92,10 +92,12 @@ LANGUAGES = {
 LANGUAGE_PATTERN = re.compile(
     '(' + '|'.join(sorted(map(re.escape, LANGUAGES), key=len, reverse=True)) + r')\b')
 
-# Merriam-Webster's inline markup. Only {it} carries words that matter here;
-# the cross references ({ma}, {dx_ety}) point at other entries, not sources.
-ITALIC = re.compile(r'\{it\}(.*?)\{/it\}')
-CROSSREF = re.compile(r'\{ma\}.*?\{/ma\}|\{dx_ety\}.*?\{/dx_ety\}|\{et_link\|[^}]*\}')
+# Merriam-Webster's inline markup. {it} carries source words; {et_link}
+# names another English entry the word was formed from ("back-formation
+# from {et_link|zipper:1|zipper:1}") and is read like an italic English
+# word. "More at" ({ma}) and "see" ({dx_ety}) references are not sources.
+ITALIC = re.compile(r'\{it\}(.*?)\{/it\}|\{et_link\|([^|}]*?)(?::\d+)?\|[^}]*\}')
+CROSSREF = re.compile(r'\{ma\}.*?\{/ma\}|\{dx_ety\}.*?\{/dx_ety\}')
 TOKEN = re.compile(r'\{[^}]*\}')
 
 # Statements that are the whole etymology, with no source word to give.
@@ -132,7 +134,7 @@ def parse_etymology(text):
     for m in LANGUAGE_PATTERN.finditer(text):
         events.append((m.start(), 'lang', LANGUAGES[m.group(1)]))
     for m in ITALIC.finditer(text):
-        events.append((m.start(), 'word', m.group(1)))
+        events.append((m.start(), 'word', m.group(1) or m.group(2) or ''))
     events.sort()
 
     current, seen_word = None, False
