@@ -22,7 +22,9 @@ stops after that many new requests; rerun tomorrow to continue. Every raw respon
 --cache (default mw_cache/ next to this file, not committed), so a word is
 never requested twice and the extraction can be rerun offline.
 
-Output is etymology_mw.json: word -> {"roots", "components", "flags"}.
+Output is etymology_mw.json: word -> {"roots", "components", "flags"}, with
+an empty entry for every word looked up that gave nothing, so the file is
+the durable record of what has been asked and the cache can be discarded.
 build_etymology.py merges it into etymology.json for words the Wiktionary
 parse left blank, and records each such word in etymology_sources.json
 under the rule "merriam-webster".
@@ -88,6 +90,8 @@ LANGUAGES = {
     'Armenian': 'hy', 'Georgian': 'ka', 'Basque': 'eu', 'Maltese': 'mt',
     'Romany': 'rom', 'Esperanto': 'eo',
     'Old English (Anglian)': 'ang', 'Anglo-Norman': 'xno',
+    # English itself: what follows are English relatives, not sources
+    'English': None,
 }
 LANGUAGE_PATTERN = re.compile(
     '(' + '|'.join(sorted(map(re.escape, LANGUAGES), key=len, reverse=True)) + r')\b')
@@ -96,6 +100,7 @@ LANGUAGE_PATTERN = re.compile(
 # names another English entry the word was formed from ("back-formation
 # from {et_link|zipper:1|zipper:1}") and is read like an italic English
 # word. "More at" ({ma}) and "see" ({dx_ety}) references are not sources.
+FRAGMENT = re.compile(r'\{it\}([^{}]*?)\{/it\}([A-Za-z]+)')
 ITALIC = re.compile(r'\{it\}(.*?)\{/it\}|\{et_link\|([^|}]*?)(?::\d+)?\|[^}]*\}')
 CROSSREF = re.compile(r'\{ma\}.*?\{/ma\}|\{dx_ety\}.*?\{/dx_ety\}')
 TOKEN = re.compile(r'\{[^}]*\}')
@@ -123,6 +128,10 @@ def parse_etymology(text):
     (code, word) pairs.
     """
     text = CROSSREF.sub(' ', text)
+    # Merriam-Webster italicises the part of a word that matters:
+    # "{it}Amm{/it}oniak", "{it}am{/it}ine". Rejoin the word first, or the
+    # fragment "am" comes back and resolves to the verb BE.
+    text = FRAGMENT.sub(lambda m: '{it}' + m.group(1) + m.group(2) + '{/it}', text)
     roots, flags = [], set()
     if IMITATIVE.search(text):
         flags.add('imitative')
@@ -134,7 +143,10 @@ def parse_etymology(text):
     for m in LANGUAGE_PATTERN.finditer(text):
         events.append((m.start(), 'lang', LANGUAGES[m.group(1)]))
     for m in ITALIC.finditer(text):
-        events.append((m.start(), 'word', m.group(1) or m.group(2) or ''))
+        # an {et_link} names an English entry whatever language was last
+        # mentioned: "German Ammoniak {et_link|ammonia|ammonia}"
+        kind = 'word' if m.group(1) is not None else 'english'
+        events.append((m.start(), kind, m.group(1) or m.group(2) or ''))
     events.sort()
 
     current, seen_word = None, False
@@ -148,10 +160,14 @@ def parse_etymology(text):
             word = clean_word(value)
             if not word:
                 continue
-            if current:
+            if current and kind == 'word':
                 roots.append((current, word))
                 seen_word = True
-            elif re.fullmatch(r"[a-z][a-z'-]*", word):
+            elif re.fullmatch(r"[a-z][a-z'-]*", word) and len(word.strip('-')) >= 3 \
+                    and not value.strip()[:1].isupper():
+                # lowercase in the original: a capitalised italic is a name
+                # ("from Adolf {it}Martens{/it}"), and MARTENS is also the
+                # plural of the animal
                 # English so far: "{it}cable{/it} + {it}cast{/it}",
                 # "alteration of {it}pester{/it}"
                 components.append(word.strip('-'))
@@ -328,26 +344,28 @@ def main():
 
     requests_made = looked_up = with_roots = 0
     for word in queue:
-        if requests_made >= args.limit:
-            break
+        cached = (cache_dir / f'{word.lower()}.json').exists()
+        if not cached and word in results:
+            continue          # looked up in an earlier run whose cache is gone
+        if not cached and requests_made >= args.limit:
+            continue          # cached words are still re-read below
         data, was_request = fetch(word, args.key, cache_dir)
         if was_request:
             requests_made += 1
             time.sleep(args.delay)
         looked_up += 1
         roots, components, flags = extract(data, word)
-        if roots or components or flags:
-            results[word] = {'roots': [f'{lang}:{root}' for lang, root in roots],
-                             'components': components, 'flags': sorted(flags)}
-            if roots:
-                with_roots += 1
+        results[word] = {'roots': [f'{lang}:{root}' for lang, root in roots],
+                         'components': components, 'flags': sorted(flags)}
+        if roots:
+            with_roots += 1
         if looked_up % 100 == 0:
             print(f"  {looked_up} looked up, {requests_made} new requests, "
                   f"{with_roots} with roots")
 
     OUTPUT_PATH.write_text(json.dumps(results, indent=1, sort_keys=True, ensure_ascii=False) + '\n',
                            encoding='utf-8')
-    remaining = len(queue) - looked_up
+    remaining = sum(1 for w in queue if w not in results)
     print(f"Looked up {looked_up} words ({requests_made} new requests); "
           f"{with_roots} gave roots. {len(results)} words in {OUTPUT_PATH}. "
           f"{remaining} still queued.")

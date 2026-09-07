@@ -8,17 +8,16 @@ tried and rejected, and what a rebuild has to redo.
 
 ```
 curl -O https://dumps.wikimedia.org/enwiktionary/latest/enwiktionary-latest-pages-articles.xml.bz2
-rm -f etymology_sources.json
 python build_etymology.py enwiktionary-latest-pages-articles.xml.bz2 --save-scan scan.json.gz
 python expand_inflections.py                                            # propagate
 python check_prefix_review.py                                           # see below
 ```
 
 Order matters. `build_etymology.py` overwrites `etymology.json` with parsed
-entries only, so run the expansion straight after with no flags, and delete a
-stale `etymology_sources.json` first. `--rebuild` is for re-expanding *without*
-re-parsing; run against fresh parse output it would drop entries the parse had
-just produced.
+entries (plus the Merriam-Webster fills below) and starts a fresh
+`etymology_sources.json`, so run the expansion straight after with no flags.
+`--rebuild` is for re-expanding *without* re-parsing; run against fresh parse
+output it would drop entries the parse had just produced.
 
 Reading the dump takes about 40 minutes. `--save-scan` keeps what was read;
 passing that file in place of the dump reruns only the resolution, in
@@ -35,17 +34,20 @@ is deterministic.
 | `etymology.json` | word to list of `language:root` |
 | `etymology_sources.json` | for each propagated word, the rule and base word it came from. Words absent from it were parsed |
 | `etymology_links.json` | for each word the parse left without roots, the playable words its page ties it to. The expansion follows these once propagation covers a target |
+| `etymology_mw.json` | what Merriam-Webster's Collegiate API said about words Wiktionary has no etymology for, one record per word looked up, empty when it said nothing usable |
 | `prefix_pair_review.json` | hand-checked verdicts for the root pairs `etymology.js` matches by prefix |
 
-Coverage as built: 168,919 of 178,691 words (94.5%), of which 162,307 parsed
-and 6,612 propagated. 764 of those carry only a marker (imitative, or a
-source language with no word) rather than a root, so coverage by real roots
-is 168,155 words, 94.1%. 9,772 words have nothing.
+Coverage as built: 170,268 of 178,691 words (95.3%), of which 162,307 parsed
+from Wiktionary, 285 filled from Merriam-Webster and 7,676 propagated. 753 of
+those carry only a marker (imitative, or a source language with no word)
+rather than a root, so coverage by real roots is 169,515 words, 94.9%. 8,423
+words have nothing.
 
 How it got here, by real-root coverage: 86.5% from the original parse, 92.3%
 after the parser learned form-of definitions, foreign-language sections and
 prose, 94.1% after the template gaps, derived-terms lists, definition links
-and link-following described below. The last round added 3,171 words at the
+and link-following described below, 94.9% after the first day of
+Merriam-Webster lookups. The last round added 3,171 words at the
 parse and cost 249: 248 whose only "root" had been a classifying suffix such
 as `-ITE`, and DUXELLES, whose root was the French article `d'`.
 
@@ -153,6 +155,36 @@ treated as blanks: a marker never blocks a real root from arriving by
 propagation, and markers propagate to inflections only in a final pass, so
 BUBBLES inherits BUBBLE's imitative marker only if nothing better was found.
 
+## Merriam-Webster
+
+For words Wiktionary has no etymology for, `mw_lookup.py` asks
+Merriam-Webster's Collegiate Dictionary API, whose word list the Scrabble
+dictionary is. Its etymologies are prose in a fixed shape - "Middle English,
+from Anglo-French *covert*, from Latin *coopertus*" - and each italic word is
+read as a root of the language named last before it, mapped to the same codes
+the Wiktionary parse uses. English words in italics or entry links ("cable +
+broadcast", "back-formation from zipper") come back as components and
+resolve against roots already known. `{{semantic loan}}`-style statements
+have no equivalent there; names ("from Adolf *Martens*") are never
+components, since MARTENS is also the plural of the animal.
+
+The free tier allows 1,000 lookups a day, so the script asks for one word per
+uncovered family (4,395 for 10,536 uncovered words; ZIP stands for ZIPS,
+ZIPPED and UNZIP) and stops at a daily limit. `etymology_mw.json` records
+every word asked, so a later day continues where the last stopped; after a
+new batch, `expand_inflections.py --rebuild` merges it without another pass
+over the dump, and produces exactly what the full pipeline would.
+
+The first day asked 943 words: 193 gave roots, 118 gave only English
+components, 96 said "origin unknown" or "imitative", and 521 had no entry or
+no etymology. That filled 285 words directly and 1,359 once links and
+propagation followed. A blind sample of 30 of those was 29 right. The Medical
+Dictionary API was tried for the drug names and carries no etymology field at
+all.
+
+Only extracted roots are stored, with provenance `merriam-webster` in
+`etymology_sources.json`; the raw responses stay in an ignored cache.
+
 ## Rejected, with the measurements
 
 Recorded because the numbers are not obvious and someone will otherwise try
@@ -226,7 +258,7 @@ reject 5,610 of 8,654 steal-compatible pairs.
 
 Prefix matching is therefore limited to roots of 7+ letters, where the error
 rate collapses. Every pair that rule matches has been checked by hand, in
-four rounds as the data grew: 1,018 pairs, 1,009 genuine, 9 not. The unrelated ones are listed in `UNRELATED_PREFIX_PAIRS` because no
+five rounds as the data grew: 1,025 pairs, 1,016 genuine, 9 not. The unrelated ones are listed in `UNRELATED_PREFIX_PAIRS` because no
 length rule separates them (chance/chancellor, hostile/hostler, market/march,
 content/contentious). Note that `old_french:chancel ~ chancelerie` *is* related
 while `enm:chaunce ~ chaunceler` is not, which is why this was reviewed rather
@@ -286,21 +318,8 @@ above was accepted or rejected that way.
 
 ## What is still missing
 
-Of the 9,772 uncovered words, by what the dump has for them:
-
-| count | what the dump has |
-|---|---|
-| 3,663 | English page, no etymology, defined as a form of an uncovered word |
-| 2,391 | English page with no etymology section |
-| 1,884 | English page with an etymology section the parser could not read |
-| 935 | no Wiktionary page (or a page the parser skipped) |
-| 289 | English page, etymology marked unknown |
-| 247 | had only a classifying suffix (-ITE, -OSIS) for a root |
-| 185 | capitalized English page only |
-
-The form-of words fall with their bases, so the parser's remaining work is
-the 1,884 unreadable sections and whatever the 2,391 no-etymology pages link
-to that the definition rule does not yet catch. The rest is what Wiktionary
-does not know: drug and trade names, and words it marks unknown. That is the
-part where another source (Merriam-Webster's Collegiate API, whose list this
-is) would have to come in.
+8,423 words. About 3,450 uncovered families are still queued for
+Merriam-Webster; the first day's rate suggests roughly a third of them will
+yield roots, and they are the smaller families, so expect another 1,000 to
+1,500 words. Past that, the residue is words neither dictionary explains: drug
+and trade names, and words both mark "origin unknown".

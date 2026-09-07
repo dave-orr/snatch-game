@@ -1,10 +1,10 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (four review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links were added)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (five review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, 7 after the first Merriam-Webster batch)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 1018,
-  "related": 1009,
+  "reviewed": 1025,
+  "related": 1016,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
@@ -2909,6 +2909,12 @@
   ],
   [
    "french",
+   "covelli",
+   "covelline",
+   true
+  ],
+  [
+   "french",
    "culotte",
    "culottes",
    true
@@ -3151,6 +3157,12 @@
    "french",
    "recherche",
    "rechercher",
+   true
+  ],
+  [
+   "french",
+   "recrute",
+   "recrutement",
    true
   ],
   [
@@ -3463,6 +3475,12 @@
    "german",
    "narziss",
    "narzissmus",
+   true
+  ],
+  [
+   "german",
+   "national",
+   "nationalsozialist",
    true
   ],
   [
@@ -3845,6 +3863,12 @@
   ],
   [
    "la-new",
+   "andromeda",
+   "andromeda polifolia",
+   true
+  ],
+  [
+   "la-new",
    "ischaemia",
    "ischaemiae",
    true
@@ -3912,6 +3936,12 @@
   [
    "latin",
    "adulter",
+   "adulterare",
+   true
+  ],
+  [
+   "latin",
+   "adulter",
    "adulteratio",
    true
   ],
@@ -3967,6 +3997,12 @@
    "latin",
    "ancilla",
    "ancillaris",
+   true
+  ],
+  [
+   "latin",
+   "andromeda",
+   "andromedae",
    true
   ],
   [
@@ -4393,6 +4429,12 @@
    "latin",
    "haesitatio",
    "haesitationem",
+   true
+  ],
+  [
+   "latin",
+   "hesperid",
+   "hesperides",
    true
   ],
   [

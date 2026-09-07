@@ -27,6 +27,8 @@ Usage:
     python expand_inflections.py                # expand and save
     python expand_inflections.py --rebuild      # re-expand, dropping the
                                                 # previous propagation first
+                                                # (also after a new batch of
+                                                # Merriam-Webster lookups)
     python expand_inflections.py --audit        # report what each rule would
                                                 # do, with samples, saving nothing
 """
@@ -570,6 +572,12 @@ def main():
     scrabble_words = load_scrabble_dictionary(args.dictionary)
     links = load_links()
     print(f"Loaded {len(links)} unresolved links from the parse")
+
+    # Merriam-Webster lookups arrive a day's batch at a time (mw_lookup.py).
+    # Applying them here as well as in the parse means a new batch needs only
+    # this script (--rebuild), not another pass over the dump.
+    from build_etymology import merge_merriam_webster
+    sources.update(merge_merriam_webster(etymology_dict, scrabble_words, {}))
 
     original_count = len(etymology_dict)
     new_sources = {}

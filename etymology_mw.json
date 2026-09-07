@@ -1,0 +1,6115 @@
+{
+ "AAH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ABELIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:abel"
+  ]
+ },
+ "ABROSIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ABSENTMINDED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACELDAMA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:akeldama",
+   "arc:ḥăqēl dĕmā"
+  ]
+ },
+ "ACETIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACETOXYL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACHILLEA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACHOO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACICULUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACRASIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ACRIDINE": {
+  "components": [
+   "pyridine"
+  ],
+  "flags": [],
+  "roots": [
+   "de:acridin",
+   "la:ācer",
+   "de:-idin",
+   "de:pyridin"
+  ]
+ },
+ "ACRIFLAVINE": {
+  "components": [
+   "acri",
+   "flavine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ACROLECT": {
+  "components": [
+   "acro",
+   "dialect"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ACTINIAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:actinia",
+   "grc:aktís",
+   "la-new:-ia"
+  ]
+ },
+ "ACTINOMYCIN": {
+  "components": [
+   "actinomyces"
+  ],
+  "flags": [],
+  "roots": [
+   "la-new:actinomyces"
+  ]
+ },
+ "ACYCLOVIR": {
+  "components": [
+   "acycl",
+   "vir"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ACYLOIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ADAMSITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ADENYL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ADJACENCE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ADULARIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "it:adula",
+   "it:-aria",
+   "la:-āria",
+   "la:-ārius"
+  ]
+ },
+ "ADULTERER": {
+  "components": [
+   "adulterate"
+  ],
+  "flags": [],
+  "roots": [
+   "la:adulter",
+   "enm:advowtrer",
+   "enm:avouter",
+   "xno:avuiltre",
+   "la:adulterāre",
+   "la:-er"
+  ]
+ },
+ "ADZUKI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AEQUORIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AEROBIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AEROSAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AFFENPINSCHER": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:affe",
+   "gmh:affe",
+   "goh:affo",
+   "goh:pinscher"
+  ]
+ },
+ "AGAMID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AGAMOSPERMY": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:agamospermie",
+   "de:agam",
+   "fr:agame",
+   "fr:-spermie"
+  ]
+ },
+ "AGERATUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:ageraton",
+   "la:achillea ageratum",
+   "grc:agḗraton",
+   "grc:agḗratos",
+   "grc:-gēratos",
+   "grc:gêras"
+  ]
+ },
+ "AGGADA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AGLYCONE": {
+  "components": [
+   "gluc",
+   "glyc"
+  ],
+  "flags": [],
+  "roots": [
+   "de:aglykon",
+   "de:aglukon",
+   "de:gluk-",
+   "de:-on",
+   "de:glyk-"
+  ]
+ },
+ "AGRIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AGUACATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AIRN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AIRSHED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AIRSHOT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AIRSHOW": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AJIVA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALACHLOR": {
+  "components": [
+   "ala",
+   "acetanilide",
+   "chlor"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALBERTITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALCID": {
+  "components": [],
+  "flags": [
+   "from:no"
+  ],
+  "roots": [
+   "la-new:alcidae",
+   "la-new:alca",
+   "sv:alka"
+  ]
+ },
+ "ALDICARB": {
+  "components": [
+   "aldehyde",
+   "carbamate"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALDOSE": {
+  "components": [
+   "aldehyde"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALENCON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALGARROBA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALGARROBO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALGERINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALKENE": {
+  "components": [
+   "alkyl"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALKINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALKOXIDE": {
+  "components": [
+   "alkyl",
+   "oxide"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALLANITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALLEGIANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALLETHRIN": {
+  "components": [
+   "allyl",
+   "ethrin"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALLOSAUR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALLOXAN": {
+  "components": [
+   "allantoin"
+  ],
+  "flags": [],
+  "roots": [
+   "de:alloxan",
+   "de:all-",
+   "de:allantoin",
+   "de:ox-",
+   "de:oxalsäure",
+   "de:-an"
+  ]
+ },
+ "ALMEMAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALMONRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALMUG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALNICO": {
+  "components": [
+   "aluminum",
+   "nickel",
+   "cobalt"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ALPHOSIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALPHYL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALSIKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALTERITY": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:alterite",
+   "la-lat:alteritās",
+   "grc:heterótēs",
+   "la:alter",
+   "la:-itās"
+  ]
+ },
+ "ALTHORN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:alt",
+   "de:horn"
+  ]
+ },
+ "ALTIGRAPH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ALUNITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:alun"
+  ]
+ },
+ "AMADAVAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMBERINA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMEBIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMEBOID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMERICIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:america",
+   "la-new:-ium"
+  ]
+ },
+ "AMIDASE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMIDONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMINITY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMINOPHYLLINE": {
+  "components": [
+   "amino",
+   "phylline"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "AMINOPYRINE": {
+  "components": [
+   "amino",
+   "pyrine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "AMITROLE": {
+  "components": [
+   "amino",
+   "triaz",
+   "ole"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "AMMINE": {
+  "components": [
+   "ammonia"
+  ],
+  "flags": [],
+  "roots": [
+   "de:ammine",
+   "de:ammoniak",
+   "de:-ine"
+  ]
+ },
+ "AMMOCETE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMMONOID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMORETTO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "it:amore",
+   "la:amor",
+   "la:-etto"
+  ]
+ },
+ "AMORIST": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:amor"
+  ]
+ },
+ "AMORPHISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMOSITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMP": {
+  "components": [
+   "amplify",
+   "amphetamine",
+   "adenosine",
+   "mono",
+   "phosphate"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "AMPERSAND": {
+  "components": [
+   "and"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "AMPHETAMINE": {
+  "components": [
+   "phe",
+   "amine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "AMPHIPOD": {
+  "components": [
+   "amphi"
+  ],
+  "flags": [],
+  "roots": [
+   "la-new:amphipoda",
+   "grc:amphi-",
+   "grc:-poda",
+   "grc:-podos",
+   "grc:poús"
+  ]
+ },
+ "AMSINCKIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMYGDALIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:amygdala"
+  ]
+ },
+ "AMYLASE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AMYLOPSIN": {
+  "components": [
+   "amylo",
+   "pepsin"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:amylopsine",
+   "fr:amylo-",
+   "fr:-psine",
+   "fr:pepsine"
+  ]
+ },
+ "AMYLOSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANABAENA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANABLEPS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANACHRONOUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANAEROBIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANAGRAMMATIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANAPLASMOSIS": {
+  "components": [
+   "anaplasma"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ANCHUSA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANDALUSITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:andalousite",
+   "fr:andalousie"
+  ]
+ },
+ "ANDESITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:andesit",
+   "de:andes"
+  ]
+ },
+ "ANDRADITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANDROMEDA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:andromeda",
+   "la-new:andromeda polifolia",
+   "la:andromeda",
+   "la:andromedae",
+   "grc:andromédē"
+  ]
+ },
+ "ANDROSTERONE": {
+  "components": [
+   "andro",
+   "sterol",
+   "ketone"
+  ],
+  "flags": [],
+  "roots": [
+   "de:androsteron",
+   "de:andro-",
+   "de:sterol",
+   "de:keton"
+  ]
+ },
+ "ANEURIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANGELUS": {
+  "components": [],
+  "flags": [
+   "from:la-lat",
+   "from:la-med"
+  ],
+  "roots": []
+ },
+ "ANGIOLOGY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANGLEPOD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANGLESITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:anglésite",
+   "fr:anglesey"
+  ]
+ },
+ "ANGOSTURA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANIMALCULUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANISEIKONIA": {
+  "components": [
+   "anis"
+  ],
+  "flags": [],
+  "roots": [
+   "grc:eikṓn"
+  ]
+ },
+ "ANKERITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:ankerit",
+   "de:anker"
+  ]
+ },
+ "ANLAS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANNATTO": {
+  "components": [
+   "onoto"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ANNONA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ANOLE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:anolis",
+   "car:anáoli"
+  ]
+ },
+ "ANORTHOSITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:anorthose",
+   "fr:an-",
+   "grc:orthós",
+   "fr:-ose"
+  ]
+ },
+ "ANTECEDE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:antecedere"
+  ]
+ },
+ "APICAL": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:apicalis",
+   "la:apex"
+  ]
+ },
+ "APLASIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "APLITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:aplit",
+   "grc:haploos"
+  ]
+ },
+ "APPENDIX": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:appendix",
+   "la:appendere",
+   "la:-ix"
+  ]
+ },
+ "ARAGONITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:aragonit",
+   "de:aragon"
+  ]
+ },
+ "ARBUTE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ARCHAEA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:archaios"
+  ]
+ },
+ "ARGLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ARGYLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AROINT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ASTRINGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AUSFORM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AUSPICATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "AUSTENITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:austen"
+  ]
+ },
+ "BABBITT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BACTERIOSTAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BADMOUTH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BALKANIZE": {
+  "components": [
+   "balkan"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BALLYRAG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BAMBOOZLE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "BANDEROLE": {
+  "components": [
+   "banaroll",
+   "band"
+  ],
+  "flags": [],
+  "roots": [
+   "frm:banderolle",
+   "frm:bannerolle",
+   "it:banderuola",
+   "it:bandiera",
+   "pro:banda",
+   "la-lat:bandum",
+   "la-lat:-iera"
+  ]
+ },
+ "BANJAX": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "BARBARIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BARBITAL": {
+  "components": [
+   "barbituric"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BARF": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "BARONET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BARRAMUNDI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BATFOWL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BAUXITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:bauxite",
+   "fr:baux"
+  ]
+ },
+ "BAWTY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BEFUDDLE": {
+  "components": [
+   "fuddle"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BEGORRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BENDAY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BENTONITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BENZIDINE": {
+  "components": [
+   "benz"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BENZINE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:benzin",
+   "de:benz-"
+  ]
+ },
+ "BIFF": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BIGHEARTED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BILBO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BILK": {
+  "components": [
+   "balk"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BLEB": {
+  "components": [
+   "blob"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BLEEP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BLIMPISH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BLIP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BLOOP": {
+  "components": [
+   "blooper"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BLUB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BLUDGE": {
+  "components": [
+   "bludger",
+   "bludgeoner",
+   "bludgeon"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BLUNGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BLURB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BODYCHECK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BOFF": {
+  "components": [
+   "box",
+   "office"
+  ],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BOINK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BOLSHEVIK": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ru:bol'shevik",
+   "ru:bol'shiĭ"
+  ]
+ },
+ "BOOB": {
+  "components": [
+   "booby"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BOOHOO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BOOMERANG": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "xdk:bumarinʸ"
+  ]
+ },
+ "BOONDOGGLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BOOZE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:bousen",
+   "dum:būsen"
+  ]
+ },
+ "BORON": {
+  "components": [
+   "borax",
+   "carbon"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "BOSCHVARK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BOWDLERIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BOWWOW": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BRISK": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "frm:brusque"
+  ]
+ },
+ "BROIDER": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:brouderen",
+   "xno:brouder"
+  ]
+ },
+ "BROMATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BROMIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BRULZIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BULLYRAG": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "BUMFUZZLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BUMKIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BUNKUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "BURP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "BURRSTONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CABEZON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CAESAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CALCTUFA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CALIPEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CARBURIZE": {
+  "components": [
+   "carburet"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CASEATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CATHODE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:kathodos",
+   "grc:kata-",
+   "grc:hodos"
+  ]
+ },
+ "CAVALLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CAVORT": {
+  "components": [
+   "cauvaut"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CAW": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CENTUPLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHALLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHARLIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHARQUI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHAUVINIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHEDDAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHEDDITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHEEP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CHERT": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "CHIRR": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CHITCHAT": {
+  "components": [
+   "chat"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CHLORALOSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHLORDANE": {
+  "components": [
+   "chlor",
+   "dane"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CHLOROSIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CHRISTIE": {
+  "components": [
+   "christiania"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CHROMATE": {
+  "components": [
+   "chrome"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:chrôme",
+   "fr:-ate"
+  ]
+ },
+ "CHUNTER": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CINEOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CITRATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CITRICULTURE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CLANK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CLARO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:claro",
+   "la:clarus"
+  ]
+ },
+ "CLASH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CLIOMETRIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CLOBBER": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "CLONK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CLUNK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "COARSE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:cors",
+   "enm:course"
+  ]
+ },
+ "COCKBILL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COCKNEY": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:cokeney",
+   "enm:coken",
+   "enm:cok",
+   "enm:ey",
+   "ang:ǣg"
+  ]
+ },
+ "COELENTERATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:koilos",
+   "grc:enteron"
+  ]
+ },
+ "COEMPT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COMMUTATE": {
+  "components": [
+   "commutation"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CONSIDERATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CONTRALTO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "it:contra-",
+   "it:alto"
+  ]
+ },
+ "CONVERTIPLANE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COPACETIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COPREMIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COPYEDIT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CORNBRAID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COSH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "COVELLITE": {
+  "components": [],
+  "flags": [
+   "from:it"
+  ],
+  "roots": [
+   "fr:covelline",
+   "fr:covelli"
+  ]
+ },
+ "COWFLOP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CRAUNCH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "CRAWDAD": {
+  "components": [
+   "crawfish"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CRIMINI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CRISSUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CROCEIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CROZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CRUNCH": {
+  "components": [
+   "craunch"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "CRYPTOCOCCUS": {
+  "components": [
+   "crypto"
+  ],
+  "flags": [],
+  "roots": [
+   "la-new:crypto-",
+   "la-new:-coccus"
+  ]
+ },
+ "CULCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CURASSOW": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CUSHAW": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "CYANAMIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CYBERNATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "CYCLOID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:cycloïde",
+   "grc:kykloeidēs",
+   "grc:kyklos"
+  ]
+ },
+ "CYMBIDIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:kýmbē",
+   "grc:-idion"
+  ]
+ },
+ "CYSTEINE": {
+  "components": [
+   "cystine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "DAIKER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DANDLE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "DARB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DATTO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DAUNDER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DAWT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DEAMINIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DEFILADE": {
+  "components": [
+   "enfilade"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "DEMARCATE": {
+  "components": [
+   "demarcation"
+  ],
+  "flags": [],
+  "roots": [
+   "es:demarcación",
+   "es:demarcar",
+   "es:de-",
+   "es:marcar",
+   "it:marcare",
+   "goh:marha"
+  ]
+ },
+ "DEMERARA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DEMIVOLT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DESECRATE": {
+  "components": [
+   "consecrate"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "DETOX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DETRUDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DEVEL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DEXTRAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DEXTRIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:dextrine",
+   "fr:dextr-"
+  ]
+ },
+ "DIAMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DIAZOTIZE": {
+  "components": [
+   "azote"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "DIB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DICLINY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DICOUMAROL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DICTY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DILLYDALLY": {
+  "components": [
+   "dally"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "DINGBAT": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "DINGDONG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DINK": {
+  "components": [
+   "double",
+   "income",
+   "kids"
+  ],
+  "flags": [
+   "from:vi",
+   "imitative"
+  ],
+  "roots": []
+ },
+ "DIOECIOUS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:dioecia",
+   "grc:di-",
+   "grc:oîkos",
+   "la-new:-ia"
+  ]
+ },
+ "DIOXANE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DIPNET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DOCKET": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:doggette"
+  ]
+ },
+ "DOLLOP": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "DOMICILIATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:domicilium"
+  ]
+ },
+ "DOMINICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DONNIKER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DOODAD": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "DOSIMETRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DOWDY": {
+  "components": [
+   "dowd"
+  ],
+  "flags": [
+   "unknown"
+  ],
+  "roots": [
+   "enm:doude"
+  ]
+ },
+ "DRAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DROPFORGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DROPKICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DRUMBLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DUH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DUNCE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DUNITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "DWEEB": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "ECDYSONE": {
+  "components": [
+   "ecdysis",
+   "hormone"
+  ],
+  "flags": [],
+  "roots": [
+   "de:ecdyson",
+   "de:ecdysis",
+   "de:-on",
+   "de:hormon"
+  ]
+ },
+ "ECTOMERE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EDUCT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ELATERIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ELUENT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ELUVIATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EMBRANGLE": {
+  "components": [
+   "brangle"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ENDOCARDIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "ENDOCYTOSIS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:end-",
+   "la-new:-cytosis",
+   "la-new:phagocytosis"
+  ]
+ },
+ "ENGLISH": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": [
+   "ang:englisc",
+   "ang:engle"
+  ]
+ },
+ "ENTAMEBA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ENTOZOON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EPINEPHRIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EPITAXY": {
+  "components": [
+   "epi"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:épitaxie",
+   "fr:épi-",
+   "grc:táxis",
+   "fr:-ie"
+  ]
+ },
+ "EPIZOOTIOLOGY": {
+  "components": [
+   "epizoot",
+   "epidemiology"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "EREMURUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:erēmos",
+   "grc:oura"
+  ]
+ },
+ "ERYTHRISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ESCALATE": {
+  "components": [
+   "escalator"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ESCOT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "xno:escoter",
+   "xno:escot",
+   "non:skot"
+  ]
+ },
+ "ESTIVATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ESTRONE": {
+  "components": [
+   "estrane"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ESTROUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ETH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ETHOXY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EUGLENID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EUONYMUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:euonymos",
+   "grc:euōnymos",
+   "grc:eu-",
+   "grc:onyma"
+  ]
+ },
+ "EUROKY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EUTHENICS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:euthenein"
+  ]
+ },
+ "EVENTUATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EVULSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EXERTION": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "EXOPHTHALMOS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:exophthalmos",
+   "grc:ex",
+   "grc:ophthalmos"
+  ]
+ },
+ "EYAS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:a neias",
+   "enm:neias",
+   "xno:niais",
+   "la-vul:nidax",
+   "la:nidus"
+  ]
+ },
+ "FARADIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FEATHERBRAIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FEATHEREDGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FEDERATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:foederatus",
+   "la:foedus"
+  ]
+ },
+ "FEDEX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FIELDSTRIP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FILIATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FILISTER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FIZZ": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "FLARE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "FLETCH": {
+  "components": [
+   "fletcher"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "FLIMFLAM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "non:flim"
+  ]
+ },
+ "FLIMSY": {
+  "components": [
+   "film",
+   "tricksy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "FLIPFLOP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FLIRT": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "FLOOZIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FLORICULTURE": {
+  "components": [
+   "flori",
+   "horticulture"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "FLOWCHART": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FLUB": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "FLUMMOX": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "FLUMP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "FLUOROSIS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "FLURRY": {
+  "components": [
+   "flurr"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "FOLDEROL": {
+  "components": [
+   "fol-de-rol"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "FOOZLE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:fuseln"
+  ]
+ },
+ "FOSSICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FOZY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FRAG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FRIBBLE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "FRONTPAGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FROUZY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FRUG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FULHAM": {
+  "components": [
+   "fullan",
+   "full",
+   "one"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "FUMARATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FURBELOW": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:farbella"
+  ]
+ },
+ "FUSSBUDGET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "FUTHORC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GABBART": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GAE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GANISTER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GASTREA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GAWP": {
+  "components": [
+   "galp"
+  ],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": []
+ },
+ "GELANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GELATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GELSEMIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GHETTO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "it:ghèto",
+   "it:ghetàr",
+   "la:jactare"
+  ]
+ },
+ "GIDDYUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIFTWRAP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIMCRACK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "GIMME": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIMMICK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "GINGILI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIZMO": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "GLOP": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "GLOUT": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": []
+ },
+ "GLUCURONIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLUG": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "GLUTAMINE": {
+  "components": [
+   "gluten",
+   "amine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "GLYCAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOBBLEDYGOOK": {
+  "components": [
+   "gobble"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "GOLIARD": {
+  "components": [],
+  "flags": [
+   "from:frm"
+  ],
+  "roots": []
+ },
+ "GOWAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:gollan"
+  ]
+ },
+ "GRADIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRANOPHYRE": {
+  "components": [
+   "grano"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:-phyre",
+   "fr:porphyre"
+  ]
+ },
+ "GRAPH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRECIANIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRECIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GREENLIGHT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GROK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRUMPHIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUACHARO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:guácharo"
+  ]
+ },
+ "GUFFAW": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "GYRON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAFFET": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": [
+   "sco:halfheid",
+   "enm:half",
+   "enm:hed"
+  ]
+ },
+ "HAFTARAH": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "he:haphṭārāh"
+  ]
+ },
+ "HAGGADIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANDICAP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARUMPH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAWKSBILL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAWKSHAW": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEADHUNT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEEHAW": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEIST": {
+  "components": [
+   "hoist"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HELIAC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HELILIFT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HELLDIVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMOSTAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEPATICA": {
+  "components": [],
+  "flags": [
+   "from:la-med",
+   "from:la-new"
+  ],
+  "roots": [
+   "la:hepaticus"
+  ]
+ },
+ "HEPATIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HERMAPHRODITE": {
+  "components": [
+   "hermaphroditus"
+  ],
+  "flags": [],
+  "roots": [
+   "enm:hermofrodite",
+   "la:hermaphrodītus",
+   "grc:hermaphródītos"
+  ]
+ },
+ "HESPERIDIUM": {
+  "components": [
+   "hesperides"
+  ],
+  "flags": [],
+  "roots": [
+   "la-new:hesperid-",
+   "la-new:citrus",
+   "la:hesperid-",
+   "la:hesperides",
+   "la:-idium"
+  ]
+ },
+ "HICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIGHFLIER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIRSEL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOBNOB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOBO": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HOCUS": {
+  "components": [
+   "hocus-pocus"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HOGTIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOICK": {
+  "components": [
+   "hike"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HONDLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HORNSWOGGLE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HOWDY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOWK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HUB": {
+  "components": [
+   "hob"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HUMPH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "HUZZAH": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HYMENOPTERON": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:hymenopteros"
+  ]
+ },
+ "HYPERESTHESIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:hyper-",
+   "la-new:-esthesia",
+   "la-new:anesthesia"
+  ]
+ },
+ "HYPERMNESIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:hyper-",
+   "la-new:-mnesia",
+   "la-new:amnesia"
+  ]
+ },
+ "HYPEROPIA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "HYPERSTHENE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:hypersthène",
+   "grc:hyper-",
+   "grc:sthenos"
+  ]
+ },
+ "ICECAP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ILLITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ILLUSTRATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:illustratus",
+   "la:illustrare",
+   "la:in-",
+   "la:lustrare"
+  ]
+ },
+ "ILLUVIATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IMIDE": {
+  "components": [
+   "amide"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:amide"
+  ]
+ },
+ "INDAMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INDEMNIFY": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:indemnis",
+   "la:in-",
+   "la:damnum"
+  ]
+ },
+ "INDURATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:induratus",
+   "la:indurare",
+   "la:in-",
+   "la:durare",
+   "la:durus"
+  ]
+ },
+ "INTITULE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:intitulen"
+  ]
+ },
+ "INTROFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IODIZE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:iode"
+  ]
+ },
+ "IONOSPHERE": {
+  "components": [
+   "ion"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "IONTOPHORESIS": {
+  "components": [
+   "ion"
+  ],
+  "flags": [],
+  "roots": [
+   "de:iontophorese",
+   "de:ionto-",
+   "de:ion",
+   "grc:iṓn",
+   "grc:iénai",
+   "grc:-phorese"
+  ]
+ },
+ "IRRADIANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IRREDENTIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISATIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISOPHOTE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:phōs"
+  ]
+ },
+ "ITALIANATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ITALIANISE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ITALICIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACKAROO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACKKNIFE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACKROLL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACULATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JALOP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JAPAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JAUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JAZZ": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "JIFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JILT": {
+  "components": [
+   "jillet"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "JIMP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JINGAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JINK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "JINRIKSHA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JOHN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-lat:johannes",
+   "grc:iōannēs",
+   "he:yōhānān"
+  ]
+ },
+ "JONES": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JOSH": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "JUDDER": {
+  "components": [
+   "shudder"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "JUDGMATIC": {
+  "components": [
+   "judge",
+   "dogmatic",
+   "judgment"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "JUDO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:jūdō",
+   "ja:jū",
+   "ja:dō"
+  ]
+ },
+ "KABBALAH": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-med:cabbala"
+  ]
+ },
+ "KABBALIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KAISER": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": [
+   "non:keisari",
+   "goh:keisur",
+   "la:caesar"
+  ]
+ },
+ "KALSOMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KAON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KARAKUL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KARYOTIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KATHODE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KAZOO": {
+  "components": [],
+  "flags": [
+   "imitative",
+   "unknown"
+  ],
+  "roots": []
+ },
+ "KEISTER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KETOSE": {
+  "components": [
+   "ketone"
+  ],
+  "flags": [],
+  "roots": [
+   "de:ketose",
+   "de:keton",
+   "de:-ose"
+  ]
+ },
+ "KHAF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KILLDEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KILLOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNUBBY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LABIATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:labiatus",
+   "la:labium"
+  ]
+ },
+ "LACTEAL": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:lacteus",
+   "la:lac"
+  ]
+ },
+ "LAG": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": [
+   "no:lagga",
+   "non:lǫgg"
+  ]
+ },
+ "LALL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LALLYGAG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LANGRAGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LARRUP": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "LATHYRISM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:lathyrisme",
+   "la-new:lathyrus",
+   "la-lat:lathyrus sativus",
+   "grc:láthyros",
+   "fr:-isme"
+  ]
+ },
+ "LEGITIMIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEOTARD": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": []
+ },
+ "LEUKOPLAKIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:leuk-",
+   "grc:plax"
+  ]
+ },
+ "LILLIPUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOBSCOUSE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "LOBSTICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOCUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOLLOP": {
+  "components": [
+   "loll",
+   "gallop"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "LOMENTUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LONGJUMP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOPSIDED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOWBALL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOWERCASE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LUDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LUMINISM": {
+  "components": [
+   "lumin"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "LUNCHEON": {
+  "components": [
+   "nuncheon"
+  ],
+  "flags": [],
+  "roots": [
+   "enm:nonshench",
+   "enm:non",
+   "enm:schench"
+  ]
+ },
+ "LUTEUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MACCABOY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MACINTOSH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAFFICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAHJONG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAMELUKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MANGABY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MANORIAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MARGENT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MARTENSITE": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": []
+ },
+ "MEATUS": {
+  "components": [],
+  "flags": [
+   "from:la-lat"
+  ],
+  "roots": [
+   "la:meare"
+  ]
+ },
+ "MECHANIZE": {
+  "components": [
+   "mechan"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MEDUSA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MEGASS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MEGILP": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "MELANITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:melanit",
+   "grc:melan-",
+   "grc:mélās",
+   "de:-it"
+  ]
+ },
+ "MEMORIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MESOGLEA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:mes-",
+   "grc-koi:gloia"
+  ]
+ },
+ "METACARPUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "METASOMATISM": {
+  "components": [
+   "metasomatic"
+  ],
+  "flags": [],
+  "roots": [
+   "de:metasomatisch",
+   "grc:meta-",
+   "grc:sōma"
+  ]
+ },
+ "MHO": {
+  "components": [
+   "ohm"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MIAUL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MICRIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MIFF": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "MIKRON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MILIARIA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:miliarius"
+  ]
+ },
+ "MIMEO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MIOTIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MIRANDIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MOLAL": {
+  "components": [
+   "mole"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MONOECY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MOSH": {
+  "components": [
+   "mash",
+   "mush"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MOTONEURON": {
+  "components": [
+   "motor",
+   "neuron"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MOVIOLA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUCIN": {
+  "components": [
+   "muc"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MUMP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MURRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MURRE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "MYCORRHIZA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:myc-",
+   "grc:rhiza"
+  ]
+ },
+ "NARCEINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NATTER": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "NAZI": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:nationalsozialist",
+   "de:national",
+   "de:sozialist"
+  ]
+ },
+ "NEARSIGHTED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NELLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIDATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIFFER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIFTY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "NIGRIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NOB": {
+  "components": [
+   "knob"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "NUB": {
+  "components": [
+   "knub"
+  ],
+  "flags": [],
+  "roots": [
+   "nds:knubbe"
+  ]
+ },
+ "NUCLEATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-lat:nucleatus",
+   "la-lat:nucleare",
+   "la:nucleus"
+  ]
+ },
+ "NUMB": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:nomme",
+   "enm:nimen"
+  ]
+ },
+ "OBSECRATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OCTAD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ODORANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OGHAM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ga:ogham",
+   "mga:ogom"
+  ]
+ },
+ "OINK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "OLOGY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ONANISM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:onanismus",
+   "la-new:onan"
+  ]
+ },
+ "ONERY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ONIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OOH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OPENMOUTHED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OPSONIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ORPHIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ORTHOTIC": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:orthosis"
+  ]
+ },
+ "OSMOLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OSMOTIC": {
+  "components": [
+   "osmose",
+   "osm"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "OSTOMY": {
+  "components": [
+   "colostomy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "OZOCERITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PADDYWACK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAIK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PALPUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:palpare"
+  ]
+ },
+ "PANFRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PANJANDRUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARADROP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARATACTIC": {
+  "components": [
+   "para",
+   "parataxis"
+  ],
+  "flags": [],
+  "roots": [
+   "de:parataktisch",
+   "fr:paratactique"
+  ]
+ },
+ "PARFLECHE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:parflèche",
+   "fr:parer",
+   "fr:flèche"
+  ]
+ },
+ "PARFOCAL": {
+  "components": [
+   "focal"
+  ],
+  "flags": [],
+  "roots": [
+   "la:par"
+  ]
+ },
+ "PARVOLINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAWKY": {
+  "components": [
+   "pawk"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PEART": {
+  "components": [
+   "pert"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PEAVY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PECTIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEEWIT": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "PEPTIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PERDURE": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": [
+   "xno:pardurer",
+   "la:perdurare"
+  ]
+ },
+ "PERIPHYTON": {
+  "components": [
+   "peri",
+   "plankton"
+  ],
+  "flags": [],
+  "roots": [
+   "ru:perifitón",
+   "grc:períphyton",
+   "grc:períphytos",
+   "grc:periphýesthai",
+   "grc:peri-",
+   "grc:phýesthai",
+   "grc:phýein",
+   "ru:planktón"
+  ]
+ },
+ "PEROXISOME": {
+  "components": [
+   "peroxide"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PHAT": {
+  "components": [
+   "fat"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PHENAKITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:phenakit",
+   "grc:phenax"
+  ]
+ },
+ "PHENAZIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHILISTINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHONATE": {
+  "components": [
+   "phonation"
+  ],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "grc:phōnḗ",
+   "fr:-ation"
+  ]
+ },
+ "PHOSPHIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHOSPHINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHOTIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHOTOPIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHYLESIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHYLETIC": {
+  "components": [
+   "phyl",
+   "genetic"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PIAFFE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PICOLINE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:pix"
+  ]
+ },
+ "PICOWAVE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIEDFORT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PITAPAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIZZAZZ": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "PLAYACT": {
+  "components": [
+   "playacting"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PLIMSOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLINK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "PLOP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "PLOSION": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLUTON": {
+  "components": [
+   "plutonic"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POLARIMETER": {
+  "components": [
+   "polarization"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POLAROGRAPHY": {
+  "components": [
+   "polarization"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POLYCHOTOMY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POOF": {
+  "components": [
+   "puff"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POTHER": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "POUSSETTE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:pousser"
+  ]
+ },
+ "PREEMPT": {
+  "components": [
+   "preemption"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PRENTICE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:prentis",
+   "enm:apprentis"
+  ]
+ },
+ "PRIG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PRINCOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROLAMIN": {
+  "components": [
+   "proline",
+   "ammonia"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PROSECT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PRUSSIANISE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PSHAW": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PTERIN": {
+  "components": [
+   "pter"
+  ],
+  "flags": [],
+  "roots": [
+   "grc:pteron"
+  ]
+ },
+ "PUNJI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PURLIN": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "PURTY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PURULENCE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PYRANOSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "QINTAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RADAR": {
+  "components": [
+   "radio",
+   "detecting",
+   "and",
+   "ranging"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "RAKEHELL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RAMILIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RAMPIKE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "RATAPLAN": {
+  "components": [],
+  "flags": [
+   "from:fr",
+   "imitative"
+  ],
+  "roots": []
+ },
+ "RAUNCH": {
+  "components": [
+   "raunchy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "RAZZ": {
+  "components": [
+   "razzberry",
+   "raspberry"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "RAZZMATAZZ": {
+  "components": [
+   "razzle-dazzle"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "RECRUDESCE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:recrudescere",
+   "la:re-",
+   "la:crudescere",
+   "la:crudus"
+  ]
+ },
+ "RECRUIT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:recrute",
+   "frm:recroistre",
+   "la:recrescere",
+   "la:re-",
+   "la:crescere"
+  ]
+ },
+ "REDIA": {
+  "components": [],
+  "flags": [
+   "from:it"
+  ],
+  "roots": [
+   "la-new:redi"
+  ]
+ },
+ "REECHY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "REFECT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:refectus",
+   "la:reficere"
+  ]
+ },
+ "RELUMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RENIG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RHIZOBIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:rhiz-",
+   "grc:bios"
+  ]
+ },
+ "RHIZOPUS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:rhiz-",
+   "grc:pous"
+  ]
+ },
+ "RICKRACK": {
+  "components": [
+   "rack"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "RIGMAROLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RIPRAP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RITZ": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ROMAN": {
+  "components": [],
+  "flags": [
+   "from:ang",
+   "from:enm",
+   "from:fr",
+   "from:xno"
+  ],
+  "roots": [
+   "la:romanus",
+   "la:roma",
+   "enm:romain",
+   "fro:romans"
+  ]
+ },
+ "ROORBACH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ROQUET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RUBEOLA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:rubeolus",
+   "la:rubeus"
+  ]
+ },
+ "RUNT": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "RUSSIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "RUTHENIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la-med:ruthenia"
+  ]
+ },
+ "SACAHUISTA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SACCHARIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SAFRANIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SAFROLE": {
+  "components": [
+   "safras"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SAGGAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SALIMETER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SALMONELLA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:salmon"
+  ]
+ },
+ "SAMARSKITE": {
+  "components": [],
+  "flags": [
+   "from:ru"
+  ],
+  "roots": [
+   "de:samarskit",
+   "de:samarskiĭ"
+  ]
+ },
+ "SAMEKH": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "he:sāmekh"
+  ]
+ },
+ "SAPPHIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SASSYWOOD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SATURNALIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:saturnalis",
+   "la:saturnus"
+  ]
+ },
+ "SCARLATINA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la-med:scarlata"
+  ]
+ },
+ "SCOTOPIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SCOUNDREL": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SCRAG": {
+  "components": [
+   "crag"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SCREAK": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "non:skrækja"
+  ]
+ },
+ "SCRIEVE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "non:skrefa"
+  ]
+ },
+ "SCRIMMAGE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:scrymmage",
+   "enm:skyrmissh"
+  ]
+ },
+ "SCRIVE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SCROGGY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SCROOCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SCROOP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SCROUGE": {
+  "components": [
+   "scruze"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SCROUNGE": {
+  "components": [
+   "scrunge"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SCRUFF": {
+  "components": [
+   "scuff",
+   "scruffy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SCUBA": {
+  "components": [
+   "self",
+   "contained",
+   "underwater",
+   "breathing",
+   "apparatus"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SEAWAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SEESAW": {
+  "components": [
+   "saw"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SEQUESTRUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:sequester"
+  ]
+ },
+ "SERENDIPITY": {
+  "components": [],
+  "flags": [
+   "from:ar",
+   "from:fa"
+  ],
+  "roots": [
+   "fa:the three princes of serendip"
+  ]
+ },
+ "SEROSA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:serōsa",
+   "la-new:membrāna serōsa"
+  ]
+ },
+ "SHAUL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SHIATSU": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:shiatsu-ryōhō",
+   "ja:shi-",
+   "ja:-atsu",
+   "ja:ryōhō"
+  ]
+ },
+ "SHIGELLA": {
+  "components": [],
+  "flags": [
+   "from:ja"
+  ],
+  "roots": [
+   "la-new:shiga"
+  ]
+ },
+ "SHINLEAF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SHIRR": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SHUFFLE": {
+  "components": [
+   "shove"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SIALID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SILKALINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SIMONIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SINICIZE": {
+  "components": [],
+  "flags": [
+   "from:zh"
+  ],
+  "roots": [
+   "la-med:sinicus",
+   "la-lat:sinae"
+  ]
+ },
+ "SKANK": {
+  "components": [
+   "shank"
+  ],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SKELTER": {
+  "components": [
+   "helter-skelter"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SKIBOB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SKIDOO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SKIMP": {
+  "components": [
+   "scrimp"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SKIRR": {
+  "components": [
+   "scour"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SKIVVY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SKREEGH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SLAMDANCE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SLATHER": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SLEAVE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:sleven",
+   "ang:-slǣfan"
+  ]
+ },
+ "SLEAZE": {
+  "components": [
+   "sleazy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SLIPSHEET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SLOSH": {
+  "components": [
+   "slop",
+   "slush"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SLUB": {
+  "components": [
+   "slubbing"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SLUM": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SLUMP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "SLURB": {
+  "components": [
+   "slovenly",
+   "urb"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SMALTITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SMARM": {
+  "components": [
+   "smarmy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SNAFU": {
+  "components": [
+   "situation",
+   "normal",
+   "all",
+   "fucked",
+   "fouled"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SNIGGER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SNOG": {
+  "components": [
+   "snug",
+   "snugg",
+   "snuggle"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SNOOZE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SOCMAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SOFAR": {
+  "components": [
+   "sound",
+   "fixing",
+   "and",
+   "ranging"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SOLAND": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SOLANINE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:solanine",
+   "la:solanum"
+  ]
+ },
+ "SOLVATE": {
+  "components": [
+   "solvent"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SOLVOLYSIS": {
+  "components": [
+   "solvent"
+  ],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la-new:-lysis"
+  ]
+ },
+ "SOMBER": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:sombre"
+  ]
+ },
+ "SOUCAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPAM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPEIL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPESSARTINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPIFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPLODGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPLOSH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SPLUTTER": {
+  "components": [
+   "sputter"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SPOOF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SQUAWK": {
+  "components": [
+   "squall",
+   "squeak"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SQUEAK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": [
+   "enm:squeken"
+  ]
+ },
+ "SQUEEGEE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SQUEG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SQUIB": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SQUIFFY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SQUILGEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SQUIRM": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "STANDOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STANDPAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STEEVE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": [
+   "es:estibar",
+   "pt:estivar",
+   "la:stipare"
+  ]
+ },
+ "STENOBATH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STOCKINET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STODGE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "STOGIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STRADDLE": {
+  "components": [
+   "stride"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "STRAITLACED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STREEK": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:streken",
+   "ang:streccan"
+  ]
+ },
+ "STRINGHALT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STRONTIUM": {
+  "components": [
+   "strontian"
+  ],
+  "flags": [],
+  "roots": [
+   "la-new:strontia"
+  ]
+ },
+ "STROUD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "STRUNT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SUBINFEUD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SUDATORIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:sudare"
+  ]
+ },
+ "SULFONATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SUMO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:sumō"
+  ]
+ },
+ "SURVEIL": {
+  "components": [
+   "surveillance"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "SWANK": {
+  "components": [],
+  "flags": [
+   "from:gml"
+  ],
+  "roots": [
+   "gmh:swanken",
+   "dum:swanc",
+   "goh:swingan"
+  ]
+ },
+ "SWASH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "SWIG": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SWIPPLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SWISH": {
+  "components": [],
+  "flags": [
+   "imitative",
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SWIZZLE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SWOOSH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "SYLLABUB": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "SYLVIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SYLVITE": {
+  "components": [
+   "sylvine"
+  ],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "la-new:sal digestivus sylvii",
+   "la-new:sylvius"
+  ]
+ },
+ "SYNGAS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "SYNKARYON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TAFIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TAGMEME": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TAKEOVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TARLATAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:tarlatane"
+  ]
+ },
+ "TAWDRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TAXEME": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TAXITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TEARGAS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TEETER": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:titeren",
+   "goh:zittarōn"
+  ]
+ },
+ "TEUGH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TEUTONIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "THIONINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "THUMP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "THYROTROPIN": {
+  "components": [
+   "thyrotrop",
+   "thyrotroph"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "THYROXINE": {
+  "components": [
+   "thyroxin",
+   "thyro-oxy-indol",
+   "thyro",
+   "oxy",
+   "indole"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TICKTACK": {
+  "components": [
+   "tick"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TICKTOCK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "TIFFIN": {
+  "components": [
+   "tiffing",
+   "tiff"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TIMPANUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TITAN": {
+  "components": [],
+  "flags": [
+   "from:grc"
+  ],
+  "roots": []
+ },
+ "TITIVATE": {
+  "components": [
+   "tidy",
+   "vate"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TITTUP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "TOIT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TOLIDINE": {
+  "components": [
+   "tol"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TOLUOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TONETIC": {
+  "components": [
+   "tone",
+   "phonetic"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TOPLOFTY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TOROID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:torus"
+  ]
+ },
+ "TOXOPLASMA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "TRANSFECT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TRAPEZIUS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:trapezium"
+  ]
+ },
+ "TRAPNEST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TREMOLITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:trémolite",
+   "fr:tremola"
+  ]
+ },
+ "TREPONEMA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:treponema",
+   "grc:trepein",
+   "grc:nēma",
+   "grc:nēn"
+  ]
+ },
+ "TRICHOMONAD": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:trichomonas",
+   "la-new:trich-",
+   "la-lat:monas"
+  ]
+ },
+ "TRIPTAN": {
+  "components": [
+   "sumatriptan"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TROPAEOLUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TSADE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TSK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TSKTSK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TUBIFICID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:tubificidae",
+   "la-new:tubifex"
+  ]
+ },
+ "TUMP": {
+  "components": [
+   "tumpoke"
+  ],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "TURACO": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "TURFSKI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TURGESCENT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:turgescens",
+   "la:turgescere",
+   "la:turgēre"
+  ]
+ },
+ "TUSSLE": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": [
+   "sco:tussillen",
+   "enm:-tusen"
+  ]
+ },
+ "TUXEDO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TWADDLE": {
+  "components": [
+   "twattle"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "TWANG": {
+  "components": [
+   "tang"
+  ],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "TYPIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "TYROCIDINE": {
+  "components": [
+   "tyrothricin",
+   "cidin"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "UNITARY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "URALITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "URANIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "URANITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "URANIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:uranus"
+  ]
+ },
+ "URATE": {
+  "components": [
+   "uric"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:urique"
+  ]
+ },
+ "UREDIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "UREOTELISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "URICOTELISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "URP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VACCINIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:vaccina",
+   "la-new:variolae vaccinae",
+   "la-new:-ia"
+  ]
+ },
+ "VANDAL": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-lat:vandalī",
+   "la:vindilī",
+   "la:wand-il-",
+   "la:wend-",
+   "ang:windan",
+   "ang:auza-wandil-",
+   "non:aurvandill",
+   "ang:ēarendel"
+  ]
+ },
+ "VANDYKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VEG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VENOSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VENULE": {
+  "components": [
+   "vein"
+  ],
+  "flags": [],
+  "roots": [
+   "la:vēnula",
+   "la:vēna",
+   "la:-ula"
+  ]
+ },
+ "VERATRINE": {
+  "components": [
+   "veratrum"
+  ],
+  "flags": [],
+  "roots": [
+   "fr:vératrine",
+   "la-new:veratrum",
+   "la-new:-ine"
+  ]
+ },
+ "VERSINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VESICATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VESUVIAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VIBE": {
+  "components": [
+   "vibration",
+   "vibraphone"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "VIBRAHARP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VIBRIO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:vibrio",
+   "la:vibrare"
+  ]
+ },
+ "VISARD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "VOLPLANE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:vol plané"
+  ]
+ },
+ "VULCANIZE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:vulcanus"
+  ]
+ },
+ "WAFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WAKANDA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WAMBLE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:wamlen",
+   "da:vamle",
+   "la:vomere"
+  ]
+ },
+ "WAMPISH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WAMUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WANK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "WATERSKI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WAUCHT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WEEWEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WEIGELA": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": [
+   "la-new:weigel"
+  ]
+ },
+ "WHAM": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "WHAP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WHEEP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WHICKER": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "WHIMS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WHODUNIT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WHOOSH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "WHOSIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WHUMP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "WHYDAH": {
+  "components": [
+   "widow"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "WICOPY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WIDDLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "WIDDY": {
+  "components": [],
+  "flags": [
+   "from:enm",
+   "from:sco"
+  ],
+  "roots": [
+   "enm:withy"
+  ]
+ },
+ "WIFTY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "WILLIWAW": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "WIMP": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "WINTERFEED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "XYLIDINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YAFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YAHOO": {
+  "components": [
+   "yo-ho"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "YAPOK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YATTER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YECH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YIRR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YOB": {
+  "components": [
+   "boy"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "YOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YUCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "YUPPIE": {
+  "components": [
+   "young",
+   "urban",
+   "professional"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ZAMARRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ZAP": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "ZIBET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ZILLION": {
+  "components": [
+   "million"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "ZING": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "ZINKIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ZIP": {
+  "components": [
+   "zipper"
+  ],
+  "flags": [
+   "imitative",
+   "unknown"
+  ],
+  "roots": []
+ },
+ "ZIZZLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ZOMBIE": {
+  "components": [
+   "zonbi"
+  ],
+  "flags": [],
+  "roots": [
+   "bnt-pro:nzúmbe"
+  ]
+ },
+ "ZONK": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "ZOOTY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ }
+}

@@ -591,6 +591,10 @@ NOISE_AFFIXES = {
     # Old English inflectional endings, reached through the page for -s.
     # Not 'eth': that is the prefix of ETHYLENE.
     'as','eþ',
+    # Latin noun-forming and diminutive suffixes, and taxonomic ranks, as
+    # Merriam-Webster spells out word formation: vēna + -ula
+    'ula','ule','ulus','ulum','culus','cule','ix','ellus','ella','etum',
+    'arium','orium','itas','tas','ura','mentum','idae','inae','aceae','ales',
 }
 
 
@@ -972,6 +976,9 @@ def build_etymology_dict(scan, scrabble_words, use_derived=True, use_definitions
             if targets:
                 links[word] = {'kind': fallback.get(key, 'stated'), 'targets': targets}
 
+    # Drop affix-only entries first: URANIUM's parse gave only -ium, and
+    # while that entry stood the word looked covered and Merriam-Webster's
+    # Uranus was skipped. The merge filters its own affixes.
     etymology_dict = drop_noisy_affixes(etymology_dict)
     sources = merge_merriam_webster(etymology_dict, scrabble_words, flags)
 
@@ -1024,24 +1031,33 @@ def merge_merriam_webster(etymology_dict, scrabble_words, flags):
     with open(MW_PATH, encoding='utf-8') as f:
         looked_up = json.load(f)
     filled = {}
-    for word in sorted(looked_up):
-        if word not in scrabble_words or word in etymology_dict:
-            continue
-        entry = looked_up[word]
-        roots = set()
-        for root in entry.get('roots', []):
-            lang, _, form = root.partition(':')
-            if valid_lang(lang) and valid_root(form):
-                roots.add(f"{ROOT_LANGUAGES.get(lang, lang)}:{form}")
-        for component in entry.get('components', []):
-            roots.update(etymology_dict.get(component.upper(), []))
-        roots = {r for r in roots if not r.endswith(':-')}
-        if roots:
-            etymology_dict[word] = sorted(roots)
-            filled[word] = {'rule': MW_RULE, 'base': word}
-        elif entry.get('flags'):
-            # nothing better than Wiktionary's own marker, if it had one
-            flags.setdefault(word.lower(), set()).update(entry['flags'])
+    # Repeat until nothing new fills: ALDOSE's component is ALDEHYDE, which
+    # may itself have just been filled from the same file.
+    while True:
+        added = 0
+        for word in sorted(looked_up):
+            if word not in scrabble_words or word in etymology_dict:
+                continue
+            entry = looked_up[word]
+            roots = set()
+            for root in entry.get('roots', []):
+                lang, _, form = root.partition(':')
+                if valid_lang(lang) and valid_root(form):
+                    roots.add(f"{ROOT_LANGUAGES.get(lang, lang)}:{form}")
+            for component in entry.get('components', []):
+                roots.update(etymology_dict.get(component.upper(), []))
+            # the same affix filter the parse gets, so vēna + -ula keeps vēna
+            roots = {r for r in roots if not r.endswith(':-')
+                     and not (is_affix_root(r) and affix_key(r) in NOISE_AFFIXES)}
+            if roots:
+                etymology_dict[word] = sorted(roots)
+                filled[word] = {'rule': MW_RULE, 'base': word}
+                added += 1
+            elif entry.get('flags') and word.lower() not in flags:
+                # nothing better than Wiktionary's own marker, if it had one
+                flags[word.lower()] = set(entry['flags'])
+        if not added:
+            break
     print(f"Filled {len(filled)} words from Merriam-Webster")
     return filled
 
