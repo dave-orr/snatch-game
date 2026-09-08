@@ -38,7 +38,7 @@ is deterministic.
 | `prefix_pair_review.json` | hand-checked verdicts for the root pairs `etymology.js` matches by prefix |
 
 Coverage as built: 170,788 of 178,691 words (95.6%), of which 162,307 parsed
-from Wiktionary, 531 filled from Merriam-Webster and 7,922 propagated. 753 of
+from Wiktionary, 531 filled from Merriam-Webster and 7,950 propagated. 753 of
 those carry only a marker (imitative, or a source language with no word)
 rather than a root, so coverage by real roots is 170,035 words, 95.2%. 7,903
 words have nothing.
