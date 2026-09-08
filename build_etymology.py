@@ -595,6 +595,7 @@ NOISE_AFFIXES = {
     # Merriam-Webster spells out word formation: vēna + -ula
     'ula','ule','ulus','ulum','culus','cule','ix','ellus','ella','etum',
     'arium','orium','itas','tas','ura','mentum','idae','inae','aceae','ales',
+    'it',   # German -it, the mineral suffix -ite
 }
 
 

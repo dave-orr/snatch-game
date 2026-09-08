@@ -1,10 +1,10 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (five review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, 7 after the first Merriam-Webster batch)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (six review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, 7 and 9 after the first two Merriam-Webster batches)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 1025,
-  "related": 1016,
+  "reviewed": 1034,
+  "related": 1025,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
@@ -2969,6 +2969,12 @@
   ],
   [
    "french",
+   "dumortier",
+   "dumortierite",
+   true
+  ],
+  [
+   "french",
    "entrain",
    "entrainement",
    true
@@ -3419,6 +3425,24 @@
   ],
   [
    "german",
+   "carnall",
+   "carnallit",
+   true
+  ],
+  [
+   "german",
+   "chondro",
+   "chondroitin",
+   true
+  ],
+  [
+   "german",
+   "chondro",
+   "chondroits",
+   true
+  ],
+  [
+   "german",
    "extravert",
    "extravertiert",
    true
@@ -3601,6 +3625,12 @@
    "gmw-pro",
    "untriuwi",
    "untriuwiþu",
+   true
+  ],
+  [
+   "greek",
+   "katarrhin",
+   "katarrhina",
    true
   ],
   [
@@ -3865,6 +3895,18 @@
    "la-new",
    "andromeda",
    "andromeda polifolia",
+   true
+  ],
+  [
+   "la-new",
+   "cantharellus",
+   "cantharellus cinnabarinus",
+   true
+  ],
+  [
+   "la-new",
+   "ceratops",
+   "ceratopsia",
    true
   ],
   [
@@ -6085,6 +6127,18 @@
    "spanish",
    "barrica",
    "barricada",
+   true
+  ],
+  [
+   "spanish",
+   "bolivia",
+   "boliviano",
+   true
+  ],
+  [
+   "spanish",
+   "gambusino",
+   "gambusinos",
    true
   ],
   [

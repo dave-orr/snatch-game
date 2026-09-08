@@ -10068,6 +10068,9 @@
   "AENEUS": [
     "latin:a\u0113neus"
   ],
+  "AEOLIAN": [
+    "latin:aeolus"
+  ],
   "AEON": [
     "greek:\u03b1\u1f30\u03ce\u03bd",
     "latin:aeon"
@@ -27900,6 +27903,12 @@
     "french:alcali",
     "la-med:alcali"
   ],
+  "ANTARCTIC": [
+    "enm:antartik",
+    "greek:antarktikos",
+    "greek:arktikos",
+    "latin:antarcticus"
+  ],
   "ANTAS": [
     "latin:antae"
   ],
@@ -28358,6 +28367,20 @@
     "greek:\u03c6\u03af\u03bb\u03bf\u03c2",
     "greek:\u1f04\u03bd\u03b8\u03bf\u03c2"
   ],
+  "ANTHOPHYLLITE": [
+    "german:-it",
+    "german:anthophyllit",
+    "greek:antho-",
+    "greek:ph\u00fdllon",
+    "la-new:anthophyllum"
+  ],
+  "ANTHOPHYLLITES": [
+    "german:-it",
+    "german:anthophyllit",
+    "greek:antho-",
+    "greek:ph\u00fdllon",
+    "la-new:anthophyllum"
+  ],
   "ANTHOZOAN": [
     "mul:anthozoa",
     "old_norse:-inn"
@@ -28389,6 +28412,14 @@
   ],
   "ANTHRACITIC": [
     "greek:\u1f00\u03bd\u03b8\u03c1\u03b1\u03ba\u1fd6\u03c4\u03b9\u03c2"
+  ],
+  "ANTHRACNOSE": [
+    "greek:n\u00f3sos",
+    "greek:\u00e1nthrax"
+  ],
+  "ANTHRACNOSES": [
+    "greek:n\u00f3sos",
+    "greek:\u00e1nthrax"
   ],
   "ANTHRAQUINONE": [
     "french:quinine",
@@ -28706,6 +28737,18 @@
     "old_english:bord",
     "old_french:bulle",
     "xno:bille"
+  ],
+  "ANTIBIOSES": [
+    "french:-biose",
+    "french:antibiose",
+    "french:symbiose",
+    "greek:\u03c3\u03c5\u03bc\u03b2\u03af\u03c9\u03c3\u03b9\u03c2"
+  ],
+  "ANTIBIOSIS": [
+    "french:-biose",
+    "french:antibiose",
+    "french:symbiose",
+    "greek:\u03c3\u03c5\u03bc\u03b2\u03af\u03c9\u03c3\u03b9\u03c2"
   ],
   "ANTIBIOTIC": [
     "french:antibiotique"
@@ -29958,6 +30001,20 @@
   "ANTILYNCHING": [
     "enm:linche",
     "old_english:hlin\u010b"
+  ],
+  "ANTIMACASSAR": [
+    "enm:oilen",
+    "enm:oyle",
+    "greek:\u1f14\u03bb\u03b1\u03b9\u03bf\u03bd",
+    "latin:oleum",
+    "xno:olie"
+  ],
+  "ANTIMACASSARS": [
+    "enm:oilen",
+    "enm:oyle",
+    "greek:\u1f14\u03bb\u03b1\u03b9\u03bf\u03bd",
+    "latin:oleum",
+    "xno:olie"
   ],
   "ANTIMACHO": [
     "latin:masculus",
@@ -32095,6 +32152,18 @@
   "ANXIETY": [
     "latin:\u0101nxiet\u0101s"
   ],
+  "ANXIOLYTIC": [
+    "french:-lytique",
+    "french:anxi",
+    "french:anxiolytique",
+    "latin:\u0101nxiet\u0101s"
+  ],
+  "ANXIOLYTICS": [
+    "french:-lytique",
+    "french:anxi",
+    "french:anxiolytique",
+    "latin:\u0101nxiet\u0101s"
+  ],
   "ANXIOUS": [
     "latin:anxius",
     "latin:\u0101nxius"
@@ -33168,6 +33237,14 @@
     "greek:\u03c0\u03bf\u03bb\u03b9\u03c4\u03b9\u03ba\u03cc\u03c2",
     "latin:politicus"
   ],
+  "APOLLO": [
+    "greek:apoll\u014dn",
+    "latin:apollo"
+  ],
+  "APOLLOS": [
+    "greek:apoll\u014dn",
+    "latin:apollo"
+  ],
   "APOLOG": [
     "french:apologue",
     "greek:\u1f00\u03c0\u03cc\u03bb\u03bf\u03b3\u03bf\u03c2",
@@ -33366,6 +33443,14 @@
   ],
   "APOPHYGES": [
     "greek:\u1f00\u03c0\u03bf\u03c6\u03c5\u03b3\u03ae"
+  ],
+  "APOPHYLLITE": [
+    "french:apo-",
+    "greek:phyllon"
+  ],
+  "APOPHYLLITES": [
+    "french:apo-",
+    "greek:phyllon"
   ],
   "APOPHYSEAL": [
     "greek:\u1f00\u03c0\u03cc\u03c6\u03c5\u03c3\u03b9\u03c2"
@@ -35455,6 +35540,14 @@
     "latin:aptus",
     "old_french:apte"
   ],
+  "APYRASE": [
+    "french:phosphate",
+    "german:adenosin"
+  ],
+  "APYRASES": [
+    "french:phosphate",
+    "german:adenosin"
+  ],
   "APYRETIC": [
     "greek:\u03c0\u03c5\u03c1\u03b5\u03c4\u03b9\u03ba\u03cc\u03c2",
     "la-new:pyreticus"
@@ -35842,6 +35935,14 @@
   "ARABIC": [
     "arabic:\u0639\u064e\u0631\u064e\u0628",
     "greek:\u1f00\u03c1\u03b1\u03b2\u03b9\u03ba\u03cc\u03c2",
+    "latin:arabicus"
+  ],
+  "ARABICA": [
+    "la-new:coffea arabica",
+    "latin:arabicus"
+  ],
+  "ARABICAS": [
+    "la-new:coffea arabica",
     "latin:arabicus"
   ],
   "ARABICIZATION": [
@@ -36859,6 +36960,12 @@
     "greek:\u1f00\u03c1\u03c7\u03b9-",
     "greek:\u1f10\u03c0\u03af\u03c3\u03ba\u03bf\u03c0\u03bf\u03c2"
   ],
+  "ARCHIL": [
+    "enm:orchell"
+  ],
+  "ARCHILS": [
+    "enm:orchell"
+  ],
   "ARCHIMANDRITE": [
     "french:archimandrite",
     "greek:\u1f00\u03c1\u03c7\u03b9\u03bc\u03b1\u03bd\u03b4\u03c1\u03af\u03c4\u03b7\u03c2",
@@ -37275,6 +37382,14 @@
     "ml:\u0d05\u0d1f\u0d2f\u0d4d\u0d15\u0d4d\u0d15"
   ],
   "ARECAS": [
+    "dra-pro:a\u1e6d-ay-kk\u0101y",
+    "ml:\u0d05\u0d1f\u0d2f\u0d4d\u0d15\u0d4d\u0d15"
+  ],
+  "ARECOLINE": [
+    "dra-pro:a\u1e6d-ay-kk\u0101y",
+    "ml:\u0d05\u0d1f\u0d2f\u0d4d\u0d15\u0d4d\u0d15"
+  ],
+  "ARECOLINES": [
     "dra-pro:a\u1e6d-ay-kk\u0101y",
     "ml:\u0d05\u0d1f\u0d2f\u0d4d\u0d15\u0d4d\u0d15"
   ],
@@ -38425,6 +38540,16 @@
   "ARNOTTOS": [
     "sai-car:-"
   ],
+  "AROID": [
+    "greek:\u1f04\u03c1\u03bf\u03bd",
+    "la-new:aroideae",
+    "latin:arum"
+  ],
+  "AROIDS": [
+    "greek:\u1f04\u03c1\u03bf\u03bd",
+    "la-new:aroideae",
+    "latin:arum"
+  ],
   "AROMA": [
     "greek:\u1f04\u03c1\u03c9\u03bc\u03b1",
     "la-lat:aroma",
@@ -39238,6 +39363,24 @@
   ],
   "ARSENIDES": [
     "enm:arsenik",
+    "frm:arsenic",
+    "greek:\u1f00\u03c1\u03c3\u03b5\u03bd\u03b9\u03ba\u03cc\u03bd",
+    "latin:arsenicum",
+    "xme-old:zaraniyak\u0101"
+  ],
+  "ARSENITE": [
+    "enm:arsenik",
+    "french:arsenic",
+    "french:ars\u00e9nite",
+    "frm:arsenic",
+    "greek:\u1f00\u03c1\u03c3\u03b5\u03bd\u03b9\u03ba\u03cc\u03bd",
+    "latin:arsenicum",
+    "xme-old:zaraniyak\u0101"
+  ],
+  "ARSENITES": [
+    "enm:arsenik",
+    "french:arsenic",
+    "french:ars\u00e9nite",
     "frm:arsenic",
     "greek:\u1f00\u03c1\u03c3\u03b5\u03bd\u03b9\u03ba\u03cc\u03bd",
     "latin:arsenicum",
@@ -42767,6 +42910,14 @@
   "ASTIGMIAS": [
     "greek:\u03c3\u03c4\u03af\u03b3\u03bc\u03b1"
   ],
+  "ASTILBE": [
+    "greek:stilb\u00f3s",
+    "greek:stilb\u1e17"
+  ],
+  "ASTILBES": [
+    "greek:stilb\u00f3s",
+    "greek:stilb\u1e17"
+  ],
   "ASTIR": [
     "enm:stiren",
     "old_english:styrian",
@@ -43478,6 +43629,12 @@
     "frm:astelier",
     "latin:assula"
   ],
+  "ATEMOYA": [
+    "tl:moya"
+  ],
+  "ATEMOYAS": [
+    "tl:moya"
+  ],
   "ATEMPORAL": [
     "enm:temporal",
     "frm:timporal",
@@ -44102,6 +44259,20 @@
   ],
   "ATRABILIOUSNESS": [
     "latin:\u0101tra b\u012blis"
+  ],
+  "ATRAZINE": [
+    "french:azote",
+    "greek:\u1f00-",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus"
+  ],
+  "ATRAZINES": [
+    "french:azote",
+    "greek:\u1f00-",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus"
   ],
   "ATREMBLE": [
     "enm:tremblen",
@@ -45204,6 +45375,14 @@
   "AUDILES": [
     "latin:audire"
   ],
+  "AUDING": [
+    "latin:audi\u014d",
+    "latin:aud\u012bt\u014drius"
+  ],
+  "AUDINGS": [
+    "latin:audi\u014d",
+    "latin:aud\u012bt\u014drius"
+  ],
   "AUDIO": [
     "latin:audi\u014d"
   ],
@@ -45224,6 +45403,14 @@
     "latin:audi\u014d",
     "old_english:b\u014dc",
     "old_english:b\u014dcian"
+  ],
+  "AUDIOCASSETTE": [
+    "french:cassette",
+    "latin:audi\u014d"
+  ],
+  "AUDIOCASSETTES": [
+    "french:cassette",
+    "latin:audi\u014d"
   ],
   "AUDIOGENIC": [
     "french:-g\u00e8ne",
@@ -48744,6 +48931,64 @@
     "old_english:\u0101wacan",
     "old_norse:-inn"
   ],
+  "AWOL": [
+    "enm:absent",
+    "enm:absenten",
+    "enm:leve",
+    "enm:leven",
+    "enm:out",
+    "enm:oute",
+    "enm:with",
+    "enm:withe",
+    "enm:wi\u00fe",
+    "french:lever",
+    "frm:absent",
+    "gmw-pro:laibijan",
+    "gmw-pro:laubijan",
+    "gmw-pro:wi\u00fei",
+    "gmw-pro:\u016bt",
+    "la-lat:absento",
+    "latin:absens",
+    "old_english:l\u0113af",
+    "old_english:l\u012befan",
+    "old_english:l\u01e3fan",
+    "old_english:wi\u00fe",
+    "old_english:wi\u00fe\u00fee",
+    "old_english:\u016bt",
+    "old_english:\u016bte",
+    "old_french:absenter",
+    "old_french:ausent",
+    "old_norse:vi\u00f0"
+  ],
+  "AWOLS": [
+    "enm:absent",
+    "enm:absenten",
+    "enm:leve",
+    "enm:leven",
+    "enm:out",
+    "enm:oute",
+    "enm:with",
+    "enm:withe",
+    "enm:wi\u00fe",
+    "french:lever",
+    "frm:absent",
+    "gmw-pro:laibijan",
+    "gmw-pro:laubijan",
+    "gmw-pro:wi\u00fei",
+    "gmw-pro:\u016bt",
+    "la-lat:absento",
+    "latin:absens",
+    "old_english:l\u0113af",
+    "old_english:l\u012befan",
+    "old_english:l\u01e3fan",
+    "old_english:wi\u00fe",
+    "old_english:wi\u00fe\u00fee",
+    "old_english:\u016bt",
+    "old_english:\u016bte",
+    "old_french:absenter",
+    "old_french:ausent",
+    "old_norse:vi\u00f0"
+  ],
   "AWRY": [
     "enm:awry"
   ],
@@ -49310,6 +49555,14 @@
     "french:azote",
     "greek:\u1f00-"
   ],
+  "AZOTOBACTER": [
+    "la-new:azote",
+    "la-new:bacterium"
+  ],
+  "AZOTOBACTERS": [
+    "la-new:azote",
+    "la-new:bacterium"
+  ],
   "AZOTURIA": [
     "french:azote",
     "greek:-\u03bf\u03c5\u03c1\u03af\u03b1",
@@ -49490,6 +49743,14 @@
     "enm:babe",
     "gmw-pro:bab\u014d",
     "old_english:baba"
+  ],
+  "BABEL": [
+    "akk:b\u0101b-ilu",
+    "he:b\u0101bhel"
+  ],
+  "BABELS": [
+    "akk:b\u0101b-ilu",
+    "he:b\u0101bhel"
   ],
   "BABES": [
     "enm:babe",
@@ -49812,6 +50073,14 @@
   ],
   "BACILLUS": [
     "latin:bacillus"
+  ],
+  "BACITRACIN": [
+    "la-new:bacillus subtilis",
+    "la-new:tracy born about"
+  ],
+  "BACITRACINS": [
+    "la-new:bacillus subtilis",
+    "la-new:tracy born about"
   ],
   "BACK": [
     "enm:bak",
@@ -52300,6 +52569,28 @@
     "old_english:b\u00e6c",
     "old_english:\u0121eard",
     "old_english:\u0121ierd"
+  ],
+  "BACLOFEN": [
+    "enm:abet",
+    "enm:bet",
+    "french:ph\u00e9nyle",
+    "gmw-pro:baitijan",
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
+    "he:\u05d1\u05d9\u05ea",
+    "old_english:bet",
+    "old_french:abet",
+    "old_french:abeter"
+  ],
+  "BACLOFENS": [
+    "enm:abet",
+    "enm:bet",
+    "french:ph\u00e9nyle",
+    "gmw-pro:baitijan",
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
+    "he:\u05d1\u05d9\u05ea",
+    "old_english:bet",
+    "old_french:abet",
+    "old_french:abeter"
   ],
   "BACON": [
     "enm:bacoun",
@@ -56667,6 +56958,14 @@
   "BARBICANS": [
     "old_french:barbacane"
   ],
+  "BARBICEL": [
+    "la-new:barbicella",
+    "latin:barba"
+  ],
+  "BARBICELS": [
+    "la-new:barbicella",
+    "latin:barba"
+  ],
   "BARBIE": [
     "german:barbiturat",
     "spanish:barbacoa",
@@ -58264,6 +58563,12 @@
   ],
   "BARRACOONS": [
     "spanish:barrac\u00f3n"
+  ],
+  "BARRACOUTA": [
+    "spanish:barracuda"
+  ],
+  "BARRACOUTAS": [
+    "spanish:barracuda"
   ],
   "BARRACUDA": [
     "spanish:barracuda"
@@ -61293,6 +61598,14 @@
     "frk:raid\u012b",
     "latin:balteus",
     "old_french:baldr\u00e9"
+  ],
+  "BAWDRIES": [
+    "enm:bawde",
+    "enm:bawderie"
+  ],
+  "BAWDRY": [
+    "enm:bawde",
+    "enm:bawderie"
   ],
   "BAWDS": [
     "enm:bawde",
@@ -68817,6 +69130,14 @@
     "sem-wes-pro:laban-",
     "xno:benfet"
   ],
+  "BENOMYL": [
+    "cy:meddyglyn",
+    "latin:medicus"
+  ],
+  "BENOMYLS": [
+    "cy:meddyglyn",
+    "latin:medicus"
+  ],
   "BENS": [
     "arabic:\u0628\u064e\u0627\u0646",
     "arabic:\u0628\u0650\u0646",
@@ -69565,6 +69886,12 @@
   ],
   "BERK": [
     "gmw-pro:berku"
+  ],
+  "BERKELIUM": [
+    "la-new:berkeley"
+  ],
+  "BERKELIUMS": [
+    "la-new:berkeley"
   ],
   "BERKS": [
     "gmw-pro:berku"
@@ -71074,6 +71401,22 @@
     "old_english:bet",
     "old_french:abet",
     "old_french:abeter"
+  ],
+  "BETTA": [
+    "jv:betah",
+    "jv:b\u0115tah",
+    "jv:b\u0325\u0259tah",
+    "jv:wader",
+    "jv:wader betah",
+    "la-new:betta"
+  ],
+  "BETTAS": [
+    "jv:betah",
+    "jv:b\u0115tah",
+    "jv:b\u0325\u0259tah",
+    "jv:wader",
+    "jv:wader betah",
+    "la-new:betta"
   ],
   "BETTED": [
     "enm:abet",
@@ -72818,6 +73161,16 @@
   "BIGEMINAL": [
     "latin:bigeminus"
   ],
+  "BIGEMINIES": [
+    "la-lat:bigeminus",
+    "la-lat:geminus",
+    "latin:bigeminus"
+  ],
+  "BIGEMINY": [
+    "la-lat:bigeminus",
+    "la-lat:geminus",
+    "latin:bigeminus"
+  ],
   "BIGENERIC": [
     "frm:g\u00e9n\u00e9rique",
     "latin:genus"
@@ -73099,6 +73452,12 @@
   ],
   "BIGNESSES": [
     "enm:bignesse"
+  ],
+  "BIGNONIA": [
+    "la-new:bignon"
+  ],
+  "BIGNONIAS": [
+    "la-new:bignon"
   ],
   "BIGOS": [
     "pl:bigos"
@@ -73631,6 +73990,32 @@
     "old_english:bil",
     "old_english:bile",
     "old_english:bord",
+    "old_french:bulle",
+    "xno:bille"
+  ],
+  "BILLBUG": [
+    "enm:bill",
+    "enm:bille",
+    "enm:budde",
+    "enm:bugge",
+    "gmw-pro:bu\u0280d\u014d",
+    "la-med:bulla",
+    "old_english:bil",
+    "old_english:bile",
+    "old_english:budda",
+    "old_french:bulle",
+    "xno:bille"
+  ],
+  "BILLBUGS": [
+    "enm:bill",
+    "enm:bille",
+    "enm:budde",
+    "enm:bugge",
+    "gmw-pro:bu\u0280d\u014d",
+    "la-med:bulla",
+    "old_english:bil",
+    "old_english:bile",
+    "old_english:budda",
     "old_french:bulle",
     "xno:bille"
   ],
@@ -85001,6 +85386,14 @@
     "gmw-pro:tagl",
     "old_english:t\u00e6\u0121el"
   ],
+  "BOCACCIO": [
+    "spanish:boca",
+    "spanish:bocacha"
+  ],
+  "BOCACCIOS": [
+    "spanish:boca",
+    "spanish:bocacha"
+  ],
   "BOCCE": [
     "italian:bocce"
   ],
@@ -85041,6 +85434,24 @@
   ],
   "BOD": [
     "gd:bodach"
+  ],
+  "BODACIOUS": [
+    "enm:bold",
+    "enm:bolden",
+    "gmw-pro:bal\u00fe",
+    "latin:audacia",
+    "old_english:bald",
+    "old_english:baldian",
+    "old_english:bold"
+  ],
+  "BODACIOUSLY": [
+    "enm:bold",
+    "enm:bolden",
+    "gmw-pro:bal\u00fe",
+    "latin:audacia",
+    "old_english:bald",
+    "old_english:baldian",
+    "old_english:bold"
   ],
   "BODDHISATTVA": [
     "sanskrit:\u092c\u094b\u0927\u093f\u0938\u0924\u094d\u0924\u094d\u0935"
@@ -85445,6 +85856,16 @@
     "old_english:weorc",
     "old_english:wyr\u010ban"
   ],
+  "BOEHMITE": [
+    "german:boehm",
+    "german:b\u00f6hm",
+    "german:b\u00f6hmit"
+  ],
+  "BOEHMITES": [
+    "german:boehm",
+    "german:b\u00f6hm",
+    "german:b\u00f6hmit"
+  ],
   "BOFF": [
     "enm:box",
     "enm:boxen",
@@ -85819,6 +86240,12 @@
   ],
   "BOHOS": [
     "french:boh\u00e9mien"
+  ],
+  "BOHRIUM": [
+    "la-new:bohr"
+  ],
+  "BOHRIUMS": [
+    "la-new:bohr"
   ],
   "BOIL": [
     "enm:bile",
@@ -86250,6 +86677,12 @@
     "eu:bolibar",
     "eu:bolu",
     "spanish:bolivia"
+  ],
+  "BOLIVIANO": [
+    "spanish:boliviano"
+  ],
+  "BOLIVIANOS": [
+    "spanish:boliviano"
   ],
   "BOLIVIAS": [
     "eu:bolibar",
@@ -89026,6 +89459,14 @@
   "BOP": [
     "enm:whappen"
   ],
+  "BOPEEP": [
+    "enm:pepen",
+    "french:beau"
+  ],
+  "BOPEEPS": [
+    "enm:pepen",
+    "french:beau"
+  ],
   "BOPPED": [
     "enm:whappen"
   ],
@@ -89978,10 +90419,17 @@
   "BOT": [
     "gd:boiteag"
   ],
+  "BOTA": [
+    "la-lat:buttis"
+  ],
   "BOTANIC": [
     "french:botanique",
     "greek:\u03b2\u03bf\u03c4\u03b1\u03bd\u03b9\u03ba\u03cc\u03c2",
     "la-med:botanicus"
+  ],
+  "BOTANICA": [
+    "spanish:bot\u00e1nica",
+    "spanish:bot\u00e1nico"
   ],
   "BOTANICAL": [
     "french:botanique",
@@ -89997,6 +90445,10 @@
     "french:botanique",
     "greek:\u03b2\u03bf\u03c4\u03b1\u03bd\u03b9\u03ba\u03cc\u03c2",
     "la-med:botanicus"
+  ],
+  "BOTANICAS": [
+    "spanish:bot\u00e1nica",
+    "spanish:bot\u00e1nico"
   ],
   "BOTANIES": [
     "french:botanique",
@@ -90067,6 +90519,9 @@
     "french:botanique",
     "greek:\u03b2\u03bf\u03c4\u03b1\u03bd\u03b9\u03ba\u03cc\u03c2",
     "la-med:botanicus"
+  ],
+  "BOTAS": [
+    "la-lat:buttis"
   ],
   "BOTCH": [
     "dum:botsen",
@@ -93434,6 +93889,22 @@
     "la-lat:branca",
     "old_french:branche"
   ],
+  "BRANCHIOPOD": [
+    "french:branchiopode",
+    "greek:-poda",
+    "greek:-pous",
+    "greek:br\u00e1nchia",
+    "greek:po\u00fas",
+    "la-new:branchiopoda"
+  ],
+  "BRANCHIOPODS": [
+    "french:branchiopode",
+    "greek:-poda",
+    "greek:-pous",
+    "greek:br\u00e1nchia",
+    "greek:po\u00fas",
+    "la-new:branchiopoda"
+  ],
   "BRANCHLESS": [
     "cel-gau:vranca",
     "enm:branche",
@@ -94005,6 +94476,14 @@
   "BRATWURSTS": [
     "german:bratwurst",
     "gmh:br\u0101twurst"
+  ],
+  "BRAUNSCHWEIGER": [
+    "german:braunschweiger",
+    "german:wurst"
+  ],
+  "BRAUNSCHWEIGERS": [
+    "german:braunschweiger",
+    "german:wurst"
   ],
   "BRAVA": [
     "italian:brava"
@@ -98130,6 +98609,12 @@
     "greek:\u03b2\u03c1\u1ff6\u03bc\u03bf\u03c2",
     "old_english:gr\u00e6s"
   ],
+  "BROMELAIN": [
+    "la-new:bromelia"
+  ],
+  "BROMELAINS": [
+    "la-new:bromelia"
+  ],
   "BROMELIAD": [
     "mul-tax:bromeliaceae"
   ],
@@ -98212,6 +98697,16 @@
   "BROMIZING": [
     "french:brome",
     "greek:\u03b2\u03c1\u1ff6\u03bc\u03bf\u03c2"
+  ],
+  "BROMOCRIPTINE": [
+    "enm:ergo",
+    "greek:kryptos",
+    "latin:erg\u014d"
+  ],
+  "BROMOCRIPTINES": [
+    "enm:ergo",
+    "greek:kryptos",
+    "latin:erg\u014d"
   ],
   "BROMOURACIL": [
     "french:ac\u00e9tique",
@@ -98883,6 +99378,12 @@
     "gmw-pro:br\u0101wu",
     "old_english:br\u016b"
   ],
+  "BROWALLIA": [
+    "la-new:browallius"
+  ],
+  "BROWALLIAS": [
+    "la-new:browallius"
+  ],
   "BROWBAND": [
     "enm:band",
     "enm:browe",
@@ -99076,6 +99577,26 @@
     "gmw-pro:nosu",
     "old_english:br\u016bn",
     "old_english:nosu"
+  ],
+  "BROWNOUT": [
+    "enm:broun",
+    "enm:out",
+    "enm:oute",
+    "gmw-pro:br\u016bn",
+    "gmw-pro:\u016bt",
+    "old_english:br\u016bn",
+    "old_english:\u016bt",
+    "old_english:\u016bte"
+  ],
+  "BROWNOUTS": [
+    "enm:broun",
+    "enm:out",
+    "enm:oute",
+    "gmw-pro:br\u016bn",
+    "gmw-pro:\u016bt",
+    "old_english:br\u016bn",
+    "old_english:\u016bt",
+    "old_english:\u016bte"
   ],
   "BROWNS": [
     "enm:broun",
@@ -99839,6 +100360,20 @@
     "enm:brionie",
     "greek:\u03b2\u03c1\u03c5\u03c9\u03bd\u03af\u03b1",
     "latin:bry\u014dnia"
+  ],
+  "BRYOPHYLLUM": [
+    "greek:ph\u00fdllon",
+    "la-new:-phyllum",
+    "la-new:bryo-",
+    "la-new:bryophyllum",
+    "la-new:kalanchoe"
+  ],
+  "BRYOPHYLLUMS": [
+    "greek:ph\u00fdllon",
+    "la-new:-phyllum",
+    "la-new:bryo-",
+    "la-new:bryophyllum",
+    "la-new:kalanchoe"
   ],
   "BRYOPHYTE": [
     "greek:\u03b2\u03c1\u03cd\u03bf\u03bd",
@@ -100742,6 +101277,12 @@
     "enm:budde",
     "gmw-pro:bu\u0280d\u0101",
     "old_english:budde"
+  ],
+  "BUDDLEIA": [
+    "la-new:buddle"
+  ],
+  "BUDDLEIAS": [
+    "la-new:buddle"
   ],
   "BUDDY": [
     "enm:buddy",
@@ -104287,6 +104828,12 @@
     "la-med:burg\u0101gium",
     "old_french:bourgage"
   ],
+  "BURGEE": [
+    "french:bourgeais"
+  ],
+  "BURGEES": [
+    "french:bourgeais"
+  ],
   "BURGEON": [
     "enm:burjon",
     "enm:burjounen",
@@ -106308,6 +106855,20 @@
     "latin:ambustum",
     "latin:bustum"
   ],
+  "BUSULFAN": [
+    "enm:but",
+    "french:m\u00e9thyl\u00e8ne",
+    "gmw-pro:bi\u016btan",
+    "greek:\u1f55\u03bb\u03b7",
+    "old_english:b\u016btan"
+  ],
+  "BUSULFANS": [
+    "enm:but",
+    "french:m\u00e9thyl\u00e8ne",
+    "gmw-pro:bi\u016btan",
+    "greek:\u1f55\u03bb\u03b7",
+    "old_english:b\u016btan"
+  ],
   "BUSY": [
     "enm:bisien",
     "enm:bisy",
@@ -106368,6 +106929,16 @@
     "enm:but",
     "gmw-pro:bi\u016btan",
     "old_english:b\u016btan"
+  ],
+  "BUTADIENE": [
+    "greek:\u03b2\u03bf\u03cd\u03c4\u03c5\u03c1\u03bf\u03c2",
+    "greek:\u03b2\u03bf\u03cd\u03c4\u1fe1\u03c1\u03bf\u03c2",
+    "latin:-\u0101nus"
+  ],
+  "BUTADIENES": [
+    "greek:\u03b2\u03bf\u03cd\u03c4\u03c5\u03c1\u03bf\u03c2",
+    "greek:\u03b2\u03bf\u03cd\u03c4\u1fe1\u03c1\u03bf\u03c2",
+    "latin:-\u0101nus"
   ],
   "BUTANE": [
     "greek:\u03b2\u03bf\u03cd\u03c4\u03c5\u03c1\u03bf\u03c2",
@@ -107915,6 +108486,16 @@
     "old_english:tealcian",
     "old_norse:b\u00fdr"
   ],
+  "BYTE": [
+    "enm:biten",
+    "gmw-pro:b\u012btan",
+    "old_english:b\u012btan"
+  ],
+  "BYTES": [
+    "enm:biten",
+    "gmw-pro:b\u012btan",
+    "old_english:b\u012btan"
+  ],
   "BYWAY": [
     "enm:bywey"
   ],
@@ -108429,6 +109010,22 @@
   "CABOTAGES": [
     "french:cabotage"
   ],
+  "CABRETTA": [
+    "cel-pro:\u0278litrom",
+    "enm:lether",
+    "gmw-pro:le\u00fer",
+    "old_english:le\u00feer",
+    "portuguese:-etta",
+    "portuguese:cabra"
+  ],
+  "CABRETTAS": [
+    "cel-pro:\u0278litrom",
+    "enm:lether",
+    "gmw-pro:le\u00fer",
+    "old_english:le\u00feer",
+    "portuguese:-etta",
+    "portuguese:cabra"
+  ],
   "CABRILLA": [
     "spanish:cabrilla"
   ],
@@ -108896,6 +109493,18 @@
     "latin:cadus",
     "latin:catanum",
     "pro:cade"
+  ],
+  "CADELLE": [
+    "latin:catella",
+    "latin:catellus",
+    "latin:catulus",
+    "oc:cadello"
+  ],
+  "CADELLES": [
+    "latin:catella",
+    "latin:catellus",
+    "latin:catulus",
+    "oc:cadello"
   ],
   "CADENCE": [
     "frm:cadence",
@@ -109754,6 +110363,14 @@
     "latin:calaminthe",
     "old_french:calament"
   ],
+  "CALAMITE": [
+    "la-new:calamites",
+    "latin:calamus"
+  ],
+  "CALAMITES": [
+    "la-new:calamites",
+    "latin:calamus"
+  ],
   "CALAMITIES": [
     "frm:calamit\u00e9",
     "latin:calamit\u0101s"
@@ -110351,6 +110968,12 @@
   "CALIFATES": [
     "la-med:cal\u012bph\u0101tus"
   ],
+  "CALIFORNIUM": [
+    "la-new:california"
+  ],
+  "CALIFORNIUMS": [
+    "la-new:california"
+  ],
   "CALIFS": [
     "arabic:\u062e\u064e\u0644\u0650\u064a\u0641\u064e\u0629",
     "enm:calife",
@@ -110800,6 +111423,14 @@
     "latin:cale\u014d",
     "roa-oit:calma"
   ],
+  "CALMODULIN": [
+    "latin:calx",
+    "latin:modulus"
+  ],
+  "CALMODULINS": [
+    "latin:calx",
+    "latin:modulus"
+  ],
   "CALMS": [
     "enm:calm",
     "frm:calme",
@@ -111053,6 +111684,12 @@
     "latin:calendarium",
     "latin:calor",
     "old_french:calendier"
+  ],
+  "CALVADOS": [
+    "french:calvados"
+  ],
+  "CALVADOSES": [
+    "french:calvados"
   ],
   "CALVARIA": [
     "latin:calv\u0101ria"
@@ -112306,6 +112943,16 @@
     "old_english:camp",
     "old_english:campian",
     "spanish:campo"
+  ],
+  "CAMPYLOBACTER": [
+    "greek:kampylos",
+    "greek:kamp\u0113",
+    "la-new:bacterium"
+  ],
+  "CAMPYLOBACTERS": [
+    "greek:kampylos",
+    "greek:kamp\u0113",
+    "la-new:bacterium"
   ],
   "CAMPYLOTROPOUS": [
     "greek:-"
@@ -114104,6 +114751,16 @@
   "CANTAL": [
     "french:cantal"
   ],
+  "CANTALA": [
+    "la-new:agave cantala",
+    "sanskrit:ka\u1e47\u1e6da",
+    "sanskrit:ka\u1e47\u1e6dala"
+  ],
+  "CANTALAS": [
+    "la-new:agave cantala",
+    "sanskrit:ka\u1e47\u1e6da",
+    "sanskrit:ka\u1e47\u1e6dala"
+  ],
   "CANTALOUP": [
     "french:cantaloup",
     "italian:cantalupo",
@@ -114190,6 +114847,12 @@
   "CANTHARIS": [
     "greek:\u03ba\u03b1\u03bd\u03b8\u03b1\u03c1\u03af\u03c2",
     "latin:cantharis"
+  ],
+  "CANTHAXANTHIN": [
+    "la-new:cantharellus cinnabarinus"
+  ],
+  "CANTHAXANTHINS": [
+    "la-new:cantharellus cinnabarinus"
   ],
   "CANTHI": [
     "greek:\u03ba\u03b1\u03bd\u03b8\u03cc\u03c2",
@@ -115393,6 +116056,18 @@
     "sco:cap",
     "xno:roche"
   ],
+  "CAPROLACTAM": [
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:lac",
+    "latin:sal ammoniacus"
+  ],
+  "CAPROLACTAMS": [
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:lac",
+    "latin:sal ammoniacus"
+  ],
   "CAPS": [
     "enm:cappe",
     "enm:cop",
@@ -116307,6 +116982,16 @@
     "latin:ammoniacus",
     "latin:sal ammoniacus"
   ],
+  "CARBAZOLE": [
+    "french:carbure",
+    "french:hydrate",
+    "greek:\u1f55\u03b4\u03c9\u03c1"
+  ],
+  "CARBAZOLES": [
+    "french:carbure",
+    "french:hydrate",
+    "greek:\u1f55\u03b4\u03c9\u03c1"
+  ],
   "CARBINE": [
     "french:carabine"
   ],
@@ -116455,6 +117140,16 @@
     "latin:carb\u014d",
     "persian:\u0640\u06cc",
     "ur:\u0640\u06cc"
+  ],
+  "CARBONIUM": [
+    "french:carbure",
+    "french:hydrate",
+    "greek:\u1f55\u03b4\u03c9\u03c1"
+  ],
+  "CARBONIUMS": [
+    "french:carbure",
+    "french:hydrate",
+    "greek:\u1f55\u03b4\u03c9\u03c1"
   ],
   "CARBONIZATION": [
     "french:carbone",
@@ -116834,6 +117529,12 @@
   "CARCINOMATA": [
     "greek:\u03ba\u1fb0\u03c1\u03ba\u1fd0\u03bd\u03ce\u03bc\u1fb0\u03c4\u1fb0",
     "latin:carcin\u014dmata"
+  ],
+  "CARCINOMATOSES": [
+    "latin:carcinoma"
+  ],
+  "CARCINOMATOSIS": [
+    "latin:carcinoma"
   ],
   "CARCINOMATOUS": [
     "greek:\u03ba\u03b1\u03c1\u03ba\u03af\u03bd\u03bf\u03c2"
@@ -118326,6 +119027,14 @@
     "enm:carnalitee",
     "latin:carn\u0101lit\u0101s"
   ],
+  "CARNALLITE": [
+    "german:carnall",
+    "german:carnallit"
+  ],
+  "CARNALLITES": [
+    "german:carnall",
+    "german:carnallit"
+  ],
   "CARNALLY": [
     "enm:carnal",
     "la-lat:carn\u0101lis",
@@ -118462,6 +119171,20 @@
   "CARNIVORY": [
     "french:carnivore",
     "latin:carnivorus"
+  ],
+  "CARNOSAUR": [
+    "greek:sauros",
+    "latin:caro"
+  ],
+  "CARNOSAURS": [
+    "greek:sauros",
+    "latin:caro"
+  ],
+  "CARNOTITE": [
+    "french:carnot"
+  ],
+  "CARNOTITES": [
+    "french:carnot"
   ],
   "CARNS": [
     "cel-pro:karnos",
@@ -119861,6 +120584,16 @@
     "frm:caruncule",
     "latin:caruncula"
   ],
+  "CARVACROL": [
+    "la-new:carum carvi",
+    "la-new:carvi",
+    "latin:acer"
+  ],
+  "CARVACROLS": [
+    "la-new:carum carvi",
+    "la-new:carvi",
+    "latin:acer"
+  ],
   "CARVE": [
     "enm:kerven",
     "gmw-pro:kerban",
@@ -121083,6 +121816,14 @@
     "greek:\u03ba\u03b1\u03c4\u03ac\u03bb\u03b7\u03c8\u03b9\u03c2",
     "greek:\u03bb\u03b1\u03bc\u03b2\u03ac\u03bd\u03c9"
   ],
+  "CATALEXES": [
+    "greek:katal\u0113gein",
+    "greek:katal\u0113xis"
+  ],
+  "CATALEXIS": [
+    "greek:katal\u0113gein",
+    "greek:katal\u0113xis"
+  ],
   "CATALO": [
     "enm:catel",
     "greek:\u03b2\u03bf\u03cd\u03b2\u03b1\u03bb\u03bf\u03c2",
@@ -121374,6 +122115,20 @@
     "greek:\u03ba\u03b1\u03c4\u03ac\u03c1\u03c1\u03bf\u03bf\u03c2",
     "la-lat:catarrhus",
     "la-med:catarrus"
+  ],
+  "CATARRHINE": [
+    "greek:kata-",
+    "greek:katarrhin",
+    "greek:katarrhina",
+    "greek:rhis",
+    "la-new:catarrhina"
+  ],
+  "CATARRHINES": [
+    "greek:kata-",
+    "greek:katarrhin",
+    "greek:katarrhina",
+    "greek:rhis",
+    "la-new:catarrhina"
   ],
   "CATARRHS": [
     "enm:catarre",
@@ -123494,6 +124249,20 @@
     "pro:cavalier",
     "roa-oit:cavaliere"
   ],
+  "CAVALLA": [
+    "latin:caballus",
+    "spanish:caballa",
+    "spanish:caballo",
+    "spanish:scomber colias",
+    "spanish:scomber scombrus"
+  ],
+  "CAVALLAS": [
+    "latin:caballus",
+    "spanish:caballa",
+    "spanish:caballo",
+    "spanish:scomber colias",
+    "spanish:scomber scombrus"
+  ],
   "CAVALLETTI": [
     "italian:cavalletto"
   ],
@@ -123879,6 +124648,12 @@
     "spanish:cacique",
     "tnq:kasike"
   ],
+  "CEANOTHUS": [
+    "greek:kean\u014dthos"
+  ],
+  "CEANOTHUSES": [
+    "greek:kean\u014dthos"
+  ],
   "CEASE": [
     "enm:cesen",
     "frm:cesser",
@@ -124148,6 +124923,14 @@
   "CEILIS": [
     "ga:c\u00e9il\u00ed",
     "gd:ceilidh"
+  ],
+  "CEILOMETER": [
+    "enm:celing",
+    "old_french:celer"
+  ],
+  "CEILOMETERS": [
+    "enm:celing",
+    "old_french:celer"
   ],
   "CEILS": [
     "french:ciel",
@@ -124605,6 +125388,12 @@
   "CELLO": [
     "italian:violoncello"
   ],
+  "CELLOBIOSE": [
+    "french:cellulose"
+  ],
+  "CELLOBIOSES": [
+    "french:cellulose"
+  ],
   "CELLOIDIN": [
     "french:cellulose"
   ],
@@ -125019,6 +125808,14 @@
     "la-med:centaur\u0113a",
     "latin:centaur\u0113um",
     "old_english:centaurie"
+  ],
+  "CENTAVO": [
+    "latin:centum",
+    "spanish:ciento"
+  ],
+  "CENTAVOS": [
+    "latin:centum",
+    "spanish:ciento"
   ],
   "CENTENARIAN": [
     "french:centenaire",
@@ -125708,10 +126505,22 @@
     "french:c\u00e9phalopode",
     "greek:\u03ba\u03b5\u03c6\u03b1\u03bb\u03ae"
   ],
+  "CEPHALORIDINE": [
+    "mul:cephalosporium"
+  ],
+  "CEPHALORIDINES": [
+    "mul:cephalosporium"
+  ],
   "CEPHALOSPORIN": [
     "mul:cephalosporium"
   ],
   "CEPHALOSPORINS": [
+    "mul:cephalosporium"
+  ],
+  "CEPHALOTHIN": [
+    "mul:cephalosporium"
+  ],
+  "CEPHALOTHINS": [
     "mul:cephalosporium"
   ],
   "CEPHALOTHORACES": [
@@ -125823,6 +126632,18 @@
   "CERATOID": [
     "greek:\u03ba\u03ad\u03c1\u03b1\u03c2",
     "greek:\u03ba\u03ad\u03c1\u1fb0\u03c2"
+  ],
+  "CERATOPSIAN": [
+    "greek:keras",
+    "greek:\u014dps",
+    "la-new:ceratops",
+    "la-new:ceratopsia"
+  ],
+  "CERATOPSIANS": [
+    "greek:keras",
+    "greek:\u014dps",
+    "la-new:ceratops",
+    "la-new:ceratopsia"
   ],
   "CERCAL": [
     "greek:\u03ba\u03ad\u03c1\u03ba\u03bf\u03c2"
@@ -126424,6 +127245,12 @@
     "frm:souspirail",
     "italian:cesso",
     "latin:suspirare"
+  ],
+  "CESTA": [
+    "latin:cista"
+  ],
+  "CESTAS": [
+    "latin:cista"
   ],
   "CESTI": [
     "latin:caestus",
@@ -127128,6 +127955,12 @@
     "greek:\u03c7\u03b1\u03bb\u03ba\u03b7\u03b4\u03ce\u03bd",
     "latin:chalc\u0113d\u014dnius"
   ],
+  "CHALCID": [
+    "greek:chalkos"
+  ],
+  "CHALCIDS": [
+    "greek:chalkos"
+  ],
   "CHALCOCITE": [
     "greek:\u03c7\u03b1\u03bb\u03ba\u03cc\u03c2"
   ],
@@ -127559,6 +128392,18 @@
   "CHAMFRONS": [
     "old_french:chanfrain"
   ],
+  "CHAMISA": [
+    "latin:flamma",
+    "portuguese:chama",
+    "portuguese:chami\u00e7a",
+    "spanish:chamiza"
+  ],
+  "CHAMISAS": [
+    "latin:flamma",
+    "portuguese:chama",
+    "portuguese:chami\u00e7a",
+    "spanish:chamiza"
+  ],
   "CHAMISE": [
     "spanish:chamiza"
   ],
@@ -127617,6 +128462,22 @@
     "cel-gau:camox",
     "frm:chamois",
     "la-lat:camox"
+  ],
+  "CHAMOMILE": [
+    "enm:camemille",
+    "greek:chamai",
+    "greek:chamaim\u0113lon",
+    "greek:m\u0113lon",
+    "la-med:camomilla",
+    "latin:chamaemelon"
+  ],
+  "CHAMOMILES": [
+    "enm:camemille",
+    "greek:chamai",
+    "greek:chamaim\u0113lon",
+    "greek:m\u0113lon",
+    "la-med:camomilla",
+    "latin:chamaemelon"
   ],
   "CHAMP": [
     "enm:champen",
@@ -128475,6 +129336,28 @@
   "CHAPATTIS": [
     "hindi:\u091a\u092a\u093e\u0924\u0940"
   ],
+  "CHAPBOOK": [
+    "enm:bok",
+    "enm:book",
+    "enm:booken",
+    "enm:chapman",
+    "gmw-pro:b\u014dk",
+    "gmw-pro:kaupamann",
+    "old_english:b\u014dc",
+    "old_english:b\u014dcian",
+    "old_english:\u010b\u0113apmann"
+  ],
+  "CHAPBOOKS": [
+    "enm:bok",
+    "enm:book",
+    "enm:booken",
+    "enm:chapman",
+    "gmw-pro:b\u014dk",
+    "gmw-pro:kaupamann",
+    "old_english:b\u014dc",
+    "old_english:b\u014dcian",
+    "old_english:\u010b\u0113apmann"
+  ],
   "CHAPE": [
     "enm:chape",
     "latin:cappa",
@@ -128679,6 +129562,12 @@
   ],
   "CHARABANCS": [
     "french:char-\u00e0-bancs"
+  ],
+  "CHARACIN": [
+    "greek:charax"
+  ],
+  "CHARACINS": [
+    "greek:charax"
   ],
   "CHARACTER": [
     "enm:caracter",
@@ -129695,6 +130584,12 @@
     "enm:chasse",
     "french:chass\u00e9",
     "old_french:chasse"
+  ],
+  "CHASSEPOT": [
+    "french:chassepot"
+  ],
+  "CHASSEPOTS": [
+    "french:chassepot"
   ],
   "CHASSES": [
     "enm:chasse",
@@ -133808,6 +134703,12 @@
     "portuguese:chinche",
     "spanish:chinche"
   ],
+  "CHINCHERINCHEE": [
+    "af:tjienkerientjee"
+  ],
+  "CHINCHERINCHEES": [
+    "af:tjienkerientjee"
+  ],
   "CHINCHES": [
     "latin:cimex",
     "portuguese:chinche",
@@ -134035,6 +134936,16 @@
     "old_english:wagian",
     "old_english:\u010binn",
     "old_norse:vaga"
+  ],
+  "CHIONODOXA": [
+    "greek:cheim\u014dn",
+    "greek:chi\u014dn",
+    "greek:doxa"
+  ],
+  "CHIONODOXAS": [
+    "greek:cheim\u014dn",
+    "greek:chi\u014dn",
+    "greek:doxa"
   ],
   "CHIP": [
     "enm:chip",
@@ -134344,6 +135255,14 @@
   "CHIROPTER": [
     "french:chiropt\u00e8re",
     "greek:\u03c7\u03b5\u03af\u03c1"
+  ],
+  "CHIROPTERAN": [
+    "greek:cheir",
+    "greek:pteron"
+  ],
+  "CHIROPTERANS": [
+    "greek:cheir",
+    "greek:pteron"
   ],
   "CHIROPTERS": [
     "french:chiropt\u00e8re",
@@ -134957,6 +135876,16 @@
   "CHLOROPHYLLS": [
     "french:chlorophylle"
   ],
+  "CHLOROPICRIN": [
+    "german:chlor-",
+    "german:chlorpikrin",
+    "greek:pikros"
+  ],
+  "CHLOROPICRINS": [
+    "german:chlor-",
+    "german:chlorpikrin",
+    "greek:pikros"
+  ],
   "CHLOROPLAST": [
     "greek:\u03c0\u03bb\u1fb0\u03c3\u03c4\u03cc\u03c2",
     "greek:\u03c7\u03bb\u03c9\u03c1\u03cc\u03c2"
@@ -135006,6 +135935,20 @@
   ],
   "CHLORPROMAZINES": [
     "french:chloropromazine"
+  ],
+  "CHLORPROPAMIDE": [
+    "french:propionique",
+    "german:propan",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus"
+  ],
+  "CHLORPROPAMIDES": [
+    "french:propionique",
+    "german:propan",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus"
   ],
   "CHOANA": [
     "greek:\u03c7\u03ad\u03c9",
@@ -135544,6 +136487,18 @@
   "CHOLESTEROLS": [
     "french:cholest\u00e9rol"
   ],
+  "CHOLESTYRAMINE": [
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus",
+    "latin:styrax"
+  ],
+  "CHOLESTYRAMINES": [
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus",
+    "latin:styrax"
+  ],
   "CHOLINE": [
     "greek:\u03c7\u03bf\u03bb\u03ae"
   ],
@@ -135634,6 +136589,18 @@
     "greek:\u03ba\u03c1\u1fb1\u03bd\u03af\u03bf\u03bd",
     "greek:\u03c7\u03cc\u03bd\u03b4\u03c1\u03bf\u03c2",
     "la-med:cr\u0101nium"
+  ],
+  "CHONDROITIN": [
+    "german:-it",
+    "german:chondro-",
+    "german:chondroits",
+    "german:chondro\u00eftin"
+  ],
+  "CHONDROITINS": [
+    "german:-it",
+    "german:chondro-",
+    "german:chondroits",
+    "german:chondro\u00eftin"
   ],
   "CHONDROMA": [
     "greek:-\u03c9\u03bc\u03b1",
@@ -135902,6 +136869,16 @@
   ],
   "CHORDAL": [
     "greek:\u03c7\u03bf\u03c1\u03b4\u03ae"
+  ],
+  "CHORDAMESODERM": [
+    "greek:\u03b4\u03ad\u03c1\u03bc\u03b1",
+    "greek:\u03bc\u03ad\u03c3\u03bf\u03c2",
+    "la-new:chorda"
+  ],
+  "CHORDAMESODERMS": [
+    "greek:\u03b4\u03ad\u03c1\u03bc\u03b1",
+    "greek:\u03bc\u03ad\u03c3\u03bf\u03c2",
+    "la-new:chorda"
   ],
   "CHORDATE": [
     "mul:chordata"
@@ -137164,6 +138141,12 @@
   "CHRYSANTHEMUMS": [
     "greek:\u03c7\u03c1\u1fe1\u03c3\u03ac\u03bd\u03b8\u03b5\u03bc\u03bf\u03bd"
   ],
+  "CHRYSAROBIN": [
+    "tpw:arar\u00f3\u03b2a"
+  ],
+  "CHRYSAROBINS": [
+    "tpw:arar\u00f3\u03b2a"
+  ],
   "CHRYSOBERYL": [
     "greek:\u03c7\u03c1\u1fe1\u03c3\u03bf\u03b2\u03ae\u03c1\u03c5\u03bb\u03bb\u03bf\u03c2",
     "latin:chrysoberyllus"
@@ -137205,6 +138188,18 @@
   ],
   "CHRYSOPRASES": [
     "greek:\u03c7\u03c1\u1fe1\u03c3\u03cc\u03c0\u03c1\u03b1\u03c3\u03bf\u03c2"
+  ],
+  "CHRYSOTILE": [
+    "german:chryso-",
+    "german:chrysotil",
+    "greek:-til-",
+    "greek:t\u00edllein"
+  ],
+  "CHRYSOTILES": [
+    "german:chryso-",
+    "german:chrysotil",
+    "greek:-til-",
+    "greek:t\u00edllein"
   ],
   "CHTHONIAN": [
     "greek:\u03c7\u03b8\u03cc\u03bd\u03b9\u03bf\u03c2"
@@ -140056,6 +141051,14 @@
     "frm:citrine",
     "latin:citr\u012bnus"
   ],
+  "CITRININ": [
+    "la-new:citrinum",
+    "la-new:penicillium citrinum"
+  ],
+  "CITRININS": [
+    "la-new:citrinum",
+    "la-new:penicillium citrinum"
+  ],
   "CITRINS": [
     "enm:citrine",
     "frm:citrine",
@@ -140096,6 +141099,12 @@
   "CITROUS": [
     "greek:\u03ba\u03ad\u03b4\u03c1\u03bf\u03c2",
     "latin:citrus"
+  ],
+  "CITRULLINE": [
+    "la-new:citrullus"
+  ],
+  "CITRULLINES": [
+    "la-new:citrullus"
   ],
   "CITRUS": [
     "greek:\u03ba\u03ad\u03b4\u03c1\u03bf\u03c2",
@@ -140407,6 +141416,22 @@
   ],
   "CLADISTS": [
     "greek:\u03ba\u03bb\u03ac\u03b4\u03bf\u03c2"
+  ],
+  "CLADOCERAN": [
+    "greek:-kera",
+    "greek:-keros",
+    "greek:k\u00e9ras",
+    "la-new:-cera",
+    "la-new:clado-",
+    "la-new:cladocera"
+  ],
+  "CLADOCERANS": [
+    "greek:-kera",
+    "greek:-keros",
+    "greek:k\u00e9ras",
+    "la-new:-cera",
+    "la-new:clado-",
+    "la-new:cladocera"
   ],
   "CLADODE": [
     "greek:\u03ba\u03bb\u1fb0\u0301\u03b4\u03bf\u03c2",
@@ -140972,6 +141997,18 @@
     "old_french:clapoir"
   ],
   "CLAPT": [
+    "enm:clappen",
+    "gmw-pro:klappijan",
+    "old_english:cl\u00e6ppan",
+    "old_french:clapoir"
+  ],
+  "CLAPTRAP": [
+    "enm:clappen",
+    "gmw-pro:klappijan",
+    "old_english:cl\u00e6ppan",
+    "old_french:clapoir"
+  ],
+  "CLAPTRAPS": [
     "enm:clappen",
     "gmw-pro:klappijan",
     "old_english:cl\u00e6ppan",
@@ -142651,6 +143688,12 @@
     "old_english:clifer",
     "osx:klib\u014dn"
   ],
+  "CLEVIS": [
+    "old_norse:kljufa"
+  ],
+  "CLEVISES": [
+    "old_norse:kljufa"
+  ],
   "CLEW": [
     "enm:clew",
     "old_english:cl\u0113owen"
@@ -143208,6 +144251,12 @@
   "CLINQUANTS": [
     "french:clinquant"
   ],
+  "CLINTONIA": [
+    "la-new:clinton"
+  ],
+  "CLINTONIAS": [
+    "la-new:clinton"
+  ],
   "CLIP": [
     "enm:clippen",
     "old_english:clyppan",
@@ -143391,6 +144440,12 @@
     "grc-koi:\u03ba\u03bb\u03b5\u03b9\u03c4\u03bf\u03c1\u03af\u03c2",
     "greek:\u03ba\u03bb\u03b5\u03af\u03c9",
     "la-new:cl\u012btoris"
+  ],
+  "CLIVIA": [
+    "la-new:clive"
+  ],
+  "CLIVIAS": [
+    "la-new:clive"
   ],
   "CLOACA": [
     "latin:clo\u0101ca"
@@ -145165,6 +146220,12 @@
   "CLUNKY": [
     "imitative:-"
   ],
+  "CLUPEID": [
+    "latin:clupea"
+  ],
+  "CLUPEIDS": [
+    "latin:clupea"
+  ],
   "CLUPEOID": [
     "mul:clupea"
   ],
@@ -146848,6 +147909,12 @@
     "greek:\u03ba\u03cc\u03ba\u03ba\u03bf\u03c2",
     "latin:coccum"
   ],
+  "COCCIDIA": [
+    "la-new:coccus"
+  ],
+  "COCCIDIUM": [
+    "la-new:coccus"
+  ],
   "COCCIDS": [
     "greek:\u03ba\u03cc\u03ba\u03ba\u03bf\u03c2",
     "latin:coccum"
@@ -147265,6 +148332,32 @@
     "old_english:cocc",
     "old_english:feoht",
     "old_english:feohtan",
+    "old_french:coque"
+  ],
+  "COCKHORSE": [
+    "enm:cok",
+    "enm:cokke",
+    "enm:hors",
+    "enm:horsen",
+    "gmw-pro:hross",
+    "gmw-pro:kokk",
+    "old_english:coc",
+    "old_english:cocc",
+    "old_english:hors",
+    "old_english:horsian",
+    "old_french:coque"
+  ],
+  "COCKHORSES": [
+    "enm:cok",
+    "enm:cokke",
+    "enm:hors",
+    "enm:horsen",
+    "gmw-pro:hross",
+    "gmw-pro:kokk",
+    "old_english:coc",
+    "old_english:cocc",
+    "old_english:hors",
+    "old_english:horsian",
     "old_french:coque"
   ],
   "COCKIER": [
@@ -148673,6 +149766,10 @@
     "latin:gadus",
     "old_english:cod"
   ],
+  "COED": [
+    "frm:\u00e9ducation",
+    "latin:\u0113duc\u0101ti\u014d"
+  ],
   "COEDIT": [
     "french:\u00e9diter",
     "latin:editus"
@@ -148696,6 +149793,10 @@
   "COEDITS": [
     "french:\u00e9diter",
     "latin:editus"
+  ],
+  "COEDS": [
+    "frm:\u00e9ducation",
+    "latin:\u0113duc\u0101ti\u014d"
   ],
   "COEDUCATION": [
     "frm:\u00e9ducation",
@@ -149573,6 +150674,12 @@
   ],
   "COGITATORS": [
     "latin:c\u014dgit\u0101tus"
+  ],
+  "COGITO": [
+    "la-new:cogito"
+  ],
+  "COGITOS": [
+    "la-new:cogito"
   ],
   "COGNAC": [
     "cel-pro:-\u0101kos",
@@ -150883,6 +151990,14 @@
     "french:col\u00e9optile",
     "greek:\u03ba\u03bf\u03bb\u03b5\u03cc\u03c2"
   ],
+  "COLEORHIZA": [
+    "greek:koleon",
+    "la-new:-rhiza"
+  ],
+  "COLEORHIZAE": [
+    "greek:koleon",
+    "la-new:-rhiza"
+  ],
   "COLES": [
     "enm:cole",
     "latin:caulis",
@@ -151061,6 +152176,12 @@
     "greek:\u03ba\u03bf\u03bb\u03bf\u03c3\u03c3\u03b9\u03b1\u1fd6\u03bf\u03c2",
     "la-med:coliseum",
     "latin:colosseum"
+  ],
+  "COLISTIN": [
+    "la-new:colistinus"
+  ],
+  "COLISTINS": [
+    "la-new:colistinus"
   ],
   "COLITIC": [
     "greek:-\u1fd6\u03c4\u03b9\u03c2",
@@ -151579,6 +152700,12 @@
   ],
   "COLLEGIUMS": [
     "latin:coll\u0113gium"
+  ],
+  "COLLEMBOLAN": [
+    "greek:embolos"
+  ],
+  "COLLEMBOLANS": [
+    "greek:embolos"
   ],
   "COLLENCHYMA": [
     "greek:\u03ba\u03bf\u03bb\u03bb\u03b1"
@@ -152941,6 +154068,18 @@
     "latin:columbinus",
     "old_french:columbin"
   ],
+  "COLUMBITE": [
+    "la-new:columbium"
+  ],
+  "COLUMBITES": [
+    "la-new:columbium"
+  ],
+  "COLUMBIUM": [
+    "la-new:columbia"
+  ],
+  "COLUMBIUMS": [
+    "la-new:columbia"
+  ],
   "COLUMEL": [
     "enm:columne",
     "latin:columna",
@@ -153580,6 +154719,16 @@
     "latin:com\u0113t\u0113s",
     "old_english:com\u0113ta",
     "old_french:comete"
+  ],
+  "COMEUPPANCE": [
+    "enm:comen",
+    "gmw-pro:kweman",
+    "old_english:cuman"
+  ],
+  "COMEUPPANCES": [
+    "enm:comen",
+    "gmw-pro:kweman",
+    "old_english:cuman"
   ],
   "COMFIER": [
     "enm:comfortable",
@@ -157782,6 +158931,12 @@
   "CONATUS": [
     "latin:c\u014dn\u0101tus"
   ],
+  "CONCANAVALIN": [
+    "la-new:canavalia"
+  ],
+  "CONCANAVALINS": [
+    "la-new:canavalia"
+  ],
   "CONCATENATE": [
     "latin:concat\u0113n\u0101re",
     "latin:concat\u0113n\u0101tus"
@@ -158075,6 +159230,16 @@
   "CONCEPT": [
     "frm:concept",
     "latin:conceptus"
+  ],
+  "CONCEPTACLE": [
+    "la-new:conceptaculum",
+    "latin:conceptus",
+    "latin:concipere"
+  ],
+  "CONCEPTACLES": [
+    "la-new:conceptaculum",
+    "latin:conceptus",
+    "latin:concipere"
   ],
   "CONCEPTI": [
     "latin:capi\u014d",
@@ -161707,6 +162872,12 @@
     "enm:conquest",
     "enm:conquesten"
   ],
+  "CONQUIAN": [
+    "es-mx:conqui\u00e1n"
+  ],
+  "CONQUIANS": [
+    "es-mx:conqui\u00e1n"
+  ],
   "CONQUISTADOR": [
     "spanish:conquistador"
   ],
@@ -164123,6 +165294,12 @@
     "italian:contrabbasso",
     "italian:contrafagotto"
   ],
+  "CONTRACEPTION": [
+    "latin:contr\u0101"
+  ],
+  "CONTRACEPTIONS": [
+    "latin:contr\u0101"
+  ],
   "CONTRACEPTIVE": [
     "latin:contr\u0101"
   ],
@@ -164794,6 +165971,12 @@
   ],
   "CONTUSIVE": [
     "latin:contundere"
+  ],
+  "CONURBATION": [
+    "latin:urbs"
+  ],
+  "CONURBATIONS": [
+    "latin:urbs"
   ],
   "CONUS": [
     "latin:c\u014dnus"
@@ -168236,6 +169419,18 @@
     "old_french:corb",
     "old_french:corbel"
   ],
+  "CORBINA": [
+    "latin:corv\u012bnus",
+    "spanish:argyrosomus regius",
+    "spanish:corbina",
+    "spanish:corvino"
+  ],
+  "CORBINAS": [
+    "latin:corv\u012bnus",
+    "spanish:argyrosomus regius",
+    "spanish:corbina",
+    "spanish:corvino"
+  ],
   "CORBY": [
     "frm:corbeau",
     "old_french:corb",
@@ -168345,6 +169540,12 @@
     "enm:cordial",
     "la-med:cordi\u0101lis",
     "old_french:cordial"
+  ],
+  "CORDIERITE": [
+    "french:cordier"
+  ],
+  "CORDIERITES": [
+    "french:cordier"
   ],
   "CORDIFORM": [
     "latin:cor"
@@ -171825,6 +173026,12 @@
     "la-new:cotinga",
     "tpw:cutinga"
   ],
+  "COTININE": [
+    "french:nicotine"
+  ],
+  "COTININES": [
+    "french:nicotine"
+  ],
   "COTONEASTER": [
     "latin:cot\u014dneum",
     "mul:cotoneaster"
@@ -172220,6 +173427,14 @@
   "COTYLOID": [
     "greek:\u03ba\u03bf\u03c4\u03cd\u03bb\u03b7",
     "latin:cotyl\u0113"
+  ],
+  "COTYLOSAUR": [
+    "greek:kotyl\u0113",
+    "greek:sauros"
+  ],
+  "COTYLOSAURS": [
+    "greek:kotyl\u0113",
+    "greek:sauros"
   ],
   "COTYPE": [
     "enm:type",
@@ -180601,6 +181816,20 @@
   "CRETONNES": [
     "french:cretonne"
   ],
+  "CREVALLE": [
+    "latin:caballus",
+    "spanish:caballa",
+    "spanish:caballo",
+    "spanish:scomber colias",
+    "spanish:scomber scombrus"
+  ],
+  "CREVALLES": [
+    "latin:caballus",
+    "spanish:caballa",
+    "spanish:caballo",
+    "spanish:scomber colias",
+    "spanish:scomber scombrus"
+  ],
   "CREVASSE": [
     "french:crevasse"
   ],
@@ -180798,6 +182027,14 @@
     "old_english:crib",
     "old_english:weorc",
     "old_english:wyr\u010ban"
+  ],
+  "CRICETID": [
+    "cs:k\u0159e\u010dek",
+    "la-new:cricetus"
+  ],
+  "CRICETIDS": [
+    "cs:k\u0159e\u010dek",
+    "la-new:cricetus"
   ],
   "CRICK": [
     "enm:crike",
@@ -181158,6 +182395,14 @@
   "CRINGING": [
     "enm:crengen",
     "old_english:cren\u0121an"
+  ],
+  "CRINGLE": [
+    "nds:kring",
+    "nds:kringel"
+  ],
+  "CRINGLES": [
+    "nds:kring",
+    "nds:kringel"
   ],
   "CRINITE": [
     "latin:cr\u012bn\u012btus"
@@ -184594,6 +185839,20 @@
     "greek:\u03ba\u03c1\u1fe0\u03c0\u03c4\u03cc\u03c2",
     "greek:\u1f00\u03bd\u03b1\u03bb\u03c5\u03c4\u03b9\u03ba\u03cc\u03c2"
   ],
+  "CRYPTARITHM": [
+    "french:cryptarithmie",
+    "greek:\u03ba\u03c1\u03c5\u03c0\u03c4\u03cc\u03c2",
+    "greek:\u03bb\u03cc\u03b3\u03bf\u03c2",
+    "la-new:logarithmus",
+    "latin:crypta"
+  ],
+  "CRYPTARITHMS": [
+    "french:cryptarithmie",
+    "greek:\u03ba\u03c1\u03c5\u03c0\u03c4\u03cc\u03c2",
+    "greek:\u03bb\u03cc\u03b3\u03bf\u03c2",
+    "la-new:logarithmus",
+    "latin:crypta"
+  ],
   "CRYPTIC": [
     "greek:\u03ba\u03c1\u03c5\u03c0\u03c4\u03b9\u03ba\u03cc\u03c2",
     "la-lat:crypticus"
@@ -184709,6 +185968,22 @@
   "CRYPTOLOGY": [
     "greek:\u03ba\u03c1\u03c5\u03c0\u03c4\u03cc\u03c2",
     "latin:cryptologia"
+  ],
+  "CRYPTOMERIA": [
+    "greek:-mereia",
+    "greek:-mer\u0113s",
+    "greek:m\u00e9ros",
+    "la-new:-meria",
+    "la-new:crypto-",
+    "la-new:cryptomeria"
+  ],
+  "CRYPTOMERIAS": [
+    "greek:-mereia",
+    "greek:-mer\u0113s",
+    "greek:m\u00e9ros",
+    "la-new:-meria",
+    "la-new:crypto-",
+    "la-new:cryptomeria"
   ],
   "CRYPTONYM": [
     "greek:\u03ba\u03c1\u1fe0\u03c0\u03c4\u03cc\u03c2",
@@ -186502,6 +187777,9 @@
   "CUPFULS": [
     "enm:copful"
   ],
+  "CUPID": [
+    "latin:cupido"
+  ],
   "CUPIDITIES": [
     "french:cupidit\u00e9",
     "latin:cupidit\u0101s"
@@ -186509,6 +187787,9 @@
   "CUPIDITY": [
     "french:cupidit\u00e9",
     "latin:cupidit\u0101s"
+  ],
+  "CUPIDS": [
+    "latin:cupido"
   ],
   "CUPLIKE": [
     "enm:cuppe",
@@ -186537,6 +187818,22 @@
     "italian:cupola",
     "latin:c\u016bpa",
     "latin:c\u016bpula"
+  ],
+  "CUPPA": [
+    "enm:cuppe",
+    "gmw-pro:kopp",
+    "la-lat:cuppa",
+    "latin:c\u016bpa",
+    "old_english:copp",
+    "old_english:cuppe"
+  ],
+  "CUPPAS": [
+    "enm:cuppe",
+    "gmw-pro:kopp",
+    "la-lat:cuppa",
+    "latin:c\u016bpa",
+    "old_english:copp",
+    "old_english:cuppe"
   ],
   "CUPPED": [
     "enm:cuppe",
@@ -186600,6 +187897,14 @@
   ],
   "CUPRIFEROUS": [
     "latin:cuprum"
+  ],
+  "CUPRITE": [
+    "german:kuprit",
+    "la-lat:cuprum"
+  ],
+  "CUPRITES": [
+    "german:kuprit",
+    "la-lat:cuprum"
   ],
   "CUPRONICKEL": [
     "german:kupfernickel"
@@ -188950,6 +190255,14 @@
     "greek:\u03ba\u03c5\u03ac\u03bd\u03b5\u03bf\u03c2",
     "greek:\u03ba\u1fe0\u1fb0\u0301\u03bd\u03b5\u03bf\u03c2"
   ],
+  "CYANOHYDRIN": [
+    "gmy:\ud800\udc13\ud800\udc37\ud800\udc1c",
+    "greek:\u03ba\u03cd\u03b1\u03bd\u03bf\u03c2"
+  ],
+  "CYANOHYDRINS": [
+    "gmy:\ud800\udc13\ud800\udc37\ud800\udc1c",
+    "greek:\u03ba\u03cd\u03b1\u03bd\u03bf\u03c2"
+  ],
   "CYANOSED": [
     "greek:\u03ba\u03c5\u03ac\u03bd\u03b5\u03bf\u03c2",
     "greek:\u03ba\u1fe0\u1fb0\u0301\u03bd\u03b5\u03bf\u03c2"
@@ -189118,6 +190431,14 @@
   ],
   "CYCAD": [
     "mul:cycas"
+  ],
+  "CYCADEOID": [
+    "la-new:cycadeoidales",
+    "la-new:cycas"
+  ],
+  "CYCADEOIDS": [
+    "la-new:cycadeoidales",
+    "la-new:cycas"
   ],
   "CYCADOPHYTE": [
     "greek:\u03c6\u03c5\u03c4\u03cc\u03bd",
@@ -189324,6 +190645,16 @@
     "greek:\u03ba\u03cd\u03ba\u03bb\u03bf\u03c2",
     "la-lat:cyclus"
   ],
+  "CYCLITOL": [
+    "greek:\u1f14\u03bb\u03b1\u03b9\u03bf\u03bd",
+    "greek:\u1fd1\u0313\u0301\u03c2",
+    "latin:oleum"
+  ],
+  "CYCLITOLS": [
+    "greek:\u1f14\u03bb\u03b1\u03b9\u03bf\u03bd",
+    "greek:\u1fd1\u0313\u0301\u03c2",
+    "latin:oleum"
+  ],
   "CYCLIZATION": [
     "enm:cicle",
     "greek:\u03ba\u03cd\u03ba\u03bb\u03bf\u03c2",
@@ -189403,6 +190734,24 @@
     "greek:\u1f11\u03be\u03b1-",
     "latin:-\u0101nus",
     "latin:hexa-"
+  ],
+  "CYCLOHEXIMIDE": [
+    "french:amide",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "greek:\u1f11\u03be\u03b1-",
+    "latin:-\u0101nus",
+    "latin:ammoniacus",
+    "latin:hexa-",
+    "latin:sal ammoniacus"
+  ],
+  "CYCLOHEXIMIDES": [
+    "french:amide",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "greek:\u1f11\u03be\u03b1-",
+    "latin:-\u0101nus",
+    "latin:ammoniacus",
+    "latin:hexa-",
+    "latin:sal ammoniacus"
   ],
   "CYCLOHEXYLAMINE": [
     "french:m\u00e9thyl\u00e8ne",
@@ -189962,6 +191311,28 @@
   ],
   "CYPRIPEDIUMS": [
     "mul:cypripedium"
+  ],
+  "CYPROHEPTADINE": [
+    "enm:dynen",
+    "french:cyclique",
+    "french:propionique",
+    "french:propylique",
+    "greek:\u03ba\u03c5\u03ba\u03bb\u03b9\u03ba\u03cc\u03c2",
+    "la-cla:cyclicus",
+    "la-vul:disi\u016bn\u014d",
+    "latin:iei\u016bnus",
+    "old_french:disner"
+  ],
+  "CYPROHEPTADINES": [
+    "enm:dynen",
+    "french:cyclique",
+    "french:propionique",
+    "french:propylique",
+    "greek:\u03ba\u03c5\u03ba\u03bb\u03b9\u03ba\u03cc\u03c2",
+    "la-cla:cyclicus",
+    "la-vul:disi\u016bn\u014d",
+    "latin:iei\u016bnus",
+    "old_french:disner"
   ],
   "CYPROTERONE": [
     "latin:gesto"
@@ -191051,12 +192422,24 @@
     "bn:\u09a1\u09be\u09b2",
     "hindi:\u0926\u093e\u0932"
   ],
+  "DAHLIA": [
+    "la-new:dahl"
+  ],
+  "DAHLIAS": [
+    "la-new:dahl"
+  ],
   "DAHLS": [
     "bn:\u09a1\u09be\u09b2",
     "hindi:\u0926\u093e\u0932"
   ],
   "DAHS": [
     "my:\u1013\u102c\u1038"
+  ],
+  "DAIDZEIN": [
+    "japanese:daizu"
+  ],
+  "DAIDZEINS": [
+    "japanese:daizu"
   ],
   "DAIKON": [
     "japanese:\u5927\u6839"
@@ -192373,6 +193756,30 @@
     "enm:daper",
     "old_dutch:dapar"
   ],
+  "DAPSONE": [
+    "enm:on",
+    "enm:onen",
+    "enm:oon",
+    "french:ph\u00e9nyle",
+    "gmw-pro:ain",
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus",
+    "old_english:\u0101n"
+  ],
+  "DAPSONES": [
+    "enm:on",
+    "enm:onen",
+    "enm:oon",
+    "french:ph\u00e9nyle",
+    "gmw-pro:ain",
+    "greek:\u03c6\u03b1\u03af\u03bd\u03c9",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:sal ammoniacus",
+    "old_english:\u0101n"
+  ],
   "DARBAR": [
     "fa-cls:\u062f\u0631\u0628\u0627\u0631"
   ],
@@ -193476,6 +194883,14 @@
   ],
   "DATUMS": [
     "latin:datum"
+  ],
+  "DATURA": [
+    "hindi:dhat\u016br\u0101",
+    "sanskrit:dhatt\u016bra\u1e25"
+  ],
+  "DATURAS": [
+    "hindi:dhat\u016br\u0101",
+    "sanskrit:dhatt\u016bra\u1e25"
   ],
   "DAUB": [
     "enm:daub",
@@ -201376,6 +202791,16 @@
     "latin:gradus",
     "old_french:degr\u00e9"
   ],
+  "DEGRESSIVE": [
+    "frm:progressif",
+    "latin:pr\u014dgredior",
+    "latin:pr\u014dgress\u012bvus"
+  ],
+  "DEGRESSIVELY": [
+    "frm:progressif",
+    "latin:pr\u014dgredior",
+    "latin:pr\u014dgress\u012bvus"
+  ],
   "DEGRINGOLADE": [
     "french:d\u00e9gringolade"
   ],
@@ -205569,6 +206994,16 @@
   "DENUMERABLY": [
     "latin:numer\u0101bilis"
   ],
+  "DENUNCIATION": [
+    "frm:denonciacion",
+    "la-med:d\u0113n\u016bnti\u0101re",
+    "latin:d\u0113n\u016bnti\u0101ti\u014d"
+  ],
+  "DENUNCIATIONS": [
+    "frm:denonciacion",
+    "la-med:d\u0113n\u016bnti\u0101re",
+    "latin:d\u0113n\u016bnti\u0101ti\u014d"
+  ],
   "DENUNCIATIVE": [
     "latin:denuntiativus"
   ],
@@ -207560,6 +208995,16 @@
   ],
   "DERMATOSIS": [
     "greek:\u03b4\u03b5\u03c1\u03bc\u03b1\u03c4\u03bf-"
+  ],
+  "DERMESTID": [
+    "greek:derm-",
+    "greek:derm\u0113st\u0113s",
+    "greek:edmenai"
+  ],
+  "DERMESTIDS": [
+    "greek:derm-",
+    "greek:derm\u0113st\u0113s",
+    "greek:edmenai"
   ],
   "DERMIC": [
     "af:derm",
@@ -210645,6 +212090,16 @@
   "DETRITAL": [
     "latin:d\u0113tr\u012btus"
   ],
+  "DETRITION": [
+    "la-med:d\u0113tr\u012bti\u014d",
+    "latin:d\u0113terere",
+    "latin:d\u0113tr\u012b-"
+  ],
+  "DETRITIONS": [
+    "la-med:d\u0113tr\u012bti\u014d",
+    "latin:d\u0113terere",
+    "latin:d\u0113tr\u012b-"
+  ],
   "DETRITUS": [
     "latin:d\u0113tr\u012btus"
   ],
@@ -210781,6 +212236,12 @@
   "DEUTOPLASMS": [
     "greek:\u03b4\u03b5\u03cd\u03c4\u03b5\u03c1\u03bf\u03c2",
     "greek:\u03c0\u03bb\u03ac\u03c3\u03bc\u03b1"
+  ],
+  "DEUTZIA": [
+    "la-new:deutz"
+  ],
+  "DEUTZIAS": [
+    "la-new:deutz"
   ],
   "DEV": [
     "hy:\u0564\u0565\u0582"
@@ -212268,6 +213729,26 @@
     "greek:\u03b4\u03b9\u03b1\u03b2\u03bf\u03bb\u03b9\u03ba\u03cc\u03c2",
     "la-lat:diabolicus"
   ],
+  "DIABOLISM": [
+    "enm:devel",
+    "enm:devil",
+    "gmw-pro:diubul",
+    "greek:di\u00e1bolos",
+    "greek:\u03b4\u03b9\u03ac\u03b2\u03bf\u03bb\u03bf\u03c2",
+    "la-lat:diabolus",
+    "latin:diabolus",
+    "old_english:d\u0113ofol"
+  ],
+  "DIABOLISMS": [
+    "enm:devel",
+    "enm:devil",
+    "gmw-pro:diubul",
+    "greek:di\u00e1bolos",
+    "greek:\u03b4\u03b9\u03ac\u03b2\u03bf\u03bb\u03bf\u03c2",
+    "la-lat:diabolus",
+    "latin:diabolus",
+    "old_english:d\u0113ofol"
+  ],
   "DIABOLIST": [
     "french:diabolo",
     "greek:\u03b4\u03b9\u03ac\u03b2\u03bf\u03bb\u03bf\u03c2",
@@ -213102,6 +214583,14 @@
     "latin:adam\u0101s",
     "old_french:diamant"
   ],
+  "DIANTHUS": [
+    "greek:anthos",
+    "greek:dios"
+  ],
+  "DIANTHUSES": [
+    "greek:anthos",
+    "greek:dios"
+  ],
   "DIAPASON": [
     "greek:\u03b4\u03b9\u03b1\u03c0\u03b1\u03c3\u1ff6\u03bd",
     "latin:diapason"
@@ -213181,6 +214670,20 @@
   ],
   "DIAPHONY": [
     "greek:\u03b4\u03b9\u03b1\u03c8\u03c9\u03bd\u03af\u03b1"
+  ],
+  "DIAPHORASE": [
+    "greek:-ase",
+    "greek:dia-",
+    "greek:diapherein",
+    "greek:diaphoros",
+    "greek:pherein"
+  ],
+  "DIAPHORASES": [
+    "greek:-ase",
+    "greek:dia-",
+    "greek:diapherein",
+    "greek:diaphoros",
+    "greek:pherein"
   ],
   "DIAPHORESES": [
     "greek:\u03b4\u1fd0\u1fb0\u03c6\u03cc\u03c1\u03b7\u03c3\u1fd0\u03c2",
@@ -213707,6 +215210,14 @@
   "DICHOGAMY": [
     "greek:\u03b4\u03af\u03c7\u03b1"
   ],
+  "DICHONDRA": [
+    "greek:ch\u00f3ndros",
+    "la-new:-chondra"
+  ],
+  "DICHONDRAS": [
+    "greek:ch\u00f3ndros",
+    "la-new:-chondra"
+  ],
   "DICHOTIC": [
     "german:dichotisch",
     "greek:\u03b4\u1fd0\u0301\u03c7\u1fb0"
@@ -214046,6 +215557,14 @@
     "greek:\u03b4\u03af\u03ba\u03c4\u03c5\u03bf\u03bd",
     "greek:\u03c3\u1ff6\u03bc\u03b1",
     "old_english:sum"
+  ],
+  "DICTYOSTELE": [
+    "french:st\u00e8le",
+    "greek:\u03c3\u03c4\u03ae\u03bb\u03b7"
+  ],
+  "DICTYOSTELES": [
+    "french:st\u00e8le",
+    "greek:\u03c3\u03c4\u03ae\u03bb\u03b7"
   ],
   "DICYCLIC": [
     "french:cyclique",
@@ -215245,6 +216764,18 @@
     "enm:digit",
     "latin:digitus"
   ],
+  "DIGITONIN": [
+    "enm:digit",
+    "la-new:digitalis",
+    "la-new:onin",
+    "latin:digitus"
+  ],
+  "DIGITONINS": [
+    "enm:digit",
+    "la-new:digitalis",
+    "la-new:onin",
+    "latin:digitus"
+  ],
   "DIGITOXIGENIN": [
     "latin:digit\u0101lis",
     "latin:toxicum"
@@ -215829,6 +217360,26 @@
     "spanish:dale la vuelta",
     "xno:delaier"
   ],
+  "DILTIAZEM": [
+    "enm:dilaten",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:d\u012bffer\u014d",
+    "latin:d\u012bl\u0101tus",
+    "latin:d\u012bl\u0101t\u014d",
+    "latin:sal ammoniacus",
+    "old_french:dilater"
+  ],
+  "DILTIAZEMS": [
+    "enm:dilaten",
+    "greek:\u1f04\u03bc\u03bc\u03c9\u03bd",
+    "latin:ammoniacus",
+    "latin:d\u012bffer\u014d",
+    "latin:d\u012bl\u0101tus",
+    "latin:d\u012bl\u0101t\u014d",
+    "latin:sal ammoniacus",
+    "old_french:dilater"
+  ],
   "DILUENT": [
     "latin:diluens"
   ],
@@ -215939,6 +217490,22 @@
   "DIMER": [
     "greek:\u03bc\u03ad\u03c1\u03bf\u03c2"
   ],
+  "DIMERCAPROL": [
+    "da:mercaptan",
+    "french:propionique",
+    "german:mercaptan",
+    "german:propan",
+    "latin:captans",
+    "latin:mercurius"
+  ],
+  "DIMERCAPROLS": [
+    "da:mercaptan",
+    "french:propionique",
+    "german:mercaptan",
+    "german:propan",
+    "latin:captans",
+    "latin:mercurius"
+  ],
   "DIMERIC": [
     "greek:\u03bc\u03ad\u03c1\u03bf\u03c2"
   ],
@@ -215983,6 +217550,12 @@
   ],
   "DIMETERS": [
     "french:-m\u00e8tre"
+  ],
+  "DIMETHOATE": [
+    "german:methyl"
+  ],
+  "DIMETHOATES": [
+    "german:methyl"
   ],
   "DIMETHYL": [
     "german:methyl"
@@ -217178,6 +218751,14 @@
   "DIPLOPIC": [
     "greek:\u03b4\u03b9\u03c0\u03bb\u03cc\u03bf\u03c2"
   ],
+  "DIPLOPOD": [
+    "greek:dipl-",
+    "greek:pous"
+  ],
+  "DIPLOPODS": [
+    "greek:dipl-",
+    "greek:pous"
+  ],
   "DIPLOTENE": [
     "french:diplot\u00e8ne"
   ],
@@ -217402,6 +218983,12 @@
   "DIPTYCHS": [
     "la-lat:diptycha"
   ],
+  "DIQUAT": [
+    "latin:quatern\u0101rius"
+  ],
+  "DIQUATS": [
+    "latin:quatern\u0101rius"
+  ],
   "DIRAM": [
     "greek:\u03b4\u03c1\u03b1\u03c7\u03bc\u03ae",
     "pal:\ud802\udf66\ud802\udf65\ud802\udf66\ud802\udf6d",
@@ -217413,6 +219000,16 @@
     "pal:\ud802\udf66\ud802\udf65\ud802\udf66\ud802\udf6d",
     "persian:\u062f\u0631\u0645",
     "tg:\u0434\u0438\u0440\u0430\u043c"
+  ],
+  "DIRDUM": [
+    "cy:dwrdd",
+    "enm:durdan",
+    "mga:dord\u00e1n"
+  ],
+  "DIRDUMS": [
+    "cy:dwrdd",
+    "enm:durdan",
+    "mga:dord\u00e1n"
   ],
   "DIRE": [
     "latin:d\u012brus"
@@ -225788,6 +227385,20 @@
   "DIURNALS": [
     "latin:diurn\u0101lis"
   ],
+  "DIURON": [
+    "french:para-",
+    "french:ur\u00e9e",
+    "greek:\u03bf\u1f56\u03c1\u03bf\u03bd",
+    "italian:para-",
+    "latin:par\u014d"
+  ],
+  "DIURONS": [
+    "french:para-",
+    "french:ur\u00e9e",
+    "greek:\u03bf\u1f56\u03c1\u03bf\u03bd",
+    "italian:para-",
+    "latin:par\u014d"
+  ],
   "DIVA": [
     "italian:diva",
     "itc-ola:deiv\u0101",
@@ -229160,6 +230771,12 @@
     "latin:dominus",
     "old_english:d\u014dn on"
   ],
+  "DONA": [
+    "latin:domina"
+  ],
+  "DONAS": [
+    "latin:domina"
+  ],
   "DONATE": [
     "latin:dono"
   ],
@@ -229232,6 +230849,14 @@
   ],
   "DONGAS": [
     "af:donga"
+  ],
+  "DONGLE": [
+    "frr:dangeln",
+    "old_norse:dengja"
+  ],
+  "DONGLES": [
+    "frr:dangeln",
+    "old_norse:dengja"
   ],
   "DONGS": [
     "korean:\ub3d9",
@@ -230255,6 +231880,12 @@
   "DORNOCKS": [
     "dutch:doornik"
   ],
+  "DORONICUM": [
+    "arabic:dar\u016bnaj"
+  ],
+  "DORONICUMS": [
+    "arabic:dar\u016bnaj"
+  ],
   "DORP": [
     "dutch:dorp"
   ],
@@ -230407,6 +232038,14 @@
   "DOSES": [
     "frm:dose",
     "greek:\u03b4\u03cc\u03c3\u03b9\u03c2",
+    "la-lat:dosis"
+  ],
+  "DOSIMETER": [
+    "la-lat:-meter",
+    "la-lat:dosis"
+  ],
+  "DOSIMETERS": [
+    "la-lat:-meter",
     "la-lat:dosis"
   ],
   "DOSING": [
@@ -232941,6 +234580,32 @@
     "greek:\u03b4\u03bf\u03be\u03bf\u03bb\u03bf\u03b3\u03af\u03b1",
     "la-med:doxologia"
   ],
+  "DOXORUBICIN": [
+    "french:ac\u00e9tyl\u00e8ne",
+    "french:cod\u00e9ine",
+    "french:oxyg\u00e8ne",
+    "greek:\u03bc\u03cd\u03ba\u03b7\u03c2",
+    "greek:\u03c7\u03bb\u03c9\u03c1\u03cc\u03c2",
+    "greek:\u1f40\u03be\u03cd\u03c2",
+    "greek:\u1f40\u03be\u1fe0\u0301\u03c2",
+    "greek:\u1f51\u03b4\u03c1\u03bf-",
+    "greek:\u1fe0\u0314\u03b4\u03c1\u03bf-",
+    "italian:daunia",
+    "latin:rubidus"
+  ],
+  "DOXORUBICINS": [
+    "french:ac\u00e9tyl\u00e8ne",
+    "french:cod\u00e9ine",
+    "french:oxyg\u00e8ne",
+    "greek:\u03bc\u03cd\u03ba\u03b7\u03c2",
+    "greek:\u03c7\u03bb\u03c9\u03c1\u03cc\u03c2",
+    "greek:\u1f40\u03be\u03cd\u03c2",
+    "greek:\u1f40\u03be\u1fe0\u0301\u03c2",
+    "greek:\u1f51\u03b4\u03c1\u03bf-",
+    "greek:\u1fe0\u0314\u03b4\u03c1\u03bf-",
+    "italian:daunia",
+    "latin:rubidus"
+  ],
   "DOXY": [
     "dum:docke",
     "dum:doketje"
@@ -233852,6 +235517,12 @@
     "latin:drachma",
     "old_french:dragme",
     "pal:\ud802\udf66\ud802\udf65\ud802\udf66\ud802\udf6d"
+  ],
+  "DRAMMOCK": [
+    "gd:dramag"
+  ],
+  "DRAMMOCKS": [
+    "gd:dramag"
   ],
   "DRAMS": [
     "enm:dragme//dramme",
@@ -235823,6 +237494,20 @@
     "ang-nor:drysnan",
     "enm:drysning"
   ],
+  "DROGUE": [
+    "enm:dragen",
+    "enm:draggen",
+    "old_english:dragan",
+    "old_norse:draga",
+    "yi:\u05d8\u05e8\u05d0\u05b8\u05d2\u05df"
+  ],
+  "DROGUES": [
+    "enm:dragen",
+    "enm:draggen",
+    "old_english:dragan",
+    "old_norse:draga",
+    "yi:\u05d8\u05e8\u05d0\u05b8\u05d2\u05df"
+  ],
   "DROID": [
     "greek:\u1f00\u03bd\u03b4\u03c1\u03cc\u03c2",
     "la-new:androides"
@@ -237534,6 +239219,12 @@
   "DUBBERS": [
     "arabic:\u062f\u064f\u0628\u064e\u0651\u0627\u0621"
   ],
+  "DUBBIN": [
+    "enm:dubben",
+    "gmw-pro:dubb\u014dn",
+    "old_english:dubbian",
+    "old_french:adober"
+  ],
   "DUBBING": [
     "enm:dubben",
     "gmw-pro:dubb\u014dn",
@@ -237541,6 +239232,12 @@
     "old_french:adober"
   ],
   "DUBBINGS": [
+    "enm:dubben",
+    "gmw-pro:dubb\u014dn",
+    "old_english:dubbian",
+    "old_french:adober"
+  ],
+  "DUBBINS": [
     "enm:dubben",
     "gmw-pro:dubb\u014dn",
     "old_english:dubbian",
@@ -237591,6 +239288,12 @@
     "enm:dubytacion",
     "frm:dubitation",
     "latin:dubit\u0101ti\u014d"
+  ],
+  "DUBNIUM": [
+    "la-new:dubna"
+  ],
+  "DUBNIUMS": [
+    "la-new:dubna"
   ],
   "DUBONNET": [
     "french:dubonnet"
@@ -238981,6 +240684,14 @@
     "old_english:dumb",
     "old_english:dumbian"
   ],
+  "DUMORTIERITE": [
+    "french:dumortier",
+    "french:dumorti\u00e9rite"
+  ],
+  "DUMORTIERITES": [
+    "french:dumortier",
+    "french:dumorti\u00e9rite"
+  ],
   "DUMP": [
     "enm:dumpen",
     "old_norse:dumpa"
@@ -239312,6 +241023,24 @@
     "gmw-pro:\u00feunk\u014dn",
     "old_high_german:dunk\u014dn",
     "pdc:dunke"
+  ],
+  "DUNLIN": [
+    "cel-pro:dusnos",
+    "cel-pro:d\u016bnom",
+    "enm:dun",
+    "ga:d\u00fan",
+    "gd:d\u00f9n",
+    "gmw-pro:du\u0280n",
+    "old_english:dunn"
+  ],
+  "DUNLINS": [
+    "cel-pro:dusnos",
+    "cel-pro:d\u016bnom",
+    "enm:dun",
+    "ga:d\u00fan",
+    "gd:d\u00f9n",
+    "gmw-pro:du\u0280n",
+    "old_english:dunn"
   ],
   "DUNNED": [
     "cel-pro:dusnos",
@@ -239867,6 +241596,12 @@
   "DURO": [
     "spanish:duro",
     "sq:duro"
+  ],
+  "DUROMETER": [
+    "latin:durus"
+  ],
+  "DUROMETERS": [
+    "latin:durus"
   ],
   "DUROS": [
     "spanish:duro",
@@ -240756,6 +242491,16 @@
   ],
   "DYNAMOS": [
     "greek:\u03b4\u03cd\u03bd\u03b1\u03bc\u03b9\u03c2"
+  ],
+  "DYNAMOTOR": [
+    "enm:motour",
+    "greek:\u03b4\u03cd\u03bd\u03b1\u03bc\u03b9\u03c2",
+    "latin:m\u014dtor"
+  ],
+  "DYNAMOTORS": [
+    "enm:motour",
+    "greek:\u03b4\u03cd\u03bd\u03b1\u03bc\u03b9\u03c2",
+    "latin:m\u014dtor"
   ],
   "DYNAST": [
     "greek:\u03b4\u03c5\u03bd\u03ac\u03c3\u03c4\u03b7\u03c2",
@@ -243390,6 +245135,28 @@
     "greek:\u1f10\u03c7\u1fd6\u03bd\u03bf\u03c2",
     "latin:ech\u012bnus"
   ],
+  "ECHIUROID": [
+    "greek:-oidea",
+    "greek:-ouros",
+    "greek:our\u00e1",
+    "greek:\u00e9chis",
+    "la-new:-ea",
+    "la-new:-eus",
+    "la-new:-urus",
+    "la-new:echiuroidea",
+    "la-new:echiurus"
+  ],
+  "ECHIUROIDS": [
+    "greek:-oidea",
+    "greek:-ouros",
+    "greek:our\u00e1",
+    "greek:\u00e9chis",
+    "la-new:-ea",
+    "la-new:-eus",
+    "la-new:-urus",
+    "la-new:echiuroidea",
+    "la-new:echiurus"
+  ],
   "ECHO": [
     "enm:eccho",
     "greek:\u1f20\u03c7\u03ce",
@@ -243506,6 +245273,42 @@
     "greek:\u1f20\u03c7\u03ce",
     "la-med:\u0113cc\u014d",
     "latin:\u0113ch\u014d"
+  ],
+  "ECHOVIRUS": [
+    "enm:humaigne",
+    "enm:humayne",
+    "enm:virus",
+    "french:-g\u00e8ne",
+    "frm:humain",
+    "greek:-\u03b3\u03b5\u03bd\u03ae\u03c2",
+    "greek:\u03ba\u03cd\u03c4\u03bf\u03c2",
+    "greek:\u03c0\u03ac\u03b8\u03bf\u03c2",
+    "greek:\u03c0\u1fb0\u0301\u03b8\u03bf\u03c2",
+    "greek:\u1f10\u03bd\u03c4\u03b5\u03c1\u03b9\u03ba\u03cc\u03c2",
+    "greek:\u1f40\u03c1\u03c6\u03b1\u03bd\u03cc\u03c2",
+    "itc-pro:weizos",
+    "la-lat:orphanus",
+    "latin:h\u016bm\u0101nus",
+    "latin:v\u012brus",
+    "old_french:humain"
+  ],
+  "ECHOVIRUSES": [
+    "enm:humaigne",
+    "enm:humayne",
+    "enm:virus",
+    "french:-g\u00e8ne",
+    "frm:humain",
+    "greek:-\u03b3\u03b5\u03bd\u03ae\u03c2",
+    "greek:\u03ba\u03cd\u03c4\u03bf\u03c2",
+    "greek:\u03c0\u03ac\u03b8\u03bf\u03c2",
+    "greek:\u03c0\u1fb0\u0301\u03b8\u03bf\u03c2",
+    "greek:\u1f10\u03bd\u03c4\u03b5\u03c1\u03b9\u03ba\u03cc\u03c2",
+    "greek:\u1f40\u03c1\u03c6\u03b1\u03bd\u03cc\u03c2",
+    "itc-pro:weizos",
+    "la-lat:orphanus",
+    "latin:h\u016bm\u0101nus",
+    "latin:v\u012brus",
+    "old_french:humain"
   ],
   "ECHT": [
     "german:echt",
@@ -244248,6 +246051,11 @@
     "greek:\u03c4\u03cd\u03c0\u03bf\u03c2",
     "greek:\u1f14\u03ba\u03c4\u03c5\u03c0\u03bf\u03c2"
   ],
+  "ECU": [
+    "french:\u00e9cu",
+    "latin:scutum",
+    "old_french:escu"
+  ],
   "ECUMENIC": [
     "greek:\u03bf\u1f30\u03ba\u03bf\u03c5\u03bc\u03b5\u03bd\u03b9\u03ba\u03cc\u03c2",
     "latin:oec\u016bmenicus"
@@ -244314,6 +246122,11 @@
   ],
   "ECUMENISTS": [
     "greek:\u03bf\u1f30\u03ba\u03bf\u03c5\u03bc\u03ad\u03bd\u03b7"
+  ],
+  "ECUS": [
+    "french:\u00e9cu",
+    "latin:scutum",
+    "old_french:escu"
   ],
   "ECZEMA": [
     "greek:\u1f10\u03ba\u03b6\u03ad\u03c9",
@@ -246224,6 +248037,14 @@
     "greek:\u03b5\u1f30\u03ba\u03ce\u03bd",
     "latin:\u012bc\u014dn"
   ],
+  "EINKORN": [
+    "old_high_german:ein",
+    "old_high_german:korn"
+  ],
+  "EINKORNS": [
+    "old_high_german:ein",
+    "old_high_german:korn"
+  ],
   "EINSTEIN": [
     "german:ein",
     "german:stein"
@@ -246502,6 +248323,16 @@
   "ELAPSING": [
     "frm:elapser",
     "latin:elapsus"
+  ],
+  "ELASMOBRANCH": [
+    "greek:branchia",
+    "greek:elasmos",
+    "greek:elaunein"
+  ],
+  "ELASMOBRANCHS": [
+    "greek:branchia",
+    "greek:elasmos",
+    "greek:elaunein"
   ],
   "ELASTASE": [
     "french:\u00e9lastique",
@@ -247618,6 +249449,12 @@
     "greek:\u1f24\u03bb\u03b5\u03ba\u03c4\u03c1\u03bf\u03bd",
     "latin:electro-"
   ],
+  "ELECTROPHORI": [
+    "la-new:electr- + -phorus"
+  ],
+  "ELECTROPHORUS": [
+    "la-new:electr- + -phorus"
+  ],
   "ELECTROPLATE": [
     "enm:plate",
     "enm:platen",
@@ -247905,6 +249742,14 @@
     "greek:\u1f10\u03ba\u03bb\u03b5\u03af\u03ba\u03c4\u03bf\u03bd",
     "latin:electuarium"
   ],
+  "ELEDOISIN": [
+    "greek:eled\u014dn\u0113",
+    "la-new:eledone"
+  ],
+  "ELEDOISINS": [
+    "greek:eled\u014dn\u0113",
+    "la-new:eledone"
+  ],
   "ELEEMOSYNARY": [
     "greek:\u1f10\u03bb\u03b5\u03b7\u03bc\u03bf\u03c3\u03cd\u03bd\u03b7",
     "la-lat:ele\u0113mosyna",
@@ -248069,6 +249914,14 @@
     "enm:elementen",
     "latin:elementum",
     "old_french:element"
+  ],
+  "ELEMI": [
+    "arabic:al l\u0101mi",
+    "la-new:elimi"
+  ],
+  "ELEMIS": [
+    "arabic:al l\u0101mi",
+    "la-new:elimi"
   ],
   "ELENCHI": [
     "greek:\u1f14\u03bb\u03b5\u03b3\u03c7\u03bf\u03c2",
@@ -248555,6 +250408,26 @@
   "ELOCUTIONS": [
     "enm:elocucioun",
     "la-lat:elocutio"
+  ],
+  "ELODEA": [
+    "greek:hel\u1e53d\u0113s",
+    "greek:h\u00e9los",
+    "greek:selos-",
+    "sanskrit:-\u014dd\u0113s",
+    "sanskrit:k\u0113\u1e53d\u0113s",
+    "sanskrit:od-",
+    "sanskrit:s\u00e1ra\u1e25",
+    "sanskrit:\u00f3zein"
+  ],
+  "ELODEAS": [
+    "greek:hel\u1e53d\u0113s",
+    "greek:h\u00e9los",
+    "greek:selos-",
+    "sanskrit:-\u014dd\u0113s",
+    "sanskrit:k\u0113\u1e53d\u0113s",
+    "sanskrit:od-",
+    "sanskrit:s\u00e1ra\u1e25",
+    "sanskrit:\u00f3zein"
   ],
   "ELOIGN": [
     "enm:eloynen",
@@ -250865,6 +252738,14 @@
     "latin:haemorrhoidae",
     "old_french:emorroides"
   ],
+  "EMERSION": [
+    "latin:emergere",
+    "latin:emersus"
+  ],
+  "EMERSIONS": [
+    "latin:emergere",
+    "latin:emersus"
+  ],
   "EMERY": [
     "french:\u00e9meri",
     "italian:smeriglio",
@@ -251071,6 +252952,12 @@
   "EMMYS": [
     "ru:\u044d\u043c",
     "uk:\u0435\u043c"
+  ],
+  "EMODIN": [
+    "la-new:rheum emodi"
+  ],
+  "EMODINS": [
+    "la-new:rheum emodi"
   ],
   "EMOLLIENT": [
     "french:\u00e9mollient",
@@ -254732,6 +256619,24 @@
     "old_french:pointe",
     "old_french:pointier"
   ],
+  "ENDRIN": [
+    "enm:ende",
+    "enm:enden",
+    "enm:rinnen",
+    "gmw-pro:and\u012b",
+    "old_english:ende",
+    "old_english:endian",
+    "old_english:rinnan"
+  ],
+  "ENDRINS": [
+    "enm:ende",
+    "enm:enden",
+    "enm:rinnen",
+    "gmw-pro:and\u012b",
+    "old_english:ende",
+    "old_english:endian",
+    "old_english:rinnan"
+  ],
   "ENDS": [
     "enm:ende",
     "enm:enden",
@@ -257755,6 +259660,20 @@
     "la-new:-itis",
     "la-new:entero-"
   ],
+  "ENTEROGASTRONE": [
+    "enm:entren",
+    "greek:\u1f41\u03c1\u03bc\u03ac\u03c9",
+    "greek:\u1f41\u03c1\u03bc\u1ff6\u03bd",
+    "latin:intr\u014d",
+    "old_french:entrer"
+  ],
+  "ENTEROGASTRONES": [
+    "enm:entren",
+    "greek:\u1f41\u03c1\u03bc\u03ac\u03c9",
+    "greek:\u1f41\u03c1\u03bc\u1ff6\u03bd",
+    "latin:intr\u014d",
+    "old_french:entrer"
+  ],
   "ENTERON": [
     "greek:\u1f14\u03bd\u03c4\u03b5\u03c1\u03bf\u03bd"
   ],
@@ -258259,6 +260178,12 @@
   "ENTOPIC": [
     "greek:\u03c4\u03bf\u03c0\u03b9\u03ba\u03cc\u03c2",
     "latin:topica"
+  ],
+  "ENTOPROCT": [
+    "greek:pr\u014dktos"
+  ],
+  "ENTOPROCTS": [
+    "greek:pr\u014dktos"
   ],
   "ENTOURAGE": [
     "french:entourage"
@@ -259244,6 +261169,9 @@
   "EOHIPPUSES": [
     "greek:\u1f20\u03ce\u03c2"
   ],
+  "EOLIAN": [
+    "latin:aeolus"
+  ],
   "EOLIPILE": [
     "french:\u00e9olipyle"
   ],
@@ -259481,11 +261409,21 @@
     "greek:\u1f25\u03b2\u03b7",
     "latin:eph\u0113bus"
   ],
+  "EPHEBI": [
+    "greek:eph\u0113bos",
+    "greek:epi-",
+    "greek:h\u0113b\u0113"
+  ],
   "EPHEBIC": [
     "greek:\u1f10\u03c0\u03af",
     "greek:\u1f14\u03c6\u03b7\u03b2\u03bf\u03c2",
     "greek:\u1f25\u03b2\u03b7",
     "latin:eph\u0113bus"
+  ],
+  "EPHEBUS": [
+    "greek:eph\u0113bos",
+    "greek:epi-",
+    "greek:h\u0113b\u0113"
   ],
   "EPHEDRA": [
     "greek:\u1f10\u03c6\u03ad\u03b4\u03c1\u03b1"
@@ -259726,6 +261664,14 @@
     "latin:continentem",
     "old_french:continent"
   ],
+  "EPICOTYL": [
+    "greek:\u03ba\u03bf\u03c4\u03c5\u03bb\u03b7\u03b4\u03ce\u03bd",
+    "latin:cotyl\u0113d\u014dn"
+  ],
+  "EPICOTYLS": [
+    "greek:\u03ba\u03bf\u03c4\u03c5\u03bb\u03b7\u03b4\u03ce\u03bd",
+    "latin:cotyl\u0113d\u014dn"
+  ],
   "EPICRANIA": [
     "greek:\u03ba\u03c1\u1fb1\u03bd\u03af\u03bf\u03bd",
     "la-med:cr\u0101nium"
@@ -259850,6 +261796,14 @@
     "french:-logie",
     "greek:-\u03bb\u03bf\u03b3\u03af\u03b1",
     "latin:-logia"
+  ],
+  "EPIDENDRUM": [
+    "greek:dendron",
+    "greek:epi-"
+  ],
+  "EPIDENDRUMS": [
+    "greek:dendron",
+    "greek:epi-"
   ],
   "EPIDERM": [
     "greek:\u1f10\u03c0\u03b9\u03b4\u03b5\u03c1\u03bc\u03af\u03c2",
@@ -260356,6 +262310,26 @@
     "greek:\u03c6\u03b1\u03b9\u03bd\u03cc\u03bc\u03b5\u03bd\u03bf\u03bd",
     "la-lat:phaenomenon"
   ],
+  "EPIPHRAGM": [
+    "greek:-ma",
+    "greek:epi-",
+    "greek:epiphrak-",
+    "greek:epiphr\u00e1ssein",
+    "greek:ep\u00edphragma",
+    "greek:phr\u00e1ssein",
+    "greek:phr\u00e1ttein",
+    "la-new:epiphragma"
+  ],
+  "EPIPHRAGMS": [
+    "greek:-ma",
+    "greek:epi-",
+    "greek:epiphrak-",
+    "greek:epiphr\u00e1ssein",
+    "greek:ep\u00edphragma",
+    "greek:phr\u00e1ssein",
+    "greek:phr\u00e1ttein",
+    "la-new:epiphragma"
+  ],
   "EPIPHYSEAL": [
     "greek:\u03c6\u03cd\u03c3\u03b9\u03c2"
   ],
@@ -260403,6 +262377,16 @@
     "greek:-\u03c9\u03c4\u03b9\u03ba\u03cc\u03c2",
     "greek:\u03c6\u1fe0\u03c4\u03cc\u03bd",
     "latin:-\u014dticus"
+  ],
+  "EPISCIA": [
+    "greek:epi-",
+    "greek:episkios",
+    "greek:skia"
+  ],
+  "EPISCIAS": [
+    "greek:epi-",
+    "greek:episkios",
+    "greek:skia"
   ],
   "EPISCOPACIES": [
     "enm:episcopal",
@@ -262048,6 +264032,16 @@
     "gmw-pro:airi",
     "old_english:\u01e3r"
   ],
+  "EREPSIN": [
+    "latin:epsin",
+    "latin:eripere",
+    "latin:rapere"
+  ],
+  "EREPSINS": [
+    "latin:epsin",
+    "latin:eripere",
+    "latin:rapere"
+  ],
   "ERETHISM": [
     "french:\u00e9r\u00e9thisme",
     "greek:\u1f10\u03c1\u03b5\u03b8\u03b9\u03c3\u03bc\u03cc\u03c2"
@@ -262176,6 +264170,16 @@
     "greek:\u1f14\u03c1\u03b3\u03bf\u03bd",
     "pl:ergonomia"
   ],
+  "ERGONOVINE": [
+    "enm:ergo",
+    "latin:erg\u014d",
+    "latin:novus"
+  ],
+  "ERGONOVINES": [
+    "enm:ergo",
+    "latin:erg\u014d",
+    "latin:novus"
+  ],
   "ERGOSTEROL": [
     "french:ergot"
   ],
@@ -262225,6 +264229,16 @@
   "ERICOID": [
     "mul:erica"
   ],
+  "ERIGERON": [
+    "greek:ger\u014dn",
+    "greek:\u0113ri",
+    "greek:\u0113riger\u014dn"
+  ],
+  "ERIGERONS": [
+    "greek:ger\u014dn",
+    "greek:\u0113ri",
+    "greek:\u0113riger\u014dn"
+  ],
   "ERINGO": [
     "greek:\u1f20\u03c1\u03cd\u03b3\u03b3\u03b9\u03bf\u03bd",
     "latin:eryngion"
@@ -262236,6 +264250,16 @@
   "ERINGOS": [
     "greek:\u1f20\u03c1\u03cd\u03b3\u03b3\u03b9\u03bf\u03bd",
     "latin:eryngion"
+  ],
+  "ERIOPHYID": [
+    "greek:erion",
+    "greek:physis",
+    "greek:phy\u0113"
+  ],
+  "ERIOPHYIDS": [
+    "greek:erion",
+    "greek:physis",
+    "greek:phy\u0113"
   ],
   "ERISTIC": [
     "greek:\u1f10\u03c1\u03b9\u03c3\u03c4\u03b9\u03ba\u03cc\u03c2"
@@ -264575,6 +266599,12 @@
   "ETHANOLS": [
     "greek:\u03b1\u1f30\u03b8\u03ae\u03c1"
   ],
+  "ETHEPHON": [
+    "german:ethyl"
+  ],
+  "ETHEPHONS": [
+    "german:ethyl"
+  ],
   "ETHER": [
     "enm:\u0113ther",
     "frm:ether",
@@ -265235,6 +267265,12 @@
   "ETHYLS": [
     "german:ethyl"
   ],
+  "ETHYNE": [
+    "german:ethyl"
+  ],
+  "ETHYNES": [
+    "german:ethyl"
+  ],
   "ETIC": [
     "greek:\u03c6\u03c9\u03bd\u03b7\u03c4\u1fd0\u03ba\u03cc\u03c2",
     "latin:ph\u014dn\u0113ticus"
@@ -265853,6 +267889,20 @@
     "greek:\u03b5\u1f56",
     "greek:\u03c0\u03ad\u03c8\u03b9\u03c2",
     "latin:pepticus"
+  ],
+  "EUPHAUSIID": [
+    "greek:-sis",
+    "greek:phau-",
+    "greek:pha\u00fasis",
+    "la-new:eu-",
+    "la-new:euphasia"
+  ],
+  "EUPHAUSIIDS": [
+    "greek:-sis",
+    "greek:phau-",
+    "greek:pha\u00fasis",
+    "la-new:eu-",
+    "la-new:euphasia"
   ],
   "EUPHEMISE": [
     "greek:\u03b5\u1f50\u03c6\u03b7\u03bc\u03b9\u03c3\u03bc\u03cc\u03c2"
@@ -267340,6 +269390,18 @@
   "EVOKING": [
     "french:\u00e9voquer",
     "latin:\u0113voc\u014d"
+  ],
+  "EVOLUTE": [
+    "la-new:l\u012bnea \u0113vol\u016bta",
+    "la-new:\u0113vol\u016bta",
+    "latin:\u0113volvere",
+    "latin:\u0113vol\u016btus"
+  ],
+  "EVOLUTES": [
+    "la-new:l\u012bnea \u0113vol\u016bta",
+    "la-new:\u0113vol\u016bta",
+    "latin:\u0113volvere",
+    "latin:\u0113vol\u016btus"
   ],
   "EVOLUTION": [
     "latin:\u0113vol\u016bti\u014d"
@@ -269875,6 +271937,18 @@
   "EXOCARPS": [
     "greek:\u03ba\u03b1\u03c1\u03c0\u03cc\u03c2"
   ],
+  "EXOCRINE": [
+    "french:-crine",
+    "french:endocrine",
+    "french:exo-",
+    "greek:\u03ba\u03c1\u03af\u03bd\u03c9"
+  ],
+  "EXOCRINES": [
+    "french:-crine",
+    "french:endocrine",
+    "french:exo-",
+    "greek:\u03ba\u03c1\u03af\u03bd\u03c9"
+  ],
   "EXOCYCLIC": [
     "french:cyclique",
     "greek:\u03ba\u03c5\u03ba\u03bb\u03b9\u03ba\u03cc\u03c2",
@@ -269915,6 +271989,12 @@
   ],
   "EXODOI": [
     "greek:\u1f14\u03be\u03bf\u03b4\u03bf\u03c2"
+  ],
+  "EXODONTIA": [
+    "la-new:-odontia"
+  ],
+  "EXODONTIAS": [
+    "la-new:-odontia"
   ],
   "EXODONTIST": [
     "greek:\u1f40\u03b4\u03bf\u03cd\u03c2"
@@ -271613,6 +273693,18 @@
     "latin:expositi\u014d",
     "old_french:esposicion"
   ],
+  "EXPOSITOR": [
+    "enm:expositour",
+    "la-lat:expositor",
+    "latin:exponere",
+    "xno:expositur"
+  ],
+  "EXPOSITORS": [
+    "enm:expositour",
+    "la-lat:expositor",
+    "latin:exponere",
+    "xno:expositur"
+  ],
   "EXPOSITORY": [
     "enm:exposicioun",
     "latin:expositi\u014d",
@@ -272271,6 +274363,16 @@
   "EXTENSIVENESSES": [
     "la-lat:extens\u012bvus",
     "latin:extensus"
+  ],
+  "EXTENSOMETER": [
+    "enm:extensioun",
+    "latin:extensi\u014d",
+    "old_french:estension"
+  ],
+  "EXTENSOMETERS": [
+    "enm:extensioun",
+    "latin:extensi\u014d",
+    "old_french:estension"
   ],
   "EXTENSOR": [
     "german:tensor",
@@ -276187,6 +278289,20 @@
     "la-lat:falc\u014d",
     "old_french:falcun"
   ],
+  "FALDSTOOL": [
+    "la-med:faldistolium",
+    "old_high_german:faldan",
+    "old_high_german:falt",
+    "old_high_german:faltistuol",
+    "old_high_german:stuol"
+  ],
+  "FALDSTOOLS": [
+    "la-med:faldistolium",
+    "old_high_german:faldan",
+    "old_high_german:falt",
+    "old_high_german:faltistuol",
+    "old_high_german:stuol"
+  ],
   "FALL": [
     "enm:fal",
     "enm:fallen",
@@ -277633,6 +279749,32 @@
     "enm:fantasien",
     "greek:\u03c6\u03b1\u03bd\u03c4\u03b1\u03c3\u03af\u03b1",
     "latin:phantasia",
+    "old_french:fantasie",
+    "old_french:fantasier"
+  ],
+  "FANTASYLAND": [
+    "enm:fantasie",
+    "enm:fantasien",
+    "enm:land",
+    "enm:lond",
+    "gmw-pro:land",
+    "greek:\u03c6\u03b1\u03bd\u03c4\u03b1\u03c3\u03af\u03b1",
+    "latin:phantasia",
+    "old_english:hland",
+    "old_english:land",
+    "old_french:fantasie",
+    "old_french:fantasier"
+  ],
+  "FANTASYLANDS": [
+    "enm:fantasie",
+    "enm:fantasien",
+    "enm:land",
+    "enm:lond",
+    "gmw-pro:land",
+    "greek:\u03c6\u03b1\u03bd\u03c4\u03b1\u03c3\u03af\u03b1",
+    "latin:phantasia",
+    "old_english:hland",
+    "old_english:land",
     "old_french:fantasie",
     "old_french:fantasier"
   ],
@@ -279992,6 +282134,16 @@
   ],
   "FAUTEUILS": [
     "french:fauteuil"
+  ],
+  "FAUVE": [
+    "french:fauve",
+    "old_french:falve",
+    "old_high_german:falo"
+  ],
+  "FAUVES": [
+    "french:fauve",
+    "old_french:falve",
+    "old_high_german:falo"
   ],
   "FAUVISM": [
     "french:fauvisme"
@@ -283059,6 +285211,18 @@
     "frm:f\u00e9rocit\u00e9",
     "latin:ferocitas"
   ],
+  "FERREDOXIN": [
+    "enm:reduccion",
+    "latin:ferrum",
+    "latin:reductio",
+    "old_french:reducion"
+  ],
+  "FERREDOXINS": [
+    "enm:reduccion",
+    "latin:ferrum",
+    "latin:reductio",
+    "old_french:reducion"
+  ],
   "FERREL": [
     "cel-pro:weiros",
     "enm:verel",
@@ -284746,6 +286910,12 @@
     "latin:fibra",
     "old_french:fibre"
   ],
+  "FIBRANNE": [
+    "french:fibre"
+  ],
+  "FIBRANNES": [
+    "french:fibre"
+  ],
   "FIBRE": [
     "french:fibre",
     "latin:fibra"
@@ -284923,6 +287093,14 @@
     "frm:cystique",
     "greek:\u03ba\u03cd\u03c3\u03c4\u03b9\u03c2"
   ],
+  "FIBROIN": [
+    "french:fibr-",
+    "french:fibro\u00efne"
+  ],
+  "FIBROINS": [
+    "french:fibr-",
+    "french:fibro\u00efne"
+  ],
   "FIBROMA": [
     "greek:-\u03c9\u03bc\u03b1"
   ],
@@ -284973,6 +287151,14 @@
   ],
   "FIBROSES": [
     "greek:-\u03c9\u03c3\u03b9\u03c2"
+  ],
+  "FIBROSITIS": [
+    "la-new:fibrosus",
+    "la-new:fibrous"
+  ],
+  "FIBROSITISES": [
+    "la-new:fibrosus",
+    "la-new:fibrous"
   ],
   "FIBROUS": [
     "french:fibre",
@@ -285032,6 +287218,12 @@
   "FICHUS": [
     "french:fichu",
     "latin:f\u012bg\u014d"
+  ],
+  "FICIN": [
+    "latin:ficus"
+  ],
+  "FICINS": [
+    "latin:ficus"
   ],
   "FICKLE": [
     "enm:fikelen",
@@ -286001,6 +288193,14 @@
     "latin:filum",
     "mul:filaria"
   ],
+  "FILATURE": [
+    "la-lat:filare",
+    "la-lat:filatus"
+  ],
+  "FILATURES": [
+    "la-lat:filare",
+    "la-lat:filatus"
+  ],
   "FILBERT": [
     "enm:filbert-note",
     "xno:noix de filbert"
@@ -286690,6 +288890,14 @@
     "el:\u03c6\u03cd\u03bb\u03bb\u03bf"
   ],
   "FILOSE": [
+    "latin:filum"
+  ],
+  "FILOVIRUS": [
+    "la-new:virus",
+    "latin:filum"
+  ],
+  "FILOVIRUSES": [
+    "la-new:virus",
     "latin:filum"
   ],
   "FILS": [
@@ -290334,6 +292542,22 @@
     "old_english:-te",
     "old_french:fixer"
   ],
+  "FIXTURE": [
+    "la-lat:f\u012bx\u016bra",
+    "latin:fixura",
+    "latin:f\u012bgere",
+    "latin:f\u012bxus",
+    "latin:mixt\u016bra",
+    "old_french:misture"
+  ],
+  "FIXTURES": [
+    "la-lat:f\u012bx\u016bra",
+    "latin:fixura",
+    "latin:f\u012bgere",
+    "latin:f\u012bxus",
+    "latin:mixt\u016bra",
+    "old_french:misture"
+  ],
   "FIXURE": [
     "latin:fixura"
   ],
@@ -292768,6 +294992,16 @@
   ],
   "FLAUTISTS": [
     "italian:flautista"
+  ],
+  "FLAVANONE": [
+    "latin:-ane",
+    "latin:-one",
+    "latin:flavus"
+  ],
+  "FLAVANONES": [
+    "latin:-ane",
+    "latin:-one",
+    "latin:flavus"
   ],
   "FLAVIN": [
     "ga:\u00f3 flaithimh\u00edn"
@@ -295257,6 +297491,16 @@
   ],
   "FLORETS": [
     "old_french:florete"
+  ],
+  "FLORIBUNDA": [
+    "la-new:fl\u014dribundus",
+    "latin:-bundus",
+    "latin:fl\u014dr\u0113re"
+  ],
+  "FLORIBUNDAS": [
+    "la-new:fl\u014dribundus",
+    "latin:-bundus",
+    "latin:fl\u014dr\u0113re"
   ],
   "FLORICANE": [
     "latin:flos"
@@ -298408,6 +300652,16 @@
     "latin:fustis",
     "old_french:fust",
     "old_french:fuste"
+  ],
+  "FOLACIN": [
+    "french:acide",
+    "latin:acidus",
+    "latin:folium"
+  ],
+  "FOLACINS": [
+    "french:acide",
+    "latin:acidus",
+    "latin:folium"
   ],
   "FOLATE": [
     "latin:folium"
@@ -305911,6 +308165,12 @@
   "FRAULEINS": [
     "german:fr\u00e4ulein"
   ],
+  "FRAXINELLA": [
+    "latin:fraxinus"
+  ],
+  "FRAXINELLAS": [
+    "latin:fraxinus"
+  ],
   "FRAY": [
     "enm:frai",
     "enm:fraien",
@@ -306697,6 +308957,12 @@
     "gmw-pro:fr\u012b",
     "old_english:fr\u0113o",
     "old_english:fr\u0113on"
+  ],
+  "FREESIA": [
+    "la-new:freese"
+  ],
+  "FREESIAS": [
+    "la-new:freese"
   ],
   "FREEST": [
     "enm:fre",
@@ -308524,6 +310790,12 @@
     "old_english:fri\u00feian",
     "old_english:fyrh\u00fee"
   ],
+  "FRITILLARIA": [
+    "latin:fritillus"
+  ],
+  "FRITILLARIAS": [
+    "latin:fritillus"
+  ],
   "FRITILLARIES": [
     "latin:fritillus"
   ],
@@ -309497,6 +311769,16 @@
     "greek:\u03bb\u1fe0\u0301\u03c3\u1fd0\u03c2",
     "latin:fr\u014dns",
     "old_french:front"
+  ],
+  "FRONTON": [
+    "latin:frons",
+    "spanish:frente",
+    "spanish:front\u00f3n"
+  ],
+  "FRONTONS": [
+    "latin:frons",
+    "spanish:frente",
+    "spanish:front\u00f3n"
   ],
   "FRONTS": [
     "enm:front",
@@ -311991,6 +314273,14 @@
   "FURANS": [
     "latin:furfur"
   ],
+  "FURAZOLIDONE": [
+    "latin:furfur",
+    "latin:oleum"
+  ],
+  "FURAZOLIDONES": [
+    "latin:furfur",
+    "latin:oleum"
+  ],
   "FURBEARER": [
     "enm:berer",
     "enm:furre",
@@ -312819,6 +315109,18 @@
   "FUSTY": [
     "enm:fusty"
   ],
+  "FUSULINID": [
+    "la-new:-ina",
+    "la-new:fusulina",
+    "la-new:fusulinidae",
+    "latin:fusus"
+  ],
+  "FUSULINIDS": [
+    "la-new:-ina",
+    "la-new:fusulina",
+    "la-new:fusulinidae",
+    "latin:fusus"
+  ],
   "FUSUMA": [
     "japanese:\u8956"
   ],
@@ -313331,6 +315633,24 @@
     "old_english:gada",
     "old_norse:gaddr"
   ],
+  "GADABOUT": [
+    "enm:gad",
+    "enm:gadden",
+    "enm:gade",
+    "gmw-pro:gaduling",
+    "gmw-pro:gad\u014d",
+    "old_english:gada",
+    "old_norse:gaddr"
+  ],
+  "GADABOUTS": [
+    "enm:gad",
+    "enm:gadden",
+    "enm:gade",
+    "gmw-pro:gaduling",
+    "gmw-pro:gad\u014d",
+    "old_english:gada",
+    "old_norse:gaddr"
+  ],
   "GADARENE": [
     "greek:\u03b3\u03b1\u03b4\u03b1\u03c1\u03b7\u03bd\u03cc\u03c2",
     "la-lat:gadar\u0113nus"
@@ -313431,6 +315751,12 @@
   ],
   "GADOIDS": [
     "mul:gadus"
+  ],
+  "GADOLINITE": [
+    "french:gadolin"
+  ],
+  "GADOLINITES": [
+    "french:gadolin"
   ],
   "GADOLINIUM": [
     "sv:-"
@@ -313652,6 +315978,16 @@
     "enm:gaggen",
     "old_norse:gaghals"
   ],
+  "GAHNITE": [
+    "french:gahnite",
+    "german:gahn",
+    "german:gahnit"
+  ],
+  "GAHNITES": [
+    "french:gahnite",
+    "german:gahn",
+    "german:gahnit"
+  ],
   "GAIETIES": [
     "frm:gaiet\u00e9"
   ],
@@ -313661,6 +315997,12 @@
   "GAIJIN": [
     "japanese:\u5916\u4eba",
     "ltc:\u5916\u4eba"
+  ],
+  "GAILLARDIA": [
+    "la-new:gaillard"
+  ],
+  "GAILLARDIAS": [
+    "la-new:gaillard"
   ],
   "GAILY": [
     "enm:gay",
@@ -314494,6 +316836,34 @@
     "old_english:\u0121ealla",
     "old_french:galle"
   ],
+  "GALLIARD": [
+    "br:gallout",
+    "br:gelh-",
+    "cy:gallu",
+    "enm:gaylard",
+    "frm:gaillarde",
+    "italian:gagliarda",
+    "lt:gal\u0117\u0301ti",
+    "old_french:-ard",
+    "old_french:gal-",
+    "old_french:galy-",
+    "sga:gal",
+    "xno:gaillard"
+  ],
+  "GALLIARDS": [
+    "br:gallout",
+    "br:gelh-",
+    "cy:gallu",
+    "enm:gaylard",
+    "frm:gaillarde",
+    "italian:gagliarda",
+    "lt:gal\u0117\u0301ti",
+    "old_french:-ard",
+    "old_french:gal-",
+    "old_french:galy-",
+    "sga:gal",
+    "xno:gaillard"
+  ],
   "GALLIASS": [
     "italian:galeaza",
     "latin:galea",
@@ -314507,8 +316877,16 @@
   "GALLIC": [
     "latin:gallicus"
   ],
+  "GALLICA": [
+    "la-new:rosa gallica",
+    "latin:gallicus"
+  ],
   "GALLICAN": [
     "latin:gallic\u0101nus"
+  ],
+  "GALLICAS": [
+    "la-new:rosa gallica",
+    "latin:gallicus"
   ],
   "GALLICISM": [
     "french:gallicisme"
@@ -315201,6 +317579,16 @@
     "frm:gambe",
     "la-lat:gamba"
   ],
+  "GAMBUSIA": [
+    "spanish:gambusino",
+    "spanish:gambusinos",
+    "spanish:pescar gambusinos"
+  ],
+  "GAMBUSIAS": [
+    "spanish:gambusino",
+    "spanish:gambusinos",
+    "spanish:pescar gambusinos"
+  ],
   "GAME": [
     "enm:game",
     "gmw-pro:gaman",
@@ -315811,6 +318199,22 @@
   "GANGLIONS": [
     "greek:\u03b3\u1fb0\u03b3\u03b3\u03bb\u1fd0\u0301\u03bf\u03bd"
   ],
+  "GANGLIOSIDE": [
+    "german:-oside",
+    "german:ganglion",
+    "german:ganglioside",
+    "german:glycoside",
+    "greek:\u03b3\u03bb\u03c5\u03ba\u03cd\u03c2",
+    "greek:\u03b3\u1fb0\u03b3\u03b3\u03bb\u1fd0\u0301\u03bf\u03bd"
+  ],
+  "GANGLIOSIDES": [
+    "german:-oside",
+    "german:ganglion",
+    "german:ganglioside",
+    "german:glycoside",
+    "greek:\u03b3\u03bb\u03c5\u03ba\u03cd\u03c2",
+    "greek:\u03b3\u1fb0\u03b3\u03b3\u03bb\u1fd0\u0301\u03bf\u03bd"
+  ],
   "GANGLY": [
     "enm:gang",
     "enm:gangen",
@@ -316033,6 +318437,40 @@
   ],
   "GANOIDS": [
     "greek:\u03b3\u03ac\u03bd\u03bf\u03c2"
+  ],
+  "GANTELOPE": [
+    "enm:lep",
+    "enm:lepen",
+    "gml:hlaupa-",
+    "gml:hlaupan-",
+    "gml:lop",
+    "gmw-pro:hlaupan",
+    "gmw-pro:laup",
+    "is:gata",
+    "is:lopp",
+    "old_english:hl\u0113apan",
+    "old_english:l\u0113ap",
+    "sv:gata",
+    "sv:gatlopp",
+    "sv:gatulop",
+    "sv:gat\u014dn-"
+  ],
+  "GANTELOPES": [
+    "enm:lep",
+    "enm:lepen",
+    "gml:hlaupa-",
+    "gml:hlaupan-",
+    "gml:lop",
+    "gmw-pro:hlaupan",
+    "gmw-pro:laup",
+    "is:gata",
+    "is:lopp",
+    "old_english:hl\u0113apan",
+    "old_english:l\u0113ap",
+    "sv:gata",
+    "sv:gatlopp",
+    "sv:gatulop",
+    "sv:gat\u014dn-"
   ],
   "GANTLET": [
     "enm:gauntelett",
@@ -317656,6 +320094,14 @@
     "greek:\u03b3\u1fb0\u03c3\u03c4\u03ae\u03c1",
     "greek:\u03c3\u03ba\u03bf\u03c0\u03ad\u03c9"
   ],
+  "GASTROTRICH": [
+    "greek:gastr-",
+    "greek:thrix"
+  ],
+  "GASTROTRICHS": [
+    "greek:gastr-",
+    "greek:thrix"
+  ],
   "GASTROVASCULAR": [
     "greek:\u03b3\u03b1\u03c3\u03c4\u03ae\u03c1",
     "greek:\u03b3\u1fb0\u03c3\u03c4\u03ae\u03c1",
@@ -318659,6 +321105,12 @@
   "GAZABOS": [
     "spanish:gazapo"
   ],
+  "GAZANIA": [
+    "la-new:gaza"
+  ],
+  "GAZANIAS": [
+    "la-new:gaza"
+  ],
   "GAZE": [
     "enm:gasen"
   ],
@@ -318747,6 +321199,18 @@
     "french:gazette",
     "italian:gazzetta",
     "vec:gazeta"
+  ],
+  "GAZILLION": [
+    "enm:milioun",
+    "frm:milion",
+    "italian:mille",
+    "old_french:millon"
+  ],
+  "GAZILLIONS": [
+    "enm:milioun",
+    "frm:milion",
+    "italian:mille",
+    "old_french:millon"
   ],
   "GAZING": [
     "enm:gasen"
@@ -319253,6 +321717,18 @@
   ],
   "GELIDNESSES": [
     "latin:gelidus"
+  ],
+  "GELIGNITE": [
+    "french:g\u00e9latine",
+    "italian:gelatina",
+    "latin:gel\u014d",
+    "latin:ignis"
+  ],
+  "GELIGNITES": [
+    "french:g\u00e9latine",
+    "italian:gelatina",
+    "latin:gel\u014d",
+    "latin:ignis"
   ],
   "GELLED": [
     "french:g\u00e9latine",
@@ -323185,6 +325661,26 @@
     "gml:wiemel",
     "old_french:guinbelet",
     "xno:wimble"
+  ],
+  "GIMME": [
+    "enm:given",
+    "old_english:\u0121efan",
+    "old_norse:gefa"
+  ],
+  "GIMMES": [
+    "enm:given",
+    "old_english:\u0121efan",
+    "old_norse:gefa"
+  ],
+  "GIMMIE": [
+    "enm:given",
+    "old_english:\u0121efan",
+    "old_norse:gefa"
+  ],
+  "GIMMIES": [
+    "enm:given",
+    "old_english:\u0121efan",
+    "old_norse:gefa"
   ],
   "GIMP": [
     "dutch:gimp",
@@ -332829,6 +335325,14 @@
   "GRAPEY": [
     "enm:grapy"
   ],
+  "GRAPH": [
+    "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
+    "latin:graphicus"
+  ],
+  "GRAPHED": [
+    "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
+    "latin:graphicus"
+  ],
   "GRAPHEME": [
     "greek:\u03b3\u03c1\u03ac\u03c6\u03c9"
   ],
@@ -332865,6 +335369,10 @@
     "latin:graphicus"
   ],
   "GRAPHICS": [
+    "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
+    "latin:graphicus"
+  ],
+  "GRAPHING": [
     "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
     "latin:graphicus"
   ],
@@ -332934,6 +335442,10 @@
   ],
   "GRAPHOLOGY": [
     "french:graphologie"
+  ],
+  "GRAPHS": [
+    "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
+    "latin:graphicus"
   ],
   "GRAPIER": [
     "enm:grapy"
@@ -346586,6 +349098,54 @@
     "old_english:healdan",
     "old_english:hendan",
     "old_english:hold"
+  ],
+  "HANDICAP": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
+  ],
+  "HANDICAPPED": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
+  ],
+  "HANDICAPPER": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
+  ],
+  "HANDICAPPERS": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
+  ],
+  "HANDICAPPING": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
+  ],
+  "HANDICAPS": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
   ],
   "HANDICRAFT": [
     "old_english:handcr\u00e6ft"
@@ -363025,6 +365585,48 @@
     "old_english:n\u00e6\u0121l",
     "old_english:n\u00e6\u0121lan"
   ],
+  "HOBNOB": [
+    "enm:drink",
+    "enm:drinken",
+    "gmw-pro:drinkan",
+    "old_english:drincan",
+    "old_english:dryn\u010b"
+  ],
+  "HOBNOBBED": [
+    "enm:drink",
+    "enm:drinken",
+    "gmw-pro:drinkan",
+    "old_english:drincan",
+    "old_english:dryn\u010b"
+  ],
+  "HOBNOBBER": [
+    "enm:drink",
+    "enm:drinken",
+    "gmw-pro:drinkan",
+    "old_english:drincan",
+    "old_english:dryn\u010b"
+  ],
+  "HOBNOBBERS": [
+    "enm:drink",
+    "enm:drinken",
+    "gmw-pro:drinkan",
+    "old_english:drincan",
+    "old_english:dryn\u010b"
+  ],
+  "HOBNOBBING": [
+    "enm:drink",
+    "enm:drinken",
+    "gmw-pro:drinkan",
+    "old_english:drincan",
+    "old_english:dryn\u010b"
+  ],
+  "HOBNOBS": [
+    "enm:drink",
+    "enm:drinken",
+    "gmw-pro:drinkan",
+    "old_english:drincan",
+    "old_english:dryn\u010b"
+  ],
   "HOBS": [
     "enm:hob"
   ],
@@ -370970,6 +373572,51 @@
   "HOWDAHS": [
     "arabic:\u0647\u064e\u0648\u0652\u062f\u064e\u062c",
     "hindi:\u0939\u094c\u0926\u093e"
+  ],
+  "HOWDIE": [
+    "enm:how",
+    "enm:howe",
+    "gmw-pro:hw\u014d",
+    "old_english:h\u014dh",
+    "old_english:h\u016b",
+    "old_norse:haugr",
+    "wya:haau"
+  ],
+  "HOWDIED": [
+    "enm:how",
+    "enm:howe",
+    "gmw-pro:hw\u014d",
+    "old_english:h\u014dh",
+    "old_english:h\u016b",
+    "old_norse:haugr",
+    "wya:haau"
+  ],
+  "HOWDIES": [
+    "enm:how",
+    "enm:howe",
+    "gmw-pro:hw\u014d",
+    "old_english:h\u014dh",
+    "old_english:h\u016b",
+    "old_norse:haugr",
+    "wya:haau"
+  ],
+  "HOWDY": [
+    "enm:how",
+    "enm:howe",
+    "gmw-pro:hw\u014d",
+    "old_english:h\u014dh",
+    "old_english:h\u016b",
+    "old_norse:haugr",
+    "wya:haau"
+  ],
+  "HOWDYING": [
+    "enm:how",
+    "enm:howe",
+    "gmw-pro:hw\u014d",
+    "old_english:h\u014dh",
+    "old_english:h\u016b",
+    "old_norse:haugr",
+    "wya:haau"
   ],
   "HOWE": [
     "enm:how",
@@ -516908,6 +519555,14 @@
   ],
   "NONHALOGENATED": [
     "greek:\u1f05\u03bb\u03c2"
+  ],
+  "NONHANDICAPPED": [
+    "enm:handen",
+    "enm:hond",
+    "gmw-pro:handijan",
+    "gmw-pro:handu",
+    "old_english:hand",
+    "old_english:hendan"
   ],
   "NONHAPPENING": [
     "enm:happen",
@@ -682115,6 +684770,26 @@
   "RIGADOONS": [
     "french:rigaudon"
   ],
+  "RIGAMAROLE": [
+    "enm:man",
+    "enm:mannen",
+    "enm:ragge",
+    "gmw-pro:mann",
+    "old_english:mann",
+    "old_english:mannian",
+    "old_english:ragg",
+    "old_norse:r\u01ebgg"
+  ],
+  "RIGAMAROLES": [
+    "enm:man",
+    "enm:mannen",
+    "enm:ragge",
+    "gmw-pro:mann",
+    "old_english:mann",
+    "old_english:mannian",
+    "old_english:ragg",
+    "old_norse:r\u01ebgg"
+  ],
   "RIGATONI": [
     "italian:rigatoni"
   ],
@@ -682490,6 +685165,26 @@
     "enm:rigged",
     "enm:rigide",
     "latin:rigidus"
+  ],
+  "RIGMAROLE": [
+    "enm:man",
+    "enm:mannen",
+    "enm:ragge",
+    "gmw-pro:mann",
+    "old_english:mann",
+    "old_english:mannian",
+    "old_english:ragg",
+    "old_norse:r\u01ebgg"
+  ],
+  "RIGMAROLES": [
+    "enm:man",
+    "enm:mannen",
+    "enm:ragge",
+    "gmw-pro:mann",
+    "old_english:mann",
+    "old_english:mannian",
+    "old_english:ragg",
+    "old_norse:r\u01ebgg"
   ],
   "RIGOR": [
     "latin:rigor"
@@ -693700,6 +696395,22 @@
   ],
   "SAFFRONS": [
     "enm:saffron"
+  ],
+  "SAFROL": [
+    "latin:saxifragus",
+    "spanish:sasafr\u00e1s"
+  ],
+  "SAFROLE": [
+    "latin:saxifragus",
+    "spanish:sasafr\u00e1s"
+  ],
+  "SAFROLES": [
+    "latin:saxifragus",
+    "spanish:sasafr\u00e1s"
+  ],
+  "SAFROLS": [
+    "latin:saxifragus",
+    "spanish:sasafr\u00e1s"
   ],
   "SAG": [
     "enm:saggen",
@@ -776678,6 +779389,12 @@
     "frm:subalterne",
     "la-lat:subalternus"
   ],
+  "SUBANTARCTIC": [
+    "enm:antartik",
+    "greek:antarktikos",
+    "greek:arktikos",
+    "latin:antarcticus"
+  ],
   "SUBAPICAL": [
     "la-new:apicalis",
     "latin:apex"
@@ -778099,6 +780816,14 @@
     "frm:grade",
     "itc-pro:gra\u00f0us",
     "latin:gradus"
+  ],
+  "SUBGRAPH": [
+    "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
+    "latin:graphicus"
+  ],
+  "SUBGRAPHS": [
+    "greek:\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03cc\u03c2",
+    "latin:graphicus"
   ],
   "SUBGROUP": [
     "french:groupe",
@@ -822608,6 +825333,36 @@
     "old_english:loft",
     "old_english:topp",
     "old_norse:lopt"
+  ],
+  "TOPLOFTIER": [
+    "enm:top",
+    "gmw-pro:topp",
+    "old_english:topp"
+  ],
+  "TOPLOFTIEST": [
+    "enm:top",
+    "gmw-pro:topp",
+    "old_english:topp"
+  ],
+  "TOPLOFTILY": [
+    "enm:top",
+    "gmw-pro:topp",
+    "old_english:topp"
+  ],
+  "TOPLOFTINESS": [
+    "enm:top",
+    "gmw-pro:topp",
+    "old_english:topp"
+  ],
+  "TOPLOFTINESSES": [
+    "enm:top",
+    "gmw-pro:topp",
+    "old_english:topp"
+  ],
+  "TOPLOFTY": [
+    "enm:top",
+    "gmw-pro:topp",
+    "old_english:topp"
   ],
   "TOPMAST": [
     "enm:mast",
@@ -895112,6 +897867,26 @@
   "WHOA": [
     "enm:ho",
     "old_norse:h\u00f3!"
+  ],
+  "WHODUNIT": [
+    "enm:who",
+    "gmw-pro:hwa\u0280",
+    "old_english:hw\u0101"
+  ],
+  "WHODUNITS": [
+    "enm:who",
+    "gmw-pro:hwa\u0280",
+    "old_english:hw\u0101"
+  ],
+  "WHODUNNIT": [
+    "enm:who",
+    "gmw-pro:hwa\u0280",
+    "old_english:hw\u0101"
+  ],
+  "WHODUNNITS": [
+    "enm:who",
+    "gmw-pro:hwa\u0280",
+    "old_english:hw\u0101"
   ],
   "WHOEVER": [
     "enm:whoever"

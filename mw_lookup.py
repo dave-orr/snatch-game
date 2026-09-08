@@ -100,7 +100,11 @@ LANGUAGE_PATTERN = re.compile(
 # names another English entry the word was formed from ("back-formation
 # from {et_link|zipper:1|zipper:1}") and is read like an italic English
 # word. "More at" ({ma}) and "see" ({dx_ety}) references are not sources.
-FRAGMENT = re.compile(r'\{it\}([^{}]*?)\{/it\}([A-Za-z]+)')
+# A word with italics on only some of its letters: "{it}b{/it}et{it}a{/it}",
+# "p{it}epsin{/it}", "{it}dil{/it}ator". The italics show which letters the
+# new word took; the word itself is the whole token.
+PARTLY_ITALIC = re.compile(r'[^\s(),;]*\{it\}[^\s(),;]*')
+IT_TAGS = re.compile(r'\{/?it\}')
 ITALIC = re.compile(r'\{it\}(.*?)\{/it\}|\{et_link\|([^|}]*?)(?::\d+)?\|[^}]*\}')
 CROSSREF = re.compile(r'\{ma\}.*?\{/ma\}|\{dx_ety\}.*?\{/dx_ety\}')
 TOKEN = re.compile(r'\{[^}]*\}')
@@ -129,17 +133,29 @@ def parse_etymology(text):
     """
     text = CROSSREF.sub(' ', text)
     # Merriam-Webster italicises the part of a word that matters:
-    # "{it}Amm{/it}oniak", "{it}am{/it}ine". Rejoin the word first, or the
-    # fragment "am" comes back and resolves to the verb BE.
-    text = FRAGMENT.sub(lambda m: '{it}' + m.group(1) + m.group(2) + '{/it}', text)
+    # "{it}Amm{/it}oniak", "{it}am{/it}ine", "{it}b{/it}et{it}a{/it}". Restore
+    # the whole word first, or the fragment "am" comes back and resolves to
+    # the verb BE and "bet" to the wager.
+    def whole_word(m):
+        token = m.group(0)
+        plain = IT_TAGS.sub('', token)
+        if IT_TAGS.sub('', token.strip()) == plain and token.startswith('{it}') \
+                and token.endswith('{/it}') and token.count('{it}') == 1:
+            return token                      # fully italic already
+        return '{it}' + plain + '{/it}'
+    text = PARTLY_ITALIC.sub(whole_word, text)
     roots, flags = [], set()
     if IMITATIVE.search(text):
         flags.add('imitative')
     if UNKNOWN.search(text):
         flags.add('unknown')
 
-    # Walk languages and italic words in order of appearance.
+    # Walk languages and italic words in order of appearance. A language
+    # named inside parentheses - "er- (probably from Latin eripere) + pepsin"
+    # - applies only until the parenthesis closes.
     events = []
+    for m in re.finditer(r'[()]', text):
+        events.append((m.start(), 'paren', m.group(0)))
     for m in LANGUAGE_PATTERN.finditer(text):
         events.append((m.start(), 'lang', LANGUAGES[m.group(1)]))
     for m in ITALIC.finditer(text):
@@ -151,7 +167,14 @@ def parse_etymology(text):
 
     current, seen_word = None, False
     components = []
+    stack = []
     for _, kind, value in events:
+        if kind == 'paren':
+            if value == '(':
+                stack.append((current, seen_word))
+            elif stack:
+                current, seen_word = stack.pop()
+            continue
         if kind == 'lang':
             if current and not seen_word:
                 flags.add(f'from:{current}')
@@ -163,8 +186,10 @@ def parse_etymology(text):
             if current and kind == 'word':
                 roots.append((current, word))
                 seen_word = True
-            elif re.fullmatch(r"[a-z][a-z'-]*", word) and len(word.strip('-')) >= 3 \
+            elif re.fullmatch(r"[a-z][a-z']*", word) and len(word) >= 3 \
                     and not value.strip()[:1].isupper():
+                # whole words only: an affix ("-fen", "cycl-") has no page in
+                # the game's data, and its bare form is another word (FEN)
                 # lowercase in the original: a capitalised italic is a name
                 # ("from Adolf {it}Martens{/it}"), and MARTENS is also the
                 # plural of the animal
