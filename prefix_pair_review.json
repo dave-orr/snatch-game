@@ -1,14 +1,20 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (six review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, 7 and 9 after the first two Merriam-Webster batches)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (seven review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, then 7, 9 and 4 after the Merriam-Webster batches)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 1034,
-  "related": 1025,
+  "reviewed": 1038,
+  "related": 1029,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
  "pairs": [
+  [
+   "arabic",
+   "ʽothman",
+   "ʽothmani",
+   true
+  ],
   [
    "cy",
    "eistedd",
@@ -3479,6 +3485,12 @@
   ],
   [
    "german",
+   "langbein",
+   "langbeinit",
+   true
+  ],
+  [
+   "german",
    "meister",
    "meistersinger",
    true
@@ -3631,6 +3643,12 @@
    "greek",
    "katarrhin",
    "katarrhina",
+   true
+  ],
+  [
+   "greek",
+   "malakos",
+   "malakostrakos",
    true
   ],
   [
@@ -3913,6 +3931,12 @@
    "la-new",
    "ischaemia",
    "ischaemiae",
+   true
+  ],
+  [
+   "la-new",
+   "penicillium",
+   "penicillium citrinum",
    true
   ],
   [

@@ -8268,6 +8268,43 @@
   "flags": [],
   "roots": []
  },
+ "GEMUTLICHKEIT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GENOISE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:génoise",
+   "fr:génois"
+  ]
+ },
+ "GERANIAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GERBERA": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": [
+   "la-new:gerber"
+  ]
+ },
+ "GEUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:gaeum",
+   "la:geum"
+  ]
+ },
  "GHETTO": {
   "components": [],
   "flags": [],
@@ -8276,6 +8313,18 @@
    "it:ghetàr",
    "la:jactare"
   ]
+ },
+ "GIBBERELLIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:gibberella"
+  ]
+ },
+ "GIBBSITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "GIDDYUP": {
   "components": [],
@@ -8287,11 +8336,23 @@
   "flags": [],
   "roots": []
  },
+ "GIGLOT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GIMCRACK": {
   "components": [],
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "GIMMAL": {
+  "components": [
+   "gemel"
+  ],
+  "flags": [],
   "roots": []
  },
  "GIMME": {
@@ -8308,7 +8369,54 @@
   ],
   "roots": []
  },
+ "GIMMICKRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GINGELEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GINGILI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GINK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "GINZO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIPON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIROSOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GITANO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIVEAWAY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GIVEBACK": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8318,6 +8426,41 @@
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "GLASSWORM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLENGARRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLIDEPATH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLIFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLOMERULUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:glomer-",
+   "la:globus"
+  ]
+ },
+ "GLONOIN": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "GLOP": {
@@ -8332,6 +8475,25 @@
   "flags": [
    "from:enm"
   ],
+  "roots": []
+ },
+ "GLOWFLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLOXINIA": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": [
+   "la-new:gloxin"
+  ]
+ },
+ "GLUCAN": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "GLUCURONIDE": {
@@ -8354,7 +8516,39 @@
   "flags": [],
   "roots": []
  },
+ "GLUTETHIMIDE": {
+  "components": [
+   "gluten",
+   "imide"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "GLYCAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLYCONIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GLYPTIC": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:glyptique",
+   "grc:glyptikē",
+   "grc:glyphein"
+  ]
+ },
+ "GNATHION": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GNATHITE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8366,11 +8560,87 @@
   "flags": [],
   "roots": []
  },
+ "GOBIOID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GODETIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:godet"
+  ]
+ },
+ "GOLDARN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOLDBUG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOLDSTONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOLDURN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GOLIARD": {
   "components": [],
   "flags": [
    "from:frm"
   ],
+  "roots": []
+ },
+ "GOMBROON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOMUTI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOOGOL": {
+  "components": [
+   "born"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "GOOMBAY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GOOSEFLESH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GORCOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GORP": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "GOSSIPRY": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "GOWAN": {
@@ -8380,7 +8650,22 @@
    "enm:gollan"
   ]
  },
+ "GOX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GRADIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRAMICIDIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRAMP": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8400,6 +8685,23 @@
   "flags": [],
   "roots": []
  },
+ "GRAYFISH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRAYOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRAYWACKE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:grauwacke"
+  ]
+ },
  "GRECIANIZE": {
   "components": [],
   "flags": [],
@@ -8410,17 +8712,92 @@
   "flags": [],
   "roots": []
  },
+ "GREEGREE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GREENLIGHT": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "GREENOCKITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GREENROOM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GREISEN": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": []
+ },
+ "GREYHEN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRIBBLE": {
+  "components": [
+   "grub"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "GRINCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRISEOFULVIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:griseofulvum",
+   "la-new:penicillium"
+  ]
  },
  "GROK": {
   "components": [],
   "flags": [],
   "roots": []
  },
+ "GROSSULARITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:grossularit",
+   "la-new:grossularia"
+  ]
+ },
+ "GROUNDOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GROWNUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRUGRU": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GRUMPHIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GRUYERE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8432,6 +8809,46 @@
    "es:guácharo"
   ]
  },
+ "GUAIOCUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUANAY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUANOSINE": {
+  "components": [
+   "guanine",
+   "ribose"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "GUAYULE": {
+  "components": [],
+  "flags": [
+   "from:es"
+  ],
+  "roots": [
+   "nah:cuauholli",
+   "nah:huauholli"
+  ]
+ },
+ "GUERNSEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUFF": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
  "GUFFAW": {
   "components": [],
   "flags": [
@@ -8439,10 +8856,117 @@
   ],
   "roots": []
  },
+ "GUIDEBOOK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUINEA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUISARD": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "sco:gyze",
+   "enm:gyzen",
+   "enm:guise"
+  ]
+ },
+ "GUITGUIT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUMMITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUMTREE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUNDOG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUNNYBAG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUNNYSACK": {
+  "components": [
+   "gunny"
+  ],
+  "flags": [],
+  "roots": [
+   "hi:gon",
+   "pa:gūṇī"
+  ]
+ },
+ "GUNPAPER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GUPPY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GURNEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GYNIATRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GYPSOPHILA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:gypsum",
+   "la-new:-phila"
+  ]
+ },
+ "GYRAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "GYRON": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "GYROPILOT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "GYTTJA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAET": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "sco:hae",
+   "sco:deil"
+  ]
  },
  "HAFFET": {
   "components": [],
@@ -8462,7 +8986,66 @@
    "he:haphṭārāh"
   ]
  },
+ "HAGBUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAGDON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HAGGADIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAHNIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:hahn"
+  ]
+ },
+ "HAIRSPRAY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HALACHIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HALAKHAH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HALAZONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HALLUCINOSIS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "HAMADRYAS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAMMERTOE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANDCRAFTSMAN": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8474,7 +9057,125 @@
   "flags": [],
   "roots": []
  },
+ "HANDOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANDOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANDOVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANGFIRE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANGUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HANSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAPAX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAPLITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAPLOPIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARDEDGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARDHACK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARDHAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARDINGGRASS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARIANA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARIJAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "sa:harijana",
+   "sa:hari",
+   "sa:jana"
+  ]
+ },
+ "HARPIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HARUMPH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HARUSPICATION": {
+  "components": [
+   "haruspex"
+  ],
+  "flags": [],
+  "roots": [
+   "la:haruspic-"
+  ]
+ },
+ "HATTERIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAUSTELLUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:haustrum",
+   "la:haurire"
+  ]
+ },
+ "HAVELOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HAVEREL": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8494,10 +9195,33 @@
   "flags": [],
   "roots": []
  },
+ "HEATSTROKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEBE": {
+  "components": [],
+  "flags": [
+   "from:he",
+   "from:la"
+  ],
+  "roots": [
+   "grc:hēbē"
+  ]
+ },
  "HEEHAW": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "HEGARI": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ar:ḥijērī",
+   "ar:ḥijārī"
+  ]
  },
  "HEIST": {
   "components": [
@@ -8506,7 +9230,17 @@
   "flags": [],
   "roots": []
  },
+ "HEKTOGRAM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HELIAC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HELICTITE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8516,12 +9250,106 @@
   "flags": [],
   "roots": []
  },
+ "HELIOZOAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:heliozoa",
+   "la-new:-zoa"
+  ]
+ },
  "HELLDIVER": {
   "components": [],
   "flags": [],
   "roots": []
  },
+ "HELLENIZATION": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HELLGRAMMITE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HELLHOLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HELLION": {
+  "components": [
+   "hell",
+   "hallion"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HEMAGOG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMATAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMATEIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMATOSIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMEROCALLIS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:hēmerokalles",
+   "grc:hēmera",
+   "grc:kallos"
+  ]
+ },
+ "HEMERYTHRIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMIOLIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMIPTER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMOPHILE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEMOPHILIAC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HEMOSTAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HENGE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8538,6 +9366,30 @@
  },
  "HEPATIZE": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEPTACHLOR": {
+  "components": [
+   "chlorine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HERDIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEREDES": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HERITABILITY": {
+  "components": [
+   "herit"
+  ],
   "flags": [],
   "roots": []
  },
@@ -8565,8 +9417,90 @@
    "la-new:-idium"
   ]
  },
+ "HESSIAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HESSITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HESSONITE": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "grc:hēsson"
+  ]
+ },
+ "HETEROGENEITY": {
+  "components": [
+   "heterogeneous"
+  ],
+  "flags": [],
+  "roots": [
+   "la-med:heterogeneitāt-",
+   "la-med:heterogeneus",
+   "la:-itāt-"
+  ]
+ },
+ "HETEROSPORY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEULANDITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEXAMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HEXOBARBITAL": {
+  "components": [
+   "barbital"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HEXOKINASE": {
+  "components": [
+   "hexose",
+   "kinase"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HEXOSAMINIDASE": {
+  "components": [
+   "hexose",
+   "amino"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "HICK": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIGHBOY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIGHFALUTIN": {
+  "components": [
+   "high",
+   "fluting",
+   "flute"
+  ],
   "flags": [],
   "roots": []
  },
@@ -8575,10 +9509,81 @@
   "flags": [],
   "roots": []
  },
+ "HIGHROAD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIGHTOP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HINDSHANK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIPPARCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HIRAGANA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:hira-",
+   "ja:kana"
+  ]
+ },
  "HIRSEL": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "HIRUDIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HISPANISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HISTOPLASMOSIS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:histoplasma"
+  ]
+ },
+ "HIZZONER": {
+  "components": [
+   "his"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HOBBLEDEHOY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HOBBYHORSE": {
+  "components": [
+   "hobby"
+  ],
+  "flags": [],
+  "roots": [
+   "enm:hoby",
+   "enm:hobbin",
+   "enm:robert",
+   "enm:robin"
+  ]
  },
  "HOBNOB": {
   "components": [
@@ -8611,9 +9616,98 @@
   "flags": [],
   "roots": []
  },
+ "HOKEYPOKEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOKYPOKY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOLDDOWN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOLDOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOLDOVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOLDUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOLYTIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOMBURG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOMESTRETCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOMOGENATE": {
+  "components": [
+   "homogen"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HOMOGONY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOMOPTERAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:hom-",
+   "grc:pteron"
+  ]
+ },
  "HONDLE": {
   "components": [],
   "flags": [],
+  "roots": []
+ },
+ "HOOEY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HOOKUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOOPSKIRT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOOTENANNY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
   "roots": []
  },
  "HORNSWOGGLE": {
@@ -8621,6 +9715,21 @@
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "HORSEBEAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOTROD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HOUSTONIA": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "HOWDY": {
@@ -8635,9 +9744,64 @@
   "flags": [],
   "roots": []
  },
+ "HOYA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:hoy"
+  ]
+ },
+ "HRYVNA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HUB": {
   "components": [
    "hob"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HUCKABACK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "HUCKLEBERRY": {
+  "components": [
+   "hurtleberry"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HULLABALOO": {
+  "components": [
+   "hallo"
+  ],
+  "flags": [],
+  "roots": [
+   "sco:balloo"
+  ]
+ },
+ "HUMATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HUMDRUM": {
+  "components": [
+   "hum"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HUMONGOUS": {
+  "components": [
+   "huge",
+   "monstrous"
   ],
   "flags": [],
   "roots": []
@@ -8649,11 +9813,73 @@
   ],
   "roots": []
  },
+ "HUMVEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HUZZAH": {
   "components": [],
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "HYALITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:hyalit",
+   "grc:hyalos"
+  ]
+ },
+ "HYALURONIDASE": {
+  "components": [
+   "hyaluronic",
+   "acid",
+   "glucosidase"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HYDATHODE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:hydat-",
+   "grc:hodos"
+  ]
+ },
+ "HYDRALAZINE": {
+  "components": [
+   "phthalic",
+   "azine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HYDRASTIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYDRAZIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYDRILLA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:hydra"
+  ]
+ },
+ "HYGEIST": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "HYMENOPTERON": {
@@ -8664,6 +9890,18 @@
   "roots": [
    "grc:hymenopteros"
   ]
+ },
+ "HYMNARY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYOSCINE": {
+  "components": [
+   "hyoscyamine"
+  ],
+  "flags": [],
+  "roots": []
  },
  "HYPERESTHESIA": {
   "components": [],
@@ -8683,6 +9921,11 @@
    "la-new:amnesia"
   ]
  },
+ "HYPERON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "HYPEROPIA": {
   "components": [],
   "flags": [
@@ -8699,7 +9942,82 @@
    "grc:sthenos"
   ]
  },
+ "HYPHEMIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYPOCYCLOID": {
+  "components": [
+   "cycloid"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "HYPONOIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYPOPYON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYPOTENSIVE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "HYPOXIA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "HYRACOID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "ICECAP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IDEALOGUE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IDOCRASE": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "grc:eidos",
+   "grc:krasis",
+   "grc:kerannynai"
+  ]
+ },
+ "IGNATIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IGUANID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ILEOSTOMY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ILLINIUM": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8724,6 +10042,14 @@
   "flags": [],
   "roots": []
  },
+ "ILMENITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:ilmenit",
+   "de:ilmen"
+  ]
+ },
  "IMIDE": {
   "components": [
    "amide"
@@ -8732,6 +10058,48 @@
   "roots": [
    "fr:amide"
   ]
+ },
+ "IMMUNOSORBENT": {
+  "components": [
+   "adsorbent"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "IMMY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IMPHEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IMPOSTHUME": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INCARDINATION": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-lat:incardination-",
+   "la-lat:incardinare",
+   "la:in-",
+   "la-lat:cardinalis"
+  ]
+ },
+ "INCONNU": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INCRETION": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "INDAMINE": {
   "components": [],
@@ -8747,6 +10115,42 @@
    "la:damnum"
   ]
  },
+ "INDENTOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INDICAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:indicum"
+  ]
+ },
+ "INDOPHENOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INDOXYL": {
+  "components": [
+   "hydroxyl"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "INDULT": {
+  "components": [],
+  "flags": [
+   "from:enm",
+   "from:la-lat"
+  ],
+  "roots": [
+   "la-med:indultum",
+   "la:indultus",
+   "la:indulgēre"
+  ]
+ },
  "INDURATE": {
   "components": [],
   "flags": [],
@@ -8758,6 +10162,26 @@
    "la:durus"
   ]
  },
+ "INHESION": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INSURGENCE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INTERMEDIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INTEROCEPTOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "INTITULE": {
   "components": [],
   "flags": [],
@@ -8765,7 +10189,29 @@
    "enm:intitulen"
   ]
  },
+ "INTRAPRENEUR": {
+  "components": [
+   "entrepreneur"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "INTROFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INULASE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "INVOLUCEL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IODISM": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8776,6 +10222,27 @@
   "roots": [
    "fr:iode"
   ]
+ },
+ "IODOPSIN": {
+  "components": [
+   "rhodopsin"
+  ],
+  "flags": [],
+  "roots": [
+   "grc:ioeidḗs"
+  ]
+ },
+ "IONIUM": {
+  "components": [
+   "ion"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "IONONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "IONOSPHERE": {
   "components": [
@@ -8798,12 +10265,56 @@
    "de:-phorese"
   ]
  },
+ "IPOMOEA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IPRONIAZID": {
+  "components": [
+   "isoniazid",
+   "propyl"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "IRITIS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:iris"
+  ]
+ },
+ "IRONSIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "IRRADIANT": {
   "components": [],
   "flags": [],
   "roots": []
  },
+ "IRRADICABLE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-med:irradicabilis",
+   "la:in-",
+   "la:radic-"
+  ]
+ },
  "IRREDENTIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "IRRIDENTA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISARITHM": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8813,12 +10324,50 @@
   "flags": [],
   "roots": []
  },
+ "ISEIKONIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISOCHIME": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISOCYANATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISONIAZID": {
+  "components": [
+   "nicotinic",
+   "hydrazide"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "ISOPHOTE": {
   "components": [],
   "flags": [],
   "roots": [
    "grc:phōt-"
   ]
+ },
+ "ISOSTACY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ISOTONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "ITALIANATE": {
   "components": [],
@@ -8835,6 +10384,30 @@
   "flags": [],
   "roots": []
  },
+ "IVERMECTIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:avermitilis",
+   "la-new:streptomyces"
+  ]
+ },
+ "JABBERWOCKY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACAMAR": {
+  "components": [],
+  "flags": [
+   "from:fr",
+   "from:gn",
+   "from:tpw"
+  ],
+  "roots": [
+   "pt:jacamacira"
+  ]
+ },
  "JACKAROO": {
   "components": [],
   "flags": [],
@@ -8845,7 +10418,32 @@
   "flags": [],
   "roots": []
  },
+ "JACKPLANE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "JACKROLL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACKSMELT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACOBUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACQUARD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JACTATION": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8860,13 +10458,85 @@
   "flags": [],
   "roots": []
  },
+ "JAMBOREE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
  "JAPAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JARINA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JARLSBERG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JAROSITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JARRAH": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "nys:jarrilʸ"
+  ]
+ },
+ "JARVEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JASPILITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JASSID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:iasos"
+  ]
+ },
+ "JATO": {
   "components": [],
   "flags": [],
   "roots": []
  },
  "JAUP": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JAYGEE": {
+  "components": [
+   "junior",
+   "grade"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "JAYHAWKER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JAYVEE": {
+  "components": [
+   "junior",
+   "varsity"
+  ],
   "flags": [],
   "roots": []
  },
@@ -8877,8 +10547,67 @@
   ],
   "roots": []
  },
+ "JAZZBO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JEHU": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "he:yēhū"
+  ]
+ },
+ "JELLO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JELLYBEAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JERKIN": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "JETLAG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JETSTREAM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JEWFISH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JIBBOOM": {
+  "components": [
+   "jib",
+   "boom"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "JIFF": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JILLION": {
+  "components": [
+   "million"
+  ],
   "flags": [],
   "roots": []
  },
@@ -8886,6 +10615,11 @@
   "components": [
    "jillet"
   ],
+  "flags": [],
+  "roots": []
+ },
+ "JIMINY": {
+  "components": [],
   "flags": [],
   "roots": []
  },
@@ -8911,6 +10645,16 @@
   "flags": [],
   "roots": []
  },
+ "JOCKO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JODHPUR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "JOHN": {
   "components": [],
   "flags": [],
@@ -8919,6 +10663,21 @@
    "grc:iōannēs",
    "he:yōhānān"
   ]
+ },
+ "JOHNBOAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JOHNSONGRASS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JOLLYBOAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "JONES": {
   "components": [],
@@ -8930,6 +10689,16 @@
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "JOULE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JUBHAH": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "JUDDER": {
@@ -8957,6 +10726,64 @@
    "ja:dō"
   ]
  },
+ "JUDOKA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:jūdōka",
+   "ja:jūdō",
+   "ja:-ka"
+  ]
+ },
+ "JUMBUCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JUMPOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JUNGLEGYM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JUNIORATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JUNTO": {
+  "components": [
+   "junta"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "JURANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "JUREL": {
+  "components": [],
+  "flags": [
+   "from:es"
+  ],
+  "roots": []
+ },
+ "KABALISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KABAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "KABBALAH": {
   "components": [],
   "flags": [],
@@ -8965,6 +10792,16 @@
   ]
  },
  "KABBALIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KABIKI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KAGU": {
   "components": [],
   "flags": [],
   "roots": []
@@ -8980,9 +10817,50 @@
    "la:caesar"
   ]
  },
+ "KALAMATA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KALEWIFE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KALIMBA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KALIPHATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KALLIDIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:kallikrein",
+   "de:peptid",
+   "de:-in"
+  ]
+ },
+ "KALPAC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "KALSOMINE": {
   "components": [],
   "flags": [],
+  "roots": []
+ },
+ "KAMIKAZE": {
+  "components": [],
+  "flags": [
+   "from:ja"
+  ],
   "roots": []
  },
  "KAON": {
@@ -9000,8 +10878,35 @@
   "flags": [],
   "roots": []
  },
+ "KATAKANA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:kata",
+   "ja:kana"
+  ]
+ },
  "KATHODE": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KATYDID": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "KAVAKAVA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KAZILLION": {
+  "components": [
+   "zillion"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9013,10 +10918,49 @@
   ],
   "roots": []
  },
+ "KEBAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KEBBIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "KEISTER": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "KEITLOA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KELEP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KENCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KEROGEN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:kēros"
+  ]
+ },
+ "KERRIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:kerr"
+  ]
  },
  "KETOSE": {
   "components": [
@@ -9029,10 +10973,62 @@
    "de:-ose"
   ]
  },
+ "KEVIL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KEWPIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "KHAF": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "KHALIFA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KHAZEN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KHIRKAH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KIAUGH": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "KICKOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KICKUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KIESERITE": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": [
+   "de:kieserit",
+   "de:kieser"
+  ]
  },
  "KILLDEE": {
   "components": [],
@@ -9044,7 +11040,171 @@
   "flags": [],
   "roots": []
  },
+ "KIMBERLITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KINETIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KINGPOST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KINNIKINNICK": {
+  "components": [],
+  "flags": [
+   "from:alg-pro"
+  ],
+  "roots": [
+   "wam:kinukkinuk"
+  ]
+ },
+ "KITTIWAKE": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "KLEBSIELLA": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": [
+   "la-new:klebs"
+  ]
+ },
+ "KLEPTO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KLONDIKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNAPWEED": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:knopwed",
+   "enm:knop",
+   "enm:wed"
+  ]
+ },
+ "KNAUR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNEEPAD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNEESOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNICKKNACK": {
+  "components": [
+   "knack"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "KNOCKABOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNOCKOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KNOCKOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "KNUBBY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KOBO": {
+  "components": [
+   "copper"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "KRAKEN": {
+  "components": [],
+  "flags": [
+   "from:no"
+  ],
+  "roots": []
+ },
+ "KREEP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KREWE": {
+  "components": [
+   "crew"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "KRIMMER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KRUBI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KRUBUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KRYOLITH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KUDZU": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:kuzu"
+  ]
+ },
+ "KUNZITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KWANZA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "KYAR": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9057,6 +11217,18 @@
    "la:labium"
   ]
  },
+ "LABROID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LACKADAISICAL": {
+  "components": [
+   "lackaday"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "LACTEAL": {
   "components": [],
   "flags": [],
@@ -9064,6 +11236,18 @@
    "la:lacteus",
    "la:lact-"
   ]
+ },
+ "LACTOBACILLUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "LADYPALM": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "LAG": {
   "components": [],
@@ -9075,7 +11259,22 @@
    "non:lǫgg"
   ]
  },
+ "LAGEND": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LALIQUE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LALL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LALLATION": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9085,9 +11284,133 @@
   "flags": [],
   "roots": []
  },
+ "LAMBERT": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": []
+ },
+ "LAMINARIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:laminaria"
+  ]
+ },
+ "LAMININ": {
+  "components": [
+   "lamina"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "LAMPAD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAMPSHELL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAMPYRID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LANDLER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LANGBEINITE": {
+  "components": [],
+  "flags": [
+   "from:de"
+  ],
+  "roots": [
+   "de:langbeinit",
+   "de:langbein"
+  ]
+ },
+ "LANGOSTINO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:langosta",
+   "la-vul:lacusta",
+   "la:locusta"
+  ]
+ },
  "LANGRAGE": {
   "components": [],
   "flags": [],
+  "roots": []
+ },
+ "LANGSHAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LANITAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LANTHANON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LANTHANUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:lanthanein"
+  ]
+ },
+ "LAOGAI": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "zh:láogǎi",
+   "zh:láodòng",
+   "zh:gǎizào"
+  ]
+ },
+ "LAPDOG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAPIS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAREE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LARGO": {
+  "components": [],
+  "flags": [
+   "from:it"
+  ],
+  "roots": [
+   "la:largus"
+  ]
+ },
+ "LARRIGAN": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
   "roots": []
  },
  "LARRUP": {
@@ -9095,6 +11418,11 @@
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "LASERDISK": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "LATHYRISM": {
@@ -9108,7 +11436,117 @@
    "fr:-isme"
   ]
  },
+ "LATILLA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LATIMERIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAUGHLINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAWRENCIUM": {
+  "components": [
+   "lawrence"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "LAYAWAY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAYIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAYOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAZULI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LAZULITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:lazulith",
+   "la-med:lazulum"
+  ]
+ },
+ "LEADOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEATHERLEAF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEBEN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LECTIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:lectus",
+   "la:legere"
+  ]
+ },
+ "LEGHORN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LEGITIMIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEGWARMER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEHR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEMPIRA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:lempira"
+  ]
+ },
+ "LENTIVIRUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:lentus",
+   "la-new:virus"
+  ]
+ },
+ "LEONE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9120,6 +11558,40 @@
   ],
   "roots": []
  },
+ "LEPIDOPTERIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEPTOPHOS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEPTOSPIRE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:leptospira",
+   "grc:leptos",
+   "la:spira"
+  ]
+ },
+ "LETDOWN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LETUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEUKON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LEUKOPLAKIA": {
   "components": [],
   "flags": [],
@@ -9128,8 +11600,169 @@
    "grc:plak-"
   ]
  },
+ "LEWISSON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LEZ": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIBIDINAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIBLAB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LICKSPIT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIDAR": {
+  "components": [
+   "light",
+   "radar"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "LIEBFRAUMILCH": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:liebfrauenmilch",
+   "de:liebfrauenstift",
+   "de:milch"
+  ]
+ },
+ "LIFTOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIGHTWOOD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIGNAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIGNIFICATION": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LILLIPUT": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LILO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIMBA": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "LIMULOID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINAC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINDANE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINDY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINEUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINGBERRY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINGUISA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINOLEATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LINURON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LIRIOPE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:liriope"
+  ]
+ },
+ "LISTEL": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "it:listello",
+   "it:lista"
+  ]
+ },
+ "LIVYER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOBBYGOW": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "LOBLOLLY": {
+  "components": [
+   "lob",
+   "lolly"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9145,7 +11778,63 @@
   "flags": [],
   "roots": []
  },
+ "LOBWORM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOCKOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOCKRAM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:lokerham",
+   "enm:locronan"
+  ]
+ },
+ "LOCKUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LOCUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOCUSTA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOCUTORY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LODICULE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:lodicula",
+   "la:lodic-"
+  ]
+ },
+ "LOGIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOGOMACH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOGON": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9158,7 +11847,20 @@
   "flags": [],
   "roots": []
  },
+ "LOMENT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:lomentum",
+   "la:lavere"
+  ]
+ },
  "LOMENTUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LONGCLOTH": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9168,7 +11870,61 @@
   "flags": [],
   "roots": []
  },
+ "LONGSIGHTED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOOFA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOOKOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOOKUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LOPSIDED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LORAZEPAM": {
+  "components": [
+   "diazepam"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "LORDOMA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LORRY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "LOTHARIO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOVAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LOVEVINE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9179,6 +11935,11 @@
   "roots": []
  },
  "LOWERCASE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LUCITE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9195,6 +11956,13 @@
   "flags": [],
   "roots": []
  },
+ "LUMMOX": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
  "LUNCHEON": {
   "components": [
    "nuncheon"
@@ -9206,7 +11974,54 @@
    "enm:schench"
   ]
  },
+ "LUNET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LUTEOLIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "LUTEUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LUV": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LWEI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LYCHNIS": {
+  "components": [],
+  "flags": [
+   "from:grc",
+   "from:la",
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:lychnos",
+   "la:lux"
+  ]
+ },
+ "LYCRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "LYDDITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MABE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9221,6 +12036,46 @@
   "flags": [],
   "roots": []
  },
+ "MACROMOLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MACRURAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MACRUROUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MADRAS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MADRASAH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MADREPORIAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MADTOM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MAFFICK": {
   "components": [],
   "flags": [],
@@ -9231,7 +12086,72 @@
   "flags": [],
   "roots": []
  },
+ "MAHONIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:mcmahon"
+  ]
+ },
+ "MAHUANG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAIASAUR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAIASAURA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAKEOVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MALACOSTRACAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:malakostrakos",
+   "grc:malakos",
+   "grc:ostrakon"
+  ]
+ },
+ "MALAGUENA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:malagueña",
+   "es:malagueño",
+   "es:málaga"
+  ]
+ },
+ "MALAROMA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MALLEMUCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MAMELUKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAMMEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MANDIOCA": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9241,12 +12161,50 @@
   "flags": [],
   "roots": []
  },
+ "MANHATTAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MANORIAL": {
   "components": [],
   "flags": [],
   "roots": []
  },
+ "MARANTA": {
+  "components": [],
+  "flags": [
+   "from:it"
+  ],
+  "roots": [
+   "la-new:maranta"
+  ]
+ },
  "MARGENT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MARKA": {
+  "components": [
+   "mark"
+  ],
+  "flags": [
+   "from:hr"
+  ],
+  "roots": [
+   "sr:marka",
+   "sr:marākā",
+   "de:marke",
+   "de:mark"
+  ]
+ },
+ "MARKUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MARTELLO": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9258,6 +12216,92 @@
   ],
   "roots": []
  },
+ "MARTIAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MARTINI": {
+  "components": [
+   "cocktail"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MARYJANE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MASTIGOPHORAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:mastig-",
+   "grc:pherein"
+  ]
+ },
+ "MASURIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MATELASSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MATTIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAVERICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAVIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAXIMITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAYBIRD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MAYPOP": {
+  "components": [
+   "maracock"
+  ],
+  "flags": [
+   "from:alg-pro"
+  ],
+  "roots": []
+ },
+ "MAZAEDIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MBAQANGA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "zu:umbaqanga"
+  ]
+ },
  "MEATUS": {
   "components": [],
   "flags": [
@@ -9267,12 +12311,31 @@
    "la:meare"
   ]
  },
+ "MECCA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MECHANIZE": {
   "components": [
    "mechan"
   ],
   "flags": [],
   "roots": []
+ },
+ "MEDFLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MEDICO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "it:medico",
+   "es:médico",
+   "la:medicus"
+  ]
  },
  "MEDUSA": {
   "components": [],
@@ -9291,6 +12354,13 @@
   ],
   "roots": []
  },
+ "MEITNERIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:meitner"
+  ]
+ },
  "MELANITE": {
   "components": [],
   "flags": [],
@@ -9301,8 +12371,51 @@
    "de:-it"
   ]
  },
+ "MELAPHYRE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MELOID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MELPHALAN": {
+  "components": [
+   "methanol",
+   "phenylalanine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MELTDOWN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MEMORIZE": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MENDELEVIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:mendeleyev"
+  ]
+ },
+ "MENTHENE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MERBROMIN": {
+  "components": [
+   "mercuric",
+   "fluorescein"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9314,7 +12427,40 @@
    "grc-koi:gloia"
   ]
  },
+ "MESOZOAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MESSALINE": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": []
+ },
+ "MESSAN": {
+  "components": [],
+  "flags": [
+   "from:enm"
+  ],
+  "roots": [
+   "gd:measan"
+  ]
+ },
+ "MESSMAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "METACARPUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "METAPLASIA": {
   "components": [],
   "flags": [
    "from:la-new"
@@ -9332,6 +12478,65 @@
    "grc:sōmat-"
   ]
  },
+ "METATAG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METEPA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METHEDRINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METHOXIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METHOXYCHLOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METHYSERGIDE": {
+  "components": [
+   "methyl",
+   "lysergic",
+   "amide"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "METOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METOPON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METRAZOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "METUMP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MEZEREUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MHO": {
   "components": [
    "ohm"
@@ -9344,7 +12549,24 @@
   "flags": [],
   "roots": []
  },
+ "MIB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MICK": {
+  "components": [],
+  "flags": [
+   "from:ga"
+  ],
+  "roots": []
+ },
  "MICRIFY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MIDISKIRT": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9356,7 +12578,17 @@
   ],
   "roots": []
  },
+ "MIGGLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MIKRON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MILESIMO": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9370,7 +12602,35 @@
    "la:miliarius"
   ]
  },
+ "MILLDAM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MILLEFLEUR": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:mille-fleurs",
+   "fr:mille"
+  ]
+ },
+ "MILLRACE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MILNEB": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MIMEO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MINAUDIERE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9380,7 +12640,60 @@
   "flags": [],
   "roots": []
  },
+ "MIRABELLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MIRANDIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MIREX": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "MIRLITON": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": []
+ },
+ "MISFEASOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MISSUS": {
+  "components": [
+   "mistress"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MIXUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MOJARRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MOKE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "MOLA": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9392,10 +12705,165 @@
   "flags": [],
   "roots": []
  },
+ "MOLLUSK": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:mollusque",
+   "la-new:mollusca",
+   "la:molluscus",
+   "la:mollis"
+  ]
+ },
+ "MOLYBDATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MONANDRY": {
+  "components": [
+   "polyandry"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MONARDA": {
+  "components": [],
+  "flags": [
+   "from:es"
+  ],
+  "roots": [
+   "la-new:monardes"
+  ]
+ },
+ "MONELLIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MONERAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:monera",
+   "grc:monērēs",
+   "grc:monos"
+  ]
+ },
+ "MONILIASIS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:monilia",
+   "la:monile"
+  ]
+ },
+ "MONKEYPOT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MONOECY": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "MONOFIL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MONOGENEAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:monogenea"
+  ]
+ },
+ "MONTADALE": {
+  "components": [
+   "dale"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MONTEITH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MONURON": {
+  "components": [
+   "urea"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MONZONITE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:monzoni"
+  ]
+ },
+ "MOOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MOONSHOT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MOPOKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MORESQUE": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "es:morisco",
+   "es:moro",
+   "la:maurus"
+  ]
+ },
+ "MORPHACTIN": {
+  "components": [
+   "active"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "MORPHALLAXIS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:morph-",
+   "grc:allaxis",
+   "grc:allassein",
+   "grc:allos"
+  ]
+ },
+ "MORPHIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:morpheus"
+  ]
+ },
+ "MOSASAUR": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:mosasaurus",
+   "la:mosa",
+   "grc:sauros"
+  ]
  },
  "MOSH": {
   "components": [
@@ -9404,6 +12872,13 @@
   ],
   "flags": [],
   "roots": []
+ },
+ "MOTMOT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:momot"
+  ]
  },
  "MOTONEURON": {
   "components": [
@@ -9418,13 +12893,50 @@
   "flags": [],
   "roots": []
  },
+ "MOXIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "MUCIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUHLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MULLITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MULTIVALENT": {
   "components": [],
   "flags": [],
   "roots": []
  },
  "MUMP": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUMU": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MURAENID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUREIN": {
+  "components": [
+   "muramic"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9440,6 +12952,59 @@
   ],
   "roots": []
  },
+ "MUSCID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUSKOX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUSKRAT": {
+  "components": [],
+  "flags": [
+   "from:alg-pro"
+  ],
+  "roots": [
+   "wam:musquash"
+  ]
+ },
+ "MUSPIKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUSTELID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MUTUEL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MYC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MYCELE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MYCETOZOAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:mycetozoa",
+   "grc:mykēt-",
+   "la-new:-zoa"
+  ]
+ },
  "MYCORRHIZA": {
   "components": [],
   "flags": [],
@@ -9448,7 +13013,71 @@
    "grc:rhiza"
   ]
  },
+ "MYLAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MYRICA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MYSOST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "MYSTICETE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NAIF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NAILBITER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NAIRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NAIRU": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NANDIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NANDINA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "ja:nanten"
+  ]
+ },
+ "NAPHTHYL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "NARCEINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NASION": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9460,6 +13089,16 @@
   ],
   "roots": []
  },
+ "NAUGAHYDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NAVAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "NAZI": {
   "components": [],
   "flags": [],
@@ -9469,7 +13108,17 @@
    "de:sozialist"
   ]
  },
+ "NEARSIDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "NEARSIGHTED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEGATON": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9479,7 +13128,128 @@
   "flags": [],
   "roots": []
  },
+ "NELSON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NELUMBIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NELUMBO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEMERTEAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:nēmertēs"
+  ]
+ },
+ "NEMERTINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEPTUNIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:neptune"
+  ]
+ },
+ "NERVATURE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEUK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEURAXON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEURINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEUROPTERAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:neuroptera",
+   "grc:neûron",
+   "grc:-ptera",
+   "grc:-pteros",
+   "grc:pterón"
+  ]
+ },
+ "NEUROSPORA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:neuro-",
+   "la-new:-spora"
+  ]
+ },
+ "NEWMARKET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NEWWAVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIALAMIDE": {
+  "components": [
+   "nicotinic",
+   "amyl",
+   "amide"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "NICKNACK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NICOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "NIDATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIDGET": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIDIFICATION": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-med:nidification-",
+   "la:nidificare",
+   "la:nidus"
+  ]
+ },
+ "NIEVE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9501,12 +13271,121 @@
   "flags": [],
   "roots": []
  },
+ "NIMBOSTRATUS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:nimbus",
+   "la-new:stratus"
+  ]
+ },
+ "NIMBYNESS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NINHYDRIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NINON": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:ninon",
+   "fr:anne"
+  ]
+ },
+ "NIOBATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:niobium"
+  ]
+ },
+ "NIOBITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NIOBIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:niobe"
+  ]
+ },
+ "NITINOL": {
+  "components": [
+   "nickel",
+   "titanium"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "NOB": {
   "components": [
    "knob"
   ],
   "flags": [],
   "roots": []
+ },
+ "NOLO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NONUPLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NOREPINEPHRINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NORTRIPTYLINE": {
+  "components": [
+   "tricyclic"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "NOSEGUARD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NOSTOC": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
+ "NOSTOLOGY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NOUVELLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NOVOBIOCIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:niveus",
+   "la:streptomyces"
+  ]
  },
  "NUB": {
   "components": [
@@ -9516,6 +13395,11 @@
   "roots": [
    "nds:knubbe"
   ]
+ },
+ "NUBIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "NUCLEATE": {
   "components": [],
@@ -9534,7 +13418,48 @@
    "enm:nimen"
   ]
  },
+ "NUMCHUCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "NYMPHALID": {
+  "components": [
+   "nymph"
+  ],
+  "flags": [],
+  "roots": [
+   "la-new:nymphalidae",
+   "la-new:nymphalis",
+   "la:nympha",
+   "la:-ālis",
+   "la-new:-idae"
+  ]
+ },
+ "NYSTATIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OBEISANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "OBSECRATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OBTRUSION": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-lat:obtrusion-",
+   "la:obtrudere"
+  ]
+ },
+ "OCTACHORD": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9544,7 +13469,32 @@
   "flags": [],
   "roots": []
  },
+ "ODOGRAPH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ODONTOGLOSSUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:odont-",
+   "grc:glōssa"
+  ]
+ },
  "ODORANT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OEDIPAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OERSTED": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9557,6 +13507,21 @@
    "mga:ogom"
   ]
  },
+ "OGRISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OILCAMP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OILHOLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "OINK": {
   "components": [],
   "flags": [
@@ -9564,10 +13529,60 @@
   ],
   "roots": []
  },
+ "OKEYDOKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OLDSTYLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OLEATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OLICOOK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OLIGOCHAETE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:oligochaeta",
+   "la-new:oligo-",
+   "la-new:-chaeta",
+   "grc:-chaitēs",
+   "grc:chaítē"
+  ]
+ },
  "OLOGY": {
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "OLOLIUQUI": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:ololiuque",
+   "nah:ololiuhqui"
+  ]
+ },
+ "OMELET": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:omelette",
+   "frm:amelette",
+   "frm:alemelle",
+   "la:lamella",
+   "la:lamina"
+  ]
  },
  "ONANISM": {
   "components": [],
@@ -9576,6 +13591,21 @@
    "la-new:onanismus",
    "la-new:onan"
   ]
+ },
+ "ONCIDIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:ónkos",
+   "la-new:-idium"
+  ]
+ },
+ "ONCORNAVIRUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "ONERY": {
   "components": [],
@@ -9592,8 +13622,54 @@
   "flags": [],
   "roots": []
  },
+ "OOMPH": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "OORALI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OOTID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "OPENMOUTHED": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OPERCELE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OPHIUROID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:ophiuroidea",
+   "la-new:ophiura",
+   "grc:óphis",
+   "grc:-oura",
+   "grc:-uros",
+   "grc:ourá",
+   "la-new:-oidea",
+   "la-new:-oides",
+   "la-new:-ea",
+   "la-new:-eus"
+  ]
+ },
+ "OPSIN": {
+  "components": [
+   "porphyropsin",
+   "rhodopsin"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9602,8 +13678,48 @@
   "flags": [],
   "roots": []
  },
+ "OREODONT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ORIBATID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:oribatidae",
+   "la-new:oribatoidea",
+   "la-new:oribata",
+   "grc:oribatēs",
+   "grc:oros",
+   "grc:-batēs",
+   "grc:bainein"
+  ]
+ },
+ "ORIGAMI": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "ja:ori",
+   "ja:kami"
+  ]
+ },
+ "ORNITHOSIS": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
  "ORPHIC": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "ORTHICON": {
+  "components": [
+   "iconoscope"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9627,6 +13743,28 @@
   "flags": [],
   "roots": []
  },
+ "OSMUNDINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OSNABURG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OSSEIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:oss-"
+  ]
+ },
+ "OSTLER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "OSTOMY": {
   "components": [
    "colostomy"
@@ -9634,7 +13772,67 @@
   "flags": [],
   "roots": []
  },
+ "OTTOMAN": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "it:ottomano",
+   "ar:ʽothmānī",
+   "ar:ʽothmān"
+  ]
+ },
+ "OURARI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OVIPARITY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OXALIS": {
+  "components": [],
+  "flags": [
+   "from:la",
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:oxys"
+  ]
+ },
+ "OXAZEPAM": {
+  "components": [
+   "diazepam"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "OXAZINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "OXYURIASIS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:oxyuris"
+  ]
+ },
+ "OZALID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "OZOCERITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PACHINKO": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9644,9 +13842,41 @@
   "flags": [],
   "roots": []
  },
+ "PADLE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAGURIAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PAIK": {
   "components": [],
   "flags": [],
+  "roots": []
+ },
+ "PAINCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PALIKAR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PALMITATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PALOOKA": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
   "roots": []
  },
  "PALPUS": {
@@ -9658,6 +13888,38 @@
    "la:palpare"
   ]
  },
+ "PAMPEAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PANAMA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:panamá",
+   "es:panama"
+  ]
+ },
+ "PANCREATIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PANCREOZYMIN": {
+  "components": [
+   "pancreas"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PANDOWDY": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
  "PANFRY": {
   "components": [],
   "flags": [],
@@ -9668,8 +13930,82 @@
   "flags": [],
   "roots": []
  },
+ "PANTDRESS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PANTHEON": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "enm:panteon",
+   "la:pantheon",
+   "grc:pantheion",
+   "grc:pantheios",
+   "grc:pan-",
+   "grc:theos"
+  ]
+ },
+ "PANTOTHENATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PANTYWAIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAPERCLIP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAPOVAVIRUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAPPOSE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARACHOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PARADROP": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARAFOIL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARAFORM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARALDEHYDE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARAMATTA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARAQUAT": {
+  "components": [
+   "quaternary"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9682,6 +14018,33 @@
    "de:parataktisch",
    "fr:paratactique"
   ]
+ },
+ "PARAZOAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARCHEESI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARDNER": {
+  "components": [
+   "partner"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PARECISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAREIRA": {
+  "components": [],
+  "flags": [],
+  "roots": []
  },
  "PARFLECHE": {
   "components": [],
@@ -9701,7 +14064,68 @@
    "la:par"
   ]
  },
+ "PARGO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARGYLINE": {
+  "components": [
+   "propargyl"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PARIAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARKINSONISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARRITCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PARURA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PARVOLINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PASCHAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PASQUEFLOWER": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "frm:passefleur",
+   "frm:passer",
+   "frm:fleur"
+  ]
+ },
+ "PASSALONG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PASTITSO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PASTORIUM": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9710,6 +14134,21 @@
   "components": [
    "pawk"
   ],
+  "flags": [],
+  "roots": []
+ },
+ "PAYBACK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAYOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PAYOUT": {
+  "components": [],
   "flags": [],
   "roots": []
  },
@@ -9725,7 +14164,44 @@
   "flags": [],
   "roots": []
  },
+ "PECTASE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PECTIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEDATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEDIATRIST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEDICULATE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:pediculus"
+  ]
+ },
+ "PEEBEEN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEESWEEP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEETWEET": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9737,7 +14213,137 @@
   ],
   "roots": []
  },
+ "PEKE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEKIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PELECYPOD": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:pelecypoda",
+   "grc:pelekys",
+   "sa:paraśu",
+   "grc:pod-"
+  ]
+ },
+ "PELORUS": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "PEMOLINE": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "PEMPHIX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PENETROMETER": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:penetrare",
+   "la:-meter"
+  ]
+ },
+ "PENICILLIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:penicillus"
+  ]
+ },
+ "PENNAME": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PENNINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PENOCHE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PENSEE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PENTLANDITE": {
+  "components": [],
+  "flags": [
+   "from:ga"
+  ],
+  "roots": [
+   "fr:pentland"
+  ]
+ },
+ "PEPINO": {
+  "components": [],
+  "flags": [
+   "from:es"
+  ],
+  "roots": [
+   "osp:pepón",
+   "la:pepon-"
+  ]
+ },
+ "PEPLUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEPONIDA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEPONIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEPPERTREE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PEPTIZE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PERBORATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PERCHLORATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PERCUSSOR": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9750,6 +14356,38 @@
   "roots": [
    "xno:pardurer",
    "la:perdurare"
+  ]
+ },
+ "PERICHONDRIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:peri-",
+   "grc:chondros"
+  ]
+ },
+ "PERIMYSIUM": {
+  "components": [
+   "periosteum",
+   "perichondrium"
+  ],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la-new:peri-",
+   "grc:my-",
+   "la-new:-ium",
+   "la-new:periosteum",
+   "la-new:perichondrium"
+  ]
+ },
+ "PERINEURIUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:peri-",
+   "grc:neuron"
   ]
  },
  "PERIPHYTON": {
@@ -9768,6 +14406,41 @@
    "ru:planktón"
   ]
  },
+ "PERIQUE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:périque"
+  ]
+ },
+ "PERITRICH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PERMITTIVITY": {
+  "components": [
+   "permit",
+   "selectivity"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PERNOD": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PEROVSKITE": {
+  "components": [],
+  "flags": [
+   "from:ru"
+  ],
+  "roots": [
+   "de:perowskit",
+   "de:perovskiĭ"
+  ]
+ },
  "PEROXISOME": {
   "components": [
    "peroxide"
@@ -9775,10 +14448,67 @@
   "flags": [],
   "roots": []
  },
+ "PERPHENAZINE": {
+  "components": [
+   "piperazine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PERSPEX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PETROLATUM": {
+  "components": [
+   "petrol"
+  ],
+  "flags": [],
+  "roots": [
+   "la:-ātum"
+  ]
+ },
+ "PEWEE": {
+  "components": [],
+  "flags": [
+   "imitative"
+  ],
+  "roots": []
+ },
+ "PEYTRAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHASEDOWN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHASEOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PHAT": {
   "components": [
    "fat"
   ],
+  "flags": [],
+  "roots": []
+ },
+ "PHELLEM": {
+  "components": [
+   "phloem"
+  ],
+  "flags": [],
+  "roots": [
+   "grc:phellos"
+  ]
+ },
+ "PHENACETIN": {
+  "components": [],
   "flags": [],
   "roots": []
  },
@@ -9790,8 +14520,53 @@
    "grc:phenak-"
   ]
  },
+ "PHENATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PHENAZIN": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHENCYCLIDINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHENMETRAZINE": {
+  "components": [
+   "phenyl",
+   "methyl",
+   "azine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PHENOBARBITONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHENYLBUTAZONE": {
+  "components": [
+   "phenyl",
+   "butyric",
+   "pyrazalone"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PHENYLENE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHERESIS": {
+  "components": [
+   "plasmapheresis"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9812,6 +14587,24 @@
    "fr:-ation"
   ]
  },
+ "PHONATHON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHORATE": {
+  "components": [
+   "phosphorus",
+   "thioate"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PHORONID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PHOSPHIDE": {
   "components": [],
   "flags": [],
@@ -9822,7 +14615,19 @@
   "flags": [],
   "roots": []
  },
+ "PHOSPHONIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": []
+ },
  "PHOTIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHOTOCHROMISM": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9831,6 +14636,24 @@
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "PHT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHYCOCYANIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHYCOMYCETE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:phykos",
+   "grc:mykēt-"
+  ]
  },
  "PHYLESIS": {
   "components": [],
@@ -9844,8 +14667,82 @@
   "flags": [],
   "roots": []
  },
+ "PHYLLARY": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:phyllarium",
+   "grc:phyllarion",
+   "grc:phyllon"
+  ]
+ },
+ "PHYLLOCLADE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:phyllocladium",
+   "la-new:phyll-",
+   "grc:klados"
+  ]
+ },
+ "PHYSED": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PHYSIATRY": {
+  "components": [
+   "physiatrics"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PHYTANE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "de:phytan",
+   "grc:phytón",
+   "de:-an"
+  ]
+ },
+ "PHYTIN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PIAFFE": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIBAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PICKETBOAT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PICKTHANK": {
+  "components": [
+   "pick"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PICKWICK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PICLORAM": {
+  "components": [
+   "picolinic",
+   "amine"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9856,7 +14753,24 @@
    "la:pic-"
   ]
  },
+ "PICOMETRE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PICOWAVE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIDDOCK": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "PIECEWORK": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9866,8 +14780,131 @@
   "flags": [],
   "roots": []
  },
+ "PIERROT": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:pierre"
+  ]
+ },
+ "PIGNOLIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIKA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIKI": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PILEATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PILEUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PILOTFISH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIMA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "es:pimahitos",
+   "es:pimahaitu"
+  ]
+ },
+ "PINBONE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINCHBECK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINCHBUG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINGRASS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINITOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINTADA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINTANO": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PINWRENCH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIOSITY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIPERINE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "fr:pipérine",
+   "la:piper"
+  ]
+ },
+ "PIPERONAL": {
+  "components": [
+   "piperine"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "PITAPAT": {
   "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PITHECANTHROPUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PIXEL": {
+  "components": [
+   "pix",
+   "element"
+  ],
   "flags": [],
   "roots": []
  },
@@ -9878,10 +14915,96 @@
   ],
   "roots": []
  },
+ "PLAINTEXT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLASMAGEL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLASMAGENE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLASMASOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLASTOCYANIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:plastos"
+  ]
+ },
+ "PLATONIC": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:platonicus",
+   "grc:platōnikos",
+   "grc:platōn"
+  ]
+ },
+ "PLATYRRHINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PLAYACT": {
   "components": [
    "playacting"
   ],
+  "flags": [],
+  "roots": []
+ },
+ "PLAYACTOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLECOPTERAN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:plecoptera",
+   "grc:plékein",
+   "grc:-ptera",
+   "grc:-pteros",
+   "grc:pterón"
+  ]
+ },
+ "PLEDGET": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
+  "roots": []
+ },
+ "PLEIOTAXY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLEOCHROISM": {
+  "components": [
+   "dichroism"
+  ],
+  "flags": [],
+  "roots": [
+   "de:pleochroismus",
+   "de:pleo-",
+   "de:-chroismus",
+   "de:dichroismus"
+  ]
+ },
+ "PLESSOR": {
+  "components": [],
   "flags": [],
   "roots": []
  },
@@ -9897,6 +15020,23 @@
   ],
   "roots": []
  },
+ "PLIOFILM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLIOTRON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLOIDY": {
+  "components": [
+   "diploidy"
+  ],
+  "flags": [],
+  "roots": []
+ },
  "PLOP": {
   "components": [],
   "flags": [
@@ -9909,10 +15049,100 @@
   "flags": [],
   "roots": []
  },
+ "PLOWBACK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLUGUGLY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PLUSSAGE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PLUTON": {
   "components": [
    "plutonic"
   ],
+  "flags": [],
+  "roots": []
+ },
+ "POBOY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PODOPHYLLIN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:podophyllum"
+  ]
+ },
+ "PODOPHYLLUM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:podophyllum"
+  ]
+ },
+ "POECHORE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POGEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POGONIA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POGONIP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POGY": {
+  "components": [
+   "poghaden"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POINCIANA": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "la-new:poinci"
+  ]
+ },
+ "POINSETTIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:poinsett"
+  ]
+ },
+ "POINTELLE": {
+  "components": [
+   "point",
+   "dentelle"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POINTMAN": {
+  "components": [],
   "flags": [],
   "roots": []
  },
@@ -9930,14 +15160,142 @@
   "flags": [],
   "roots": []
  },
+ "POLLIWOG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POLYANTHA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:polyanthos"
+  ]
+ },
+ "POLYBRID": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "POLYCHOTOMY": {
   "components": [],
   "flags": [],
   "roots": []
  },
+ "POLYCOT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POLYEMBRYONY": {
+  "components": [
+   "embryo"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POLYGALA": {
+  "components": [],
+  "flags": [
+   "from:la",
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:polýgalon",
+   "grc:poly-",
+   "grc:-galon",
+   "grc:galakt-"
+  ]
+ },
+ "POLYPARIUM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POLYPIDE": {
+  "components": [
+   "polyp"
+  ],
+  "flags": [],
+  "roots": [
+   "grc:-idēs"
+  ]
+ },
+ "PONGID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "kg:mpongi"
+  ]
+ },
  "POOF": {
   "components": [
    "puff"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "POPGUN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POPLITEUS": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POPOVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PORIFERAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PORKPIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PORPHYROPSIN": {
+  "components": [
+   "rhodopsin"
+  ],
+  "flags": [],
+  "roots": [
+   "grc:porphyra"
+  ]
+ },
+ "PORTULACA": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:portula",
+   "la:porta"
+  ]
+ },
+ "POSTMORTEM": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la:post"
+  ]
+ },
+ "POTATOBUG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POTENTIOMETER": {
+  "components": [
+   "potential"
   ],
   "flags": [],
   "roots": []
@@ -9949,6 +15307,18 @@
   ],
   "roots": []
  },
+ "POTTO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "wo:pata"
+  ]
+ },
+ "POTZER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "POUSSETTE": {
   "components": [],
   "flags": [],
@@ -9956,9 +15326,46 @@
    "fr:pousser"
   ]
  },
+ "POUSSIE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "POYOU": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PREEMPT": {
   "components": [
    "preemption"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PREEMPTION": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-med:praeemption-",
+   "la-med:praeemere",
+   "la:prae-",
+   "la:emere"
+  ]
+ },
+ "PREEMPTOR": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PREFERENTIAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PREGNENOLONE": {
+  "components": [
+   "pregnene"
   ],
   "flags": [],
   "roots": []
@@ -9971,12 +15378,89 @@
    "enm:apprentis"
   ]
  },
+ "PREQUEL": {
+  "components": [
+   "sequel"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PRESSOR": {
+  "components": [],
+  "flags": [
+   "from:la-lat"
+  ],
+  "roots": [
+   "la:premere"
+  ]
+ },
+ "PREX": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PRIG": {
   "components": [],
   "flags": [],
   "roots": []
  },
+ "PRIMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PRINCOCK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PRISERE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROBANG": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROCARBAZINE": {
+  "components": [
+   "propyl",
+   "carbamic",
+   "azine"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PROCARP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROCERCOID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:kerkos"
+  ]
+ },
+ "PROGERIA": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:progḗrōs",
+   "grc:pro-",
+   "grc:-gērōs",
+   "grc:gḗras"
+  ]
+ },
+ "PROGNATHISM": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROLACTIN": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9989,7 +15473,123 @@
   "flags": [],
   "roots": []
  },
+ "PROLAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROMETHIUM": {
+  "components": [],
+  "flags": [
+   "from:la-new"
+  ],
+  "roots": [
+   "la:prometheus"
+  ]
+ },
+ "PROMINE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROPAGULE": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:propagulum",
+   "la:propages"
+  ]
+ },
+ "PROPENE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROPENOL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROPMAN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROPOXYPHENE": {
+  "components": [
+   "oxy",
+   "phenyl"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PROPTOSIS": {
+  "components": [],
+  "flags": [
+   "from:la-lat",
+   "from:la-new"
+  ],
+  "roots": [
+   "grc:proptōsis",
+   "grc:propiptein",
+   "grc:pro-",
+   "grc:piptein"
+  ]
+ },
+ "PROPYLITE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROSAUROPOD": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:prosauropoda",
+   "la-new:sauropoda"
+  ]
+ },
  "PROSECT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROSO": {
+  "components": [],
+  "flags": [
+   "from:ru"
+  ],
+  "roots": []
+ },
+ "PROSTACYCLIN": {
+  "components": [
+   "prostaglandin"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PROTEOGLYCAN": {
+  "components": [
+   "glycan"
+  ],
+  "flags": [],
+  "roots": []
+ },
+ "PROTEOLYTIC": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PROUSTITE": {
+  "components": [],
+  "flags": [
+   "from:fr"
+  ],
+  "roots": [
+   "fr:proust"
+  ]
+ },
+ "PRURIENCE": {
   "components": [],
   "flags": [],
   "roots": []
@@ -9999,7 +15599,39 @@
   "flags": [],
   "roots": []
  },
+ "PRUSSIATE": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PSEUDEPIGRAPH": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
  "PSHAW": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PSORALEA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PSORALEN": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-new:psoralea"
+  ]
+ },
+ "PSST": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PSYWAR": {
   "components": [],
   "flags": [],
   "roots": []
@@ -10011,9 +15643,48 @@
    "grc:pteron"
   ]
  },
+ "PUBERAL": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PULLBACK": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PULLOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PULLOVER": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PULLUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUNCHINELLO": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "it:polecenella"
+  ]
+ },
  "PUNJI": {
   "components": [],
   "flags": [],
+  "roots": []
+ },
+ "PUNNET": {
+  "components": [],
+  "flags": [
+   "unknown"
+  ],
   "roots": []
  },
  "PURLIN": {
@@ -10021,6 +15692,11 @@
   "flags": [
    "unknown"
   ],
+  "roots": []
+ },
+ "PURPURIN": {
+  "components": [],
+  "flags": [],
   "roots": []
  },
  "PURTY": {
@@ -10032,6 +15708,65 @@
   "components": [],
   "flags": [],
   "roots": []
+ },
+ "PUSHUP": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUSILLANIMOUS": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "la-lat:pusillanimis",
+   "la:pusillus",
+   "la:pusus",
+   "la:animus",
+   "la:puer"
+  ]
+ },
+ "PUSLEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUSSLEY": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUTDOWN": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUTOFF": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUTON": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUTONGHUA": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PUTOUT": {
+  "components": [],
+  "flags": [],
+  "roots": []
+ },
+ "PYCNOGONID": {
+  "components": [],
+  "flags": [],
+  "roots": [
+   "grc:pyknos",
+   "grc:gony"
+  ]
  },
  "PYRANOSE": {
   "components": [],
