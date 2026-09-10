@@ -37,16 +37,16 @@ is deterministic.
 | `etymology_mw.json` | what Merriam-Webster's Collegiate API said about words Wiktionary has no etymology for, one record per word looked up, empty when it said nothing usable |
 | `prefix_pair_review.json` | hand-checked verdicts for the root pairs `etymology.js` matches by prefix |
 
-Coverage as built: 171,258 of 178,691 words (95.8%), of which 162,307 parsed
-from Wiktionary, 766 filled from Merriam-Webster and 8,185 propagated. 753 of
+Coverage as built: 171,711 of 178,691 words (96.1%), of which 162,307 parsed
+from Wiktionary, 1,003 filled from Merriam-Webster and 8,401 propagated. 753 of
 those carry only a marker (imitative, or a source language with no word)
-rather than a root, so coverage by real roots is 170,505 words, 95.4%. 7,433
+rather than a root, so coverage by real roots is 170,958 words, 95.7%. 6,980
 words have nothing.
 
 How it got here, by real-root coverage: 86.5% from the original parse, 92.3%
 after the parser learned form-of definitions, foreign-language sections and
 prose, 94.1% after the template gaps, derived-terms lists, definition links
-and link-following described below, 95.4% after three days of
+and link-following described below, 95.7% after four days of
 Merriam-Webster lookups. The last round added 3,171 words at the
 parse and cost 249: 248 whose only "root" had been a classifying suffix such
 as `-ITE`, and DUXELLES, whose root was the French article `d'`.
@@ -175,10 +175,10 @@ every word asked, so a later day continues where the last stopped; after a
 new batch, `expand_inflections.py --rebuild` merges it without another pass
 over the dump, and produces exactly what the full pipeline would.
 
-Three days asked 2,843 words: 550 gave roots, 291 gave only English
-components, 194 said "origin unknown" or "imitative", and 1,808 had no entry
-or no etymology. That filled 766 words directly and 2,350 once links and
-propagation followed. Blind samples of 30 per day were 29, 27 and 29 right; the
+Four days asked 3,793 words: 725 gave roots, 380 gave only English
+components, 229 said "origin unknown" or "imitative", and 2,459 had no entry
+or no etymology. That filled 1,003 words directly and 2,803 once links and
+propagation followed. Blind samples of 30 per day were 29, 27, 29 and 28 right; the
 misses were drug names whose etymologies are spelled out letter by letter
 ("{it}b{/it}et{it}a{/it} + {it}c{/it}h{it}lo{/it}ro-"), which the reader now
 restores to whole words, and a language named inside parentheses leaking
@@ -261,7 +261,7 @@ reject 5,610 of 8,654 steal-compatible pairs.
 
 Prefix matching is therefore limited to roots of 7+ letters, where the error
 rate collapses. Every pair that rule matches has been checked by hand, in
-seven rounds as the data grew: 1,038 pairs, 1,029 genuine, 9 not. The unrelated ones are listed in `UNRELATED_PREFIX_PAIRS` because no
+eight rounds as the data grew: 1,046 pairs, 1,037 genuine, 9 not. The unrelated ones are listed in `UNRELATED_PREFIX_PAIRS` because no
 length rule separates them (chance/chancellor, hostile/hostler, market/march,
 content/contentious). Note that `old_french:chancel ~ chancelerie` *is* related
 while `enm:chaunce ~ chaunceler` is not, which is why this was reviewed rather
@@ -321,7 +321,7 @@ above was accepted or rejected that way.
 
 ## What is still missing
 
-7,433 words. About 1,552 uncovered families are still queued for
+6,980 words. About 602 uncovered families are still queued for
 Merriam-Webster, the smallest ones, where roughly a fifth yield roots. Past
 that, the residue is words neither dictionary explains: drug and trade names,
 and words both mark "origin unknown".

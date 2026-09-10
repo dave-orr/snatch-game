@@ -1,10 +1,10 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (seven review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, then 7, 9 and 4 after the Merriam-Webster batches)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (eight review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, then 7, 9, 4 and 8 after the Merriam-Webster batches)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 1038,
-  "related": 1029,
+  "reviewed": 1046,
+  "related": 1037,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
@@ -3557,6 +3557,18 @@
   ],
   [
    "german",
+   "symbion",
+   "symbiont",
+   true
+  ],
+  [
+   "german",
+   "symbioun",
+   "symbiount",
+   true
+  ],
+  [
+   "german",
    "trommel",
    "trommelfeuer",
    true
@@ -3917,6 +3929,12 @@
   ],
   [
    "la-new",
+   "bacillus",
+   "bacillus subtilis",
+   true
+  ],
+  [
+   "la-new",
    "cantharellus",
    "cantharellus cinnabarinus",
    true
@@ -3949,6 +3967,24 @@
    "la-new",
    "petechia",
    "petechialis",
+   true
+  ],
+  [
+   "la-new",
+   "strepto",
+   "streptomyces",
+   true
+  ],
+  [
+   "la-new",
+   "strepto",
+   "streptomycet",
+   true
+  ],
+  [
+   "la-new",
+   "strepto",
+   "streptothric",
    true
   ],
   [
@@ -4975,6 +5011,18 @@
    "latin",
    "sagitta",
    "sagittarius",
+   true
+  ],
+  [
+   "latin",
+   "santoni",
+   "santonica",
+   true
+  ],
+  [
+   "latin",
+   "santoni",
+   "santonicus",
    true
   ],
   [

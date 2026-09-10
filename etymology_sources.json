@@ -111,6 +111,10 @@
     "base": "ACERATE",
     "rule": "suffix:ED"
   },
+  "ACETOPHENETIDIN": {
+    "base": "ACETOPHENETIDIN",
+    "rule": "merriam-webster"
+  },
   "ACHIER": {
     "base": "ACHE",
     "rule": "suffix:IER"
@@ -183,6 +187,10 @@
     "base": "ACTINOMORPHY",
     "rule": "suffix:IES"
   },
+  "ACTINOMYCES": {
+    "base": "ACTINOMYCES",
+    "rule": "merriam-webster"
+  },
   "ACTINOMYCIN": {
     "base": "ACTINOMYCIN",
     "rule": "merriam-webster"
@@ -251,6 +259,14 @@
     "base": "ADZUKI",
     "rule": "link:stated"
   },
+  "AE": {
+    "base": "AE",
+    "rule": "merriam-webster"
+  },
+  "AEDES": {
+    "base": "AEDES",
+    "rule": "merriam-webster"
+  },
   "AEOLIAN": {
     "base": "EOLIAN",
     "rule": "spelling:AE>E"
@@ -298,6 +314,10 @@
   "AFFENPINSCHERS": {
     "base": "AFFENPINSCHER",
     "rule": "link:stated"
+  },
+  "AFLUTTER": {
+    "base": "AFLUTTER",
+    "rule": "merriam-webster"
   },
   "AFTERCARES": {
     "base": "AFTERCARE",
@@ -595,6 +615,10 @@
     "base": "ALKOXIDE",
     "rule": "link:stated"
   },
+  "ALKOXY": {
+    "base": "ALKOXY",
+    "rule": "merriam-webster"
+  },
   "ALKYD": {
     "base": "ALKY",
     "rule": "suffix:D"
@@ -743,6 +767,10 @@
     "base": "AMIDIN",
     "rule": "suffix:ES"
   },
+  "AMIDO": {
+    "base": "AMIDO",
+    "rule": "merriam-webster"
+  },
   "AMINOPHYLLINE": {
     "base": "AMINOPHYLLINE",
     "rule": "merriam-webster"
@@ -830,6 +858,10 @@
   "AMPED": {
     "base": "AMP",
     "rule": "link:stated"
+  },
+  "AMPEROMETRIC": {
+    "base": "AMPEROMETRIC",
+    "rule": "merriam-webster"
   },
   "AMPERSAND": {
     "base": "AMPERSAND",
@@ -938,6 +970,10 @@
   "ANARTHRIAS": {
     "base": "ANARTHRIA",
     "rule": "suffix:S"
+  },
+  "ANATROPOUS": {
+    "base": "ANATROPOUS",
+    "rule": "merriam-webster"
   },
   "ANATTO": {
     "base": "ANNATTO",
@@ -1399,6 +1435,10 @@
     "base": "APISH",
     "rule": "suffix:NESSES"
   },
+  "APLANATIC": {
+    "base": "APLANATIC",
+    "rule": "merriam-webster"
+  },
   "APLITE": {
     "base": "APLITE",
     "rule": "merriam-webster"
@@ -1418,6 +1458,10 @@
   "APOCARPIES": {
     "base": "APOCARP",
     "rule": "suffix:IES"
+  },
+  "APOCHROMATIC": {
+    "base": "APOCHROMATIC",
+    "rule": "merriam-webster"
   },
   "APOGAMIES": {
     "base": "APOGAMY",
@@ -1631,6 +1675,10 @@
     "base": "ARROGATOR",
     "rule": "suffix:S"
   },
+  "ARSENIOUS": {
+    "base": "ARSENIOUS",
+    "rule": "merriam-webster"
+  },
   "ARSENITE": {
     "base": "ARSENITE",
     "rule": "merriam-webster"
@@ -1699,6 +1747,10 @@
     "base": "ASTERIA",
     "rule": "suffix:S"
   },
+  "ASTERIATED": {
+    "base": "ASTERIATED",
+    "rule": "merriam-webster"
+  },
   "ASTILBE": {
     "base": "ASTILBE",
     "rule": "merriam-webster"
@@ -1714,6 +1766,10 @@
   "ASTROBIOLOGIES": {
     "base": "ASTROBIOLOGY",
     "rule": "suffix:IES"
+  },
+  "ASTYLAR": {
+    "base": "STYLAR",
+    "rule": "link:stated"
   },
   "ASYNCHRONISM": {
     "base": "ASYNCHRONY",
@@ -1859,6 +1915,10 @@
     "base": "AUTEURISM",
     "rule": "suffix:S"
   },
+  "AUTOCRINE": {
+    "base": "AUTOCRINE",
+    "rule": "merriam-webster"
+  },
   "AUTOECISMS": {
     "base": "AUTOECISM",
     "rule": "suffix:S"
@@ -1907,6 +1967,10 @@
     "base": "AVASCULARITY",
     "rule": "suffix:IES"
   },
+  "AVELLAN": {
+    "base": "AVELLAN",
+    "rule": "merriam-webster"
+  },
   "AVERAGENESSES": {
     "base": "AVERAGE",
     "rule": "suffix:NESSES"
@@ -1950,6 +2014,10 @@
   "AWOLS": {
     "base": "AWOL",
     "rule": "link:stated"
+  },
+  "AXONOMETRIC": {
+    "base": "AXONOMETRIC",
+    "rule": "merriam-webster"
   },
   "AZEOTROPIES": {
     "base": "AZEOTROPE",
@@ -2023,13 +2091,17 @@
     "base": "BACCATE",
     "rule": "suffix:ED"
   },
+  "BACCHANALIA": {
+    "base": "BACCHANALIA",
+    "rule": "merriam-webster"
+  },
   "BACCHANALIAN": {
-    "base": "BACCHANAL",
-    "rule": "derivational:IAN"
+    "base": "BACCHANALIA",
+    "rule": "link:stated"
   },
   "BACCHANALIANS": {
     "base": "BACCHANALIAN",
-    "rule": "suffix:S"
+    "rule": "link:stated"
   },
   "BACCHANTE": {
     "base": "BACCHANTES",
@@ -5171,6 +5243,10 @@
     "base": "CEMENTUM",
     "rule": "suffix:S"
   },
+  "CENTAS": {
+    "base": "CENTAS",
+    "rule": "merriam-webster"
+  },
   "CENTAURIC": {
     "base": "CENTAUR",
     "rule": "derivational:IC"
@@ -5318,6 +5394,10 @@
   "CHANTAGES": {
     "base": "CHANTAGE",
     "rule": "suffix:ES"
+  },
+  "CHAPARAJOS": {
+    "base": "CHAPARAJOS",
+    "rule": "merriam-webster"
   },
   "CHAPBOOK": {
     "base": "CHAPBOOK",
@@ -5675,6 +5755,10 @@
     "base": "CHOLECYSTITIS",
     "rule": "suffix:ES"
   },
+  "CHOLESTERIC": {
+    "base": "CHOLESTERIC",
+    "rule": "merriam-webster"
+  },
   "CHOLESTYRAMINE": {
     "base": "CHOLESTYRAMINE",
     "rule": "merriam-webster"
@@ -5810,6 +5894,10 @@
   "CHURLISHNESSES": {
     "base": "CHURLISH",
     "rule": "suffix:NESSES"
+  },
+  "CHURRIGUERESQUE": {
+    "base": "CHURRIGUERESQUE",
+    "rule": "merriam-webster"
   },
   "CHUTIST": {
     "base": "CHUTE",
@@ -6006,6 +6094,10 @@
   "CLAUGHTS": {
     "base": "CLAUGHT",
     "rule": "suffix:S"
+  },
+  "CLEIDOIC": {
+    "base": "CLEIDOIC",
+    "rule": "merriam-webster"
   },
   "CLEISTOGAMIES": {
     "base": "CLEISTOGAMY",
@@ -6466,6 +6558,10 @@
   "COLED": {
     "base": "COL",
     "rule": "suffix:ED"
+  },
+  "COLEOPTERA": {
+    "base": "COLEOPTERA",
+    "rule": "merriam-webster"
   },
   "COLEORHIZA": {
     "base": "COLEORHIZA",
@@ -25771,6 +25867,38 @@
     "base": "PYOSIS",
     "rule": "classical_plural:ES>IS"
   },
+  "PYRACANTHA": {
+    "base": "PYRACANTHA",
+    "rule": "merriam-webster"
+  },
+  "PYRACANTHAS": {
+    "base": "PYRACANTHA",
+    "rule": "link:stated"
+  },
+  "PYRIDOXAL": {
+    "base": "PYRIDOXAL",
+    "rule": "merriam-webster"
+  },
+  "PYRIDOXALS": {
+    "base": "PYRIDOXAL",
+    "rule": "link:stated"
+  },
+  "PYRIDOXAMINE": {
+    "base": "PYRIDOXAMINE",
+    "rule": "merriam-webster"
+  },
+  "PYRIDOXAMINES": {
+    "base": "PYRIDOXAMINE",
+    "rule": "link:stated"
+  },
+  "PYROLA": {
+    "base": "PYROLA",
+    "rule": "merriam-webster"
+  },
+  "PYROLAS": {
+    "base": "PYROLA",
+    "rule": "link:stated"
+  },
   "PYROLOGIES": {
     "base": "PYROLOGY",
     "rule": "suffix:IES"
@@ -25783,9 +25911,33 @@
     "base": "PYROMETRY",
     "rule": "suffix:IES"
   },
+  "PYROMORPHITE": {
+    "base": "PYROMORPHITE",
+    "rule": "merriam-webster"
+  },
+  "PYROMORPHITES": {
+    "base": "PYROMORPHITE",
+    "rule": "link:stated"
+  },
+  "PYROPHYLLITE": {
+    "base": "PYROPHYLLITE",
+    "rule": "merriam-webster"
+  },
+  "PYROPHYLLITES": {
+    "base": "PYROPHYLLITE",
+    "rule": "link:stated"
+  },
   "PYROSISES": {
     "base": "PYROSIS",
     "rule": "suffix:ES"
+  },
+  "PYROXYLIN": {
+    "base": "PYROXYLIN",
+    "rule": "merriam-webster"
+  },
+  "PYROXYLINS": {
+    "base": "PYROXYLIN",
+    "rule": "link:stated"
   },
   "QABALA": {
     "base": "KABBALAH",
@@ -25839,6 +25991,14 @@
     "base": "QUALMISH",
     "rule": "suffix:NESSES"
   },
+  "QUANGO": {
+    "base": "QUANGO",
+    "rule": "merriam-webster"
+  },
+  "QUANGOS": {
+    "base": "QUANGO",
+    "rule": "link:stated"
+  },
   "QUANTALLY": {
     "base": "QUANTAL",
     "rule": "suffix:LY"
@@ -25866,6 +26026,22 @@
   "QUILLAJAS": {
     "base": "QUILLAJA",
     "rule": "suffix:S"
+  },
+  "QUINACRINE": {
+    "base": "QUINACRINE",
+    "rule": "merriam-webster"
+  },
+  "QUINACRINES": {
+    "base": "QUINACRINE",
+    "rule": "link:stated"
+  },
+  "QUINIDINE": {
+    "base": "QUINIDINE",
+    "rule": "merriam-webster"
+  },
+  "QUINIDINES": {
+    "base": "QUINIDINE",
+    "rule": "link:stated"
   },
   "QUININAS": {
     "base": "QUININA",
@@ -26087,9 +26263,33 @@
     "base": "RAPID",
     "rule": "suffix:S"
   },
+  "RAPSCALLION": {
+    "base": "RAPSCALLION",
+    "rule": "merriam-webster"
+  },
+  "RAPSCALLIONS": {
+    "base": "RAPSCALLION",
+    "rule": "link:stated"
+  },
   "RAPTUROUSNESSES": {
     "base": "RAPTUROUS",
     "rule": "suffix:NESSES"
+  },
+  "RARERIPE": {
+    "base": "RARERIPE",
+    "rule": "merriam-webster"
+  },
+  "RARERIPES": {
+    "base": "RARERIPE",
+    "rule": "link:stated"
+  },
+  "RASBORA": {
+    "base": "RASBORA",
+    "rule": "merriam-webster"
+  },
+  "RASBORAS": {
+    "base": "RASBORA",
+    "rule": "link:stated"
   },
   "RASERS": {
     "base": "RAS",
@@ -26154,6 +26354,14 @@
   "RAUCITIES": {
     "base": "RAUCITY",
     "rule": "suffix:IES"
+  },
+  "RAUWOLFIA": {
+    "base": "RAUWOLFIA",
+    "rule": "merriam-webster"
+  },
+  "RAUWOLFIAS": {
+    "base": "RAUWOLFIA",
+    "rule": "link:stated"
   },
   "RAVENING": {
     "base": "RAVEN",
@@ -26515,6 +26723,14 @@
     "base": "REGLORIFY",
     "rule": "suffix:ING"
   },
+  "REGOSOL": {
+    "base": "REGOSOL",
+    "rule": "merriam-webster"
+  },
+  "REGOSOLS": {
+    "base": "REGOSOL",
+    "rule": "link:stated"
+  },
   "REGRETFULNESSES": {
     "base": "REGRETFUL",
     "rule": "suffix:NESSES"
@@ -26587,6 +26803,14 @@
     "base": "REOBJECT",
     "rule": "suffix:S"
   },
+  "REOVIRUS": {
+    "base": "REOVIRUS",
+    "rule": "merriam-webster"
+  },
+  "REOVIRUSES": {
+    "base": "REOVIRUS",
+    "rule": "link:stated"
+  },
   "REPETENDS": {
     "base": "REPETEND",
     "rule": "link:stated"
@@ -26626,6 +26850,14 @@
   "REQUISITENESSES": {
     "base": "REQUISITE",
     "rule": "suffix:NESSES"
+  },
+  "RESEAU": {
+    "base": "RESEAU",
+    "rule": "merriam-webster"
+  },
+  "RESEAUS": {
+    "base": "RESEAU",
+    "rule": "suffix:S"
   },
   "RESENTFULNESSES": {
     "base": "RESENTFUL",
@@ -26771,6 +27003,14 @@
     "base": "REVERSO",
     "rule": "suffix:S"
   },
+  "REVIVISCENCE": {
+    "base": "REVIVISCENCE",
+    "rule": "merriam-webster"
+  },
+  "REVIVISCENCES": {
+    "base": "REVIVISCENCE",
+    "rule": "link:stated"
+  },
   "REWAN": {
     "base": "WAN",
     "rule": "prefix:RE"
@@ -26799,6 +27039,14 @@
     "base": "REZERO",
     "rule": "suffix:S"
   },
+  "RHABDOCOELE": {
+    "base": "RHABDOCOELE",
+    "rule": "merriam-webster"
+  },
+  "RHABDOCOELES": {
+    "base": "RHABDOCOELE",
+    "rule": "link:stated"
+  },
   "RHABDOM": {
     "base": "RHABDOMES",
     "rule": "reverse_inflection"
@@ -26822,6 +27070,14 @@
   "RHABDOMS": {
     "base": "RHABDOM",
     "rule": "suffix:S"
+  },
+  "RHABDOVIRUS": {
+    "base": "RHABDOVIRUS",
+    "rule": "merriam-webster"
+  },
+  "RHABDOVIRUSES": {
+    "base": "RHABDOVIRUS",
+    "rule": "link:stated"
   },
   "RHAPHAE": {
     "base": "RHAPHE",
@@ -26847,6 +27103,14 @@
     "base": "RHIZOBIUM",
     "rule": "merriam-webster"
   },
+  "RHIZOCTONIA": {
+    "base": "RHIZOCTONIA",
+    "rule": "merriam-webster"
+  },
+  "RHIZOCTONIAS": {
+    "base": "RHIZOCTONIA",
+    "rule": "suffix:S"
+  },
   "RHIZOIDAL": {
     "base": "RHIZOID",
     "rule": "derivational:AL"
@@ -26861,6 +27125,14 @@
   },
   "RHIZOPUSES": {
     "base": "RHIZOPUS",
+    "rule": "suffix:ES"
+  },
+  "RHUS": {
+    "base": "RHUS",
+    "rule": "merriam-webster"
+  },
+  "RHUSES": {
+    "base": "RHUS",
     "rule": "suffix:ES"
   },
   "RIBIER": {
@@ -26963,6 +27235,14 @@
     "base": "RISUS",
     "rule": "suffix:ES"
   },
+  "RITONAVIR": {
+    "base": "RITONAVIR",
+    "rule": "merriam-webster"
+  },
+  "RITONAVIRS": {
+    "base": "RITONAVIR",
+    "rule": "suffix:S"
+  },
   "RIVIERES": {
     "base": "RIVIERE",
     "rule": "suffix:ES"
@@ -26974,6 +27254,22 @@
   "ROADHOLDINGS": {
     "base": "ROADHOLDING",
     "rule": "suffix:S"
+  },
+  "ROBAND": {
+    "base": "ROBAND",
+    "rule": "merriam-webster"
+  },
+  "ROBANDS": {
+    "base": "ROBAND",
+    "rule": "link:stated"
+  },
+  "ROBLE": {
+    "base": "ROBLE",
+    "rule": "merriam-webster"
+  },
+  "ROBLES": {
+    "base": "ROBLE",
+    "rule": "link:stated"
   },
   "ROBOTISMS": {
     "base": "ROBOTISM",
@@ -27123,9 +27419,25 @@
     "base": "ROSANILIN",
     "rule": "suffix:S"
   },
+  "ROSEBAY": {
+    "base": "ROSEBAY",
+    "rule": "merriam-webster"
+  },
+  "ROSEBAYS": {
+    "base": "ROSEBAY",
+    "rule": "link:stated"
+  },
   "ROSEMALINGS": {
     "base": "ROSEMALING",
     "rule": "suffix:S"
+  },
+  "ROTAMETER": {
+    "base": "ROTAMETER",
+    "rule": "merriam-webster"
+  },
+  "ROTAMETERS": {
+    "base": "ROTAMETER",
+    "rule": "link:stated"
   },
   "ROTATORES": {
     "base": "ROTATOR",
@@ -27231,6 +27543,14 @@
     "base": "RUGGEDIZATION",
     "rule": "suffix:S"
   },
+  "RUGOLA": {
+    "base": "RUGOLA",
+    "rule": "merriam-webster"
+  },
+  "RUGOLAS": {
+    "base": "RUGOLA",
+    "rule": "suffix:S"
+  },
   "RUINOUSNESSES": {
     "base": "RUINOUS",
     "rule": "suffix:NESSES"
@@ -27238,6 +27558,22 @@
   "RUMORMONGERINGS": {
     "base": "RUMORMONGER",
     "rule": "suffix:INGS"
+  },
+  "RUNAGATE": {
+    "base": "RUNAGATE",
+    "rule": "merriam-webster"
+  },
+  "RUNAGATES": {
+    "base": "RUNAGATE",
+    "rule": "link:stated"
+  },
+  "RUNDLET": {
+    "base": "RUNDLET",
+    "rule": "merriam-webster"
+  },
+  "RUNDLETS": {
+    "base": "RUNDLET",
+    "rule": "link:stated"
   },
   "RUNNINESSES": {
     "base": "RUNNINESS",
@@ -27258,6 +27594,14 @@
   "RUTHENIUMS": {
     "base": "RUTHENIUM",
     "rule": "link:stated"
+  },
+  "RUTHERFORDIUM": {
+    "base": "RUTHERFORDIUM",
+    "rule": "merriam-webster"
+  },
+  "RUTHERFORDIUMS": {
+    "base": "RUTHERFORDIUM",
+    "rule": "suffix:S"
   },
   "RUTHFULNESSES": {
     "base": "RUTHFUL",
@@ -27289,6 +27633,14 @@
   },
   "RYOKANS": {
     "base": "RYOKAN",
+    "rule": "link:stated"
+  },
+  "SABRA": {
+    "base": "SABRA",
+    "rule": "merriam-webster"
+  },
+  "SABRAS": {
+    "base": "SABRA",
     "rule": "link:stated"
   },
   "SAFROL": {
@@ -27346,6 +27698,14 @@
   "SALMONELLOSIS": {
     "base": "SALMONELLA",
     "rule": "link:stated"
+  },
+  "SALPIGLOSSES": {
+    "base": "SALPIGLOSSIS",
+    "rule": "link:stated"
+  },
+  "SALPIGLOSSIS": {
+    "base": "SALPIGLOSSIS",
+    "rule": "merriam-webster"
   },
   "SALSILLAS": {
     "base": "SALSILLA",
@@ -27423,6 +27783,14 @@
     "base": "SANE",
     "rule": "suffix:NESSES"
   },
+  "SANGUINARIA": {
+    "base": "SANGUINARIA",
+    "rule": "merriam-webster"
+  },
+  "SANGUINARIAS": {
+    "base": "SANGUINARIA",
+    "rule": "link:stated"
+  },
   "SANGUINENESSES": {
     "base": "SANGUINE",
     "rule": "suffix:NESSES"
@@ -27431,9 +27799,25 @@
     "base": "SANE",
     "rule": "suffix:ING"
   },
+  "SANSEVIERIA": {
+    "base": "SANSEVIERIA",
+    "rule": "merriam-webster"
+  },
+  "SANSEVIERIAS": {
+    "base": "SANSEVIERIA",
+    "rule": "link:stated"
+  },
   "SANTERIAS": {
     "base": "SANTERIA",
     "rule": "suffix:S"
+  },
+  "SANTOLINA": {
+    "base": "SANTOLINA",
+    "rule": "merriam-webster"
+  },
+  "SANTOLINAS": {
+    "base": "SANTOLINA",
+    "rule": "link:stated"
   },
   "SANTOORS": {
     "base": "SANTOOR",
@@ -27455,6 +27839,14 @@
     "base": "SAPLESS",
     "rule": "suffix:NESSES"
   },
+  "SAPONITE": {
+    "base": "SAPONITE",
+    "rule": "merriam-webster"
+  },
+  "SAPONITES": {
+    "base": "SAPONITE",
+    "rule": "link:stated"
+  },
   "SAPPINESSES": {
     "base": "SAPPINESS",
     "rule": "suffix:ES"
@@ -27462,6 +27854,14 @@
   "SAPROGENICITIES": {
     "base": "SAPROGENICITY",
     "rule": "suffix:IES"
+  },
+  "SAPSAGO": {
+    "base": "SAPSAGO",
+    "rule": "merriam-webster"
+  },
+  "SAPSAGOS": {
+    "base": "SAPSAGO",
+    "rule": "link:stated"
   },
   "SARCINAE": {
     "base": "SARCINA",
@@ -27474,6 +27874,14 @@
   "SARCOLOGIES": {
     "base": "SARCOLOGY",
     "rule": "suffix:IES"
+  },
+  "SARRACENIA": {
+    "base": "SARRACENIA",
+    "rule": "merriam-webster"
+  },
+  "SARRACENIAS": {
+    "base": "SARRACENIA",
+    "rule": "link:stated"
   },
   "SASHIMIS": {
     "base": "SASHIMI",
@@ -27511,13 +27919,45 @@
     "base": "SATURNALIA",
     "rule": "link:stated"
   },
+  "SATURNIID": {
+    "base": "SATURNIID",
+    "rule": "merriam-webster"
+  },
+  "SATURNIIDS": {
+    "base": "SATURNIID",
+    "rule": "link:stated"
+  },
   "SATURNISMS": {
     "base": "SATURNISM",
     "rule": "suffix:S"
   },
+  "SATYRID": {
+    "base": "SATYRID",
+    "rule": "merriam-webster"
+  },
+  "SATYRIDS": {
+    "base": "SATYRID",
+    "rule": "link:stated"
+  },
   "SAUCHS": {
     "base": "SAUCH",
     "rule": "suffix:S"
+  },
+  "SAUGH": {
+    "base": "SAUGH",
+    "rule": "merriam-webster"
+  },
+  "SAUGHS": {
+    "base": "SAUGH",
+    "rule": "link:stated"
+  },
+  "SAUROPOD": {
+    "base": "SAUROPOD",
+    "rule": "merriam-webster"
+  },
+  "SAUROPODS": {
+    "base": "SAUROPOD",
+    "rule": "link:stated"
   },
   "SAUTERNES": {
     "base": "SAUTERNE",
@@ -27535,9 +27975,25 @@
     "base": "SAVORINESS",
     "rule": "suffix:ES"
   },
+  "SAXITOXIN": {
+    "base": "SAXITOXIN",
+    "rule": "merriam-webster"
+  },
+  "SAXITOXINS": {
+    "base": "SAXITOXIN",
+    "rule": "link:stated"
+  },
   "SCABROUSNESSES": {
     "base": "SCABROUS",
     "rule": "suffix:NESSES"
+  },
+  "SCAD": {
+    "base": "SCAD",
+    "rule": "merriam-webster"
+  },
+  "SCADS": {
+    "base": "SCAD",
+    "rule": "link:stated"
   },
   "SCALAGE": {
     "base": "SCALE",
@@ -27555,6 +28011,22 @@
     "base": "SCALINESS",
     "rule": "suffix:ES"
   },
+  "SCALOPPINE": {
+    "base": "SCALOPPINE",
+    "rule": "merriam-webster"
+  },
+  "SCALOPPINES": {
+    "base": "SCALOPPINE",
+    "rule": "link:stated"
+  },
+  "SCANDIUM": {
+    "base": "SCANDIUM",
+    "rule": "merriam-webster"
+  },
+  "SCANDIUMS": {
+    "base": "SCANDIUM",
+    "rule": "suffix:S"
+  },
   "SCANTNESSES": {
     "base": "SCANT",
     "rule": "suffix:NESSES"
@@ -27571,6 +28043,14 @@
     "base": "SCARF",
     "rule": "suffix:ERS"
   },
+  "SCARFSKIN": {
+    "base": "SCARFSKIN",
+    "rule": "merriam-webster"
+  },
+  "SCARFSKINS": {
+    "base": "SCARFSKIN",
+    "rule": "link:stated"
+  },
   "SCARINESSES": {
     "base": "SCARINESS",
     "rule": "suffix:ES"
@@ -27585,6 +28065,14 @@
   },
   "SCARLATINAS": {
     "base": "SCARLATINA",
+    "rule": "link:stated"
+  },
+  "SCATBACK": {
+    "base": "SCATBACK",
+    "rule": "merriam-webster"
+  },
+  "SCATBACKS": {
+    "base": "SCATBACK",
     "rule": "link:stated"
   },
   "SCAUPER": {
@@ -27618,6 +28106,14 @@
   "SCHAVS": {
     "base": "SCHAV",
     "rule": "suffix:S"
+  },
+  "SCHEELITE": {
+    "base": "SCHEELITE",
+    "rule": "merriam-webster"
+  },
+  "SCHEELITES": {
+    "base": "SCHEELITE",
+    "rule": "link:stated"
   },
   "SCHIZIER": {
     "base": "SCHIZY",
@@ -27667,6 +28163,30 @@
     "base": "SCHUSS",
     "rule": "suffix:ERS"
   },
+  "SCHWARMEREI": {
+    "base": "SCHWARMEREI",
+    "rule": "merriam-webster"
+  },
+  "SCHWARMEREIS": {
+    "base": "SCHWARMEREI",
+    "rule": "suffix:S"
+  },
+  "SCINTILLOMETER": {
+    "base": "SCINTILLOMETER",
+    "rule": "merriam-webster"
+  },
+  "SCINTILLOMETERS": {
+    "base": "SCINTILLOMETER",
+    "rule": "link:stated"
+  },
+  "SCLEREID": {
+    "base": "SCLEREID",
+    "rule": "merriam-webster"
+  },
+  "SCLEREIDS": {
+    "base": "SCLEREID",
+    "rule": "link:stated"
+  },
   "SCLERITISES": {
     "base": "SCLERITIS",
     "rule": "suffix:ES"
@@ -27674,6 +28194,14 @@
   "SCLERODERMATA": {
     "base": "SCLERODERMA",
     "rule": "classical_plural:MATA>MA"
+  },
+  "SCLEROTIN": {
+    "base": "SCLEROTIN",
+    "rule": "merriam-webster"
+  },
+  "SCLEROTINS": {
+    "base": "SCLEROTIN",
+    "rule": "link:stated"
   },
   "SCORNFULNESSES": {
     "base": "SCORNFUL",
@@ -27802,6 +28330,14 @@
   "SCRAPPINESSES": {
     "base": "SCRAPPINESS",
     "rule": "suffix:ES"
+  },
+  "SCRAPPLE": {
+    "base": "SCRAPPLE",
+    "rule": "merriam-webster"
+  },
+  "SCRAPPLES": {
+    "base": "SCRAPPLE",
+    "rule": "link:stated"
   },
   "SCRATCHINESSES": {
     "base": "SCRATCHINESS",
@@ -27975,8 +28511,40 @@
     "base": "SCURVINESS",
     "rule": "suffix:ES"
   },
+  "SCUTCHEON": {
+    "base": "SCUTCHEON",
+    "rule": "merriam-webster"
+  },
+  "SCUTCHEONS": {
+    "base": "SCUTCHEON",
+    "rule": "link:stated"
+  },
+  "SCUTTLEBUTT": {
+    "base": "SCUTTLEBUTT",
+    "rule": "merriam-webster"
+  },
+  "SCUTTLEBUTTS": {
+    "base": "SCUTTLEBUTT",
+    "rule": "link:stated"
+  },
   "SCUTWORKS": {
     "base": "SCUTWORK",
+    "rule": "suffix:S"
+  },
+  "SCYPHOZOAN": {
+    "base": "SCYPHOZOAN",
+    "rule": "merriam-webster"
+  },
+  "SCYPHOZOANS": {
+    "base": "SCYPHOZOAN",
+    "rule": "link:stated"
+  },
+  "SEABORGIUM": {
+    "base": "SEABORGIUM",
+    "rule": "merriam-webster"
+  },
+  "SEABORGIUMS": {
+    "base": "SEABORGIUM",
     "rule": "suffix:S"
   },
   "SEAMINESSES": {
@@ -28091,6 +28659,14 @@
     "base": "SEISMOMETRY",
     "rule": "suffix:IES"
   },
+  "SELAGINELLA": {
+    "base": "SELAGINELLA",
+    "rule": "merriam-webster"
+  },
+  "SELAGINELLAS": {
+    "base": "SELAGINELLA",
+    "rule": "link:stated"
+  },
   "SELECTIVE": {
     "base": "SELECT",
     "rule": "suffix:IVE"
@@ -28183,13 +28759,37 @@
     "base": "STIFF",
     "rule": "prefix:SEMI"
   },
+  "SEMPERVIVUM": {
+    "base": "SEMPERVIVUM",
+    "rule": "merriam-webster"
+  },
+  "SEMPERVIVUMS": {
+    "base": "SEMPERVIVUM",
+    "rule": "link:stated"
+  },
   "SEMPITERNITIES": {
     "base": "SEMPITERNITY",
     "rule": "suffix:IES"
   },
+  "SENECIO": {
+    "base": "SENECIO",
+    "rule": "merriam-webster"
+  },
+  "SENECIOS": {
+    "base": "SENECIO",
+    "rule": "link:stated"
+  },
   "SENECTITUDES": {
     "base": "SENECTITUDE",
     "rule": "suffix:ES"
+  },
+  "SENHORA": {
+    "base": "SENHORA",
+    "rule": "merriam-webster"
+  },
+  "SENHORAS": {
+    "base": "SENHORA",
+    "rule": "suffix:S"
   },
   "SENSIBLENESSES": {
     "base": "SENSIBLE",
@@ -28199,9 +28799,25 @@
     "base": "SENSIBLE",
     "rule": "suffix:ER"
   },
+  "SENSITOMETER": {
+    "base": "SENSITOMETER",
+    "rule": "merriam-webster"
+  },
+  "SENSITOMETERS": {
+    "base": "SENSITOMETER",
+    "rule": "link:stated"
+  },
   "SENTENTIAE": {
     "base": "SENTENTIA",
     "rule": "latin_plural:AE>A"
+  },
+  "SENTIMO": {
+    "base": "SENTIMO",
+    "rule": "merriam-webster"
+  },
+  "SENTIMOS": {
+    "base": "SENTIMO",
+    "rule": "link:stated"
   },
   "SEPARABLENESSES": {
     "base": "SEPARABLE",
@@ -28359,6 +28975,14 @@
     "base": "SHAMEABLE",
     "rule": "suffix:Y"
   },
+  "SHAMUS": {
+    "base": "SHAMUS",
+    "rule": "merriam-webster"
+  },
+  "SHAMUSES": {
+    "base": "SHAMUS",
+    "rule": "link:stated"
+  },
   "SHANTIHS": {
     "base": "SHANTIH",
     "rule": "suffix:S"
@@ -28423,6 +29047,14 @@
     "base": "SHEOL",
     "rule": "suffix:S"
   },
+  "SHERPA": {
+    "base": "SHERPA",
+    "rule": "merriam-webster"
+  },
+  "SHERPAS": {
+    "base": "SHERPA",
+    "rule": "link:stated"
+  },
   "SHERRISES": {
     "base": "SHERRIS",
     "rule": "suffix:ES"
@@ -28467,6 +29099,14 @@
     "base": "SHIGELLA",
     "rule": "link:stated"
   },
+  "SHINNERIES": {
+    "base": "SHINNERY",
+    "rule": "link:stated"
+  },
+  "SHINNERY": {
+    "base": "SHINNERY",
+    "rule": "merriam-webster"
+  },
   "SHINNEYED": {
     "base": "SHINNEY",
     "rule": "suffix:ED"
@@ -28510,6 +29150,14 @@
   "SHOGIS": {
     "base": "SHOGI",
     "rule": "suffix:S"
+  },
+  "SHOOFLIES": {
+    "base": "SHOOFLY",
+    "rule": "link:stated"
+  },
+  "SHOOFLY": {
+    "base": "SHOOFLY",
+    "rule": "merriam-webster"
   },
   "SHOPPE": {
     "base": "SHOPPED",
@@ -28687,6 +29335,14 @@
     "base": "SIGNIORIES",
     "rule": "reverse_inflection"
   },
+  "SILANE": {
+    "base": "SILANE",
+    "rule": "merriam-webster"
+  },
+  "SILANES": {
+    "base": "SILANE",
+    "rule": "link:stated"
+  },
   "SILENI": {
     "base": "SILENUS",
     "rule": "latin_plural:I>US"
@@ -28694,6 +29350,14 @@
   "SILICIUMS": {
     "base": "SILICIUM",
     "rule": "suffix:S"
+  },
+  "SILOXANE": {
+    "base": "SILOXANE",
+    "rule": "merriam-webster"
+  },
+  "SILOXANES": {
+    "base": "SILOXANE",
+    "rule": "link:stated"
   },
   "SILVANS": {
     "base": "SILVAN",
@@ -28706,6 +29370,22 @@
   "SILVERSMITHINGS": {
     "base": "SILVERSMITH",
     "rule": "suffix:INGS"
+  },
+  "SILVEX": {
+    "base": "SILVEX",
+    "rule": "merriam-webster"
+  },
+  "SILVEXES": {
+    "base": "SILVEX",
+    "rule": "suffix:ES"
+  },
+  "SIMNEL": {
+    "base": "SIMNEL",
+    "rule": "merriam-webster"
+  },
+  "SIMNELS": {
+    "base": "SIMNEL",
+    "rule": "link:stated"
   },
   "SIMONIACAL": {
     "base": "SIMONIAC",
@@ -28782,6 +29462,14 @@
   "SISSYNESSES": {
     "base": "SISSY",
     "rule": "suffix:NESSES"
+  },
+  "SITCOM": {
+    "base": "SITCOM",
+    "rule": "merriam-webster"
+  },
+  "SITCOMS": {
+    "base": "SITCOM",
+    "rule": "link:stated"
   },
   "SITOLOGIES": {
     "base": "SITOLOGY",
@@ -29011,6 +29699,14 @@
     "base": "SLANGINESS",
     "rule": "suffix:ES"
   },
+  "SLAPJACK": {
+    "base": "SLAPJACK",
+    "rule": "merriam-webster"
+  },
+  "SLAPJACKS": {
+    "base": "SLAPJACK",
+    "rule": "link:stated"
+  },
   "SLATEY": {
     "base": "SLAT",
     "rule": "suffix:EY"
@@ -29042,6 +29738,14 @@
   "SLICKENERS": {
     "base": "SLICKEN",
     "rule": "suffix:ERS"
+  },
+  "SLICKENSIDE": {
+    "base": "SLICKENSIDE",
+    "rule": "merriam-webster"
+  },
+  "SLICKENSIDES": {
+    "base": "SLICKENSIDE",
+    "rule": "link:stated"
   },
   "SLIEVES": {
     "base": "SLIEVE",
@@ -29190,6 +29894,14 @@
   "SMEEKS": {
     "base": "SMEEK",
     "rule": "suffix:S"
+  },
+  "SMEW": {
+    "base": "SMEW",
+    "rule": "merriam-webster"
+  },
+  "SMEWS": {
+    "base": "SMEW",
+    "rule": "link:stated"
   },
   "SMIERCASES": {
     "base": "SMIERCASE",
@@ -29367,6 +30079,14 @@
     "base": "SOCIOLOGESE",
     "rule": "suffix:ES"
   },
+  "SODALITE": {
+    "base": "SODALITE",
+    "rule": "merriam-webster"
+  },
+  "SODALITES": {
+    "base": "SODALITE",
+    "rule": "link:stated"
+  },
   "SODDENNESSES": {
     "base": "SODDEN",
     "rule": "suffix:NESSES"
@@ -29471,6 +30191,14 @@
     "base": "SOLVOLYSIS",
     "rule": "link:derived+definition"
   },
+  "SOMATOMEDIN": {
+    "base": "SOMATOMEDIN",
+    "rule": "merriam-webster"
+  },
+  "SOMATOMEDINS": {
+    "base": "SOMATOMEDIN",
+    "rule": "link:stated"
+  },
   "SOMBER": {
     "base": "SOMBER",
     "rule": "merriam-webster"
@@ -29485,6 +30213,14 @@
   },
   "SOMBERNESSES": {
     "base": "SOMBERNESS",
+    "rule": "link:stated"
+  },
+  "SONAR": {
+    "base": "SONAR",
+    "rule": "merriam-webster"
+  },
+  "SONARS": {
+    "base": "SONAR",
     "rule": "link:stated"
   },
   "SONGFULNESSES": {
@@ -29510,6 +30246,14 @@
   "SOPPINESSES": {
     "base": "SOPPINESS",
     "rule": "suffix:ES"
+  },
+  "SORBENT": {
+    "base": "SORBENT",
+    "rule": "merriam-webster"
+  },
+  "SORBENTS": {
+    "base": "SORBENT",
+    "rule": "link:stated"
   },
   "SORED": {
     "base": "SORE",
@@ -29631,6 +30375,14 @@
     "base": "SPAIL",
     "rule": "suffix:S"
   },
+  "SPANDEX": {
+    "base": "SPANDEX",
+    "rule": "merriam-webster"
+  },
+  "SPANDEXES": {
+    "base": "SPANDEX",
+    "rule": "link:stated"
+  },
   "SPARRIER": {
     "base": "SPAR",
     "rule": "suffix:IER"
@@ -29638,6 +30390,30 @@
   "SPARRIEST": {
     "base": "SPAR",
     "rule": "suffix:IEST"
+  },
+  "SPARTEINE": {
+    "base": "SPARTEINE",
+    "rule": "merriam-webster"
+  },
+  "SPARTEINES": {
+    "base": "SPARTEINE",
+    "rule": "link:stated"
+  },
+  "SPARTINA": {
+    "base": "SPARTINA",
+    "rule": "merriam-webster"
+  },
+  "SPARTINAS": {
+    "base": "SPARTINA",
+    "rule": "link:stated"
+  },
+  "SPASMOLYTIC": {
+    "base": "SPASMOLYTIC",
+    "rule": "merriam-webster"
+  },
+  "SPASMOLYTICS": {
+    "base": "SPASMOLYTIC",
+    "rule": "link:stated"
   },
   "SPAVIES": {
     "base": "SPAVIE",
@@ -29675,6 +30451,30 @@
     "base": "SPERMACETI",
     "rule": "suffix:S"
   },
+  "SPHALERITE": {
+    "base": "SPHALERITE",
+    "rule": "merriam-webster"
+  },
+  "SPHALERITES": {
+    "base": "SPHALERITE",
+    "rule": "link:stated"
+  },
+  "SPHENODON": {
+    "base": "SPHENODON",
+    "rule": "merriam-webster"
+  },
+  "SPHENODONS": {
+    "base": "SPHENODON",
+    "rule": "link:stated"
+  },
+  "SPHENOPSID": {
+    "base": "SPHENOPSID",
+    "rule": "merriam-webster"
+  },
+  "SPHENOPSIDS": {
+    "base": "SPHENOPSID",
+    "rule": "link:stated"
+  },
   "SPHERIER": {
     "base": "SPHERE",
     "rule": "suffix:IER"
@@ -29682,6 +30482,22 @@
   "SPHERIEST": {
     "base": "SPHERE",
     "rule": "suffix:IEST"
+  },
+  "SPHINGID": {
+    "base": "SPHINGID",
+    "rule": "merriam-webster"
+  },
+  "SPHINGIDS": {
+    "base": "SPHINGID",
+    "rule": "link:stated"
+  },
+  "SPHINGOSINE": {
+    "base": "SPHINGOSINE",
+    "rule": "merriam-webster"
+  },
+  "SPHINGOSINES": {
+    "base": "SPHINGOSINE",
+    "rule": "link:stated"
   },
   "SPIC": {
     "base": "SPICES",
@@ -29787,6 +30603,14 @@
     "base": "SPINNER",
     "rule": "suffix:Y"
   },
+  "SPINOR": {
+    "base": "SPINOR",
+    "rule": "merriam-webster"
+  },
+  "SPINORS": {
+    "base": "SPINOR",
+    "rule": "link:stated"
+  },
   "SPIRIER": {
     "base": "SPIRE",
     "rule": "suffix:IER"
@@ -29874,6 +30698,14 @@
   "SPONGINESSES": {
     "base": "SPONGINESS",
     "rule": "suffix:ES"
+  },
+  "SPOROTRICHOSES": {
+    "base": "SPOROTRICHOSIS",
+    "rule": "link:stated"
+  },
+  "SPOROTRICHOSIS": {
+    "base": "SPOROTRICHOSIS",
+    "rule": "merriam-webster"
   },
   "SPORTFISHINGS": {
     "base": "SPORTFISHING",
@@ -30127,6 +30959,14 @@
     "base": "SQUIRM",
     "rule": "link:stated"
   },
+  "SRI": {
+    "base": "SRI",
+    "rule": "merriam-webster"
+  },
+  "SRIS": {
+    "base": "SRI",
+    "rule": "link:stated"
+  },
   "STABLENESSES": {
     "base": "STABLE",
     "rule": "suffix:NESSES"
@@ -30179,6 +31019,14 @@
     "base": "STANNUM",
     "rule": "suffix:S"
   },
+  "STAPELIA": {
+    "base": "STAPELIA",
+    "rule": "merriam-webster"
+  },
+  "STAPELIAS": {
+    "base": "STAPELIA",
+    "rule": "link:stated"
+  },
   "STARCHINESSES": {
     "base": "STARCHINESS",
     "rule": "suffix:ES"
@@ -30191,9 +31039,25 @@
     "base": "STATELESS",
     "rule": "suffix:NESSES"
   },
+  "STATIN": {
+    "base": "STATIN",
+    "rule": "merriam-webster"
+  },
+  "STATINS": {
+    "base": "STATIN",
+    "rule": "link:stated"
+  },
   "STAUMRELS": {
     "base": "STAUMREL",
     "rule": "suffix:S"
+  },
+  "STAVUDINE": {
+    "base": "STAVUDINE",
+    "rule": "merriam-webster"
+  },
+  "STAVUDINES": {
+    "base": "STAVUDINE",
+    "rule": "suffix:ES"
   },
   "STEADED": {
     "base": "STEAD",
@@ -30235,6 +31099,14 @@
     "base": "STEEVE",
     "rule": "suffix:INGS"
   },
+  "STEGOSAUR": {
+    "base": "STEGOSAUR",
+    "rule": "merriam-webster"
+  },
+  "STEGOSAURS": {
+    "base": "STEGOSAUR",
+    "rule": "link:stated"
+  },
   "STELAR": {
     "base": "STELLAR",
     "rule": "spelling:L>LL"
@@ -30242,6 +31114,14 @@
   "STENOTYPIES": {
     "base": "STENOTYPE",
     "rule": "suffix:IES"
+  },
+  "STEPHANOTIS": {
+    "base": "STEPHANOTIS",
+    "rule": "merriam-webster"
+  },
+  "STEPHANOTISES": {
+    "base": "STEPHANOTIS",
+    "rule": "link:stated"
   },
   "STEPPARENTINGS": {
     "base": "STEPPARENT",
@@ -30263,6 +31143,14 @@
     "base": "STERLING",
     "rule": "suffix:NESSES"
   },
+  "STERNITE": {
+    "base": "STERNITE",
+    "rule": "merriam-webster"
+  },
+  "STERNITES": {
+    "base": "STERNITE",
+    "rule": "link:stated"
+  },
   "STIBIUMS": {
     "base": "STIBIUM",
     "rule": "suffix:S"
@@ -30270,6 +31158,14 @@
   "STICKWORKS": {
     "base": "STICKWORK",
     "rule": "suffix:S"
+  },
+  "STIGMASTEROL": {
+    "base": "STIGMASTEROL",
+    "rule": "merriam-webster"
+  },
+  "STIGMASTEROLS": {
+    "base": "STIGMASTEROL",
+    "rule": "link:stated"
   },
   "STIMES": {
     "base": "STIME",
@@ -30379,6 +31275,22 @@
     "base": "STREETWALKING",
     "rule": "suffix:S"
   },
+  "STREPTOMYCETE": {
+    "base": "STREPTOMYCETE",
+    "rule": "merriam-webster"
+  },
+  "STREPTOMYCETES": {
+    "base": "STREPTOMYCETE",
+    "rule": "link:stated"
+  },
+  "STREPTOTHRICIN": {
+    "base": "STREPTOTHRICIN",
+    "rule": "merriam-webster"
+  },
+  "STREPTOTHRICINS": {
+    "base": "STREPTOTHRICIN",
+    "rule": "link:stated"
+  },
   "STRICTIONS": {
     "base": "STRICTION",
     "rule": "suffix:S"
@@ -30425,6 +31337,14 @@
   },
   "STRONTIUMS": {
     "base": "STRONTIUM",
+    "rule": "link:stated"
+  },
+  "STROPHANTHIN": {
+    "base": "STROPHANTHIN",
+    "rule": "merriam-webster"
+  },
+  "STROPHANTHINS": {
+    "base": "STROPHANTHIN",
     "rule": "link:stated"
   },
   "STROPHOID": {
@@ -30483,9 +31403,21 @@
     "base": "STURDY",
     "rule": "suffix:IES"
   },
+  "STURT": {
+    "base": "STURT",
+    "rule": "merriam-webster"
+  },
+  "STURTS": {
+    "base": "STURT",
+    "rule": "link:stated"
+  },
   "STYED": {
     "base": "STY",
     "rule": "suffix:ED"
+  },
+  "STYLAR": {
+    "base": "STYLAR",
+    "rule": "merriam-webster"
   },
   "STYLELESSNESSES": {
     "base": "STYLELESS",
@@ -30711,9 +31643,25 @@
     "base": "SUBSERE",
     "rule": "suffix:ES"
   },
+  "SUBSTITUENT": {
+    "base": "SUBSTITUENT",
+    "rule": "merriam-webster"
+  },
+  "SUBSTITUENTS": {
+    "base": "SUBSTITUENT",
+    "rule": "link:stated"
+  },
   "SUBSTRATUMS": {
     "base": "SUBSTRATUM",
     "rule": "suffix:S"
+  },
+  "SUBTERRANEAN": {
+    "base": "SUBTERRANEAN",
+    "rule": "merriam-webster"
+  },
+  "SUBTERRANEANLY": {
+    "base": "SUBTERRANEAN",
+    "rule": "link:stated"
   },
   "SUBTILENESSES": {
     "base": "SUBTILE",
@@ -30722,6 +31670,14 @@
   "SUBTILINS": {
     "base": "SUBTILIN",
     "rule": "suffix:S"
+  },
+  "SUBTILISIN": {
+    "base": "SUBTILISIN",
+    "rule": "merriam-webster"
+  },
+  "SUBTILISINS": {
+    "base": "SUBTILISIN",
+    "rule": "link:stated"
   },
   "SUBTILIZATION": {
     "base": "SUBTILE",
@@ -30746,6 +31702,14 @@
   "SUCCINCTNESSES": {
     "base": "SUCCINCT",
     "rule": "suffix:NESSES"
+  },
+  "SUCRALOSE": {
+    "base": "SUCRALOSE",
+    "rule": "merriam-webster"
+  },
+  "SUCRALOSES": {
+    "base": "SUCRALOSE",
+    "rule": "link:stated"
   },
   "SUCTORIANS": {
     "base": "SUCTORIAN",
@@ -30787,6 +31751,30 @@
     "base": "SULCATION",
     "rule": "suffix:S"
   },
+  "SULFA": {
+    "base": "SULFA",
+    "rule": "merriam-webster"
+  },
+  "SULFANILAMIDE": {
+    "base": "SULFANILAMIDE",
+    "rule": "merriam-webster"
+  },
+  "SULFANILAMIDES": {
+    "base": "SULFANILAMIDE",
+    "rule": "link:stated"
+  },
+  "SULFAS": {
+    "base": "SULFA",
+    "rule": "link:stated"
+  },
+  "SULFINPYRAZONE": {
+    "base": "SULFINPYRAZONE",
+    "rule": "merriam-webster"
+  },
+  "SULFINPYRAZONES": {
+    "base": "SULFINPYRAZONE",
+    "rule": "link:stated"
+  },
   "SULFONIC": {
     "base": "SULFONE",
     "rule": "derivational:IC"
@@ -30823,6 +31811,14 @@
     "base": "SULK",
     "rule": "suffix:Y"
   },
+  "SULLAGE": {
+    "base": "SULLAGE",
+    "rule": "merriam-webster"
+  },
+  "SULLAGES": {
+    "base": "SULLAGE",
+    "rule": "link:stated"
+  },
   "SUMMERWOODS": {
     "base": "SUMMERWOOD",
     "rule": "suffix:S"
@@ -30858,6 +31854,14 @@
   "SUPERABLY": {
     "base": "SUPERABLE",
     "rule": "suffix:Y"
+  },
+  "SUPERALTERN": {
+    "base": "SUPERALTERN",
+    "rule": "merriam-webster"
+  },
+  "SUPERALTERNS": {
+    "base": "SUPERALTERN",
+    "rule": "link:stated"
   },
   "SUPERBNESSES": {
     "base": "SUPERB",
@@ -30927,6 +31931,14 @@
     "base": "SUPERSTARDOM",
     "rule": "suffix:S"
   },
+  "SUPREMATISM": {
+    "base": "SUPREMATISM",
+    "rule": "merriam-webster"
+  },
+  "SUPREMATISMS": {
+    "base": "SUPREMATISM",
+    "rule": "suffix:S"
+  },
   "SUPREMENESSES": {
     "base": "SUPREME",
     "rule": "suffix:NESSES"
@@ -30973,6 +31985,14 @@
   },
   "SURVEILS": {
     "base": "SURVEIL",
+    "rule": "link:stated"
+  },
+  "SUSPENSOR": {
+    "base": "SUSPENSOR",
+    "rule": "merriam-webster"
+  },
+  "SUSPENSORS": {
+    "base": "SUSPENSOR",
     "rule": "link:stated"
   },
   "SVARAJES": {
@@ -31223,6 +32243,14 @@
     "base": "SYLVITE",
     "rule": "link:stated"
   },
+  "SYMBIONT": {
+    "base": "SYMBIONT",
+    "rule": "merriam-webster"
+  },
+  "SYMBIONTS": {
+    "base": "SYMBIONT",
+    "rule": "suffix:S"
+  },
   "SYMBIOT": {
     "base": "SYMBIOTES",
     "rule": "reverse_inflection"
@@ -31235,6 +32263,14 @@
     "base": "SYMBOL",
     "rule": "suffix:ICAL"
   },
+  "SYMMETALLISM": {
+    "base": "SYMMETALLISM",
+    "rule": "merriam-webster"
+  },
+  "SYMMETALLISMS": {
+    "base": "SYMMETALLISM",
+    "rule": "suffix:S"
+  },
   "SYNAGOGAL": {
     "base": "SYNAGOG",
     "rule": "derivational:AL"
@@ -31243,6 +32279,14 @@
     "base": "SYNCARP",
     "rule": "suffix:IES"
   },
+  "SYNCLINE": {
+    "base": "SYNCLINE",
+    "rule": "merriam-webster"
+  },
+  "SYNCLINES": {
+    "base": "SYNCLINE",
+    "rule": "suffix:ES"
+  },
   "SYNDESISES": {
     "base": "SYNDESIS",
     "rule": "suffix:ES"
@@ -31250,6 +32294,14 @@
   "SYNERGIAS": {
     "base": "SYNERGIA",
     "rule": "suffix:S"
+  },
+  "SYNERGID": {
+    "base": "SYNERGID",
+    "rule": "merriam-webster"
+  },
+  "SYNERGIDS": {
+    "base": "SYNERGID",
+    "rule": "link:stated"
   },
   "SYNESISES": {
     "base": "SYNESIS",
@@ -31307,6 +32359,14 @@
     "base": "TABULI",
     "rule": "suffix:S"
   },
+  "TACHINID": {
+    "base": "TACHINID",
+    "rule": "merriam-webster"
+  },
+  "TACHINIDS": {
+    "base": "TACHINID",
+    "rule": "link:stated"
+  },
   "TACHISMES": {
     "base": "TACHISM",
     "rule": "suffix:ES"
@@ -31331,6 +32391,14 @@
     "base": "TACRINE",
     "rule": "suffix:ES"
   },
+  "TACTUAL": {
+    "base": "TACTUAL",
+    "rule": "merriam-webster"
+  },
+  "TACTUALLY": {
+    "base": "TACTUAL",
+    "rule": "link:stated"
+  },
   "TAEKWONDOS": {
     "base": "TAEKWONDO",
     "rule": "suffix:S"
@@ -31341,6 +32409,14 @@
   },
   "TAFFIAS": {
     "base": "TAFFIA",
+    "rule": "link:stated"
+  },
+  "TAFFRAIL": {
+    "base": "TAFFRAIL",
+    "rule": "merriam-webster"
+  },
+  "TAFFRAILS": {
+    "base": "TAFFRAIL",
     "rule": "link:stated"
   },
   "TAFIAS": {
@@ -31402,6 +32478,14 @@
   "TANGLEMENTS": {
     "base": "TANGLE",
     "rule": "suffix:MENTS"
+  },
+  "TANTARA": {
+    "base": "TANTARA",
+    "rule": "merriam-webster"
+  },
+  "TANTARAS": {
+    "base": "TANTARA",
+    "rule": "link:stated"
   },
   "TANTRISMS": {
     "base": "TANTRISM",
@@ -31478,6 +32562,14 @@
   "TAWNINESSES": {
     "base": "TAWNINESS",
     "rule": "suffix:ES"
+  },
+  "TAWPIE": {
+    "base": "TAWPIE",
+    "rule": "merriam-webster"
+  },
+  "TAWPIES": {
+    "base": "TAWPIE",
+    "rule": "link:stated"
   },
   "TAXPAYINGS": {
     "base": "TAXPAYING",
@@ -31559,6 +32651,14 @@
     "base": "TEGUA",
     "rule": "suffix:S"
   },
+  "TEIID": {
+    "base": "TEIID",
+    "rule": "merriam-webster"
+  },
+  "TEIIDS": {
+    "base": "TEIID",
+    "rule": "link:stated"
+  },
   "TEINDS": {
     "base": "TEIND",
     "rule": "suffix:S"
@@ -31627,6 +32727,14 @@
     "base": "TENACIOUS",
     "rule": "suffix:NESSES"
   },
+  "TENDANCE": {
+    "base": "TENDANCE",
+    "rule": "merriam-webster"
+  },
+  "TENDANCES": {
+    "base": "TENDANCE",
+    "rule": "link:stated"
+  },
   "TENDERIZATIONS": {
     "base": "TENDERIZATION",
     "rule": "suffix:S"
@@ -31650,6 +32758,14 @@
   "TENSIBLY": {
     "base": "TENSIBLE",
     "rule": "suffix:Y"
+  },
+  "TENSIOMETER": {
+    "base": "TENSIOMETER",
+    "rule": "merriam-webster"
+  },
+  "TENSIOMETERS": {
+    "base": "TENSIOMETER",
+    "rule": "link:stated"
   },
   "TENSIOMETRIES": {
     "base": "TENSIOMETRY",
@@ -31679,6 +32795,22 @@
     "base": "TERAHERTZ",
     "rule": "suffix:ES"
   },
+  "TERBIUM": {
+    "base": "TERBIUM",
+    "rule": "merriam-webster"
+  },
+  "TERBIUMS": {
+    "base": "TERBIUM",
+    "rule": "suffix:S"
+  },
+  "TERCET": {
+    "base": "TERCET",
+    "rule": "merriam-webster"
+  },
+  "TERCETS": {
+    "base": "TERCET",
+    "rule": "link:stated"
+  },
   "TERIYAKIS": {
     "base": "TERIYAKI",
     "rule": "link:stated"
@@ -31686,6 +32818,14 @@
   "TERMINABLY": {
     "base": "TERMINABLE",
     "rule": "suffix:Y"
+  },
+  "TERRANE": {
+    "base": "TERRANE",
+    "rule": "merriam-webster"
+  },
+  "TERRANES": {
+    "base": "TERRANE",
+    "rule": "link:stated"
   },
   "TERRASES": {
     "base": "TERRAS",
@@ -31695,6 +32835,14 @@
     "base": "TESTACY",
     "rule": "suffix:IES"
   },
+  "TESTON": {
+    "base": "TESTON",
+    "rule": "merriam-webster"
+  },
+  "TESTONS": {
+    "base": "TESTON",
+    "rule": "link:stated"
+  },
   "TETANICAL": {
     "base": "TETANIC",
     "rule": "derivational:AL"
@@ -31703,9 +32851,25 @@
     "base": "TETANIC",
     "rule": "suffix:S"
   },
+  "TETRAHYMENA": {
+    "base": "TETRAHYMENA",
+    "rule": "merriam-webster"
+  },
+  "TETRAHYMENAS": {
+    "base": "TETRAHYMENA",
+    "rule": "link:stated"
+  },
   "TETRIS": {
     "base": "TETRI",
     "rule": "suffix:S"
+  },
+  "TEXTUARIES": {
+    "base": "TEXTUARY",
+    "rule": "link:stated"
+  },
+  "TEXTUARY": {
+    "base": "TEXTUARY",
+    "rule": "merriam-webster"
   },
   "THAIRMS": {
     "base": "THAIRM",
@@ -31726,6 +32890,14 @@
   "THEBAINES": {
     "base": "THEBAINE",
     "rule": "suffix:ES"
+  },
+  "THEELIN": {
+    "base": "THEELIN",
+    "rule": "merriam-webster"
+  },
+  "THEELINS": {
+    "base": "THEELIN",
+    "rule": "suffix:S"
   },
   "THELITISES": {
     "base": "THELITIS",
@@ -31767,6 +32939,14 @@
     "base": "THIEVISH",
     "rule": "suffix:NESSES"
   },
+  "THIMEROSAL": {
+    "base": "THIMEROSAL",
+    "rule": "merriam-webster"
+  },
+  "THIMEROSALS": {
+    "base": "THIMEROSAL",
+    "rule": "suffix:S"
+  },
   "THINKABLENESSES": {
     "base": "THINKABLE",
     "rule": "suffix:NESSES"
@@ -31799,8 +32979,32 @@
     "base": "THIRSTINESS",
     "rule": "suffix:ES"
   },
+  "THIXOTROPIES": {
+    "base": "THIXOTROPY",
+    "rule": "suffix:IES"
+  },
+  "THIXOTROPY": {
+    "base": "THIXOTROPY",
+    "rule": "merriam-webster"
+  },
   "THORIAS": {
     "base": "THORIA",
+    "rule": "suffix:S"
+  },
+  "THORITE": {
+    "base": "THORITE",
+    "rule": "merriam-webster"
+  },
+  "THORITES": {
+    "base": "THORITE",
+    "rule": "suffix:ES"
+  },
+  "THORIUM": {
+    "base": "THORIUM",
+    "rule": "merriam-webster"
+  },
+  "THORIUMS": {
+    "base": "THORIUM",
     "rule": "suffix:S"
   },
   "THRAWED": {
@@ -31847,6 +33051,14 @@
     "base": "THULIA",
     "rule": "suffix:S"
   },
+  "THULIUM": {
+    "base": "THULIUM",
+    "rule": "merriam-webster"
+  },
+  "THULIUMS": {
+    "base": "THULIUM",
+    "rule": "suffix:S"
+  },
   "THUMPED": {
     "base": "THUMP",
     "rule": "link:stated"
@@ -31867,6 +33079,14 @@
     "base": "THUMP",
     "rule": "link:stated"
   },
+  "THYMOSIN": {
+    "base": "THYMOSIN",
+    "rule": "merriam-webster"
+  },
+  "THYMOSINS": {
+    "base": "THYMOSIN",
+    "rule": "link:stated"
+  },
   "THYROXIN": {
     "base": "THYROXINE",
     "rule": "link:stated"
@@ -31881,6 +33101,22 @@
   },
   "THYROXINS": {
     "base": "THYROXIN",
+    "rule": "link:stated"
+  },
+  "THYSANURAN": {
+    "base": "THYSANURAN",
+    "rule": "merriam-webster"
+  },
+  "THYSANURANS": {
+    "base": "THYSANURAN",
+    "rule": "link:stated"
+  },
+  "TICAL": {
+    "base": "TICAL",
+    "rule": "merriam-webster"
+  },
+  "TICALS": {
+    "base": "TICAL",
     "rule": "link:stated"
   },
   "TICKLISHNESSES": {
@@ -31943,6 +33179,22 @@
     "base": "TIGERISH",
     "rule": "suffix:NESSES"
   },
+  "TIGLON": {
+    "base": "TIGLON",
+    "rule": "merriam-webster"
+  },
+  "TIGLONS": {
+    "base": "TIGLON",
+    "rule": "link:stated"
+  },
+  "TIMBERDOODLE": {
+    "base": "TIMBERDOODLE",
+    "rule": "merriam-webster"
+  },
+  "TIMBERDOODLES": {
+    "base": "TIMBERDOODLE",
+    "rule": "link:stated"
+  },
   "TIMEWORKS": {
     "base": "TIMEWORK",
     "rule": "suffix:S"
@@ -31954,6 +33206,14 @@
   "TIMOCRATICAL": {
     "base": "TIMOCRATIC",
     "rule": "derivational:AL"
+  },
+  "TIMOLOL": {
+    "base": "TIMOLOL",
+    "rule": "merriam-webster"
+  },
+  "TIMOLOLS": {
+    "base": "TIMOLOL",
+    "rule": "suffix:S"
   },
   "TINCALS": {
     "base": "TINCAL",
@@ -31989,6 +33249,22 @@
   },
   "TITANS": {
     "base": "TITAN",
+    "rule": "link:stated"
+  },
+  "TITHONIA": {
+    "base": "TITHONIA",
+    "rule": "merriam-webster"
+  },
+  "TITHONIAS": {
+    "base": "TITHONIA",
+    "rule": "link:stated"
+  },
+  "TITI": {
+    "base": "TITI",
+    "rule": "merriam-webster"
+  },
+  "TITIS": {
+    "base": "TITI",
     "rule": "link:stated"
   },
   "TITIVATE": {
@@ -32119,6 +33395,14 @@
     "base": "TOLAN",
     "rule": "suffix:S"
   },
+  "TOLBUTAMIDE": {
+    "base": "TOLBUTAMIDE",
+    "rule": "merriam-webster"
+  },
+  "TOLBUTAMIDES": {
+    "base": "TOLBUTAMIDE",
+    "rule": "link:stated"
+  },
   "TOMBACKS": {
     "base": "TOMBACK",
     "rule": "suffix:S"
@@ -32126,6 +33410,22 @@
   "TOMBOYISHNESSES": {
     "base": "TOMBOYISH",
     "rule": "suffix:NESSES"
+  },
+  "TOMMYROT": {
+    "base": "TOMMYROT",
+    "rule": "merriam-webster"
+  },
+  "TOMMYROTS": {
+    "base": "TOMMYROT",
+    "rule": "link:stated"
+  },
+  "TOMTIT": {
+    "base": "TOMTIT",
+    "rule": "merriam-webster"
+  },
+  "TOMTITS": {
+    "base": "TOMTIT",
+    "rule": "link:stated"
   },
   "TONELESSNESSES": {
     "base": "TONELESS",
@@ -32142,6 +33442,14 @@
   "TONETICS": {
     "base": "TONETIC",
     "rule": "suffix:S"
+  },
+  "TONETTE": {
+    "base": "TONETTE",
+    "rule": "merriam-webster"
+  },
+  "TONETTES": {
+    "base": "TONETTE",
+    "rule": "link:stated"
   },
   "TONSILLITISES": {
     "base": "TONSILLITIS",
@@ -32170,6 +33478,14 @@
   "TOOTSY": {
     "base": "TOOTS",
     "rule": "suffix:Y"
+  },
+  "TOPGALLANT": {
+    "base": "TOPGALLANT",
+    "rule": "merriam-webster"
+  },
+  "TOPGALLANTS": {
+    "base": "TOPGALLANT",
+    "rule": "link:stated"
   },
   "TOPHES": {
     "base": "TOPH",
@@ -32231,6 +33547,14 @@
     "base": "TORTELLINI",
     "rule": "suffix:S"
   },
+  "TORTICOLLIS": {
+    "base": "TORTICOLLIS",
+    "rule": "merriam-webster"
+  },
+  "TORTICOLLISES": {
+    "base": "TORTICOLLIS",
+    "rule": "suffix:ES"
+  },
   "TOTALIST": {
     "base": "TOTAL",
     "rule": "suffix:IST"
@@ -32246,6 +33570,14 @@
   "TOUCHWOODS": {
     "base": "TOUCHWOOD",
     "rule": "suffix:S"
+  },
+  "TOURBILLION": {
+    "base": "TOURBILLION",
+    "rule": "merriam-webster"
+  },
+  "TOURBILLIONS": {
+    "base": "TOURBILLION",
+    "rule": "link:stated"
   },
   "TOWARDLINESSES": {
     "base": "TOWARDLINESS",
@@ -32363,6 +33695,14 @@
     "base": "TRANQUIL",
     "rule": "suffix:NESSES"
   },
+  "TRANSFERRIN": {
+    "base": "TRANSFERRIN",
+    "rule": "merriam-webster"
+  },
+  "TRANSFERRINS": {
+    "base": "TRANSFERRIN",
+    "rule": "link:stated"
+  },
   "TRANSMISSIVE": {
     "base": "MISSIVE",
     "rule": "prefix:TRANS"
@@ -32409,6 +33749,14 @@
   },
   "TRAPEZIUSES": {
     "base": "TRAPEZIUS",
+    "rule": "link:stated"
+  },
+  "TRAPROCK": {
+    "base": "TRAPROCK",
+    "rule": "merriam-webster"
+  },
+  "TRAPROCKS": {
+    "base": "TRAPROCK",
     "rule": "link:stated"
   },
   "TRAPSHOOTINGS": {
@@ -32551,6 +33899,14 @@
     "base": "TRICHOMONAD",
     "rule": "link:stated"
   },
+  "TRICHOTHECENE": {
+    "base": "TRICHOTHECENE",
+    "rule": "merriam-webster"
+  },
+  "TRICHOTHECENES": {
+    "base": "TRICHOTHECENE",
+    "rule": "link:stated"
+  },
   "TRICHROME": {
     "base": "CHROME",
     "rule": "prefix:TRI"
@@ -32579,6 +33935,22 @@
     "base": "CLINIC",
     "rule": "prefix:TRI"
   },
+  "TRICOLETTE": {
+    "base": "TRICOLETTE",
+    "rule": "merriam-webster"
+  },
+  "TRICOLETTES": {
+    "base": "TRICOLETTE",
+    "rule": "link:stated"
+  },
+  "TRICOTINE": {
+    "base": "TRICOTINE",
+    "rule": "merriam-webster"
+  },
+  "TRICOTINES": {
+    "base": "TRICOTINE",
+    "rule": "link:stated"
+  },
   "TRICTRAC": {
     "base": "TICKTACK",
     "rule": "link:stated"
@@ -32586,6 +33958,22 @@
   "TRICTRACS": {
     "base": "TRICTRAC",
     "rule": "suffix:S"
+  },
+  "TRIFECTA": {
+    "base": "TRIFECTA",
+    "rule": "merriam-webster"
+  },
+  "TRIFECTAS": {
+    "base": "TRIFECTA",
+    "rule": "link:stated"
+  },
+  "TRIFLURALIN": {
+    "base": "TRIFLURALIN",
+    "rule": "merriam-webster"
+  },
+  "TRIFLURALINS": {
+    "base": "TRIFLURALIN",
+    "rule": "link:stated"
   },
   "TRIFOCALS": {
     "base": "TRIFOCAL",
@@ -32618,6 +34006,14 @@
   "TRILITERALISMS": {
     "base": "TRILITERALISM",
     "rule": "suffix:S"
+  },
+  "TRILLIUM": {
+    "base": "TRILLIUM",
+    "rule": "merriam-webster"
+  },
+  "TRILLIUMS": {
+    "base": "TRILLIUM",
+    "rule": "link:stated"
   },
   "TRIMERISM": {
     "base": "TRIMER",
@@ -32695,6 +34091,22 @@
     "base": "TRISTFUL",
     "rule": "suffix:NESSES"
   },
+  "TRITICALE": {
+    "base": "TRITICALE",
+    "rule": "merriam-webster"
+  },
+  "TRITICALES": {
+    "base": "TRITICALE",
+    "rule": "link:stated"
+  },
+  "TRITOMA": {
+    "base": "TRITOMA",
+    "rule": "merriam-webster"
+  },
+  "TRITOMAS": {
+    "base": "TRITOMA",
+    "rule": "link:stated"
+  },
   "TRIUNES": {
     "base": "TRIUNE",
     "rule": "suffix:ES"
@@ -32711,6 +34123,22 @@
     "base": "TROCK",
     "rule": "suffix:S"
   },
+  "TROFFER": {
+    "base": "TROFFER",
+    "rule": "merriam-webster"
+  },
+  "TROFFERS": {
+    "base": "TROFFER",
+    "rule": "link:stated"
+  },
+  "TROILITE": {
+    "base": "TROILITE",
+    "rule": "merriam-webster"
+  },
+  "TROILITES": {
+    "base": "TROILITE",
+    "rule": "link:stated"
+  },
   "TROILUSES": {
     "base": "TROILUS",
     "rule": "suffix:ES"
@@ -32722,6 +34150,14 @@
   "TROPEOLINS": {
     "base": "TROPEOLIN",
     "rule": "suffix:S"
+  },
+  "TROPHALLAXES": {
+    "base": "TROPHALLAXIS",
+    "rule": "link:stated"
+  },
+  "TROPHALLAXIS": {
+    "base": "TROPHALLAXIS",
+    "rule": "merriam-webster"
   },
   "TROPINE": {
     "base": "TROPINES",
@@ -32783,6 +34219,14 @@
     "base": "TRUSTING",
     "rule": "suffix:NESSES"
   },
+  "TRYPSIN": {
+    "base": "TRYPSIN",
+    "rule": "merriam-webster"
+  },
+  "TRYPSINS": {
+    "base": "TRYPSIN",
+    "rule": "link:stated"
+  },
   "TSKED": {
     "base": "TSK",
     "rule": "link:stated"
@@ -32835,6 +34279,14 @@
     "base": "TUBULATOR",
     "rule": "suffix:S"
   },
+  "TUBULIN": {
+    "base": "TUBULIN",
+    "rule": "merriam-webster"
+  },
+  "TUBULINS": {
+    "base": "TUBULIN",
+    "rule": "link:stated"
+  },
   "TUCHUNS": {
     "base": "TUCHUN",
     "rule": "link:stated"
@@ -32846,6 +34298,14 @@
   "TUMIDNESSES": {
     "base": "TUMID",
     "rule": "suffix:NESSES"
+  },
+  "TUMMIES": {
+    "base": "TUMMY",
+    "rule": "link:stated"
+  },
+  "TUMMY": {
+    "base": "TUMMY",
+    "rule": "merriam-webster"
   },
   "TUMPED": {
     "base": "TUMP",
@@ -33135,6 +34595,30 @@
     "base": "TYPICAL",
     "rule": "suffix:NESSES"
   },
+  "TYROCIDIN": {
+    "base": "TYROCIDINE",
+    "rule": "link:stated"
+  },
+  "TYROCIDINE": {
+    "base": "TYROCIDINE",
+    "rule": "merriam-webster"
+  },
+  "TYROCIDINES": {
+    "base": "TYROCIDINE",
+    "rule": "link:stated"
+  },
+  "TYROCIDINS": {
+    "base": "TYROCIDIN",
+    "rule": "link:stated"
+  },
+  "TYROTHRICIN": {
+    "base": "TYROTHRICIN",
+    "rule": "merriam-webster"
+  },
+  "TYROTHRICINS": {
+    "base": "TYROTHRICIN",
+    "rule": "link:stated"
+  },
   "TYTHING": {
     "base": "TYTHE",
     "rule": "suffix:ING"
@@ -33142,6 +34626,14 @@
   "TZARISMS": {
     "base": "TZARISM",
     "rule": "suffix:S"
+  },
+  "UBIQUINONE": {
+    "base": "UBIQUINONE",
+    "rule": "merriam-webster"
+  },
+  "UBIQUINONES": {
+    "base": "UBIQUINONE",
+    "rule": "link:stated"
   },
   "UDOMETRIES": {
     "base": "UDOMETRY",
@@ -33154,6 +34646,14 @@
   "ULAMAS": {
     "base": "ULAMA",
     "rule": "suffix:S"
+  },
+  "ULTIMOGENITURE": {
+    "base": "ULTIMOGENITURE",
+    "rule": "merriam-webster"
+  },
+  "ULTIMOGENITURES": {
+    "base": "ULTIMOGENITURE",
+    "rule": "link:stated"
   },
   "ULTRAFICHE": {
     "base": "FICHE",
@@ -33647,6 +35147,22 @@
     "base": "UREMIC",
     "rule": "spelling:AE>E"
   },
+  "URANIA": {
+    "base": "URANIA",
+    "rule": "merriam-webster"
+  },
+  "URANIAS": {
+    "base": "URANIA",
+    "rule": "suffix:S"
+  },
+  "URANINITE": {
+    "base": "URANINITE",
+    "rule": "merriam-webster"
+  },
+  "URANINITES": {
+    "base": "URANINITE",
+    "rule": "link:stated"
+  },
   "URANIUM": {
     "base": "URANIUM",
     "rule": "merriam-webster"
@@ -33683,6 +35199,14 @@
     "base": "URETHRITIS",
     "rule": "suffix:ES"
   },
+  "UROCHORDATE": {
+    "base": "UROCHORDATE",
+    "rule": "merriam-webster"
+  },
+  "UROCHORDATES": {
+    "base": "UROCHORDATE",
+    "rule": "link:stated"
+  },
   "UROPODOUS": {
     "base": "UROPOD",
     "rule": "derivational:OUS"
@@ -33707,9 +35231,25 @@
     "base": "USURIOUS",
     "rule": "suffix:NESSES"
   },
+  "UTE": {
+    "base": "UTE",
+    "rule": "merriam-webster"
+  },
+  "UTES": {
+    "base": "UTE",
+    "rule": "link:stated"
+  },
   "UTTERNESSES": {
     "base": "UTTER",
     "rule": "suffix:NESSES"
+  },
+  "UVAROVITE": {
+    "base": "UVAROVITE",
+    "rule": "merriam-webster"
+  },
+  "UVAROVITES": {
+    "base": "UVAROVITE",
+    "rule": "link:stated"
   },
   "UVEITISES": {
     "base": "UVEITIS",
@@ -33763,6 +35303,14 @@
     "base": "VAIN",
     "rule": "suffix:NESSES"
   },
+  "VALENTINE": {
+    "base": "VALENTINE",
+    "rule": "merriam-webster"
+  },
+  "VALENTINES": {
+    "base": "VALENTINE",
+    "rule": "link:stated"
+  },
   "VALGUSES": {
     "base": "VALGUS",
     "rule": "suffix:ES"
@@ -33794,6 +35342,14 @@
   "VALVULITISES": {
     "base": "VALVULITIS",
     "rule": "suffix:ES"
+  },
+  "VANADATE": {
+    "base": "VANADATE",
+    "rule": "merriam-webster"
+  },
+  "VANADATES": {
+    "base": "VANADATE",
+    "rule": "link:stated"
   },
   "VANDAL": {
     "base": "VANDAL",
@@ -33931,6 +35487,22 @@
     "base": "VARICOSE",
     "rule": "suffix:ES"
   },
+  "VARLETRIES": {
+    "base": "VARLETRY",
+    "rule": "suffix:IES"
+  },
+  "VARLETRY": {
+    "base": "VARLETRY",
+    "rule": "merriam-webster"
+  },
+  "VARSITIES": {
+    "base": "VARSITY",
+    "rule": "link:stated"
+  },
+  "VARSITY": {
+    "base": "VARSITY",
+    "rule": "merriam-webster"
+  },
   "VARUSES": {
     "base": "VARUS",
     "rule": "suffix:ES"
@@ -33982,6 +35554,14 @@
   "VENERABLES": {
     "base": "VENERABLE",
     "rule": "suffix:ES"
+  },
+  "VENESECTION": {
+    "base": "VENESECTION",
+    "rule": "merriam-webster"
+  },
+  "VENESECTIONS": {
+    "base": "VENESECTION",
+    "rule": "link:stated"
   },
   "VENGEFULNESSES": {
     "base": "VENGEFUL",
@@ -34053,6 +35633,14 @@
   },
   "VERATRINS": {
     "base": "VERATRIN",
+    "rule": "link:stated"
+  },
+  "VERBIGERATION": {
+    "base": "VERBIGERATION",
+    "rule": "merriam-webster"
+  },
+  "VERBIGERATIONS": {
+    "base": "VERBIGERATION",
     "rule": "link:stated"
   },
   "VERBOSENESSES": {
@@ -34151,6 +35739,14 @@
     "base": "VIDEOTEXT",
     "rule": "suffix:S"
   },
+  "VIDICON": {
+    "base": "VIDICON",
+    "rule": "merriam-webster"
+  },
+  "VIDICONS": {
+    "base": "VIDICON",
+    "rule": "link:stated"
+  },
   "VIDUITIES": {
     "base": "VIDUITY",
     "rule": "suffix:IES"
@@ -34167,6 +35763,30 @@
     "base": "VINAL",
     "rule": "suffix:S"
   },
+  "VINBLASTINE": {
+    "base": "VINBLASTINE",
+    "rule": "merriam-webster"
+  },
+  "VINBLASTINES": {
+    "base": "VINBLASTINE",
+    "rule": "link:stated"
+  },
+  "VINIFERA": {
+    "base": "VINIFERA",
+    "rule": "merriam-webster"
+  },
+  "VINIFERAS": {
+    "base": "VINIFERA",
+    "rule": "link:stated"
+  },
+  "VINYLIDENE": {
+    "base": "VINYLIDENE",
+    "rule": "merriam-webster"
+  },
+  "VINYLIDENES": {
+    "base": "VINYLIDENE",
+    "rule": "link:stated"
+  },
   "VIOLABLENESSES": {
     "base": "VIOLABLE",
     "rule": "suffix:NESSES"
@@ -34175,6 +35795,14 @@
     "base": "VIREONINE",
     "rule": "suffix:ES"
   },
+  "VIRL": {
+    "base": "VIRL",
+    "rule": "merriam-webster"
+  },
+  "VIRLS": {
+    "base": "VIRL",
+    "rule": "link:stated"
+  },
   "VIRUCIDAL": {
     "base": "VIRUCIDE",
     "rule": "derivational:AL"
@@ -34182,6 +35810,14 @@
   "VISCOMETRIES": {
     "base": "VISCOMETRY",
     "rule": "suffix:IES"
+  },
+  "VISCOSIMETER": {
+    "base": "VISCOSIMETER",
+    "rule": "merriam-webster"
+  },
+  "VISCOSIMETERS": {
+    "base": "VISCOSIMETER",
+    "rule": "link:stated"
   },
   "VISCOUSNESSES": {
     "base": "VISCOUS",
@@ -34311,6 +35947,14 @@
     "base": "VOLUBLE",
     "rule": "suffix:NESSES"
   },
+  "VOLUTIN": {
+    "base": "VOLUTIN",
+    "rule": "merriam-webster"
+  },
+  "VOLUTINS": {
+    "base": "VOLUTIN",
+    "rule": "suffix:S"
+  },
   "VOMITUSES": {
     "base": "VOMITUS",
     "rule": "suffix:ES"
@@ -34326,6 +35970,14 @@
   "VOUDOUNS": {
     "base": "VOUDOUN",
     "rule": "suffix:S"
+  },
+  "VOUVRAY": {
+    "base": "VOUVRAY",
+    "rule": "merriam-webster"
+  },
+  "VOUVRAYS": {
+    "base": "VOUVRAY",
+    "rule": "link:stated"
   },
   "VUGGIER": {
     "base": "VUGG",
@@ -34422,6 +36074,14 @@
   "VULCANOLOGISTS": {
     "base": "VULCANOLOGY",
     "rule": "suffix:ISTS"
+  },
+  "VULGUS": {
+    "base": "VULGUS",
+    "rule": "merriam-webster"
+  },
+  "VULGUSES": {
+    "base": "VULGUS",
+    "rule": "link:stated"
   },
   "VULVITISES": {
     "base": "VULVITIS",
@@ -34783,6 +36443,14 @@
     "base": "WEIGELIA",
     "rule": "link:stated"
   },
+  "WEIMARANER": {
+    "base": "WEIMARANER",
+    "rule": "merriam-webster"
+  },
+  "WEIMARANERS": {
+    "base": "WEIMARANER",
+    "rule": "link:stated"
+  },
   "WELCOMENESSES": {
     "base": "WELCOME",
     "rule": "suffix:NESSES"
@@ -34903,6 +36571,14 @@
     "base": "WHIN",
     "rule": "suffix:IEST"
   },
+  "WHIPPLETREE": {
+    "base": "WHIPPLETREE",
+    "rule": "merriam-webster"
+  },
+  "WHIPPLETREES": {
+    "base": "WHIPPLETREE",
+    "rule": "link:stated"
+  },
   "WHISHTED": {
     "base": "WHISHT",
     "rule": "suffix:ED"
@@ -34914,6 +36590,14 @@
   "WHISHTS": {
     "base": "WHISHT",
     "rule": "suffix:S"
+  },
+  "WHITEOUT": {
+    "base": "WHITEOUT",
+    "rule": "merriam-webster"
+  },
+  "WHITEOUTS": {
+    "base": "WHITEOUT",
+    "rule": "link:stated"
   },
   "WHITRACKS": {
     "base": "WHITRACK",
@@ -34935,9 +36619,17 @@
     "base": "WHODUNNIT",
     "rule": "link:stated"
   },
+  "WHOOPEE": {
+    "base": "WHOOPEE",
+    "rule": "merriam-webster"
+  },
+  "WHOOPEES": {
+    "base": "WHOOPEE",
+    "rule": "link:stated"
+  },
   "WHOOPIE": {
-    "base": "WHOOPIES",
-    "rule": "reverse_inflection"
+    "base": "WHOOPEE",
+    "rule": "link:stated"
   },
   "WHOOPIES": {
     "base": "WHOOP",
@@ -35019,6 +36711,14 @@
     "base": "WILDFOWL",
     "rule": "suffix:INGS"
   },
+  "WILLEMITE": {
+    "base": "WILLEMITE",
+    "rule": "merriam-webster"
+  },
+  "WILLEMITES": {
+    "base": "WILLEMITE",
+    "rule": "link:stated"
+  },
   "WILLET": {
     "base": "WILE",
     "rule": "suffix:LET"
@@ -35079,6 +36779,14 @@
     "base": "WINNOCK",
     "rule": "suffix:S"
   },
+  "WINZE": {
+    "base": "WINZE",
+    "rule": "merriam-webster"
+  },
+  "WINZES": {
+    "base": "WINZE",
+    "rule": "link:stated"
+  },
   "WIRINESSES": {
     "base": "WIRINESS",
     "rule": "suffix:ES"
@@ -35094,6 +36802,14 @@
   "WITHDRAWNNESSES": {
     "base": "WITHDRAWN",
     "rule": "suffix:NESSES"
+  },
+  "WITHERITE": {
+    "base": "WITHERITE",
+    "rule": "merriam-webster"
+  },
+  "WITHERITES": {
+    "base": "WITHERITE",
+    "rule": "link:stated"
   },
   "WITHINDOORS": {
     "base": "INDOORS",
@@ -35307,13 +37023,37 @@
     "base": "WRATHFUL",
     "rule": "suffix:NESSES"
   },
+  "WULFENITE": {
+    "base": "WULFENITE",
+    "rule": "merriam-webster"
+  },
+  "WULFENITES": {
+    "base": "WULFENITE",
+    "rule": "link:stated"
+  },
   "WYLES": {
     "base": "WYLE",
     "rule": "suffix:ES"
   },
+  "WYLIECOAT": {
+    "base": "WYLIECOAT",
+    "rule": "merriam-webster"
+  },
+  "WYLIECOATS": {
+    "base": "WYLIECOAT",
+    "rule": "link:stated"
+  },
   "WYLING": {
     "base": "WYLE",
     "rule": "suffix:ING"
+  },
+  "XANTHONE": {
+    "base": "XANTHONE",
+    "rule": "merriam-webster"
+  },
+  "XANTHONES": {
+    "base": "XANTHONE",
+    "rule": "link:stated"
   },
   "XENOGAMIES": {
     "base": "XENOGAMY",
@@ -35451,6 +37191,22 @@
     "base": "YOW",
     "rule": "suffix:ING"
   },
+  "YTTERBIUM": {
+    "base": "YTTERBIUM",
+    "rule": "merriam-webster"
+  },
+  "YTTERBIUMS": {
+    "base": "YTTERBIUM",
+    "rule": "suffix:S"
+  },
+  "YTTRIUM": {
+    "base": "YTTRIUM",
+    "rule": "merriam-webster"
+  },
+  "YTTRIUMS": {
+    "base": "YTTRIUM",
+    "rule": "suffix:S"
+  },
   "YUCKED": {
     "base": "YUCK",
     "rule": "link:stated"
@@ -35571,6 +37327,14 @@
     "base": "ZAFFIR",
     "rule": "suffix:S"
   },
+  "ZAMIA": {
+    "base": "ZAMIA",
+    "rule": "merriam-webster"
+  },
+  "ZAMIAS": {
+    "base": "ZAMIA",
+    "rule": "link:stated"
+  },
   "ZAPPED": {
     "base": "ZAP",
     "rule": "link:stated"
@@ -35610,6 +37374,14 @@
   "ZEBRANOS": {
     "base": "ZEBRANO",
     "rule": "suffix:S"
+  },
+  "ZEIN": {
+    "base": "ZEIN",
+    "rule": "merriam-webster"
+  },
+  "ZEINS": {
+    "base": "ZEIN",
+    "rule": "link:stated"
   },
   "ZIBELLINE": {
     "base": "ZIBELINE",
@@ -35711,9 +37483,33 @@
     "base": "ZIP",
     "rule": "link:stated"
   },
+  "ZIRAM": {
+    "base": "ZIRAM",
+    "rule": "merriam-webster"
+  },
+  "ZIRAMS": {
+    "base": "ZIRAM",
+    "rule": "suffix:S"
+  },
+  "ZOANTHARIAN": {
+    "base": "ZOANTHARIAN",
+    "rule": "merriam-webster"
+  },
+  "ZOANTHARIANS": {
+    "base": "ZOANTHARIAN",
+    "rule": "link:stated"
+  },
   "ZOARIA": {
     "base": "ZOARIUM",
     "rule": "classical_plural:A>UM"
+  },
+  "ZOISITE": {
+    "base": "ZOISITE",
+    "rule": "merriam-webster"
+  },
+  "ZOISITES": {
+    "base": "ZOISITE",
+    "rule": "link:stated"
   },
   "ZOMBI": {
     "base": "ZOMBIE",
@@ -35779,6 +37575,14 @@
     "base": "ZOOPHILE",
     "rule": "suffix:IES"
   },
+  "ZOYSIA": {
+    "base": "ZOYSIA",
+    "rule": "merriam-webster"
+  },
+  "ZOYSIAS": {
+    "base": "ZOYSIA",
+    "rule": "link:stated"
+  },
   "ZUCCHETTI": {
     "base": "ZUCCHETTO",
     "rule": "classical_plural:I>O"
@@ -35798,6 +37602,14 @@
   "ZYMOLYSES": {
     "base": "ZYMOLYSIS",
     "rule": "classical_plural:ES>IS"
+  },
+  "ZYMOSAN": {
+    "base": "ZYMOSAN",
+    "rule": "merriam-webster"
+  },
+  "ZYMOSANS": {
+    "base": "ZYMOSAN",
+    "rule": "link:stated"
   },
   "ZYMURGIES": {
     "base": "ZYMURGY",
