@@ -37,16 +37,16 @@ is deterministic.
 | `etymology_mw.json` | what Merriam-Webster's Collegiate API said about words Wiktionary has no etymology for, one record per word looked up, empty when it said nothing usable |
 | `prefix_pair_review.json` | hand-checked verdicts for the root pairs `etymology.js` matches by prefix |
 
-Coverage as built: 171,711 of 178,691 words (96.1%), of which 162,307 parsed
-from Wiktionary, 1,003 filled from Merriam-Webster and 8,401 propagated. 753 of
+Coverage as built: 171,807 of 178,691 words (96.1%), of which 162,307 parsed
+from Wiktionary, 1,098 filled from Merriam-Webster and 8,402 propagated. 753 of
 those carry only a marker (imitative, or a source language with no word)
-rather than a root, so coverage by real roots is 170,958 words, 95.7%. 6,980
+rather than a root, so coverage by real roots is 171,054 words, 95.7%. 6,884
 words have nothing.
 
 How it got here, by real-root coverage: 86.5% from the original parse, 92.3%
 after the parser learned form-of definitions, foreign-language sections and
 prose, 94.1% after the template gaps, derived-terms lists, definition links
-and link-following described below, 95.7% after four days of
+and link-following described below, 95.7% after the
 Merriam-Webster lookups. The last round added 3,171 words at the
 parse and cost 249: 248 whose only "root" had been a classifying suffix such
 as `-ITE`, and DUXELLES, whose root was the French article `d'`.
@@ -170,15 +170,15 @@ components, since MARTENS is also the plural of the animal.
 
 The free tier allows 1,000 lookups a day, so the script asks for one word per
 uncovered family (4,395 for 10,536 uncovered words; ZIP stands for ZIPS,
-ZIPPED and UNZIP) and stops at a daily limit. `etymology_mw.json` records
+ZIPPED and UNZIP) and stops at a daily limit. The whole queue took five days. `etymology_mw.json` records
 every word asked, so a later day continues where the last stopped; after a
 new batch, `expand_inflections.py --rebuild` merges it without another pass
 over the dump, and produces exactly what the full pipeline would.
 
-Four days asked 3,793 words: 725 gave roots, 380 gave only English
-components, 229 said "origin unknown" or "imitative", and 2,459 had no entry
-or no etymology. That filled 1,003 words directly and 2,803 once links and
-propagation followed. Blind samples of 30 per day were 29, 27, 29 and 28 right; the
+All 4,395 were asked: 800 gave roots, 410 gave only English
+components, 238 said "origin unknown" or "imitative", and 2,947 had no entry
+or no etymology. That filled 1,098 words directly and 2,899 once links and
+propagation followed. Blind samples of 30 per day were 29, 27, 29, 28 and 30 right; the
 misses were drug names whose etymologies are spelled out letter by letter
 ("{it}b{/it}et{it}a{/it} + {it}c{/it}h{it}lo{/it}ro-"), which the reader now
 restores to whole words, and a language named inside parentheses leaking
@@ -261,7 +261,7 @@ reject 5,610 of 8,654 steal-compatible pairs.
 
 Prefix matching is therefore limited to roots of 7+ letters, where the error
 rate collapses. Every pair that rule matches has been checked by hand, in
-eight rounds as the data grew: 1,046 pairs, 1,037 genuine, 9 not. The unrelated ones are listed in `UNRELATED_PREFIX_PAIRS` because no
+nine rounds as the data grew: 1,049 pairs, 1,040 genuine, 9 not. The unrelated ones are listed in `UNRELATED_PREFIX_PAIRS` because no
 length rule separates them (chance/chancellor, hostile/hostler, market/march,
 content/contentious). Note that `old_french:chancel ~ chancelerie` *is* related
 while `enm:chaunce ~ chaunceler` is not, which is why this was reviewed rather
@@ -321,7 +321,22 @@ above was accepted or rejected that way.
 
 ## What is still missing
 
-6,980 words. About 602 uncovered families are still queued for
-Merriam-Webster, the smallest ones, where roughly a fifth yield roots. Past
-that, the residue is words neither dictionary explains: drug and trade names,
-and words both mark "origin unknown".
+6,884 words, plus 753 that carry only a marker. Every uncovered family has
+now been put to both dictionaries. By what Merriam-Webster said about the
+family's head word:
+
+| count | Merriam-Webster's answer |
+|---|---|
+| 6,075 | no entry or no etymology in Merriam-Webster |
+| 436 | Merriam-Webster: origin unknown |
+| 258 | Merriam-Webster gave English parts that are themselves uncovered |
+| 105 | Merriam-Webster: only a language or "imitative" |
+| 9 | Merriam-Webster gave roots but they did not carry to this form |
+| 1 | not looked up (family changed after the queue was built) |
+
+On the Wiktionary side, 4,219 of these have an English page with no
+etymology section, 970 have no page, 1,175 have a section the parser
+could not read and 218 are marked unknown. The two groups Merriam-Webster
+answered with English parts or with roots that did not carry over are the
+only ones any more parsing could reach; the rest is what neither dictionary
+knows.

@@ -1,10 +1,10 @@
 {
  "purpose": "Verdicts from reviewing every root pair that etymology.js matches by prefix. Keep this so a rebuild only has to review pairs that are new, rather than all of them again.",
- "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (eight review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, then 7, 9, 4 and 8 after the Merriam-Webster batches)",
+ "reviewed_against_dump": "enwiktionary-latest-pages-articles.xml.bz2, 2026-08-04 (nine review rounds: 879 pairs, 118 after the parser was widened, 1 after the deterministic rebuild, 20 after derived terms and definition links, then 7, 9, 4, 8 and 3 after the Merriam-Webster batches)",
  "min_root_length": 7,
  "counts": {
-  "reviewed": 1046,
-  "related": 1037,
+  "reviewed": 1049,
+  "related": 1040,
   "unrelated": 9
  },
  "note": "The unrelated pairs must match UNRELATED_PREFIX_PAIRS in etymology.js. Pairs are [language, shorter root, longer root, related]. Roots are lowercased with diacritics and affix hyphens removed, as compared.",
@@ -3971,6 +3971,12 @@
   ],
   [
    "la-new",
+   "sacchar",
+   "saccharum",
+   true
+  ],
+  [
+   "la-new",
    "strepto",
    "streptomyces",
    true
@@ -4295,6 +4301,12 @@
   ],
   [
    "latin",
+   "credent",
+   "credentia",
+   true
+  ],
+  [
+   "latin",
    "crimino",
    "criminosus",
    true
@@ -4441,6 +4453,12 @@
    "latin",
    "fabrica",
    "fabricatus",
+   true
+  ],
+  [
+   "latin",
+   "facetia",
+   "facetiae",
    true
   ],
   [

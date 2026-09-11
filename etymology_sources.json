@@ -6751,6 +6751,10 @@
     "base": "COMMUTATOR",
     "rule": "suffix:S"
   },
+  "COMPAS": {
+    "base": "COMPAS",
+    "rule": "merriam-webster"
+  },
   "COMPLEXNESSES": {
     "base": "COMPLEX",
     "rule": "suffix:NESSES"
@@ -7055,6 +7059,10 @@
     "base": "CORNEITIS",
     "rule": "suffix:ES"
   },
+  "CORNEOUS": {
+    "base": "CORNEOUS",
+    "rule": "merriam-webster"
+  },
   "CORNINESSES": {
     "base": "CORNINESS",
     "rule": "suffix:ES"
@@ -7271,6 +7279,10 @@
     "base": "CREATUREHOOD",
     "rule": "suffix:S"
   },
+  "CREDENT": {
+    "base": "CREDENT",
+    "rule": "merriam-webster"
+  },
   "CREDENTIALISMS": {
     "base": "CREDENTIALISM",
     "rule": "suffix:S"
@@ -7374,6 +7386,10 @@
   "CROSSJACKS": {
     "base": "CROSSJACK",
     "rule": "suffix:S"
+  },
+  "CROSSOPTERYGIAN": {
+    "base": "CROSSOPTERYGIAN",
+    "rule": "merriam-webster"
   },
   "CROSSTIE": {
     "base": "CROSSTIED",
@@ -7844,8 +7860,12 @@
     "rule": "link:stated"
   },
   "CYCLOSES": {
-    "base": "CYCLOS",
-    "rule": "suffix:ES"
+    "base": "CYCLOSIS",
+    "rule": "link:stated"
+  },
+  "CYCLOSIS": {
+    "base": "CYCLOSIS",
+    "rule": "merriam-webster"
   },
   "CYMBALER": {
     "base": "CYMBAL",
@@ -8038,6 +8058,10 @@
   "DANAZOLS": {
     "base": "DANAZOL",
     "rule": "suffix:S"
+  },
+  "DANDIACAL": {
+    "base": "DANDIACAL",
+    "rule": "merriam-webster"
   },
   "DANDRIFFS": {
     "base": "DANDRIFF",
@@ -8470,6 +8494,10 @@
   "DELUSIVENESSES": {
     "base": "DELUSIVE",
     "rule": "suffix:NESSES"
+  },
+  "DELUSORY": {
+    "base": "DELUSORY",
+    "rule": "merriam-webster"
   },
   "DEMANDINGNESSES": {
     "base": "DEMANDING",
@@ -9747,6 +9775,10 @@
     "base": "DRUM",
     "rule": "suffix:LY"
   },
+  "DRUTHERS": {
+    "base": "DRUTHERS",
+    "rule": "merriam-webster"
+  },
   "DUBBIN": {
     "base": "DUBBIN",
     "rule": "merriam-webster"
@@ -9846,6 +9878,10 @@
   "DUVETINES": {
     "base": "DUVETINE",
     "rule": "suffix:ES"
+  },
+  "DUXELLES": {
+    "base": "DUXELLES",
+    "rule": "merriam-webster"
   },
   "DWARFISHNESSES": {
     "base": "DWARFISH",
@@ -10122,6 +10158,10 @@
   "ELEOPTENES": {
     "base": "ELEOPTENE",
     "rule": "suffix:ES"
+  },
+  "ELHI": {
+    "base": "ELHI",
+    "rule": "merriam-webster"
   },
   "ELMIER": {
     "base": "ELM",
@@ -10543,6 +10583,10 @@
     "base": "EPICOTYL",
     "rule": "link:stated"
   },
+  "EPICRITIC": {
+    "base": "EPICRITIC",
+    "rule": "merriam-webster"
+  },
   "EPICYCLOID": {
     "base": "EPICYCLE",
     "rule": "derivational:OID"
@@ -10655,6 +10699,10 @@
     "base": "EQUINITY",
     "rule": "suffix:IES"
   },
+  "EQUIPONDERANT": {
+    "base": "EQUIPONDERANT",
+    "rule": "merriam-webster"
+  },
   "EQUITABLENESSES": {
     "base": "EQUITABLE",
     "rule": "suffix:NESSES"
@@ -10694,6 +10742,10 @@
   "EREPSINS": {
     "base": "EREPSIN",
     "rule": "link:stated"
+  },
+  "ERGASTIC": {
+    "base": "ERGASTIC",
+    "rule": "merriam-webster"
   },
   "ERGONOVINE": {
     "base": "ERGONOVINE",
@@ -11124,16 +11176,20 @@
     "rule": "prefix:EX"
   },
   "EXTEMPORARY": {
-    "base": "TEMPORARY",
-    "rule": "prefix:EX"
+    "base": "EXTEMPORE",
+    "rule": "derivational:ARY"
+  },
+  "EXTEMPORE": {
+    "base": "EXTEMPORE",
+    "rule": "merriam-webster"
   },
   "EXTEMPORISATION": {
-    "base": "EXTEMPORISE",
-    "rule": "link:stated"
+    "base": "EXTEMPORE",
+    "rule": "suffix:ISATION"
   },
   "EXTEMPORISE": {
-    "base": "TEMPORISE",
-    "rule": "prefix:EX"
+    "base": "EXTEMPORE",
+    "rule": "suffix:ISE"
   },
   "EXTEMPORISED": {
     "base": "EXTEMPORISE",
@@ -11148,32 +11204,32 @@
     "rule": "suffix:ING"
   },
   "EXTEMPORIZATION": {
-    "base": "TEMPORIZATION",
-    "rule": "prefix:EX"
+    "base": "EXTEMPORE",
+    "rule": "suffix:IZATION"
   },
   "EXTEMPORIZE": {
-    "base": "TEMPORIZE",
-    "rule": "prefix:EX"
+    "base": "EXTEMPORE",
+    "rule": "link:stated"
   },
   "EXTEMPORIZED": {
     "base": "EXTEMPORIZE",
-    "rule": "suffix:ED"
+    "rule": "link:stated"
   },
   "EXTEMPORIZER": {
     "base": "EXTEMPORIZE",
-    "rule": "suffix:ER"
+    "rule": "link:stated"
   },
   "EXTEMPORIZERS": {
-    "base": "EXTEMPORIZE",
-    "rule": "suffix:ERS"
+    "base": "EXTEMPORIZER",
+    "rule": "link:stated"
   },
   "EXTEMPORIZES": {
     "base": "EXTEMPORIZE",
-    "rule": "suffix:ES"
+    "rule": "link:stated"
   },
   "EXTEMPORIZING": {
     "base": "EXTEMPORIZE",
-    "rule": "suffix:ING"
+    "rule": "link:stated"
   },
   "EXTENSOMETER": {
     "base": "EXTENSOMETER",
@@ -11203,6 +11259,10 @@
     "base": "EXTRABOLD",
     "rule": "suffix:S"
   },
+  "EXTRORSE": {
+    "base": "EXTRORSE",
+    "rule": "merriam-webster"
+  },
   "EYAS": {
     "base": "EYAS",
     "rule": "merriam-webster"
@@ -11226,6 +11286,10 @@
   "FACELESSNESSES": {
     "base": "FACELESS",
     "rule": "suffix:NESSES"
+  },
+  "FACETIAE": {
+    "base": "FACETIAE",
+    "rule": "merriam-webster"
   },
   "FACIAE": {
     "base": "FACIA",
@@ -11475,9 +11539,17 @@
     "base": "FEH",
     "rule": "suffix:S"
   },
+  "FEIRIE": {
+    "base": "FEIRIE",
+    "rule": "merriam-webster"
+  },
   "FEISTINESSES": {
     "base": "FEISTINESS",
     "rule": "suffix:ES"
+  },
+  "FELICIFIC": {
+    "base": "FELICIFIC",
+    "rule": "merriam-webster"
   },
   "FELLABLE": {
     "base": "FELL",
@@ -12035,6 +12107,10 @@
     "base": "FLOPPINESS",
     "rule": "suffix:ES"
   },
+  "FLORIATED": {
+    "base": "FLORIATED",
+    "rule": "merriam-webster"
+  },
   "FLORIBUNDA": {
     "base": "FLORIBUNDA",
     "rule": "merriam-webster"
@@ -12266,6 +12342,10 @@
   "FORMALNESSES": {
     "base": "FORMAL",
     "rule": "suffix:NESSES"
+  },
+  "FORRADER": {
+    "base": "FORRADER",
+    "rule": "merriam-webster"
   },
   "FORTUNATES": {
     "base": "FORTUNATE",
@@ -12510,6 +12590,10 @@
   "FRUITLESSNESSES": {
     "base": "FRUITLESS",
     "rule": "suffix:NESSES"
+  },
+  "FRUTICOSE": {
+    "base": "FRUTICOSE",
+    "rule": "merriam-webster"
   },
   "FUCHSIAS": {
     "base": "FUCHSIA",
@@ -13055,6 +13139,10 @@
     "base": "GEOPHAGY",
     "rule": "suffix:IES"
   },
+  "GEOTACTIC": {
+    "base": "GEOTACTIC",
+    "rule": "merriam-webster"
+  },
   "GERBERA": {
     "base": "GERBERA",
     "rule": "merriam-webster"
@@ -13090,6 +13178,10 @@
   "GEWURZTRAMINERS": {
     "base": "GEWURZTRAMINER",
     "rule": "suffix:S"
+  },
+  "GEY": {
+    "base": "GEY",
+    "rule": "merriam-webster"
   },
   "GHETTO": {
     "base": "GHETTO",
@@ -13515,6 +13607,10 @@
     "base": "GLYPTIC",
     "rule": "link:definition"
   },
+  "GNATHIC": {
+    "base": "GNATHIC",
+    "rule": "merriam-webster"
+  },
   "GNATTIER": {
     "base": "GNAT",
     "rule": "suffix:IER"
@@ -13715,6 +13811,10 @@
     "base": "GRANGERISM",
     "rule": "suffix:S"
   },
+  "GRANIVOROUS": {
+    "base": "GRANIVOROUS",
+    "rule": "merriam-webster"
+  },
   "GRANOPHYRE": {
     "base": "GRANOPHYRE",
     "rule": "merriam-webster"
@@ -13794,6 +13894,10 @@
   "GREATS": {
     "base": "GREAT",
     "rule": "suffix:S"
+  },
+  "GREEK": {
+    "base": "GREEK",
+    "rule": "merriam-webster"
   },
   "GREENBACKER": {
     "base": "GREENBACK",
@@ -14054,6 +14158,10 @@
   "GYNANDROMORPHIC": {
     "base": "GYNANDROMORPH",
     "rule": "derivational:IC"
+  },
+  "GYNECOID": {
+    "base": "GYNECOID",
+    "rule": "merriam-webster"
   },
   "GYNOGENESES": {
     "base": "GYNOGENESIS",
@@ -14747,6 +14855,10 @@
     "base": "HERMAPHRODITE",
     "rule": "link:stated"
   },
+  "HERMATYPIC": {
+    "base": "HERMATYPIC",
+    "rule": "merriam-webster"
+  },
   "HERMITISMS": {
     "base": "HERMITISM",
     "rule": "suffix:S"
@@ -14811,9 +14923,17 @@
     "base": "HETEROPHYLLY",
     "rule": "suffix:IES"
   },
+  "HETEROPTEROUS": {
+    "base": "HETEROPTEROUS",
+    "rule": "merriam-webster"
+  },
   "HEUCHS": {
     "base": "HEUCH",
     "rule": "suffix:S"
+  },
+  "HEXACHLOROPHENE": {
+    "base": "HEXACHLOROPHENE",
+    "rule": "merriam-webster"
   },
   "HEXADE": {
     "base": "HEXADES",
@@ -15106,6 +15226,10 @@
   "HOLOMETABOLISMS": {
     "base": "HOLOMETABOLISM",
     "rule": "suffix:S"
+  },
+  "HOLOPHRASTIC": {
+    "base": "HOLOPHRASTIC",
+    "rule": "merriam-webster"
   },
   "HOMEOTHERMIES": {
     "base": "HOMEOTHERM",
@@ -15755,6 +15879,10 @@
     "base": "ILLUMINANCE",
     "rule": "suffix:ES"
   },
+  "ILLUMINATI": {
+    "base": "ILLUMINATI",
+    "rule": "merriam-webster"
+  },
   "ILLUMINISM": {
     "base": "ILLUMINE",
     "rule": "derivational:ISM"
@@ -16375,6 +16503,10 @@
     "base": "INTERLOOP",
     "rule": "suffix:S"
   },
+  "INTEROCEPTIVE": {
+    "base": "INTEROCEPTIVE",
+    "rule": "merriam-webster"
+  },
   "INTERREGES": {
     "base": "REGES",
     "rule": "prefix:INTER"
@@ -16454,6 +16586,10 @@
   "INTRAPRENEURS": {
     "base": "INTRAPRENEUR",
     "rule": "link:stated"
+  },
+  "INTRAVITAM": {
+    "base": "INTRAVITAM",
+    "rule": "merriam-webster"
   },
   "INTREPIDNESSES": {
     "base": "INTREPID",
@@ -16699,6 +16835,10 @@
     "base": "ISOCHRON",
     "rule": "suffix:ES"
   },
+  "ISOGENEIC": {
+    "base": "ISOGENEIC",
+    "rule": "merriam-webster"
+  },
   "ISOGONES": {
     "base": "ISOGON",
     "rule": "suffix:ES"
@@ -16938,6 +17078,10 @@
   "JILLIONS": {
     "base": "JILLION",
     "rule": "link:stated"
+  },
+  "JIMJAMS": {
+    "base": "JIMJAMS",
+    "rule": "merriam-webster"
   },
   "JIMMIE": {
     "base": "JIMMIES",
@@ -17407,6 +17551,10 @@
     "base": "KEP",
     "rule": "suffix:ING"
   },
+  "KERFLOOEY": {
+    "base": "KERFLOOEY",
+    "rule": "merriam-webster"
+  },
   "KERNITES": {
     "base": "KERNITE",
     "rule": "suffix:ES"
@@ -17679,6 +17827,18 @@
     "base": "LACINESS",
     "rule": "suffix:ES"
   },
+  "LACKADAISICAL": {
+    "base": "LACKADAISICAL",
+    "rule": "merriam-webster"
+  },
+  "LACKADAISICALLY": {
+    "base": "LACKADAISICAL",
+    "rule": "link:stated"
+  },
+  "LACKADAY": {
+    "base": "LACKADAY",
+    "rule": "merriam-webster"
+  },
   "LACROSSES": {
     "base": "LACROSSE",
     "rule": "suffix:ES"
@@ -17746,6 +17906,10 @@
   "LAGUNAS": {
     "base": "LAGUNA",
     "rule": "suffix:S"
+  },
+  "LAICAL": {
+    "base": "LAICAL",
+    "rule": "merriam-webster"
   },
   "LAICHS": {
     "base": "LAICH",
@@ -17890,6 +18054,10 @@
   "LASTINGNESSES": {
     "base": "LASTING",
     "rule": "suffix:NESSES"
+  },
+  "LATERAD": {
+    "base": "LATERAD",
+    "rule": "merriam-webster"
   },
   "LATERBORNS": {
     "base": "LATERBORN",
@@ -18855,6 +19023,10 @@
     "base": "MALM",
     "rule": "suffix:IEST"
   },
+  "MALOLACTIC": {
+    "base": "MALOLACTIC",
+    "rule": "merriam-webster"
+  },
   "MALTINESSES": {
     "base": "MALTINESS",
     "rule": "suffix:ES"
@@ -19422,6 +19594,10 @@
   "METHYLDOPAS": {
     "base": "METHYLDOPA",
     "rule": "suffix:S"
+  },
+  "METHYLPHENIDATE": {
+    "base": "METHYLPHENIDATE",
+    "rule": "merriam-webster"
   },
   "METHYSERGIDE": {
     "base": "METHYSERGIDE",
@@ -20138,6 +20314,10 @@
   "MONTADALES": {
     "base": "MONTADALE",
     "rule": "link:stated"
+  },
+  "MONTMORILLONITE": {
+    "base": "MONTMORILLONITE",
+    "rule": "merriam-webster"
   },
   "MONURON": {
     "base": "MONURON",
@@ -21315,6 +21495,10 @@
     "base": "NONINTERCOURSE",
     "rule": "suffix:ES"
   },
+  "NONJURING": {
+    "base": "NONJURING",
+    "rule": "merriam-webster"
+  },
   "NONKOSHERS": {
     "base": "NONKOSHER",
     "rule": "suffix:S"
@@ -21382,6 +21566,14 @@
   "NONVOCALS": {
     "base": "NONVOCAL",
     "rule": "suffix:S"
+  },
+  "NORADRENERGIC": {
+    "base": "NORADRENERGIC",
+    "rule": "merriam-webster"
+  },
+  "NORDIC": {
+    "base": "NORDIC",
+    "rule": "merriam-webster"
   },
   "NORETHINDRONES": {
     "base": "NORETHINDRONE",
@@ -21586,6 +21778,10 @@
   "OBIISMS": {
     "base": "OBIISM",
     "rule": "suffix:S"
+  },
+  "OBOVOID": {
+    "base": "OBOVOID",
+    "rule": "merriam-webster"
   },
   "OBSESSIVENESSES": {
     "base": "OBSESSIVE",
@@ -21963,6 +22159,10 @@
     "base": "ORLON",
     "rule": "suffix:S"
   },
+  "ORNITHIC": {
+    "base": "ORNITHIC",
+    "rule": "merriam-webster"
+  },
   "OROLOGIES": {
     "base": "OROLOGY",
     "rule": "suffix:IES"
@@ -21990,6 +22190,10 @@
   "ORTHODONTIAS": {
     "base": "ORTHODONTIA",
     "rule": "suffix:S"
+  },
+  "ORTHOPTERA": {
+    "base": "ORTHOPTERA",
+    "rule": "merriam-webster"
   },
   "ORTHOTIC": {
     "base": "ORTHOTIC",
@@ -22607,6 +22811,10 @@
     "base": "OXYCODONE",
     "rule": "suffix:ES"
   },
+  "OXYPHENBUTAZONE": {
+    "base": "OXYPHENBUTAZONE",
+    "rule": "merriam-webster"
+  },
   "OXYPHIL": {
     "base": "OXYPHILS",
     "rule": "reverse_inflection"
@@ -23215,6 +23423,10 @@
     "base": "PENETROMETER",
     "rule": "link:stated"
   },
+  "PENICILLATE": {
+    "base": "PENICILLATE",
+    "rule": "merriam-webster"
+  },
   "PENICILLIA": {
     "base": "PENICILLIUM",
     "rule": "link:stated"
@@ -23443,6 +23655,10 @@
     "base": "PERMITTIVITY",
     "rule": "merriam-webster"
   },
+  "PERONEAL": {
+    "base": "PERONEAL",
+    "rule": "merriam-webster"
+  },
   "PERORATOR": {
     "base": "PERORATE",
     "rule": "derivational:ATOR"
@@ -23498,6 +23714,10 @@
   "PERSEVERATIVE": {
     "base": "PERSEVERATE",
     "rule": "suffix:IVE"
+  },
+  "PERSUASIBLE": {
+    "base": "PERSUASIBLE",
+    "rule": "merriam-webster"
   },
   "PERTUSSISES": {
     "base": "PERTUSSIS",
@@ -23586,6 +23806,10 @@
   "PETROLATUMS": {
     "base": "PETROLATUM",
     "rule": "link:stated"
+  },
+  "PETROSAL": {
+    "base": "PETROSAL",
+    "rule": "merriam-webster"
   },
   "PETSAIS": {
     "base": "PETSAI",
@@ -24015,6 +24239,10 @@
     "base": "PINKISH",
     "rule": "suffix:NESSES"
   },
+  "PINNATIFID": {
+    "base": "PINNATIFID",
+    "rule": "merriam-webster"
+  },
   "PINOCLES": {
     "base": "PINOCLE",
     "rule": "suffix:ES"
@@ -24030,6 +24258,10 @@
   "PINWORK": {
     "base": "PINWORKS",
     "rule": "reverse_inflection"
+  },
+  "PINYIN": {
+    "base": "PINYIN",
+    "rule": "merriam-webster"
   },
   "PIPERINE": {
     "base": "PIPERINE",
@@ -24535,6 +24767,10 @@
     "base": "POLYSOMIC",
     "rule": "suffix:S"
   },
+  "POLYSTICHOUS": {
+    "base": "POLYSTICHOUS",
+    "rule": "merriam-webster"
+  },
   "POLYTENIES": {
     "base": "POLYTENE",
     "rule": "suffix:IES"
@@ -24626,6 +24862,10 @@
   "PORKWOODS": {
     "base": "PORKWOOD",
     "rule": "suffix:S"
+  },
+  "PORPHYRITIC": {
+    "base": "PORPHYRITIC",
+    "rule": "merriam-webster"
   },
   "PORPHYROPSIN": {
     "base": "PORPHYROPSIN",
@@ -25667,6 +25907,10 @@
     "base": "PSEPHOLOGY",
     "rule": "suffix:IES"
   },
+  "PSEUDEPIGRAPHON": {
+    "base": "PSEUDEPIGRAPHON",
+    "rule": "merriam-webster"
+  },
   "PSILOCINS": {
     "base": "PSILOCIN",
     "rule": "suffix:S"
@@ -25734,6 +25978,10 @@
   "PUGGINESSES": {
     "base": "PUGGINESS",
     "rule": "suffix:ES"
+  },
+  "PULSANT": {
+    "base": "PULSANT",
+    "rule": "merriam-webster"
   },
   "PULSATORY": {
     "base": "PULSATOR",
@@ -26011,6 +26259,10 @@
     "base": "QUARTIC",
     "rule": "suffix:S"
   },
+  "QUATERCENTENARY": {
+    "base": "QUATERCENTENARY",
+    "rule": "merriam-webster"
+  },
   "QUATTROCENTOS": {
     "base": "QUATTROCENTO",
     "rule": "suffix:S"
@@ -26214,6 +26466,10 @@
   "RAKUS": {
     "base": "RAKU",
     "rule": "suffix:S"
+  },
+  "RAMATE": {
+    "base": "RAMATE",
+    "rule": "merriam-webster"
   },
   "RAMBLAS": {
     "base": "RAMBLA",
@@ -26995,6 +27251,10 @@
     "base": "RETROGRESSIVE",
     "rule": "suffix:LY"
   },
+  "RETUSE": {
+    "base": "RETUSE",
+    "rule": "merriam-webster"
+  },
   "REVERSO": {
     "base": "VERSO",
     "rule": "prefix:RE"
@@ -27551,6 +27811,10 @@
     "base": "RUGOLA",
     "rule": "suffix:S"
   },
+  "RUGULOSE": {
+    "base": "RUGULOSE",
+    "rule": "merriam-webster"
+  },
   "RUINOUSNESSES": {
     "base": "RUINOUS",
     "rule": "suffix:NESSES"
@@ -27642,6 +27906,10 @@
   "SABRAS": {
     "base": "SABRA",
     "rule": "link:stated"
+  },
+  "SACCHAROMYCES": {
+    "base": "SACCHAROMYCES",
+    "rule": "merriam-webster"
   },
   "SAFROL": {
     "base": "SAFROLE",
@@ -28744,8 +29012,12 @@
     "rule": "suffix:IES"
   },
   "SEMIOSES": {
-    "base": "OSES",
-    "rule": "prefix:SEMI"
+    "base": "SEMIOSIS",
+    "rule": "classical_plural:ES>IS"
+  },
+  "SEMIOSIS": {
+    "base": "SEMIOSIS",
+    "rule": "merriam-webster"
   },
   "SEMIPIOUS": {
     "base": "PIOUS",
@@ -28791,6 +29063,14 @@
     "base": "SENHORA",
     "rule": "suffix:S"
   },
+  "SENITI": {
+    "base": "SENITI",
+    "rule": "merriam-webster"
+  },
+  "SENSIBILIA": {
+    "base": "SENSIBILIA",
+    "rule": "merriam-webster"
+  },
   "SENSIBLENESSES": {
     "base": "SENSIBLE",
     "rule": "suffix:NESSES"
@@ -28806,6 +29086,10 @@
   "SENSITOMETERS": {
     "base": "SENSITOMETER",
     "rule": "link:stated"
+  },
+  "SENSUM": {
+    "base": "SENSUM",
+    "rule": "merriam-webster"
   },
   "SENTENTIAE": {
     "base": "SENTENTIA",
@@ -29030,6 +29314,10 @@
   "SHEEPISHNESSES": {
     "base": "SHEEPISH",
     "rule": "suffix:NESSES"
+  },
+  "SHEESH": {
+    "base": "SHEESH",
+    "rule": "merriam-webster"
   },
   "SHELTAS": {
     "base": "SHELTA",
@@ -30079,6 +30367,10 @@
     "base": "SOCIOLOGESE",
     "rule": "suffix:ES"
   },
+  "SOCKO": {
+    "base": "SOCKO",
+    "rule": "merriam-webster"
+  },
   "SODALITE": {
     "base": "SODALITE",
     "rule": "merriam-webster"
@@ -30911,6 +31203,10 @@
     "base": "SQUEAK",
     "rule": "link:stated"
   },
+  "SQUETEAGUE": {
+    "base": "SQUETEAGUE",
+    "rule": "merriam-webster"
+  },
   "SQUINNIER": {
     "base": "SQUINNY",
     "rule": "suffix:IER"
@@ -31111,6 +31407,10 @@
     "base": "STELLAR",
     "rule": "spelling:L>LL"
   },
+  "STENOTOPIC": {
+    "base": "STENOTOPIC",
+    "rule": "merriam-webster"
+  },
   "STENOTYPIES": {
     "base": "STENOTYPE",
     "rule": "suffix:IES"
@@ -31154,6 +31454,10 @@
   "STIBIUMS": {
     "base": "STIBIUM",
     "rule": "suffix:S"
+  },
+  "STICKIT": {
+    "base": "STICKIT",
+    "rule": "merriam-webster"
   },
   "STICKWORKS": {
     "base": "STICKWORK",
@@ -31274,6 +31578,10 @@
   "STREETWALKINGS": {
     "base": "STREETWALKING",
     "rule": "suffix:S"
+  },
+  "STREPTOMYCES": {
+    "base": "STREPTOMYCES",
+    "rule": "merriam-webster"
   },
   "STREPTOMYCETE": {
     "base": "STREPTOMYCETE",
@@ -32271,9 +32579,17 @@
     "base": "SYMMETALLISM",
     "rule": "suffix:S"
   },
+  "SYMPODIAL": {
+    "base": "SYMPODIAL",
+    "rule": "merriam-webster"
+  },
   "SYNAGOGAL": {
     "base": "SYNAGOG",
     "rule": "derivational:AL"
+  },
+  "SYNARTHRODIAL": {
+    "base": "SYNARTHRODIAL",
+    "rule": "merriam-webster"
   },
   "SYNCARPIES": {
     "base": "SYNCARP",
@@ -32915,6 +33231,10 @@
     "base": "THERMIT",
     "rule": "suffix:S"
   },
+  "THERMODURIC": {
+    "base": "THERMODURIC",
+    "rule": "merriam-webster"
+  },
   "THERMOMETRIES": {
     "base": "THERMOMETRY",
     "rule": "suffix:IES"
@@ -32926,6 +33246,10 @@
   "THERMOSTATTING": {
     "base": "THERMOSTAT",
     "rule": "suffix:ING"
+  },
+  "THETIC": {
+    "base": "THETIC",
+    "rule": "merriam-webster"
   },
   "THEWIER": {
     "base": "THEW",
@@ -33291,6 +33615,10 @@
     "base": "TITIVATION",
     "rule": "link:stated"
   },
+  "TITRIMETRIC": {
+    "base": "TITRIMETRIC",
+    "rule": "merriam-webster"
+  },
   "TITTIVATE": {
     "base": "TITIVATE",
     "rule": "link:stated"
@@ -33566,6 +33894,10 @@
   "TOTALISTS": {
     "base": "TOTAL",
     "rule": "suffix:ISTS"
+  },
+  "TOTHER": {
+    "base": "TOTHER",
+    "rule": "merriam-webster"
   },
   "TOUCHWOODS": {
     "base": "TOUCHWOOD",
@@ -33967,6 +34299,10 @@
     "base": "TRIFECTA",
     "rule": "link:stated"
   },
+  "TRIFLUOPERAZINE": {
+    "base": "TRIFLUOPERAZINE",
+    "rule": "merriam-webster"
+  },
   "TRIFLURALIN": {
     "base": "TRIFLURALIN",
     "rule": "merriam-webster"
@@ -34023,6 +34359,10 @@
     "base": "TRIMERISM",
     "rule": "suffix:S"
   },
+  "TRINOCULAR": {
+    "base": "TRINOCULAR",
+    "rule": "merriam-webster"
+  },
   "TRIOSE": {
     "base": "TRIOSES",
     "rule": "reverse_inflection"
@@ -34030,6 +34370,10 @@
   "TRIOSES": {
     "base": "TRIOS",
     "rule": "suffix:ES"
+  },
+  "TRIPLOBLASTIC": {
+    "base": "TRIPLOBLASTIC",
+    "rule": "merriam-webster"
   },
   "TRIPODAL": {
     "base": "TRIPOD",
@@ -34226,6 +34570,10 @@
   "TRYPSINS": {
     "base": "TRYPSIN",
     "rule": "link:stated"
+  },
+  "TRYPTIC": {
+    "base": "TRYPTIC",
+    "rule": "merriam-webster"
   },
   "TSKED": {
     "base": "TSK",
@@ -34835,6 +35183,10 @@
     "base": "UNDULANCE",
     "rule": "suffix:ES"
   },
+  "UNDULANT": {
+    "base": "UNDULANT",
+    "rule": "merriam-webster"
+  },
   "UNENSURED": {
     "base": "ENSURED",
     "rule": "prefix:UN"
@@ -35331,6 +35683,10 @@
     "base": "VALID",
     "rule": "suffix:NESSES"
   },
+  "VALLATE": {
+    "base": "VALLATE",
+    "rule": "merriam-webster"
+  },
   "VALUABLENESSES": {
     "base": "VALUABLE",
     "rule": "suffix:NESSES"
@@ -35519,6 +35875,10 @@
     "base": "VAST",
     "rule": "suffix:Y"
   },
+  "VATICINAL": {
+    "base": "VATICINAL",
+    "rule": "merriam-webster"
+  },
   "VAULTIER": {
     "base": "VAULT",
     "rule": "suffix:IER"
@@ -35582,6 +35942,10 @@
   "VENOMOUSNESSES": {
     "base": "VENOMOUS",
     "rule": "suffix:NESSES"
+  },
+  "VENTRICOSE": {
+    "base": "VENTRICOSE",
+    "rule": "merriam-webster"
   },
   "VENTUROUSNESSES": {
     "base": "VENTUROUS",
@@ -35659,6 +36023,10 @@
     "base": "VERITABLE",
     "rule": "suffix:NESSES"
   },
+  "VERMICULAR": {
+    "base": "VERMICULAR",
+    "rule": "merriam-webster"
+  },
   "VERNICLES": {
     "base": "VERNICLE",
     "rule": "suffix:ES"
@@ -35670,6 +36038,10 @@
   "VERSATILENESSES": {
     "base": "VERSATILE",
     "rule": "suffix:NESSES"
+  },
+  "VERSICULAR": {
+    "base": "VERSICULAR",
+    "rule": "merriam-webster"
   },
   "VERTICALNESSES": {
     "base": "VERTICAL",
@@ -36518,6 +36890,10 @@
   "WHAMS": {
     "base": "WHAM",
     "rule": "link:stated"
+  },
+  "WHATCHAMACALLIT": {
+    "base": "WHATCHAMACALLIT",
+    "rule": "merriam-webster"
   },
   "WHEEZINESSES": {
     "base": "WHEEZINESS",
@@ -37555,6 +37931,10 @@
     "base": "ZOOGENY",
     "rule": "suffix:IES"
   },
+  "ZOOKS": {
+    "base": "ZOOKS",
+    "rule": "merriam-webster"
+  },
   "ZOOMANIAS": {
     "base": "ZOOMANIA",
     "rule": "suffix:S"
@@ -37574,6 +37954,10 @@
   "ZOOPHILIES": {
     "base": "ZOOPHILE",
     "rule": "suffix:IES"
+  },
+  "ZOOTECHNICAL": {
+    "base": "ZOOTECHNICAL",
+    "rule": "merriam-webster"
   },
   "ZOYSIA": {
     "base": "ZOYSIA",
