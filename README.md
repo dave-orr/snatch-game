@@ -1,20 +1,20 @@
 # Snatch
 
-A word checker for Snatch, the tile game where you steal other players' words
-by adding letters to them. It tells you whether a word is in the Scrabble
+A word checker for Snatch, the tile game (played with Bananagrams tiles) where you steal other players' words
+by adding letters to them. The app tells you whether a word is in the Scrabble
 dictionary, whether one word can legally be stolen into another, and what
 steals are possible from a given word.
 
 **Live site: https://dave-orr.github.io/snatch-game/**
 
-## What it does
+## The app
 
 Type a word and hit Check to see if it's valid. Type a second word in the
-steal field and it checks whether the first can become the second. Find
+steal field and it checks whether the first can be stolen into the second. Find
 Steals lists everything that can be stolen to make your word, and everything
 your word can be stolen into.
 
-The rules as the app enforces them:
+The rules:
 
 - Words must be at least four letters and in the Scrabble dictionary.
 - A steal must use every letter of the original word, plus at least one more.
@@ -25,11 +25,14 @@ The rules as the app enforces them:
   so they need nine or more letters. The result can't just contain one of the
   originals.
 
-The shared-root check is the interesting part. It uses per-word etymology
+The shared-root check is the most complex. It uses per-word etymology
 data (see below), backed up by a list of common affixes and irregular verb
-pairs for the cases the data misses (WIND and WINDY have different recorded
-roots, but the suffix rule still catches it). Steals that fail the
+pairs (WIND and WINDY have different recorded
+roots, but suffix rules match). Steals that fail the
 root check are still listed, but marked invalid, so you can see why.
+
+The etymology dictionary is incomplete (English is messy) and contains some errors.
+It covers over 95% of the words in the scrabble dictionary. 
 
 ## The data
 
