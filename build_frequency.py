@@ -22,14 +22,22 @@ Sources:
 
 The rules, each measured before it was adopted (see FREQUENCY.md):
 
-- A word wordfreq has keeps wordfreq's value.
+- A word wordfreq has keeps wordfreq's value, unless it is much more common
+  in Spanish, Portuguese, Italian or Malay than in English. Those languages
+  turn up inside English text - HOY is Spanish "today" - and every English
+  source counts them, so such a word takes the lower of wordfreq's value and
+  its Google Books lowercase count. Words far more common in subtitles than
+  in Wikipedia are spared: they are spoken English (UM, CIAO), which books
+  undercount.
 - A word wordfreq lacks takes the median of the three corpora, each put on
   wordfreq's scale by one offset. A corpus that never saw the word counts as
   sitting just below the rarest word it lists. The median needs two corpora
   to agree, so a spike in one - legal jargon in Google Books, an OCR misread
   such as DENNED for "deemed", a surname in Wikipedia - cannot carry a word.
-- If the median is one of those stand-ins rather than a real count, the word
-  was seen in one corpus at most and has no figure: it is left out.
+- If the median is one of those stand-ins rather than a real count - one
+  corpus saw the word, or two saw it and disagreed across the missing one's
+  limit - the word has no figure and is left out. Every such word would get
+  one of two figures, the stand-ins, which say nothing the label does not.
 
 Usage:
     python build_frequency.py --fetch corpora/     # about an hour, resumable
@@ -81,6 +89,13 @@ CALIBRATION_RANGE = (2.0, 5.0)
 # A corpus that never saw a word stands in at this far below its rarest
 # listed count, about half a listing.
 UNSEEN_MARGIN = 0.3
+
+# Languages whose words most often turn up inside English text, and how much
+# more common in one of them (in Zipf steps) a word must be to be suspect.
+FOREIGN_LANGUAGES = ('es', 'pt', 'it', 'ms')
+FOREIGN_MARGIN = 2.0
+# Subtitles this far above Wikipedia mark a word as spoken English.
+SPOKEN_MARGIN = 0.9
 
 
 def zipf(count, total):
@@ -232,10 +247,32 @@ def build(scrabble_words, corpora_dir):
               for name in CORPORA}
     unseen = {name: rarest[name] + offset[name] - UNSEEN_MARGIN for name in CORPORA}
 
-    frequency, sources = {}, {}
+    def reading(name, word):
+        if word in raw[name]:
+            return raw[name][word] + offset[name]
+        return unseen[name]
+
+    def foreign(word):
+        """(language, its Zipf) if the word is mostly another language's."""
+        language, other = max(((l, wordfreq.zipf_frequency(word.lower(), l))
+                               for l in FOREIGN_LANGUAGES), key=lambda x: x[1])
+        if other < wf[word] + FOREIGN_MARGIN or word not in raw['books']:
+            return None
+        if reading('subtitles', word) - reading('wikipedia', word) >= SPOKEN_MARGIN:
+            return None
+        return language, other
+
+    frequency, sources, corrected = {}, {}, {}
     for word in sorted(scrabble_words):
         if wf[word] >= WORDFREQ_FLOOR:
-            frequency[word] = round(wf[word], 2)
+            value = wf[word]
+            spill = foreign(word)
+            if spill:
+                books_value = reading('books', word)
+                if books_value < value:
+                    corrected[word] = [round(value, 2), spill[0]]
+                    value = books_value
+            frequency[word] = round(value, 2)
             continue
         readings = []            # (value, measured)
         for name in CORPORA:
@@ -249,7 +286,7 @@ def build(scrabble_words, corpora_dir):
         sources[word] = [round(v, 2) if m else None for v, m in readings]
         if measured:
             frequency[word] = round(value, 2)
-    return frequency, sources, offset, unseen
+    return frequency, sources, corrected, offset, unseen
 
 
 def main():
@@ -269,24 +306,28 @@ def main():
     if not args.sources:
         parser.error('pass --sources DIR (after --fetch DIR)')
 
-    frequency, sources, offset, unseen = build(scrabble_words, args.sources)
+    frequency, sources, corrected, offset, unseen = build(scrabble_words, args.sources)
 
     FREQUENCY_PATH.write_text(json.dumps(frequency, separators=(',', ':'), sort_keys=True) + '\n')
     SOURCES_PATH.write_text(
         json.dumps({'columns': list(CORPORA),
                     'note': 'Zipf values on wordfreq\'s scale, null where the corpus never saw '
-                            'the word. Words taken from wordfreq are not listed.',
-                    'words': sources},
+                            'the word. Words taken from wordfreq are not listed, except those '
+                            'lowered as foreign: "foreign" gives their wordfreq value and the '
+                            'language they belong to.',
+                    'words': sources, 'foreign': corrected},
                    separators=(',', ':'), sort_keys=True) + '\n')
 
     from_corpora = sum(1 for w in sources if w in frequency)
+    no_figure = len(sources) - from_corpora
     print("offsets to wordfreq's scale: " +
           ', '.join(f'{name} {offset[name]:+.2f}' for name in CORPORA))
     print(f"{len(frequency):,} of {len(scrabble_words):,} words have a frequency "
           f"({100 * len(frequency) / len(scrabble_words):.1f}%): "
-          f"{len(frequency) - from_corpora:,} from wordfreq, {from_corpora:,} from the corpora")
-    print(f"seen in one corpus only, no figure: {len(sources) - from_corpora:,}; "
-          f"not seen at all: {len(scrabble_words) - len(frequency) - (len(sources) - from_corpora):,}")
+          f"{len(frequency) - from_corpora:,} from wordfreq ({len(corrected)} lowered as foreign), "
+          f"{from_corpora:,} from the corpora")
+    print(f"seen, but the corpora's median is a stand-in, so no figure: {no_figure:,}; "
+          f"not seen at all: {len(scrabble_words) - len(frequency) - no_figure:,}")
 
 
 if __name__ == '__main__':

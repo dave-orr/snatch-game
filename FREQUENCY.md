@@ -9,7 +9,7 @@ and what a rebuild has to redo.
 | file | contents |
 |---|---|
 | `frequency.json` | word to Zipf frequency, for every word with a trustworthy figure |
-| `frequency_sources.json` | for each word below wordfreq's floor, what Google Books, Wikipedia and OpenSubtitles each said, on wordfreq's scale, or null where the corpus never saw it |
+| `frequency_sources.json` | for each word below wordfreq's floor, what Google Books, Wikipedia and OpenSubtitles each said, on wordfreq's scale, or null where the corpus never saw it; and for each word lowered as foreign, its wordfreq value and the language it belongs to |
 
 A Zipf frequency is log10 of occurrences per billion words. 3.5 is about 3,000
 per billion, one word in 300,000, and each whole step is a factor of ten. The
@@ -17,17 +17,18 @@ app derives everything it shows from that one number:
 
 | label | Zipf | one word in | words |
 |---|---|---|---|
-| Everyday | 5 and up | fewer than 10,000 | 996 |
-| Common | 4 to 5 | 10,000 to 100,000 | 5,458 |
-| Uncommon | 3 to 4 | 100,000 to 1 million | 16,417 |
-| Rare | 2 to 3 | 1 to 10 million | 30,402 |
-| Very rare | 1 to 2 | 10 to 100 million | 47,087 |
-| Obscure | below 1, or absent | more than 100 million | 78,331 |
+| Everyday | 5 and up | fewer than 10,000 | 995 |
+| Common | 4 to 5 | 10,000 to 100,000 | 5,453 |
+| Uncommon | 3 to 4 | 100,000 to 1 million | 16,399 |
+| Rare | 2 to 3 | 1 to 10 million | 30,332 |
+| Very rare | 1 to 2 | 10 to 100 million | 47,084 |
+| Obscure | below 1, or absent | more than 100 million | 78,428 |
 
 The "1 in N" figure is 10 to the power (9 minus Zipf), rounded to two
 significant figures. Every word gets a label. 138,595 of 178,691 (77.6%) also
-get a figure; the other 40,096 are Obscure with no figure, because at most one
-corpus saw them.
+get a figure. The other 40,096 are Obscure with no figure: 7,556 no source has
+seen, and 32,540 were seen but not well enough to place - 26,494 by one corpus
+only and 6,046 by two that disagreed widely (see below).
 
 ## Rebuilding
 
@@ -51,6 +52,18 @@ in a hundred million, and lists 92,728 of the Scrabble words (51.9%). The rest
 are almost all 7 to 15 letters long: inflections and derivatives of rare
 words.
 
+**Except foreign words.** Spanish, Portuguese, Italian and Malay turn up
+inside English text, and every English source counts them: HOY is Spanish
+"today", CASA "house", DATO a Malay title. A word at least two Zipf steps more
+common in one of those languages than in English takes the lower of
+wordfreq's value and its Google Books lowercase count; books print foreign
+words less and capitalise them more. Words used far more in subtitles than in
+Wikipedia (by 0.9 steps or more) are spared, because they are spoken English
+that books undercount: without that, UM, CIAO and HO dropped a label. This
+lowers 490 words and changes the label of 218, 214 of them by one step. Of
+219 changes read, about 86% were clearly better, 10% toss-ups, and 4% perhaps
+one label low - English loanwords such as FORTE, MANA, ROTI and TOQUE.
+
 **Below wordfreq's floor, the median of three corpora.** Each corpus is put on
 wordfreq's scale by one offset, fitted on words both know well:
 
@@ -62,8 +75,8 @@ wordfreq's scale by one offset, fitted on words both know well:
 
 A corpus that never saw a word stands in at half a listing below the rarest
 word it lists. If the median of the three is a real count, that is the word's
-figure. If it is one of those stand-ins, only one corpus saw the word, and it
-gets no figure.
+figure. If it is one of those stand-ins - one corpus saw the word, or two saw
+it and disagreed across the missing one's limit - the word gets no figure.
 
 The median was chosen by testing it on words wordfreq does know, near its
 floor, where the answer is known:
@@ -104,6 +117,26 @@ a scanning slip from producing a figure.
   against 80% for simply calling unseen words Obscure. Words the corpora miss
   are missed because almost nobody writes them: INELIGIBLE is fairly common,
   INELIGIBLES is not.
+- **A figure for the 32,540 words the median cannot place.** Tested by
+  pretending Wikipedia and subtitles missed words they had seen, the most
+  accurate figure is the stand-in itself (right label 98% of the time, within
+  0.3 steps about 85%), but that gives every such word one of two figures, 1 in
+  710 million or 1 in 1.7 billion, which says nothing the label does not.
+  Google Books capped at the missing corpora's limit keeps some per-word
+  variation but was less accurate, and a model of each corpus's noise was
+  worse still. Below the smaller corpora's limits nothing can check a
+  per-word figure, so none is given.
+- **Google Books fiction only**, to avoid the legal and government text. As
+  the Books vote in the median it gave the right label 66.5% of the time,
+  against 78.0% for all books: it is a ninth the size and skews to narrative
+  (it puts SNATCH a step higher). The median already neutralises the jargon.
+- **Counting the books a word appears in** rather than its occurrences. Alone,
+  it matched wordfreq's label 51% of the time against 61%.
+- **Checking inflected forms against their base.** 1,513 forms sit more than a
+  label above their base, but nearly all are right: CHANGING above CHANG, GREEN
+  above GREE, where the matched base is a different word.
+- **Google's trillion-word web list.** Reachable, but it keeps only the top
+  333,000 words, so it stops near wordfreq's own floor.
 - **Reading the Wikipedia list by upper-casing every entry.** It has "houſe"
   with a long s, which upper-cases to HOUSE and replaced HOUSE's count with 4.
   Only plain lowercase ASCII entries are read.
@@ -130,22 +163,20 @@ a scanning slip from producing a figure.
   wordfreq folds case. For a player that is arguably right - the string is
   familiar - but the lowercase word itself (a john, august, china, a texas on
   a steamboat) is rarer than its label.
-- **Foreign words.** Spanish, Portuguese, Italian and Malay turn up inside
-  English text, and all four English sources count them: HOY is Spanish
-  "today", PLAYA "beach", DATO a Malay title. A rule that flags words more
-  common in one of those languages and mostly capitalised in books finds 999,
-  almost all one label high; it also catches English words such as PREMIER,
-  so the true number is lower.
+- **Foreign words** are now lowered by the rule above. Some keep a label that
+  is one step high: PLAYA is only 1.5 steps more common in Spanish, under the
+  two-step bar, and MAS is lowered but not across a label boundary.
 
 ## Known weak spots
 
 - The name effect above, 1,745 words, one to three labels too high as the
-  lowercase word. Scaling by lowercase share fixes these but was rejected for
-  what it does to GOD, YES and MARCH; a rule limited to shares under 5% would
-  spare those and is the obvious next step if the lowercase reading is wanted.
-- Foreign words inside English text, up to about 1,000 words, one label high.
+  lowercase word. Kept deliberately: the label says how familiar the string
+  is, and JOHN is familiar.
+- The foreign-word rule lowers some English loanwords one label too far
+  (FORTE, MANA, ROTI, TOQUE), about 4% of its changes.
 - Pages of one corpus that happen to repeat a word are only guarded against by
-  the median; a word seen in exactly two corpora takes the lower of the two.
+  the median; a word seen in exactly two corpora takes one of their two
+  readings, never a blend.
 - Below Zipf 1 the corpora disagree more, so a figure there is a rougher guide
   than the label. The Obscure/Very rare boundary is right about 80% of the
   time on words where it can be checked.
