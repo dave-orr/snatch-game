@@ -26,3 +26,6 @@ __pycache__/
 # Debug output from build_etymology.py
 etymology_samples.txt
 mw_cache/
+
+# Corpora fetched by build_frequency.py --fetch
+corpora/
