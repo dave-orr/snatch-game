@@ -4,11 +4,13 @@
 // URLs
 export const DICTIONARY_URL = 'https://raw.githubusercontent.com/redbo/scrabble/master/dictionary.txt';
 export const ETYMOLOGY_URL = 'etymology.json';
+export const FREQUENCY_URL = 'frequency.json';
 
 // Dictionary state
 let dictionary = new Set();
 let wordList = [];
 let etymology = {};
+let frequency = null; // null until frequency.json loads
 let isLoaded = false;
 
 // Dictionary state accessors
@@ -31,6 +33,14 @@ export function getEtymology() {
 
 export function setEtymology(etym) {
     etymology = etym;
+}
+
+export function getFrequency() {
+    return frequency;
+}
+
+export function setFrequency(freq) {
+    frequency = freq;
 }
 
 export function getIsLoaded() {

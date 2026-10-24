@@ -1,10 +1,12 @@
 import {
     DICTIONARY_URL,
     ETYMOLOGY_URL,
+    FREQUENCY_URL,
     getDictionary,
     setDictionary,
     getEtymology,
     setEtymology,
+    setFrequency,
     getIsLoaded,
     setIsLoaded
 } from './state.js';
@@ -32,6 +34,13 @@ import {
     getSharedEtymologies
 } from './etymology.js';
 
+import {
+    formatFrequency,
+    formatFrequencyHeader,
+    formatFrequencySimple,
+    isRareWord
+} from './frequency.js';
+
 // UI constants
 const UI_YIELD_MS = 10;
 
@@ -57,10 +66,11 @@ async function loadDictionary() {
     stealsBtn.disabled = true;
 
     try {
-        // Load dictionary and etymology in parallel
-        const [dictResponse, etymResponse] = await Promise.all([
+        // Load dictionary, etymology and frequency in parallel
+        const [dictResponse, etymResponse, freqResponse] = await Promise.all([
             fetch(DICTIONARY_URL),
-            fetch(ETYMOLOGY_URL).catch(() => null) // Etymology is optional
+            fetch(ETYMOLOGY_URL).catch(() => null), // Etymology is optional
+            fetch(FREQUENCY_URL).catch(() => null)  // So is frequency
         ]);
 
         if (!dictResponse.ok) throw new Error('Failed to fetch dictionary');
@@ -76,6 +86,14 @@ async function loadDictionary() {
             console.log(`Etymology loaded: ${Object.keys(getEtymology()).length} entries`);
         } else {
             console.log('Etymology not available, using affix-based detection only');
+        }
+
+        // Load frequency if available; without it no frequency is shown
+        if (freqResponse && freqResponse.ok) {
+            setFrequency(await freqResponse.json());
+            console.log('Frequency loaded');
+        } else {
+            console.log('Frequency not available');
         }
 
         setIsLoaded(true);
@@ -97,7 +115,9 @@ function displayResult(word, result) {
     stealsResultDiv.classList.add('hidden');
 
     const normalizedWord = word.trim().toUpperCase();
-    const etymHtml = result === 'valid' ? formatEtymology(normalizedWord) : '';
+    const etymHtml = result === 'valid'
+        ? formatFrequency(normalizedWord) + formatEtymology(normalizedWord)
+        : '';
 
     if (result === 'valid') {
         resultDiv.classList.add('valid');
@@ -189,25 +209,31 @@ async function displaySteals(word) {
     // Show etymology at the top
     html += `<div class="steals-header">
         <h2 class="steals-word">${normalizedWord}</h2>
+        ${formatFrequencyHeader(normalizedWord)}
         ${formatEtymology(normalizedWord)}
     </div>`;
 
+    // Rows whose word is Very rare or Obscure are greyed, so the eye skips them
+    const rareClass = word => isRareWord(word) ? ' rare-word' : '';
+
     // Render function for "steal from" items
     const renderStealFrom = ({ baseWord, addedLetters, invalid }) => `
-        <div class="steal-item${invalid ? ' invalid-steal' : ''}">
+        <div class="steal-item${invalid ? ' invalid-steal' : ''}${rareClass(baseWord)}">
             <span class="base-word">${baseWord}</span>
             <span class="added-letters">+${addedLetters}</span>
             ${invalid ? '<span class="invalid-label">same root</span>' : ''}
+            ${formatFrequencySimple(baseWord)}
         </div>
     `;
 
     // Render function for "steal to" items
     const renderStealTo = ({ resultWord, addedLetters, invalid }) => `
-        <div class="steal-item${invalid ? ' invalid-steal' : ''}">
+        <div class="steal-item${invalid ? ' invalid-steal' : ''}${rareClass(resultWord)}">
             <span class="added-letters">+${addedLetters}</span>
             <span class="arrow">→</span>
             <span class="result-word">${resultWord}</span>
             ${invalid ? '<span class="invalid-label">same root</span>' : ''}
+            ${formatFrequencySimple(resultWord)}
         </div>
     `;
 
@@ -224,12 +250,13 @@ async function displaySteals(word) {
 
     // Render function for merge-to items
     const renderMergeTo = ({ otherWord, addedLetters, resultWord, invalid }) => `
-        <div class="steal-item merge-item${invalid ? ' invalid-steal' : ''}">
+        <div class="steal-item merge-item${invalid ? ' invalid-steal' : ''}${rareClass(resultWord)}">
             <span class="base-word">${otherWord}</span>
             <span class="added-letters">+${addedLetters}</span>
             <span class="arrow">→</span>
             <span class="result-word">${resultWord}</span>
             ${invalid ? '<span class="invalid-label">compound</span>' : ''}
+            ${formatFrequencySimple(resultWord)}
         </div>
     `;
 
@@ -473,11 +500,13 @@ function displayCompareResult(result) {
             <div class="compare-words">
                 <div class="compare-word">
                     <div class="word-text">${result.base}</div>
+                    <div class="frequency">${formatFrequencySimple(result.base)}</div>
                     <div class="etymology">${formatEtymologySimple(result.base)}</div>
                 </div>
                 <span class="compare-arrow-large">→</span>
                 <div class="compare-word">
                     <div class="word-text">${result.steal}</div>
+                    <div class="frequency">${formatFrequencySimple(result.steal)}</div>
                     <div class="etymology">${formatEtymologySimple(result.steal)}</div>
                 </div>
             </div>
@@ -497,11 +526,13 @@ function displayCompareResult(result) {
             <div class="compare-words">
                 <div class="compare-word">
                     <div class="word-text">${result.base}</div>
+                    <div class="frequency">${formatFrequencySimple(result.base)}</div>
                     <div class="etymology">${formatEtymologySimple(result.base)}</div>
                 </div>
                 <span class="compare-arrow-large">→</span>
                 <div class="compare-word">
                     <div class="word-text">${result.steal}</div>
+                    <div class="frequency">${formatFrequencySimple(result.steal)}</div>
                     <div class="etymology">${formatEtymologySimple(result.steal)}</div>
                 </div>
             </div>
@@ -515,11 +546,13 @@ function displayCompareResult(result) {
             <div class="compare-words">
                 <div class="compare-word">
                     <div class="word-text">${result.base}</div>
+                    <div class="frequency">${formatFrequencySimple(result.base)}</div>
                     <div class="etymology">${formatEtymologySimple(result.base)}</div>
                 </div>
                 <span class="compare-arrow-large">→</span>
                 <div class="compare-word">
                     <div class="word-text">${result.steal}</div>
+                    <div class="frequency">${formatFrequencySimple(result.steal)}</div>
                     <div class="etymology">${formatEtymologySimple(result.steal)}</div>
                 </div>
             </div>
