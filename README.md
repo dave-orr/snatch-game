@@ -14,6 +14,11 @@ steal field and it checks whether the first can be stolen into the second. Find
 Steals lists everything that can be stolen to make your word, and everything
 your word can be stolen into.
 
+Each word also shows how common it is, as one of six labels from Everyday to
+Obscure, and where there is room how often it turns up in English ("about 1
+in 300,000 words"). In the steals lists, Very rare and Obscure words are
+greyed so the ones you could defend stand out.
+
 The rules:
 
 - Words must be at least four letters and in the Scrabble dictionary.
@@ -47,6 +52,11 @@ covers about 96% of the dictionary. How it was built, what was tried and
 rejected, and how to rebuild it are all in [ETYMOLOGY.md](ETYMOLOGY.md).
 Read that before touching any of the Python scripts.
 
+Word frequencies live in `frequency.json`, which maps each word to its Zipf
+frequency, blended from wordfreq, Google Books, Wikipedia and OpenSubtitles.
+A word missing from it is Obscure. The labels, the sources and the rebuild
+steps are in [FREQUENCY.md](FREQUENCY.md).
+
 ## Running it locally
 
 It's a static site with no build step, but the JavaScript uses ES modules,
@@ -76,6 +86,8 @@ version number shown in the corner of the page is set by hand in
 | `words.js` | validity, letter-subset and shared-root checks |
 | `steals.js` | finds single-word and merge steals |
 | `etymology.js` | root comparison and display, plus the hand-reviewed list of unrelated root pairs |
-| `state.js` | dictionary and etymology state, and the URLs they load from |
+| `frequency.js` | frequency labels and the "1 in N" figure |
+| `state.js` | dictionary, etymology and frequency state, and the URLs they load from |
 | `etymology*.json` | the etymology data and its provenance |
-| `*.py` | the etymology build pipeline |
+| `frequency*.json` | the frequency data and its provenance |
+| `*.py` | the etymology and frequency build pipelines |

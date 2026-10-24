@@ -348,6 +348,52 @@ body {
     font-style: italic;
 }
 
+/* Frequency display: one of six labels, plus a "1 in N" figure where there is room */
+.frequency {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.frequency:empty {
+    display: none;
+}
+
+.frequency-label {
+    color: #0f766e;
+    font-weight: 600;
+}
+
+/* Very rare and Obscure: grey, so the eye skips words that are hard to defend */
+.frequency-label.rare {
+    color: #8a8f99;
+}
+
+.frequency-sep {
+    color: #b8bcc4;
+    margin: 0 6px;
+}
+
+.frequency-figure {
+    font-variant-numeric: tabular-nums;
+}
+
+.steal-item .frequency-label {
+    margin-left: auto;
+    font-size: 0.75rem;
+}
+
+.steal-item .invalid-label + .frequency-label {
+    margin-left: 0;
+}
+
+.steal-item.rare-word .base-word,
+.steal-item.rare-word .result-word {
+    color: #8a8f99;
+}
+
 /* Steals header with word and etymology */
 .steals-header {
     text-align: center;
@@ -365,6 +411,7 @@ body {
     margin-bottom: 5px;
 }
 
+.steals-header .frequency,
 .steals-header .etymology {
     border-top: none;
     padding-top: 0;
@@ -476,6 +523,7 @@ body {
     color: #1a1a2e;
 }
 
+.compare-word .frequency,
 .compare-word .etymology {
     font-size: 0.8rem;
     margin-top: 4px;
